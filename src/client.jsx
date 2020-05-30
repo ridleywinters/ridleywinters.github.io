@@ -196,6 +196,95 @@ fn main() {
                     </pre>
                 </Section>
 
+                <Section name={"Adding baseline benchmarks"}>
+                    <pre>{`
+Yes! Do this early, not after! Measure but don't optimize yet.
+
+https://bheisler.github.io/criterion.rs/book/getting_started.html
+
+                `}</pre>
+                </Section>
+
+                <Section name={"Writing to an image"}>
+                    <pre>{`
+use lodepng;
+
+struct RGBAF32 {
+    r: f32,
+    g: f32,
+    b: f32,
+    a: f32,
+}
+
+struct Frame {
+    width: usize,
+    height: usize,
+}
+
+fn clamp_to_byte(v: f32, min: u8, max: u8) -> u8 {
+    return if v < min as f32 {
+        min
+    } else if v > max as f32 {
+        max
+    } else {
+        v as u8
+    };
+}
+
+fn trace_pixel(frame: &Frame, x: f32, y: f32) -> RGBAF32 {
+    let half_width = (frame.width / 2) as f32;
+    let half_height = (frame.height / 2) as f32;
+
+    let dx = (x - half_width).abs();
+    let dy = (y - half_height).abs();
+    let d = ((dx * dx) + (dy * dy)).sqrt() / half_width;
+    let mut c64 = 1.0f32 - d;
+    c64 = c64.sqrt();
+
+    let c = if c64 > 1.0 {
+        1.0
+    } else if c64 < 0.0 {
+        0.0
+    } else {
+        c64
+    };
+
+    RGBAF32 {
+        r: c,
+        g: c,
+        b: c,
+        a: 1.0,
+    }
+}
+
+fn main() {
+    println!("Hello, raytracer!");
+
+    let frame = Frame {
+        width: 512,
+        height: 512,
+    };
+
+    let mut buffer = vec![0u8; frame.width * frame.height * 4];
+    for y in 0..frame.height {
+        for x in 0..frame.width {
+            let i = y * frame.width + x;
+
+            let c = trace_pixel(&frame, x as f32, y as f32);
+            buffer[i * 4 + 0] = clamp_to_byte(c.r * 255f32, 0, 255);
+            buffer[i * 4 + 1] = clamp_to_byte(c.g * 255f32, 0, 255);
+            buffer[i * 4 + 2] = clamp_to_byte(c.b * 255f32, 0, 255);
+            buffer[i * 4 + 3] = clamp_to_byte(c.a * 255f32, 0, 255);
+        }
+    }
+    let _ = lodepng::encode32_file("out.png", &buffer, frame.width, frame.height);
+
+    println!("Done!");
+}
+                                        
+                    `}</pre>
+                </Section>
+
                 <section>
                     <h2>References</h2>
                     <ul>
