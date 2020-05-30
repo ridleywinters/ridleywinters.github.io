@@ -104,6 +104,17 @@ function RustRaytracer() {
                 </section>
                 <section>
                     <h2>Goals</h2>
+                    <p>
+                        Build a pretty simple raytracer that:
+                    </p>
+                    <ul>
+                        <li>Shows the basics of Rust</li>
+                        <li>Is packaged as a library</li>
+                        <li>Has a command-line interface (Rust native)</li>
+                        <li>Has a WASM interface for direct Browser rendering</li>
+                        <li>Has a server interface for Browser API calls</li>
+                        <li>Is documented, benchmarked, tested, and all the good things</li>
+                    </ul>
                 </section>
                 <section>
                     <h2>Prerequisites</h2>
