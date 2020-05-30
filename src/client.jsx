@@ -2,6 +2,42 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Router from './base/routing/router.jsx'
 
+function Layout({ children }) {
+    return (
+        <div>
+            <div style={{
+                padding: '12px 2rem 6px',
+                backgroundColor: '#ACF',
+            }}>
+                <a href="/">home</a>
+            </div>
+            <div style={{
+                minHeight: 'calc(100vh - 120px)'
+            }}
+            >{children}
+            </div>
+            <div style={{
+                minHeight: '120px',
+                padding: '12px 2rem 6px',
+                backgroundColor: '#ACF',
+            }}>
+                <div>
+                    Twitter: <a href="https://twitter.com/RidleyWinters">RidleyWinters</a>
+                </div>
+                <div>
+                    Favicon designed by
+                    {' '}<a href="https://www.flaticon.com/authors/good-ware">Good Ware</a>{' '}
+                    available at
+                    {' '}<a href="https://www.flaticon.com/free-icon/woodland_2933738?term=landscape&page=1&position=">flaticon</a>.
+                </div>
+            </div>
+        </div>
+
+    )
+
+
+}
+
 function HelloWorld({ name }) {
     return (
         <div>
@@ -41,9 +77,6 @@ function HelloWorld({ name }) {
                         <li>Product Thoughts</li>
                         <li>Every Day Routine (EDR)</li>
                     </ul>
-                    <div>
-                        Twitter: <a href="https://twitter.com/RidleyWinters">RidleyWinters</a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -113,7 +146,7 @@ function RustRaytracer() {
                         <li>Has a command-line interface (Rust native)</li>
                         <li>Has a WASM interface for direct Browser rendering</li>
                         <li>Has a server interface for Browser API calls</li>
-                        <li>Is documented, benchmarked, tested, and all the good things</li>
+                        <li>Is documented, benchmarked, tested, and all the good thingsexplor</li>
                     </ul>
                 </section>
                 <section>
@@ -309,12 +342,14 @@ fn main() {
 
 function Application() {
     return (
-        <Router
-            routes={{
-                'challenges-rust_raytracer': () => <RustRaytracer />,
-            }}
-            defaultRoute={() => <HelloWorld name="Ridley" />}
-        />
+        <Layout>
+            <Router
+                routes={{
+                    'challenges-rust_raytracer': () => <RustRaytracer />,
+                }}
+                defaultRoute={() => <HelloWorld name="World" />}
+            />
+        </Layout>
     );
 }
 
