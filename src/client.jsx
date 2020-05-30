@@ -60,7 +60,7 @@ function Disclaimer() {
             }}
         >
             I'm still learning so please take any information here with a grain of salt.
-            Anything you see that's incorrect, please let me know about as
+            Anything you see that's incorrect, please let me know about by creating
             a <a href="https://github.com/ridleywinters/ridleywinters.github.io/issues">GitHub issue</a>.
             Thank you!
         </div>
