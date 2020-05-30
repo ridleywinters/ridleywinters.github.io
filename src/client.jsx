@@ -82,6 +82,15 @@ function Todo({ children }) {
     </div>
 }
 
+function Section({ name, children }) {
+    return (
+        <section>
+            <h2>{name}</h2>
+            {children}
+        </section>
+    )
+}
+
 function RustRaytracer() {
     return (
         <div>
@@ -140,6 +149,53 @@ fn main() {
 }
 `}</pre>
                 </section>
+                <Section name={"Writing to an image"}>
+                    <pre>{`
+https://github.com/kornelski/lodepng-rust
+
+[dependencies]
+lodepng = "2.5.0"
+
+
+use lodepng;
+
+fn main() {
+    println!("Hello, raytracer!");
+
+    let width: usize = 512;
+    let height: usize = 512;
+    let mut buffer = vec![0u8; width * height * 4];
+    for y in 0..height {
+        for x in 0..width {
+            let i = y * width + x;
+
+            let dx = (x as i64 - (width / 2) as i64).abs();
+            let dy = (y as i64 - (height / 2) as i64).abs();
+            let d = (((dx * dx) + (dy * dy)) as f64).sqrt();
+            let mut c64 = 255.0 - d * (255.0 / (width / 2) as f64);
+            c64 = if c64 > 255.0 {
+                255.0
+            } else if c64 < 0.0 {
+                0.0
+            } else {
+                c64
+            };
+
+            let c = c64 as u8;
+            buffer[i * 4 + 0] = c;
+            buffer[i * 4 + 1] = c;
+            buffer[i * 4 + 2] = c;
+            buffer[i * 4 + 3] = 255;
+        }
+    }
+    let _ = lodepng::encode32_file("out.png", &buffer, width, height);
+
+    println!("Done!");
+}
+`}
+                    </pre>
+                </Section>
+
                 <section>
                     <h2>References</h2>
                     <ul>
