@@ -6,7 +6,6 @@ ensure:
 build: ensure
 	npx parcel build src/client.jsx
 	sed -i -E "s/URL=\/client.js.map/URL=\/dist\/client.js.map/" dist/client.js
-	deno run --allow-read --allow-write --unstable index.jsx
 
 publish: build
 	@true || git diff --quiet
