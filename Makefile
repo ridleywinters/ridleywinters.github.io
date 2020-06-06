@@ -13,7 +13,7 @@ publish: build
 		monorepo ridleywinters git@github.com:ridleywinters/ridleywinters.github.io
 
 dev:
-	npx nodemon --watch src --ext js,jsx --exec make run
+	npx nodemon --watch src --watch data --ext js,jsx,mdx --exec make run
 
 run: build
 	npx http-server -c-1 .

@@ -1,10 +1,9 @@
 import React from "react";
 import Router from '../base/routing/router.jsx';
 import Layout from './layout.jsx';
-import RustProducerConsumer from './pages/rust_producer_consumer.jsx';
 import RustRaytracer from './pages/rust_raytracer.jsx';
 import database from '../database.json';
-
+import MDXPage from './mdx_page.jsx';
 
 function HelloWorld({ name }) {
     return (
@@ -38,7 +37,7 @@ function HelloWorld({ name }) {
                                 <li>Writing a raytracer in Deno</li>
                                 <li>End-to-end Development of a Distributed System</li>
                                 <li>
-                                    <a href="/?page=challenges-rust_producer_consumer">
+                                    <a href="/?page=rust_producer_consumer">
                                         Multithreaded Product-Consumer in Rust
                                     </a>
                                 </li>
@@ -56,32 +55,19 @@ function HelloWorld({ name }) {
     );
 }
 
-const remark = require('remark');
-import remark2react from 'remark-react'
 
-function MDXPage({ast}) {
-
-    const contents = remark()
-        .use(remark2react)
-        .processSync(ast)
-
-    let text = contents.result;
-    return (
-        <div>
-            <div>{text}</div>
-        </div>
-    )
-}
 
 export default function Application() {
-
-    console.log(database);
+    database.pages.forEach((page) => {
+        page.href = `/?page=${page.id}`;
+    });
 
     const routes = {
         'challenges-rust_raytracer': () => <RustRaytracer />,
-        'challenges-rust_producer_consumer': () => <RustProducerConsumer />,
-        'test': () => <MDXPage ast={database.test.content} />
     };
+    database.pages.forEach((page) => {
+        routes[page.id] = () => <MDXPage page={page} />
+    });
 
     return (
         <Layout>

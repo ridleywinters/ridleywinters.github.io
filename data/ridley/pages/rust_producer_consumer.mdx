@@ -1,0 +1,83 @@
+
+# Multi-threaded Worker Queue in Rust
+
+_Note: this was originally going to be an article on the Producer-Consumer pattern, but it went a different direction. I need to clean up the naming a bit!_
+
+See the [full repository here](https://github.com/ridleywinters/rust-producer-consumer).
+
+## Goals and Context
+
+As part of the [Rust Raytracer](/?page=challenges-rust_raytracer), I've been looking into leaning how to do multithreaded programming in Rust. The scenario I have in mind is to split the render buffer into tiles and let separate threads render each time, where the number of worker threads is a variable.
+
+This requires some mechanism where a pool of threads is created, the tiles are dispatched to the threads awaiting work (i.e. some simple [scheduling algorithm](https://en.wikipedia.org/wiki/Scheduling_(computing)#Scheduling_disciplines)), the tiles then rendered to a memory buffer, that then is passed back to the main thread to be copied into the main buffer.
+
+## Source code
+
+### TODO
+
+* How do I generalize this for more than just i32?
+* How do shared blocks of memory work?
+
+```rust
+use rand::seq::SliceRandom;
+use rand::thread_rng;
+use std::sync::mpsc::{channel, Receiver, Sender};
+use std::thread;
+
+fn create_thread_pool(thread_count: usize) -> (Vec<Sender<i32>>, Receiver<i32>) {
+    // Create a vector of Senders, one for each worker thread that is created.
+    // This is used to send work requests to the worker thread from the parent.
+    let mut pool_tx = Vec::new();
+
+    // Create the parent channel, which is used for the worker threads to
+    // send finished work back.
+    let (parent_tx, parent_rx): (Sender<i32>, Receiver<i32>) = channel();
+
+    // Create the pool of threads
+    for id in 0..thread_count {
+        let tx = Sender::clone(&parent_tx);
+        let (thread_tx, thread_rx) = channel();
+        pool_tx.push(thread_tx);
+
+        // Give the thread a cloned handle to the send the result of its work
+        // to the parent thread.
+
+        thread::spawn(move || {
+            println!("Starting thread {}...", id);
+            // Loop over potentially multiple requests
+            while let Ok(num) = thread_rx.recv() {
+                thread::sleep(std::time::Duration::from_millis((15 * num) as u64));
+                tx.send(num).unwrap()
+            }
+            println!("Ending thread {}.", id);
+        });
+    }
+    // Remove the "outer" reference to the parent Sender. If this reference is left
+    // open, then receiving channel will not close even after all threads complete.
+    drop(parent_tx);
+
+    (pool_tx, parent_rx)
+}
+
+fn main() {
+    let (mut pool_tx, parent_rx) = create_thread_pool(16);
+
+    // Send the work requests to the threads. Clear the vector as soon as all the
+    // work has been sent to let the worker threads know finish.
+    let mut rng = thread_rng();
+    let mut a = (0..100).collect::<Vec<usize>>();
+    a.shuffle(&mut rng);
+    for i in a {
+        let tx = &pool_tx[i % pool_tx.len()];
+        let value = (i * 2) as i32;
+        tx.send(value).unwrap();
+    }
+    pool_tx.clear();
+
+    let mut count = 0;
+    for received in parent_rx {
+        count += 1;
+        println!("Received ({} total): value = {}", count, received);
+    }
+}
+```
