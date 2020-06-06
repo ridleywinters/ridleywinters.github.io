@@ -3,17 +3,15 @@ const remark = require('remark');
 const mdx = require('remark-mdx');
 const visit = require('unist-util-visit');
 const util = require('util');
-var unified = require('unified');
-const remarkParse = require('remark-parse')
+const remarkParse = require('remark-parse');
+var frontmatter = require('remark-frontmatter')
 
-import remark2react from 'remark-react'
-
-import ReactDOMServer from 'react-dom/server';
 const glob = util.promisify(require('glob'));
 
 import fs from 'fs';
 import path from 'path';
 import _ from 'lodash';
+import YAML from 'yaml';
 
 /**
  * Convert the MDX (Markdown + JSX) to an abstract syntax tree (AST).
@@ -22,6 +20,7 @@ async function processMDXAST({ filename }) {
   const file = await read(filename);
   const ast = await remark()
     .use(mdx)
+    .use(frontmatter, ['yaml', 'toml'])
     .use(() => tree => {
       visit(tree, 'jsx', node => {
         node.type = "code";
@@ -35,26 +34,42 @@ async function processMDXAST({ filename }) {
 async function postprocessMDX({ entry }) {
 
   //
+  // Check for front-matter
+  //
+  entry.properties = {};
+  visit(entry.ast, 'yaml', node => {
+    Object.assign(entry.properties, YAML.parse(node.value));
+    if (entry.properties.title) {
+      entry.title = entry.properties.title;
+    }
+  });
+
+  //
   // Assign each entry a title based on the first heading, using the
   // entry id as a default.
   //
   // TODO: what about MDX front-matter?
   //
-  entry.title = entry.id;
-  visit(entry.ast, 'heading', node => {
+  if (!entry.title) {
+    visit(entry.ast, 'heading', node => {
 
-    console.log(node);
-    let text = "";
-    visit(node, 'text', node => {
-      text += node.value;
+      console.log(node);
+      let text = "";
+      visit(node, 'text', node => {
+        text += node.value;
+      });
+
+      if (text.trim().length > 0) {
+        entry.title = text.trim();
+        console.log(entry.id, '->', entry.title);
+        return false;
+      }
     });
 
-    if (text.trim().length > 0) {
-      entry.title = text.trim();
-      console.log(entry.id, '->', entry.title);
-      return false;
+    if (!entry.title) {
+      entry.title = entry.id;
     }
-  });
+  }
 }
 
 async function scanFiles({

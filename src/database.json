@@ -8,6 +8,27 @@
                 "type": "root",
                 "children": [
                     {
+                        "type": "yaml",
+                        "value": "specialprop: my_value\nprop2: test123",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 4,
+                                "column": 4,
+                                "offset": 44
+                            },
+                            "indent": [
+                                1,
+                                1,
+                                1
+                            ]
+                        }
+                    },
+                    {
                         "type": "heading",
                         "depth": 1,
                         "children": [
@@ -16,14 +37,14 @@
                                 "value": "Multi-threaded Worker Queue in Rust",
                                 "position": {
                                     "start": {
-                                        "line": 2,
+                                        "line": 6,
                                         "column": 3,
-                                        "offset": 3
+                                        "offset": 48
                                     },
                                     "end": {
-                                        "line": 2,
+                                        "line": 6,
                                         "column": 38,
-                                        "offset": 38
+                                        "offset": 83
                                     },
                                     "indent": []
                                 }
@@ -31,14 +52,14 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 2,
+                                "line": 6,
                                 "column": 1,
-                                "offset": 1
+                                "offset": 46
                             },
                             "end": {
-                                "line": 2,
+                                "line": 6,
                                 "column": 38,
-                                "offset": 38
+                                "offset": 83
                             },
                             "indent": []
                         }
@@ -54,14 +75,14 @@
                                         "value": "Note: this was originally going to be an article on the Producer-Consumer pattern, but it went a different direction. I need to clean up the naming a bit!",
                                         "position": {
                                             "start": {
-                                                "line": 4,
+                                                "line": 8,
                                                 "column": 2,
-                                                "offset": 41
+                                                "offset": 86
                                             },
                                             "end": {
-                                                "line": 4,
+                                                "line": 8,
                                                 "column": 156,
-                                                "offset": 195
+                                                "offset": 240
                                             },
                                             "indent": []
                                         }
@@ -69,14 +90,14 @@
                                 ],
                                 "position": {
                                     "start": {
-                                        "line": 4,
+                                        "line": 8,
                                         "column": 1,
-                                        "offset": 40
+                                        "offset": 85
                                     },
                                     "end": {
-                                        "line": 4,
+                                        "line": 8,
                                         "column": 157,
-                                        "offset": 196
+                                        "offset": 241
                                     },
                                     "indent": []
                                 }
@@ -84,14 +105,14 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 4,
+                                "line": 8,
                                 "column": 1,
-                                "offset": 40
+                                "offset": 85
                             },
                             "end": {
-                                "line": 4,
+                                "line": 8,
                                 "column": 157,
-                                "offset": 196
+                                "offset": 241
                             },
                             "indent": []
                         }
@@ -104,14 +125,14 @@
                                 "value": "See the ",
                                 "position": {
                                     "start": {
-                                        "line": 6,
+                                        "line": 10,
                                         "column": 1,
-                                        "offset": 198
+                                        "offset": 243
                                     },
                                     "end": {
-                                        "line": 6,
+                                        "line": 10,
                                         "column": 9,
-                                        "offset": 206
+                                        "offset": 251
                                     },
                                     "indent": []
                                 }
@@ -126,14 +147,14 @@
                                         "value": "full repository here",
                                         "position": {
                                             "start": {
-                                                "line": 6,
+                                                "line": 10,
                                                 "column": 10,
-                                                "offset": 207
+                                                "offset": 252
                                             },
                                             "end": {
-                                                "line": 6,
+                                                "line": 10,
                                                 "column": 30,
-                                                "offset": 227
+                                                "offset": 272
                                             },
                                             "indent": []
                                         }
@@ -141,14 +162,14 @@
                                 ],
                                 "position": {
                                     "start": {
-                                        "line": 6,
+                                        "line": 10,
                                         "column": 9,
-                                        "offset": 206
+                                        "offset": 251
                                     },
                                     "end": {
-                                        "line": 6,
+                                        "line": 10,
                                         "column": 88,
-                                        "offset": 285
+                                        "offset": 330
                                     },
                                     "indent": []
                                 }
@@ -158,14 +179,14 @@
                                 "value": ".",
                                 "position": {
                                     "start": {
-                                        "line": 6,
+                                        "line": 10,
                                         "column": 88,
-                                        "offset": 285
+                                        "offset": 330
                                     },
                                     "end": {
-                                        "line": 6,
+                                        "line": 10,
                                         "column": 89,
-                                        "offset": 286
+                                        "offset": 331
                                     },
                                     "indent": []
                                 }
@@ -173,14 +194,14 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 6,
+                                "line": 10,
                                 "column": 1,
-                                "offset": 198
+                                "offset": 243
                             },
                             "end": {
-                                "line": 6,
+                                "line": 10,
                                 "column": 89,
-                                "offset": 286
+                                "offset": 331
                             },
                             "indent": []
                         }
@@ -194,14 +215,14 @@
                                 "value": "Goals and Context",
                                 "position": {
                                     "start": {
-                                        "line": 8,
+                                        "line": 12,
                                         "column": 4,
-                                        "offset": 291
+                                        "offset": 336
                                     },
                                     "end": {
-                                        "line": 8,
+                                        "line": 12,
                                         "column": 21,
-                                        "offset": 308
+                                        "offset": 353
                                     },
                                     "indent": []
                                 }
@@ -209,14 +230,14 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 8,
+                                "line": 12,
                                 "column": 1,
-                                "offset": 288
+                                "offset": 333
                             },
                             "end": {
-                                "line": 8,
+                                "line": 12,
                                 "column": 21,
-                                "offset": 308
+                                "offset": 353
                             },
                             "indent": []
                         }
@@ -229,14 +250,14 @@
                                 "value": "As part of the ",
                                 "position": {
                                     "start": {
-                                        "line": 10,
+                                        "line": 14,
                                         "column": 1,
-                                        "offset": 310
+                                        "offset": 355
                                     },
                                     "end": {
-                                        "line": 10,
+                                        "line": 14,
                                         "column": 16,
-                                        "offset": 325
+                                        "offset": 370
                                     },
                                     "indent": []
                                 }
@@ -251,14 +272,14 @@
                                         "value": "Rust Raytracer",
                                         "position": {
                                             "start": {
-                                                "line": 10,
+                                                "line": 14,
                                                 "column": 17,
-                                                "offset": 326
+                                                "offset": 371
                                             },
                                             "end": {
-                                                "line": 10,
+                                                "line": 14,
                                                 "column": 31,
-                                                "offset": 340
+                                                "offset": 385
                                             },
                                             "indent": []
                                         }
@@ -266,14 +287,14 @@
                                 ],
                                 "position": {
                                     "start": {
-                                        "line": 10,
+                                        "line": 14,
                                         "column": 16,
-                                        "offset": 325
+                                        "offset": 370
                                     },
                                     "end": {
-                                        "line": 10,
+                                        "line": 14,
                                         "column": 66,
-                                        "offset": 375
+                                        "offset": 420
                                     },
                                     "indent": []
                                 }
@@ -283,14 +304,14 @@
                                 "value": ", I've been looking into leaning how to do multithreaded programming in Rust. The scenario I have in mind is to split the render buffer into tiles and let separate threads render each time, where the number of worker threads is a variable.",
                                 "position": {
                                     "start": {
-                                        "line": 10,
+                                        "line": 14,
                                         "column": 66,
-                                        "offset": 375
+                                        "offset": 420
                                     },
                                     "end": {
-                                        "line": 10,
+                                        "line": 14,
                                         "column": 305,
-                                        "offset": 614
+                                        "offset": 659
                                     },
                                     "indent": []
                                 }
@@ -298,14 +319,14 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 10,
+                                "line": 14,
                                 "column": 1,
-                                "offset": 310
+                                "offset": 355
                             },
                             "end": {
-                                "line": 10,
+                                "line": 14,
                                 "column": 305,
-                                "offset": 614
+                                "offset": 659
                             },
                             "indent": []
                         }
@@ -318,14 +339,14 @@
                                 "value": "This requires some mechanism where a pool of threads is created, the tiles are dispatched to the threads awaiting work (i.e. some simple ",
                                 "position": {
                                     "start": {
-                                        "line": 12,
+                                        "line": 16,
                                         "column": 1,
-                                        "offset": 616
+                                        "offset": 661
                                     },
                                     "end": {
-                                        "line": 12,
+                                        "line": 16,
                                         "column": 138,
-                                        "offset": 753
+                                        "offset": 798
                                     },
                                     "indent": []
                                 }
@@ -340,14 +361,14 @@
                                         "value": "scheduling algorithm",
                                         "position": {
                                             "start": {
-                                                "line": 12,
+                                                "line": 16,
                                                 "column": 139,
-                                                "offset": 754
+                                                "offset": 799
                                             },
                                             "end": {
-                                                "line": 12,
+                                                "line": 16,
                                                 "column": 159,
-                                                "offset": 774
+                                                "offset": 819
                                             },
                                             "indent": []
                                         }
@@ -355,14 +376,14 @@
                                 ],
                                 "position": {
                                     "start": {
-                                        "line": 12,
+                                        "line": 16,
                                         "column": 138,
-                                        "offset": 753
+                                        "offset": 798
                                     },
                                     "end": {
-                                        "line": 12,
+                                        "line": 16,
                                         "column": 237,
-                                        "offset": 852
+                                        "offset": 897
                                     },
                                     "indent": []
                                 }
@@ -372,14 +393,14 @@
                                 "value": "), the tiles then rendered to a memory buffer, that then is passed back to the main thread to be copied into the main buffer.",
                                 "position": {
                                     "start": {
-                                        "line": 12,
+                                        "line": 16,
                                         "column": 237,
-                                        "offset": 852
+                                        "offset": 897
                                     },
                                     "end": {
-                                        "line": 12,
+                                        "line": 16,
                                         "column": 362,
-                                        "offset": 977
+                                        "offset": 1022
                                     },
                                     "indent": []
                                 }
@@ -387,14 +408,14 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 12,
+                                "line": 16,
                                 "column": 1,
-                                "offset": 616
+                                "offset": 661
                             },
                             "end": {
-                                "line": 12,
+                                "line": 16,
                                 "column": 362,
-                                "offset": 977
+                                "offset": 1022
                             },
                             "indent": []
                         }
@@ -408,14 +429,14 @@
                                 "value": "Source code",
                                 "position": {
                                     "start": {
-                                        "line": 14,
+                                        "line": 18,
                                         "column": 4,
-                                        "offset": 982
+                                        "offset": 1027
                                     },
                                     "end": {
-                                        "line": 14,
+                                        "line": 18,
                                         "column": 15,
-                                        "offset": 993
+                                        "offset": 1038
                                     },
                                     "indent": []
                                 }
@@ -423,14 +444,14 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 14,
+                                "line": 18,
                                 "column": 1,
-                                "offset": 979
+                                "offset": 1024
                             },
                             "end": {
-                                "line": 14,
+                                "line": 18,
                                 "column": 15,
-                                "offset": 993
+                                "offset": 1038
                             },
                             "indent": []
                         }
@@ -444,14 +465,14 @@
                                 "value": "TODO",
                                 "position": {
                                     "start": {
-                                        "line": 16,
+                                        "line": 20,
                                         "column": 5,
-                                        "offset": 999
+                                        "offset": 1044
                                     },
                                     "end": {
-                                        "line": 16,
+                                        "line": 20,
                                         "column": 9,
-                                        "offset": 1003
+                                        "offset": 1048
                                     },
                                     "indent": []
                                 }
@@ -459,14 +480,14 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 16,
+                                "line": 20,
                                 "column": 1,
-                                "offset": 995
+                                "offset": 1040
                             },
                             "end": {
-                                "line": 16,
+                                "line": 20,
                                 "column": 9,
-                                "offset": 1003
+                                "offset": 1048
                             },
                             "indent": []
                         }
@@ -490,14 +511,14 @@
                                                 "value": "How do I generalize this for more than just i32?",
                                                 "position": {
                                                     "start": {
-                                                        "line": 18,
+                                                        "line": 22,
                                                         "column": 3,
-                                                        "offset": 1007
+                                                        "offset": 1052
                                                     },
                                                     "end": {
-                                                        "line": 18,
+                                                        "line": 22,
                                                         "column": 51,
-                                                        "offset": 1055
+                                                        "offset": 1100
                                                     },
                                                     "indent": []
                                                 }
@@ -505,14 +526,14 @@
                                         ],
                                         "position": {
                                             "start": {
-                                                "line": 18,
+                                                "line": 22,
                                                 "column": 3,
-                                                "offset": 1007
+                                                "offset": 1052
                                             },
                                             "end": {
-                                                "line": 18,
+                                                "line": 22,
                                                 "column": 51,
-                                                "offset": 1055
+                                                "offset": 1100
                                             },
                                             "indent": []
                                         }
@@ -520,14 +541,14 @@
                                 ],
                                 "position": {
                                     "start": {
-                                        "line": 18,
+                                        "line": 22,
                                         "column": 1,
-                                        "offset": 1005
+                                        "offset": 1050
                                     },
                                     "end": {
-                                        "line": 18,
+                                        "line": 22,
                                         "column": 51,
-                                        "offset": 1055
+                                        "offset": 1100
                                     },
                                     "indent": []
                                 }
@@ -545,14 +566,14 @@
                                                 "value": "How do shared blocks of memory work?",
                                                 "position": {
                                                     "start": {
-                                                        "line": 19,
+                                                        "line": 23,
                                                         "column": 3,
-                                                        "offset": 1058
+                                                        "offset": 1103
                                                     },
                                                     "end": {
-                                                        "line": 19,
+                                                        "line": 23,
                                                         "column": 39,
-                                                        "offset": 1094
+                                                        "offset": 1139
                                                     },
                                                     "indent": []
                                                 }
@@ -560,14 +581,14 @@
                                         ],
                                         "position": {
                                             "start": {
-                                                "line": 19,
+                                                "line": 23,
                                                 "column": 3,
-                                                "offset": 1058
+                                                "offset": 1103
                                             },
                                             "end": {
-                                                "line": 19,
+                                                "line": 23,
                                                 "column": 39,
-                                                "offset": 1094
+                                                "offset": 1139
                                             },
                                             "indent": []
                                         }
@@ -575,14 +596,14 @@
                                 ],
                                 "position": {
                                     "start": {
-                                        "line": 19,
+                                        "line": 23,
                                         "column": 1,
-                                        "offset": 1056
+                                        "offset": 1101
                                     },
                                     "end": {
-                                        "line": 19,
+                                        "line": 23,
                                         "column": 39,
-                                        "offset": 1094
+                                        "offset": 1139
                                     },
                                     "indent": []
                                 }
@@ -590,14 +611,14 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 18,
+                                "line": 22,
                                 "column": 1,
-                                "offset": 1005
+                                "offset": 1050
                             },
                             "end": {
-                                "line": 19,
+                                "line": 23,
                                 "column": 39,
-                                "offset": 1094
+                                "offset": 1139
                             },
                             "indent": [
                                 1
@@ -611,14 +632,14 @@
                         "value": "use rand::seq::SliceRandom;\nuse rand::thread_rng;\nuse std::sync::mpsc::{channel, Receiver, Sender};\nuse std::thread;\n\nfn create_thread_pool(thread_count: usize) -> (Vec<Sender<i32>>, Receiver<i32>) {\n    // Create a vector of Senders, one for each worker thread that is created.\n    // This is used to send work requests to the worker thread from the parent.\n    let mut pool_tx = Vec::new();\n\n    // Create the parent channel, which is used for the worker threads to\n    // send finished work back.\n    let (parent_tx, parent_rx): (Sender<i32>, Receiver<i32>) = channel();\n\n    // Create the pool of threads\n    for id in 0..thread_count {\n        let tx = Sender::clone(&parent_tx);\n        let (thread_tx, thread_rx) = channel();\n        pool_tx.push(thread_tx);\n\n        // Give the thread a cloned handle to the send the result of its work\n        // to the parent thread.\n\n        thread::spawn(move || {\n            println!(\"Starting thread {}...\", id);\n            // Loop over potentially multiple requests\n            while let Ok(num) = thread_rx.recv() {\n                thread::sleep(std::time::Duration::from_millis((15 * num) as u64));\n                tx.send(num).unwrap()\n            }\n            println!(\"Ending thread {}.\", id);\n        });\n    }\n    // Remove the \"outer\" reference to the parent Sender. If this reference is left\n    // open, then receiving channel will not close even after all threads complete.\n    drop(parent_tx);\n\n    (pool_tx, parent_rx)\n}\n\nfn main() {\n    let (mut pool_tx, parent_rx) = create_thread_pool(16);\n\n    // Send the work requests to the threads. Clear the vector as soon as all the\n    // work has been sent to let the worker threads know finish.\n    let mut rng = thread_rng();\n    let mut a = (0..100).collect::<Vec<usize>>();\n    a.shuffle(&mut rng);\n    for i in a {\n        let tx = &pool_tx[i % pool_tx.len()];\n        let value = (i * 2) as i32;\n        tx.send(value).unwrap();\n    }\n    pool_tx.clear();\n\n    let mut count = 0;\n    for received in parent_rx {\n        count += 1;\n        println!(\"Received ({} total): value = {}\", count, received);\n    }\n}",
                         "position": {
                             "start": {
-                                "line": 21,
+                                "line": 25,
                                 "column": 1,
-                                "offset": 1096
+                                "offset": 1141
                             },
                             "end": {
-                                "line": 83,
+                                "line": 87,
                                 "column": 4,
-                                "offset": 3233
+                                "offset": 3278
                             },
                             "indent": [
                                 1,
@@ -694,11 +715,15 @@
                         "offset": 0
                     },
                     "end": {
-                        "line": 83,
+                        "line": 87,
                         "column": 4,
-                        "offset": 3233
+                        "offset": 3278
                     }
                 }
+            },
+            "properties": {
+                "specialprop": "my_value",
+                "prop2": "test123"
             },
             "title": "Multi-threaded Worker Queue in Rust"
         },
@@ -811,6 +836,7 @@
                     }
                 }
             },
+            "properties": {},
             "title": "Hello World"
         }
     ],
