@@ -807,7 +807,7 @@
                     },
                     {
                         "type": "jsx",
-                        "value": "<Component arg={1} />",
+                        "value": "<Component arg={1}>\n    There's something here.\n</Component>",
                         "position": {
                             "start": {
                                 "line": 6,
@@ -815,9 +815,136 @@
                                 "offset": 30
                             },
                             "end": {
-                                "line": 6,
-                                "column": 22,
-                                "offset": 51
+                                "line": 8,
+                                "column": 13,
+                                "offset": 90
+                            },
+                            "indent": [
+                                1,
+                                1
+                            ]
+                        }
+                    },
+                    {
+                        "type": "jsx",
+                        "value": "<Component arg={28}>\n    <Cat/>\n    <Dog/>\n</Component>",
+                        "position": {
+                            "start": {
+                                "line": 10,
+                                "column": 1,
+                                "offset": 92
+                            },
+                            "end": {
+                                "line": 13,
+                                "column": 13,
+                                "offset": 147
+                            },
+                            "indent": [
+                                1,
+                                1,
+                                1
+                            ]
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "What about ",
+                                "position": {
+                                    "start": {
+                                        "line": 16,
+                                        "column": 1,
+                                        "offset": 150
+                                    },
+                                    "end": {
+                                        "line": 16,
+                                        "column": 12,
+                                        "offset": 161
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "jsx",
+                                "value": "<Component>",
+                                "position": {
+                                    "start": {
+                                        "line": 16,
+                                        "column": 12,
+                                        "offset": 161
+                                    },
+                                    "end": {
+                                        "line": 16,
+                                        "column": 23,
+                                        "offset": 172
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": "test",
+                                "position": {
+                                    "start": {
+                                        "line": 16,
+                                        "column": 23,
+                                        "offset": 172
+                                    },
+                                    "end": {
+                                        "line": 16,
+                                        "column": 27,
+                                        "offset": 176
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "jsx",
+                                "value": "</Component>",
+                                "position": {
+                                    "start": {
+                                        "line": 16,
+                                        "column": 27,
+                                        "offset": 176
+                                    },
+                                    "end": {
+                                        "line": 16,
+                                        "column": 39,
+                                        "offset": 188
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": ", does this work?",
+                                "position": {
+                                    "start": {
+                                        "line": 16,
+                                        "column": 39,
+                                        "offset": 188
+                                    },
+                                    "end": {
+                                        "line": 16,
+                                        "column": 56,
+                                        "offset": 205
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 16,
+                                "column": 1,
+                                "offset": 150
+                            },
+                            "end": {
+                                "line": 16,
+                                "column": 56,
+                                "offset": 205
                             },
                             "indent": []
                         }
@@ -830,9 +957,9 @@
                         "offset": 0
                     },
                     "end": {
-                        "line": 8,
+                        "line": 17,
                         "column": 1,
-                        "offset": 53
+                        "offset": 206
                     }
                 }
             },
