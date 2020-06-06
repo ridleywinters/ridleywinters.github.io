@@ -126,7 +126,6 @@ export default function MDXPage({
                     wikilink : (h, node) => {
                         console.log(database, page)
                         let match = _.find(database.pages, (page) => page.id == node.id);
-                        console.log('M', match);
 
                         // Link to Github to create a new file if there is not a match.
                         // An inexpensive way to create a wiki.
