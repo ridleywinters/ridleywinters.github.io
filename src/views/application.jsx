@@ -3,6 +3,8 @@ import Router from '../base/routing/router.jsx';
 import Layout from './layout.jsx';
 import RustProducerConsumer from './pages/rust_producer_consumer.jsx';
 import RustRaytracer from './pages/rust_raytracer.jsx';
+import database from '../database.json';
+
 
 function HelloWorld({ name }) {
     return (
@@ -54,16 +56,37 @@ function HelloWorld({ name }) {
     );
 }
 
+const remark = require('remark');
+import remark2react from 'remark-react'
 
+function MDXPage({ast}) {
+
+    const contents = remark()
+        .use(remark2react)
+        .processSync(ast)
+
+    let text = contents.result;
+    return (
+        <div>
+            <div>{text}</div>
+        </div>
+    )
+}
 
 export default function Application() {
+
+    console.log(database);
+
+    const routes = {
+        'challenges-rust_raytracer': () => <RustRaytracer />,
+        'challenges-rust_producer_consumer': () => <RustProducerConsumer />,
+        'test': () => <MDXPage ast={database.test.content} />
+    };
+
     return (
         <Layout>
             <Router
-                routes={{
-                    'challenges-rust_raytracer': () => <RustRaytracer />,
-                    'challenges-rust_producer_consumer': () => <RustProducerConsumer />,
-                }}
+                routes={routes}
                 defaultRoute={() => <HelloWorld name="World" />}
             />
         </Layout>

@@ -1,0 +1,178 @@
+{
+    "test": {
+        "ast": {
+            "type": "root",
+            "children": [
+                {
+                    "type": "heading",
+                    "depth": 1,
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Hello World",
+                            "position": {
+                                "start": {
+                                    "line": 2,
+                                    "column": 3,
+                                    "offset": 3
+                                },
+                                "end": {
+                                    "line": 2,
+                                    "column": 14,
+                                    "offset": 14
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 2,
+                            "column": 1,
+                            "offset": 1
+                        },
+                        "end": {
+                            "line": 2,
+                            "column": 14,
+                            "offset": 14
+                        },
+                        "indent": []
+                    }
+                },
+                {
+                    "type": "paragraph",
+                    "children": [
+                        {
+                            "type": "text",
+                            "value": "Hello world!",
+                            "position": {
+                                "start": {
+                                    "line": 4,
+                                    "column": 1,
+                                    "offset": 16
+                                },
+                                "end": {
+                                    "line": 4,
+                                    "column": 13,
+                                    "offset": 28
+                                },
+                                "indent": []
+                            }
+                        }
+                    ],
+                    "position": {
+                        "start": {
+                            "line": 4,
+                            "column": 1,
+                            "offset": 16
+                        },
+                        "end": {
+                            "line": 4,
+                            "column": 13,
+                            "offset": 28
+                        },
+                        "indent": []
+                    }
+                },
+                {
+                    "type": "code",
+                    "value": "<Component arg={1} />",
+                    "position": {
+                        "start": {
+                            "line": 6,
+                            "column": 1,
+                            "offset": 30
+                        },
+                        "end": {
+                            "line": 6,
+                            "column": 22,
+                            "offset": 51
+                        },
+                        "indent": []
+                    }
+                }
+            ],
+            "position": {
+                "start": {
+                    "line": 1,
+                    "column": 1,
+                    "offset": 0
+                },
+                "end": {
+                    "line": 8,
+                    "column": 1,
+                    "offset": 53
+                }
+            }
+        },
+        "content": {
+            "data": {},
+            "messages": [],
+            "history": [
+                "data/test.mdx"
+            ],
+            "cwd": "/home/bcronin/workspace/sc-repo/source/html/sites/ridleywinters.github.io",
+            "contents": "# Hello World\n\nHello world!\n\n    <Component arg={1} />\n",
+            "result": {
+                "key": null,
+                "ref": null,
+                "props": {
+                    "children": [
+                        {
+                            "type": "h1",
+                            "key": "h-2",
+                            "ref": null,
+                            "props": {
+                                "children": [
+                                    "Hello World"
+                                ]
+                            },
+                            "_owner": null,
+                            "_store": {}
+                        },
+                        "\n",
+                        {
+                            "type": "p",
+                            "key": "h-3",
+                            "ref": null,
+                            "props": {
+                                "children": [
+                                    "Hello world!"
+                                ]
+                            },
+                            "_owner": null,
+                            "_store": {}
+                        },
+                        "\n",
+                        {
+                            "type": "pre",
+                            "key": "h-4",
+                            "ref": null,
+                            "props": {
+                                "children": [
+                                    {
+                                        "type": "code",
+                                        "key": "h-5",
+                                        "ref": null,
+                                        "props": {
+                                            "children": [
+                                                "<Component arg={1} />\n"
+                                            ]
+                                        },
+                                        "_owner": null,
+                                        "_store": {}
+                                    }
+                                ]
+                            },
+                            "_owner": null,
+                            "_store": {}
+                        }
+                    ]
+                },
+                "_owner": null,
+                "_store": {}
+            }
+        },
+        "id": "test"
+    }
+}

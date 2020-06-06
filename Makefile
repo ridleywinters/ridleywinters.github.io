@@ -4,11 +4,11 @@ ensure:
 	@[ -d "node_modules" ] || npm install
 
 build: ensure
+	npx babel-node build.js
 	npx parcel build src/client.jsx
 	sed -i -E "s/URL=\/client.js.map/URL=\/dist\/client.js.map/" dist/client.js
 
 publish: build
-	@true || git diff --quiet
 	bash $(MONOREPO_ROOT)/deploy/scripts/push-from-monorepo.sh \
 		monorepo ridleywinters git@github.com:ridleywinters/ridleywinters.github.io
 

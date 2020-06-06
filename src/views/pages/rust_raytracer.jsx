@@ -2,6 +2,7 @@ import React from 'react';
 
 import Disclaimer from '../disclaimer.jsx';
 import CodeBlock from '../code_block.jsx'
+import MarkdownBlock from '../markdown_block.jsx';
 
 function Section({ name, children }) {
     return (
@@ -67,17 +68,21 @@ export default function RustRaytracer() {
                         We'll move quickly through this section of the challenge as the goal is writing the
                         raytracer, not setting up the Rust toolchain.
                     </p>
-                    <pre>{`
+                    <MarkdownBlock text={`
+\`\`\`
 $ cargo new rust_raytracer --bin
 $ cargo build
+\`\`\`
 
+\`\`\`
 Add .gitignore
         /target/                    
-
+\`\`\`
     
 Makefile
-        Link to zero-config musings        
-`}</pre>
+        Link to zero-config musings                          
+                    `} />
+
 
                 </section>
                 <section>

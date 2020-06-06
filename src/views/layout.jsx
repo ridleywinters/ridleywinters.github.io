@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Layout({ children }) {
     return (
-        <div>
+        <div className="c-layout">
             <div style={{
                 padding: '12px 2rem 6px',
                 backgroundColor: '#ACF',
