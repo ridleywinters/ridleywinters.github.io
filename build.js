@@ -134,7 +134,7 @@ async function scanDatabase(databaseName) {
 
 (async () => {
     const database = await scanDatabase("ridley");
-    console.log(database);
+    console.log('Rebuilt database');
     fs.writeFileSync('./src/database.json', JSON.stringify(database, null, 4));
 })();
 

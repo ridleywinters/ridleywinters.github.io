@@ -1,0 +1,89 @@
+# Webpack Notes
+
+## Goals, constraints, and background
+
+* Background
+    * I started with Deno to avoid Babel configuration, but how to build client React code was not clear to me
+    * Webpack complex-feeling configuration turned me to try parcel
+    * Parcel does not seem to do hot loading or impl
+* Goals
+    * Minimal configuration webpack development server
+
+
+## Installation
+
+```bash
+npm i --save-dev webpack webpack-cli webpack-dev-server
+npm i --save-dev babel-loader
+```
+
+```make
+dev:
+    npx webpack-dev-server
+```
+
+* Using `npx` so global installs are not needed
+
+
+## Babel configuration
+
+In `webpack.config.js`:
+
+```js
+module.exports = {
+    module: {
+        rules: [
+            {
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader"
+                }
+            }
+        ]
+    }
+};
+```
+
+## Makefile configuration
+
+* Goals
+    * Want `nodemon` watching the database
+    * Want `webpack-dev-server` watching the source code
+    * Want to hide this in a single `make` command
+* Constraints
+    * Make doesn't seem to directly support running multiple processes in the background as part of the command
+
+### Approach
+
+* Use `make`'s `define` command and `export` command to create a long-string
+* Encapsulate the bash script to run multiple watchers in that long-string
+
+```make
+#
+# Use a bash script since we want a single make command to run multiple
+# background processes.
+#
+define DEV_SCRIPT
+shutdown() {
+    echo kill $(jobs -l |awk '$2 == "|" {print $1; next} {print $2}')
+    kill $(jobs -l |awk '$2 == "|" {print $1; next} {print $2}')
+    exit 0
+}
+trap "shutdown" SIGINT SIGTERM
+
+npx nodemon --watch data --ext js,jsx,mdx --exec make build-database &
+
+npx webpack-dev-server \
+		--mode development \
+		--entry ./src/client.jsx \
+		--output-filename client.bundle.js &
+wait
+endef
+export DEV_SCRIPT
+
+dev:
+	bash -c "$$DEV_SCRIPT"
+```
+
+

@@ -1,16 +1,15 @@
-# Multi-threaded Worker Queue in Rust
+---
+status: draft
+---
+
+# Multithreaded Worker Queue in Rust
 
 _Note: this was originally going to be an article on the Producer-Consumer pattern, but it went a different direction. I need to clean up the naming a bit!_
 
 See the [full repository here](https://github.com/ridleywinters/rust-producer-consumer).
 
-## Preface
-
-* **This is a work in progress!**
-* **I'm still learning so please [file an issue](https://github.com/ridleywinters/ridleywinters.github.io/issues) if there are mistakes here!**
-
 ## Goals and Context
-1
+
 As part of the [Rust Raytracer](/?page=challenges-rust_raytracer), I've been looking into leaning how to do multithreaded programming in Rust. The scenario I have in mind is to split the render buffer into tiles and let separate threads render each time, where the number of worker threads is a variable.
 
 This requires some mechanism where a pool of threads is created, the tiles are dispatched to the threads awaiting work (i.e. some simple [scheduling algorithm](https://en.wikipedia.org/wiki/Scheduling_(computing)#Scheduling_disciplines)), the tiles then rendered to a memory buffer, that then is passed back to the main thread to be copied into the main buffer.

@@ -1,0 +1,20 @@
+/**
+ * Converts an arbitrary string into a string that can be safely used as an identifier in
+ * many contexts (e.g. variable names, filenames).
+ *
+ * Note the implementation _does not_ provide a unique mapping. Callers converting sets of
+ * strings should check for potential collisions.
+ *
+ * @todo Consider a "mode" for variables, filenames, urls, etc.
+ */
+export function normalizeID(s) {
+    return s
+        .trim()
+        .toLowerCase()
+        .replace(/[^a-z0-9\-._]/g, '_')
+        .replace(/__+/g, '_')
+        .replace(/^_+/, '')
+        .replace(/_+$/, '')
+        .substr(0, 120)
+    ;
+}

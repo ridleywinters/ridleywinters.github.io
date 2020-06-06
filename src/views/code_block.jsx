@@ -5,6 +5,9 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 // Modified from:
 //import theme from 'react-syntax-highlighter/dist/esm/styles/prism/vs';
 const theme = {
+    "code": {
+      "fontSize": "0.90em",
+    },
     "code[class*=\"language-\"]": {
       "color": "#393A34",
       "fontFamily": "\"Courier Prime\", \"Consolas\", \"Bitstream Vera Sans Mono\", \"Courier New\", Courier, monospace",
@@ -13,7 +16,6 @@ const theme = {
       "whiteSpace": "pre",
       "wordSpacing": "normal",
       "wordBreak": "normal",
-      "fontSize": "0.90em",
       "lineHeight": "1.2em",
       "MozTabSize": "4",
       "OTabSize": "4",
@@ -31,7 +33,6 @@ const theme = {
       "whiteSpace": "pre",
       "wordSpacing": "normal",
       "wordBreak": "normal",
-      "fontSize": "0.90em",
       "lineHeight": "1.2em",
       "MozTabSize": "4",
       "OTabSize": "4",

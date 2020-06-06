@@ -19,6 +19,9 @@ base.setHTMLProperties({
         "a, a:visited": {
             color: 'rgb(31, 136, 180)',
         },
+        "code" : {
+            fontSize: '0.85rem'
+        },
         "body": {
             fontFamily: 'Catamaran',
         },
