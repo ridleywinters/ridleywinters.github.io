@@ -90,7 +90,7 @@ export default function MDXPage({page}) {
                     code : (h, node) => {
                         return {
                             type : 'element',
-                            tagName : 'code',
+                            tagName : 'codeblock',
                             properties : {
                                 language  : node.lang,
                                 value : node.value,
@@ -106,7 +106,7 @@ export default function MDXPage({page}) {
             createElement : (tag, props, children) => {
                 tag = {
                     a : MyLink,
-                    code : MyCodeBlock,
+                    codeblock : MyCodeBlock,
                 }[tag] || tag;
                 return React.createElement(tag, props, children);
             },
