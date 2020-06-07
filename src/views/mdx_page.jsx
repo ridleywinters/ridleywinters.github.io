@@ -176,12 +176,14 @@ export default function MDXPage({
                         // Link to Github to create a new file if there is not a match.
                         // An inexpensive way to create a wiki.
                         let href;
+                        let title = node.text;
                         if (match) {
                             href = `/?page=${node.id}`;
+                            title = match.title || node.text;
                         } else {
                             const repo = `ridleywinters/ridleywinters.github.io`;
                             const dbpath = 'data/ridley'
-                            href = `https://github.com/${repo}/new/master/${dbpath}/pages?filename=${node.id}.mdx`;
+                            href = `https://github.com/${repo}/new/master/${dbpath}/pages/q?filename=${node.id}.mdx`;
                         }
 
 
@@ -192,7 +194,7 @@ export default function MDXPage({
                                 href,
                             },
                             children: [
-                                { type: 'text', value: node.text }
+                                { type: 'text', value: title }
                             ]
                         }
                     },
