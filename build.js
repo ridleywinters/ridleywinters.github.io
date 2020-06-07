@@ -173,10 +173,6 @@ async function postprocessMDX({ entry }) {
         return node;
     })
 
-    visit(entry.ast, 'code', node => {
-
-    });
-
     //
     // Assign each entry a title based on the first heading, using the
     // entry id as a default.
@@ -255,6 +251,41 @@ async function scanDatabase(databaseName) {
         type: 'components',
         extension: 'jsx',
     });
+
+    const words = {};
+    database.pages.forEach((page) => {
+        visit(page.ast, 'text', node => {
+            let s = node.value;
+            if (!s) {
+                return;
+            }
+            s = s.replace(/[!?.,()\"\'{}\/&^*@:]/g, ' ');
+
+            s.trim().split(/\s+/g).forEach((word) => {
+                word = word.trim().toLowerCase();
+                if (word.length === 0 || !word.match(/[a-z]/i)) {
+                    return;
+                }
+                words[word] = words[word] || {};
+                words[word][page.id] = true;
+            });
+        });
+    });
+
+    // Rather than blacklist common words like "this", "that", "to", instead filter any
+    // word that's being used in over a third of the pages: the intention of this list is
+    // to highlight interesting commonalities between pages. If over 1/3rd of the pages
+    // reference something, it's difficult to say it's calling out an "interesting" bit of
+    // information.
+    _.each(words, (value, key) => {
+        const list = Object.keys(value);
+        if (list.length > 1 && list.length < database.pages.length / 3) {
+            words[key] = list.sort();
+        } else {
+            delete words[key];
+        }
+    });
+    database.index_words = words;
 
     return database;
 }

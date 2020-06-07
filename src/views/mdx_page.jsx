@@ -147,6 +147,56 @@ function Status({
     }
 }
 
+function RelatedArticles({ database, page }) {
+
+    const pages = _.keyBy(database.pages, 'id');
+    
+    // This absurd functional chain is taking the set of keywords on this
+    // page and unioning it with the set of pages that also have that keyword.
+    const related = _.chain(database.index_words)
+        .map((list, word) => {
+            for (let i = 0; i < list.length; i++) {
+                if (list[i] === page.id) {
+                    return word;
+                }
+            }
+            return null;
+        })
+        .compact()
+        .sort()
+        .uniq()
+        .map((word) => database.index_words[word])
+        .flatten()
+        .compact()
+        .sort()
+        .filter((id) => id !== page.id)
+        .uniq()
+        .value();
+
+    return (
+        <div
+            style={{
+                margin: '8rem 0 2rem'
+            }}
+        >
+            <h3>Similar pages</h3>
+            <div>
+                {_.map(related, (id, index) => (
+                    <span key={id}>
+                        <MDXLink href={`/?page=${id}`}>{pages[id].title}</MDXLink>
+                        {index + 1 < related.length
+                            ?
+                            <span style={{ paddingRight: '0.5rem' }}>,</span>
+                            :
+                            null
+                        }
+                    </span>
+                ))}
+            </div>
+        </div>
+    );
+}
+
 /**
  * remark2react converts the mdast -> hast -> react components. Some data is lost in the
  * conversion through hast, for example the "language" on a code block.
@@ -231,10 +281,6 @@ export default function MDXPage({
             // clean-up remark-react does).
             createElement: (tag, props, children) => {
 
-                if (tag === 'codeblock') {
-                    console.log(tag, props, children)
-                }
-
                 tag = {
                     a: MDXLink,
                     p: MDXParagraph,
@@ -253,6 +299,7 @@ export default function MDXPage({
         <MDXLayout>
             <Status database={database} page={page} />
             <div>{components}</div>
+            <RelatedArticles database={database} page={page} />
         </MDXLayout>
     )
 }
