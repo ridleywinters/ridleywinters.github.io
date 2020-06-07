@@ -4,6 +4,7 @@ const mdx = require('remark-mdx');
 const visit = require('unist-util-visit');
 const util = require('util');
 var frontmatter = require('remark-frontmatter')
+var unifMap = require('unist-util-map');
 
 const glob = util.promisify(require('glob'));
 
@@ -14,6 +15,102 @@ import YAML from 'yaml';
 
 import wikilinks from './src/codecs/mdx/wikilinks.js'
 
+
+
+import * as babel from '@babel/core';
+
+import babelPresetEnv from '@babel/preset-env';
+import babelPresetReact from '@babel/preset-react';
+
+import babelPlugin0 from '@babel/plugin-proposal-class-properties';
+import babelPlugin1 from '@babel/plugin-proposal-object-rest-spread';
+import babelPlugin2 from '@babel/plugin-proposal-async-generator-functions';
+import babelPlugin3 from '@babel/plugin-transform-async-to-generator';
+
+/**
+ * Given ES6/JSX source code transforms it into a cross-browser JavaScript
+ * that can be run as the source in a Function object.
+ */
+function parseES6(source) {
+    const data = {};
+
+    // All the "work" is in the config file and the installed plugins
+    const options = {
+        configFile: false,
+        'presets': [
+            [
+                babelPresetEnv,
+                {
+                    'targets': {
+                        'browsers': '> 5%',
+                    },
+                },
+            ],
+            babelPresetReact,
+        ],
+        'plugins': [
+            babelPlugin0,
+            babelPlugin1,
+            babelPlugin2,
+            babelPlugin3,
+        ],
+        parserOpts: {
+            allowReturnOutsideFunction: true,
+        },
+    };
+    let result = babel.transformSync(source, options);
+
+    data.err = null;
+    data.source = source;
+    data.result = result;
+    data.compiled = _.get(result, 'code', 'throw new Error(\'compilation failed\')');
+
+    const code = [
+        '(function() {',
+        data.compiled,
+        '})()',
+    ].join('\n');
+    return code;
+}
+
+function parseES6Expression(expr) {
+    return parseES6(`return (${expr})`);
+}
+
+/**
+ * context is a map of variable names to values
+ */
+function evaluateJSExpression(sourceExpr, context = {}) {
+    const f = new Function(...Object.keys(context), `return (${sourceExpr})`);
+    return f(...Object.values(context));
+}
+
+function evaluateDefaultExport(source, additionalContext = {}) {
+    const exports = {};
+    const context = {
+        ...additionalContext,
+        exports,
+    };
+    let f;
+    try {
+        f = new Function(...Object.keys(context), source);
+    } catch (err) {
+        // eslint-disable-next-line
+        console.error('Exception constructing function:', source);
+        throw err;
+    }
+    try {
+        f(...Object.values(context));
+    } catch (err) {
+        // eslint-disable-next-line
+        console.error('Exception evaluating:', source);
+        throw err;
+    }
+    return exports.default;
+}
+
+
+
 /**
  * Convert the MDX (Markdown + JSX) to an abstract syntax tree (AST).
  */
@@ -22,7 +119,7 @@ async function processMDXAST({ filename }) {
     const ast = await remark()
         .use(mdx)
         .use(frontmatter, ['yaml', 'toml'])
-        .use(wikilinks, { inlineMode : true })
+        .use(wikilinks, { inlineMode: true })
         .use(() => tree => {
             visit(tree, 'jsx', node => {
                 node.type = "code";
@@ -35,6 +132,8 @@ async function processMDXAST({ filename }) {
 
 async function postprocessMDX({ entry }) {
 
+    entry.tags = [];
+
     //
     // Check for front-matter
     //
@@ -44,6 +143,38 @@ async function postprocessMDX({ entry }) {
         if (entry.properties.title) {
             entry.title = entry.properties.title;
         }
+        if (entry.properties.tags) {
+            if (typeof entry.properties.tags === 'string') {
+                entry.properties.tags = entry.properties.tags.split(',').map((tag) => tag.trim());
+            }
+            entry.tags = entry.properties.tags;
+        }
+    });
+
+    entry.ast = unifMap(entry.ast, (node) => {
+        if (node.type === 'code' && node.lang === 'eval-jsx') {
+            try {
+                const source = `return <React.Fragment>${node.value}</React.Fragment>;`;
+                node.value2 = parseES6(source);
+            } catch (err) {
+                console.log(err);
+                return {
+                    type: 'code',
+                    lang: "jsx",
+                    value: [
+                        "//",
+                        "// Parse error!!!",
+                        "//",
+                    ].join('\n') + '\n' + node.value,
+
+                };
+            }
+        }
+        return node;
+    })
+
+    visit(entry.ast, 'code', node => {
+
     });
 
     //
@@ -54,8 +185,6 @@ async function postprocessMDX({ entry }) {
     //
     if (!entry.title) {
         visit(entry.ast, 'heading', node => {
-
-            console.log(node);
             let text = "";
             visit(node, 'text', node => {
                 text += node.value;
@@ -63,7 +192,6 @@ async function postprocessMDX({ entry }) {
 
             if (text.trim().length > 0) {
                 entry.title = text.trim();
-                console.log(entry.id, '->', entry.title);
                 return false;
             }
         });

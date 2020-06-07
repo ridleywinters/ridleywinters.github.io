@@ -8,13 +8,28 @@ I'm Ridley Winters. This is my website that I use to share some my software engi
 
 I'm still learning so please take everything you find on this site with a grain of salt.
 
-* About
-* Exercises
-    * [Writing a raytracer in Rust](/?page=challenges-rust_raytracer)
-    * [Multithreaded Product-Consumer in Rust](/?page=rust_producer_consumer)
-    * [[End-to-end Development of a Distributed System]]
-* Hobby Projects
-* How To's
-* Musings
-* Product Thoughts
-* Every Day Routine (EDR)
+### Exercises
+
+* [Writing a raytracer in Rust](/?page=challenges-rust_raytracer)
+* [Multithreaded Product-Consumer in Rust](/?page=rust_producer_consumer)
+* [[End-to-end Development of a Distributed System]]
+
+### Hobby Projects
+
+### How To's
+
+```eval-jsx
+<ul>
+{_.map(database.index.tag["how-to"], (page) => (
+        <li key={page.id}>
+            <MDXLink href={`/?page=${page.id}`}>{page.title}</MDXLink>
+        </li>
+    ))}
+</ul>
+```
+
+### Musings
+
+### Product Thoughts
+
+### Every Day Routine (EDR)

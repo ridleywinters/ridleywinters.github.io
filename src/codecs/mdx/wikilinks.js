@@ -79,7 +79,6 @@ function wikilinks(options) {
 		entireShortcode = value.slice(0, endPosition);
 		innerShortcode = value.slice(startBlock.length, endBlockPosition);
 
-		console.log('WL', entireShortcode, innerShortcode)
 		parsedShortcode = parseShortcode(innerShortcode);
 
 		// If there is no parsed data, something fishy is up - return nothing.

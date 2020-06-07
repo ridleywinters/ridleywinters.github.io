@@ -3,6 +3,9 @@
     "@babel/core": "^7.10.1",
     "@babel/node": "^7.10.1",
     "@babel/plugin-proposal-class-properties": "^7.10.1",
+    "@babel/plugin-proposal-async-generator-functions": "^7.10.1",
+    "@babel/plugin-proposal-object-rest-spread": "^7.10.1",
+    "@babel/plugin-transform-async-to-generator": "^7.10.1",
     "@babel/plugin-transform-runtime": "^7.10.1",
     "@babel/preset-env": "^7.10.1",
     "@babel/preset-react": "^7.10.1",
@@ -25,6 +28,7 @@
     "remark-react": "^7.0.1",
     "to-vfile": "^6.1.0",
     "unified": "^9.0.0",
+    "unist-util-map": "^2.0.1",
     "unist-util-visit": "^2.0.2",
     "yaml": "^1.10.0"
   }

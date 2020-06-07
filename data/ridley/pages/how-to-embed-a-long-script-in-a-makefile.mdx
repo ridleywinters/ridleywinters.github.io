@@ -1,30 +1,18 @@
-.PHONY: build publish 
+---
+tags: how-to
+---
 
-ensure:
-	@[ -d "node_modules" ] || npm install
+# How to embed a bash script inside a Makefile
 
-build: ensure
-	npx webpack-cli \
-		--mode production \
-		--entry ./src/client.jsx \
-		--output-public-path dist \
-		--output-filename client.bundle.js	
+Relies on Make's features:
 
-build-database: ensure
-	npx babel-node build.js
+* `define`
+* `export`
 
-publish: build
-	bash $(MONOREPO_ROOT)/deploy/scripts/push-from-monorepo.sh \
-		monorepo ridleywinters git@github.com:ridleywinters/ridleywinters.github.io
+In this particular example, a bash script is used to wrap running multiple background 
+processes together into logically a single Makefile command.
 
-run: build
-	npx http-server -c-1 .
-
-clean:
-	rm -rf .cache
-	rm -rf .parcel-cache
-	rm -rf node_modules
-
+```makefile
 #
 # Use a bash script since we want a single make command to run multiple
 # background processes.
@@ -39,8 +27,6 @@ trap "shutdown" SIGINT SIGTERM
 
 npx nodemon --watch data --ext js,jsx,mdx --exec make build-database &
 
-sleep 1
-
 npx webpack-dev-server \
 		--mode development \
 		--entry ./src/client.jsx \
@@ -52,5 +38,5 @@ export DEV_SCRIPT
 
 dev:
 	@bash -c "$$DEV_SCRIPT"
-
+```
 

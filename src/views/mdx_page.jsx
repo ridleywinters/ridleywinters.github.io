@@ -68,6 +68,28 @@ function MDXCodeBlock({ language, value }) {
     );
 }
 
+function MDXEvalBlock({ db, language, value, value2 }) {
+
+
+    const context = {
+        database: db,
+        _,
+        React,
+        MDXLink,
+        console,
+    };
+    const contextKeys = Object.keys(context);
+    const contextValues = contextKeys.map((key) => context[key]);
+
+    try {
+        const f = new Function(...contextKeys, `return ${value2}`);
+        const e = f(...contextValues);
+        return e;
+    } catch (err) {
+        return (<pre>{JSON.stringify(err, null, 4)}</pre>);
+    }
+}
+
 function MDXParagraph({ children }) {
     return (
         <div style={{
@@ -79,25 +101,50 @@ function MDXParagraph({ children }) {
     )
 }
 
-function DraftNotice() {
-    return (
-        <div
-            style={{
-                margin: '0.5rem 0',
-                padding: '0.5rem 1rem',
-                border: 'solid 1px rgba(80,192,80, 0.25)',
-                borderRadius: '8px',
-                background: 'rgba(80,192,80, 0.25)',
-            }}
-        >
-            <strong>Status: Draft</strong><br />
-            This article is still a work-in-progress. Take what is written here
-            with a grain of salt. 
-            Please feel free to log a 
-            {' '}<a href="https://github.com/ridleywinters/ridleywinters.github.io/issues">GitHub issue</a>{' '}
-            if you see a problem. Thank you!
-        </div>
-    )
+function Status({
+    database,
+    page,
+}) {
+    switch (page.properties.status) {
+        case 'placeholder':
+            return (
+                <div
+                    style={{
+                        margin: '0.5rem 0',
+                        padding: '0.5rem 1rem',
+                        border: 'solid 1px rgba(140,60,80, 0.25)',
+                        borderRadius: '8px',
+                        background: 'rgba(140,60,80, 0.25)',
+                    }}
+                >
+                    <strong>Status: Placeholder</strong><br />
+                    This article isn't ready! Just a reminder to myself that I wanted
+                    to write about this topic.
+                </div>
+            );
+        case 'draft':
+            return (
+                <div
+                    style={{
+                        margin: '0.5rem 0',
+                        padding: '0.5rem 1rem',
+                        border: 'solid 1px rgba(80,192,80, 0.25)',
+                        borderRadius: '8px',
+                        background: 'rgba(80,192,80, 0.25)',
+                    }}
+                >
+                    <strong>Status: Draft</strong><br />
+                    This article is still a work-in-progress. Take what is written here
+                    with a grain of salt.
+                    Please feel free to log a
+                    {' '}<a href="https://github.com/ridleywinters/ridleywinters.github.io/issues">GitHub issue</a>{' '}
+                    if you see a problem. Thank you!
+                </div>
+            );
+
+        default:
+            return null;
+    }
 }
 
 /**
@@ -109,9 +156,9 @@ function DraftNotice() {
  * something working using existing libraries over optimal code.
  * 
  */
-export default function MDXPage({ 
+export default function MDXPage({
     database,
-    page ,
+    page,
 }) {
     const components = unified()
         .use(remark2react, {
@@ -123,8 +170,7 @@ export default function MDXPage({
             // processor
             toHast: {
                 handlers: {
-                    wikilink : (h, node) => {
-                        console.log(database, page)
+                    wikilink: (h, node) => {
                         let match = _.find(database.pages, (page) => page.id == node.id);
 
                         // Link to Github to create a new file if there is not a match.
@@ -146,11 +192,26 @@ export default function MDXPage({
                                 href,
                             },
                             children: [
-                                { type : 'text', value : node.text }
+                                { type: 'text', value: node.text }
                             ]
                         }
-                    },  
+                    },
                     code: (h, node) => {
+
+                        if (node.lang === 'eval-jsx') {
+                            return {
+                                type: 'element',
+                                tagName: 'evalblock',
+                                properties: {
+                                    language: node.lang,
+                                    value: node.value,
+                                    value2: node.value2,
+                                    db: database,
+                                },
+                                children: [],
+                            };
+                        }
+
                         return {
                             type: 'element',
                             tagName: 'codeblock',
@@ -167,11 +228,18 @@ export default function MDXPage({
             // HAST -> React more transparent (while retaining some of the
             // clean-up remark-react does).
             createElement: (tag, props, children) => {
+
+                if (tag === 'codeblock') {
+                    console.log(tag, props, children)
+                }
+
                 tag = {
                     a: MDXLink,
                     p: MDXParagraph,
                     codeblock: MDXCodeBlock,
+                    evalblock: MDXEvalBlock,
                 }[tag] || tag;
+
                 return React.createElement(tag, props, children);
             },
         })
@@ -181,9 +249,7 @@ export default function MDXPage({
     document.title = page.title;
     return (
         <MDXLayout>
-            {page.properties.status === 'draft' && 
-                <DraftNotice />
-            }
+            <Status database={database} page={page} />
             <div>{components}</div>
         </MDXLayout>
     )

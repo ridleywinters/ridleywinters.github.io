@@ -5,6 +5,23 @@ import RustRaytracer from './pages/rust_raytracer.jsx';
 import database from '../database.json';
 import MDXPage from './mdx_page.jsx';
 
+
+
+(() => {
+
+    const tagIndex = {};
+    database.pages.forEach((page) => {
+        page.tags.forEach((tag) => {
+            tagIndex[tag] = tagIndex[tag] || [];
+            tagIndex[tag].push(page);
+        })
+    });
+    database.index = {
+        tag : tagIndex,
+    };
+})();
+
+
 export default function Application() {
     database.pages.forEach((page) => {
         page.href = `/?page=${page.id}`;
