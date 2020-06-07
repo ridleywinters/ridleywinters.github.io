@@ -1,6 +1,66 @@
 {
     "pages": [
         {
+            "filename": "end-to-end_development_of_a_distributed_system.mdx",
+            "extension": "mdx",
+            "id": "end-to-end_development_of_a_distributed_system",
+            "ast": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "heading",
+                        "depth": 1,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Hello",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 3,
+                                        "offset": 2
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 8,
+                                        "offset": 7
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 8,
+                                "offset": 7
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 1,
+                        "offset": 8
+                    }
+                }
+            },
+            "properties": {},
+            "title": "Hello"
+        },
+        {
             "filename": "home.mdx",
             "extension": "mdx",
             "id": "home",
@@ -68,7 +128,7 @@
                         "children": [
                             {
                                 "type": "text",
-                                "value": "I'm Ridley Winters. This is my website where I share some my software engineering hobby projects and tools. I'm a former product manager and now part-time software engineer. For my hobby projects, I am focused on learning Deno and Rust - and a small side obsession with Vulkan and WebGL.",
+                                "value": "I'm Ridley Winters. This is my website that I use to share some my software engineering hobby projects and tools. I'm a former product manager and now part-time software engineer. For my hobby projects, I am focused on learning Deno and Rust - and a small side obsession with Vulkan and WebGL.",
                                 "position": {
                                     "start": {
                                         "line": 7,
@@ -77,8 +137,8 @@
                                     },
                                     "end": {
                                         "line": 7,
-                                        "column": 288,
-                                        "offset": 344
+                                        "column": 294,
+                                        "offset": 350
                                     },
                                     "indent": []
                                 }
@@ -92,8 +152,8 @@
                             },
                             "end": {
                                 "line": 7,
-                                "column": 288,
-                                "offset": 344
+                                "column": 294,
+                                "offset": 350
                             },
                             "indent": []
                         }
@@ -108,12 +168,12 @@
                                     "start": {
                                         "line": 9,
                                         "column": 1,
-                                        "offset": 346
+                                        "offset": 352
                                     },
                                     "end": {
                                         "line": 9,
                                         "column": 89,
-                                        "offset": 434
+                                        "offset": 440
                                     },
                                     "indent": []
                                 }
@@ -123,12 +183,12 @@
                             "start": {
                                 "line": 9,
                                 "column": 1,
-                                "offset": 346
+                                "offset": 352
                             },
                             "end": {
                                 "line": 9,
                                 "column": 89,
-                                "offset": 434
+                                "offset": 440
                             },
                             "indent": []
                         }
@@ -154,12 +214,12 @@
                                                     "start": {
                                                         "line": 11,
                                                         "column": 3,
-                                                        "offset": 438
+                                                        "offset": 444
                                                     },
                                                     "end": {
                                                         "line": 11,
                                                         "column": 8,
-                                                        "offset": 443
+                                                        "offset": 449
                                                     },
                                                     "indent": []
                                                 }
@@ -169,12 +229,12 @@
                                             "start": {
                                                 "line": 11,
                                                 "column": 3,
-                                                "offset": 438
+                                                "offset": 444
                                             },
                                             "end": {
                                                 "line": 11,
                                                 "column": 8,
-                                                "offset": 443
+                                                "offset": 449
                                             },
                                             "indent": []
                                         }
@@ -184,12 +244,12 @@
                                     "start": {
                                         "line": 11,
                                         "column": 1,
-                                        "offset": 436
+                                        "offset": 442
                                     },
                                     "end": {
                                         "line": 11,
                                         "column": 8,
-                                        "offset": 443
+                                        "offset": 449
                                     },
                                     "indent": []
                                 }
@@ -209,12 +269,12 @@
                                                     "start": {
                                                         "line": 12,
                                                         "column": 3,
-                                                        "offset": 446
+                                                        "offset": 452
                                                     },
                                                     "end": {
                                                         "line": 12,
                                                         "column": 12,
-                                                        "offset": 455
+                                                        "offset": 461
                                                     },
                                                     "indent": []
                                                 }
@@ -224,12 +284,12 @@
                                             "start": {
                                                 "line": 12,
                                                 "column": 3,
-                                                "offset": 446
+                                                "offset": 452
                                             },
                                             "end": {
                                                 "line": 12,
                                                 "column": 12,
-                                                "offset": 455
+                                                "offset": 461
                                             },
                                             "indent": []
                                         }
@@ -260,12 +320,12 @@
                                                                             "start": {
                                                                                 "line": 13,
                                                                                 "column": 8,
-                                                                                "offset": 463
+                                                                                "offset": 469
                                                                             },
                                                                             "end": {
                                                                                 "line": 13,
                                                                                 "column": 35,
-                                                                                "offset": 490
+                                                                                "offset": 496
                                                                             },
                                                                             "indent": []
                                                                         }
@@ -275,12 +335,12 @@
                                                                     "start": {
                                                                         "line": 13,
                                                                         "column": 7,
-                                                                        "offset": 462
+                                                                        "offset": 468
                                                                     },
                                                                     "end": {
                                                                         "line": 13,
                                                                         "column": 70,
-                                                                        "offset": 525
+                                                                        "offset": 531
                                                                     },
                                                                     "indent": []
                                                                 }
@@ -290,12 +350,12 @@
                                                             "start": {
                                                                 "line": 13,
                                                                 "column": 7,
-                                                                "offset": 462
+                                                                "offset": 468
                                                             },
                                                             "end": {
                                                                 "line": 13,
                                                                 "column": 70,
-                                                                "offset": 525
+                                                                "offset": 531
                                                             },
                                                             "indent": []
                                                         }
@@ -305,12 +365,12 @@
                                                     "start": {
                                                         "line": 13,
                                                         "column": 3,
-                                                        "offset": 458
+                                                        "offset": 464
                                                     },
                                                     "end": {
                                                         "line": 13,
                                                         "column": 70,
-                                                        "offset": 525
+                                                        "offset": 531
                                                     },
                                                     "indent": []
                                                 }
@@ -335,12 +395,12 @@
                                                                             "start": {
                                                                                 "line": 14,
                                                                                 "column": 8,
-                                                                                "offset": 533
+                                                                                "offset": 539
                                                                             },
                                                                             "end": {
                                                                                 "line": 14,
                                                                                 "column": 46,
-                                                                                "offset": 571
+                                                                                "offset": 577
                                                                             },
                                                                             "indent": []
                                                                         }
@@ -350,12 +410,12 @@
                                                                     "start": {
                                                                         "line": 14,
                                                                         "column": 7,
-                                                                        "offset": 532
+                                                                        "offset": 538
                                                                     },
                                                                     "end": {
                                                                         "line": 14,
                                                                         "column": 78,
-                                                                        "offset": 603
+                                                                        "offset": 609
                                                                     },
                                                                     "indent": []
                                                                 }
@@ -365,12 +425,12 @@
                                                             "start": {
                                                                 "line": 14,
                                                                 "column": 7,
-                                                                "offset": 532
+                                                                "offset": 538
                                                             },
                                                             "end": {
                                                                 "line": 14,
                                                                 "column": 78,
-                                                                "offset": 603
+                                                                "offset": 609
                                                             },
                                                             "indent": []
                                                         }
@@ -380,12 +440,12 @@
                                                     "start": {
                                                         "line": 14,
                                                         "column": 3,
-                                                        "offset": 528
+                                                        "offset": 534
                                                     },
                                                     "end": {
                                                         "line": 14,
                                                         "column": 78,
-                                                        "offset": 603
+                                                        "offset": 609
                                                     },
                                                     "indent": []
                                                 }
@@ -406,12 +466,12 @@
                                                                     "start": {
                                                                         "line": 15,
                                                                         "column": 7,
-                                                                        "offset": 610
+                                                                        "offset": 616
                                                                     },
                                                                     "end": {
                                                                         "line": 15,
                                                                         "column": 57,
-                                                                        "offset": 660
+                                                                        "offset": 666
                                                                     },
                                                                     "indent": []
                                                                 }
@@ -421,12 +481,12 @@
                                                             "start": {
                                                                 "line": 15,
                                                                 "column": 7,
-                                                                "offset": 610
+                                                                "offset": 616
                                                             },
                                                             "end": {
                                                                 "line": 15,
                                                                 "column": 57,
-                                                                "offset": 660
+                                                                "offset": 666
                                                             },
                                                             "indent": []
                                                         }
@@ -436,12 +496,12 @@
                                                     "start": {
                                                         "line": 15,
                                                         "column": 3,
-                                                        "offset": 606
+                                                        "offset": 612
                                                     },
                                                     "end": {
                                                         "line": 15,
                                                         "column": 57,
-                                                        "offset": 660
+                                                        "offset": 666
                                                     },
                                                     "indent": []
                                                 }
@@ -451,12 +511,12 @@
                                             "start": {
                                                 "line": 13,
                                                 "column": 3,
-                                                "offset": 458
+                                                "offset": 464
                                             },
                                             "end": {
                                                 "line": 15,
                                                 "column": 57,
-                                                "offset": 660
+                                                "offset": 666
                                             },
                                             "indent": [
                                                 3,
@@ -469,12 +529,12 @@
                                     "start": {
                                         "line": 12,
                                         "column": 1,
-                                        "offset": 444
+                                        "offset": 450
                                     },
                                     "end": {
                                         "line": 15,
                                         "column": 57,
-                                        "offset": 660
+                                        "offset": 666
                                     },
                                     "indent": [
                                         1,
@@ -498,12 +558,12 @@
                                                     "start": {
                                                         "line": 16,
                                                         "column": 3,
-                                                        "offset": 663
+                                                        "offset": 669
                                                     },
                                                     "end": {
                                                         "line": 16,
                                                         "column": 17,
-                                                        "offset": 677
+                                                        "offset": 683
                                                     },
                                                     "indent": []
                                                 }
@@ -513,12 +573,12 @@
                                             "start": {
                                                 "line": 16,
                                                 "column": 3,
-                                                "offset": 663
+                                                "offset": 669
                                             },
                                             "end": {
                                                 "line": 16,
                                                 "column": 17,
-                                                "offset": 677
+                                                "offset": 683
                                             },
                                             "indent": []
                                         }
@@ -528,12 +588,12 @@
                                     "start": {
                                         "line": 16,
                                         "column": 1,
-                                        "offset": 661
+                                        "offset": 667
                                     },
                                     "end": {
                                         "line": 16,
                                         "column": 17,
-                                        "offset": 677
+                                        "offset": 683
                                     },
                                     "indent": []
                                 }
@@ -553,12 +613,12 @@
                                                     "start": {
                                                         "line": 17,
                                                         "column": 3,
-                                                        "offset": 680
+                                                        "offset": 686
                                                     },
                                                     "end": {
                                                         "line": 17,
                                                         "column": 11,
-                                                        "offset": 688
+                                                        "offset": 694
                                                     },
                                                     "indent": []
                                                 }
@@ -568,12 +628,12 @@
                                             "start": {
                                                 "line": 17,
                                                 "column": 3,
-                                                "offset": 680
+                                                "offset": 686
                                             },
                                             "end": {
                                                 "line": 17,
                                                 "column": 11,
-                                                "offset": 688
+                                                "offset": 694
                                             },
                                             "indent": []
                                         }
@@ -583,12 +643,12 @@
                                     "start": {
                                         "line": 17,
                                         "column": 1,
-                                        "offset": 678
+                                        "offset": 684
                                     },
                                     "end": {
                                         "line": 17,
                                         "column": 11,
-                                        "offset": 688
+                                        "offset": 694
                                     },
                                     "indent": []
                                 }
@@ -608,12 +668,12 @@
                                                     "start": {
                                                         "line": 18,
                                                         "column": 3,
-                                                        "offset": 691
+                                                        "offset": 697
                                                     },
                                                     "end": {
                                                         "line": 18,
                                                         "column": 10,
-                                                        "offset": 698
+                                                        "offset": 704
                                                     },
                                                     "indent": []
                                                 }
@@ -623,12 +683,12 @@
                                             "start": {
                                                 "line": 18,
                                                 "column": 3,
-                                                "offset": 691
+                                                "offset": 697
                                             },
                                             "end": {
                                                 "line": 18,
                                                 "column": 10,
-                                                "offset": 698
+                                                "offset": 704
                                             },
                                             "indent": []
                                         }
@@ -638,12 +698,12 @@
                                     "start": {
                                         "line": 18,
                                         "column": 1,
-                                        "offset": 689
+                                        "offset": 695
                                     },
                                     "end": {
                                         "line": 18,
                                         "column": 10,
-                                        "offset": 698
+                                        "offset": 704
                                     },
                                     "indent": []
                                 }
@@ -663,12 +723,12 @@
                                                     "start": {
                                                         "line": 19,
                                                         "column": 3,
-                                                        "offset": 701
+                                                        "offset": 707
                                                     },
                                                     "end": {
                                                         "line": 19,
                                                         "column": 19,
-                                                        "offset": 717
+                                                        "offset": 723
                                                     },
                                                     "indent": []
                                                 }
@@ -678,12 +738,12 @@
                                             "start": {
                                                 "line": 19,
                                                 "column": 3,
-                                                "offset": 701
+                                                "offset": 707
                                             },
                                             "end": {
                                                 "line": 19,
                                                 "column": 19,
-                                                "offset": 717
+                                                "offset": 723
                                             },
                                             "indent": []
                                         }
@@ -693,12 +753,12 @@
                                     "start": {
                                         "line": 19,
                                         "column": 1,
-                                        "offset": 699
+                                        "offset": 705
                                     },
                                     "end": {
                                         "line": 19,
                                         "column": 19,
-                                        "offset": 717
+                                        "offset": 723
                                     },
                                     "indent": []
                                 }
@@ -718,12 +778,12 @@
                                                     "start": {
                                                         "line": 20,
                                                         "column": 3,
-                                                        "offset": 720
+                                                        "offset": 726
                                                     },
                                                     "end": {
                                                         "line": 20,
                                                         "column": 26,
-                                                        "offset": 743
+                                                        "offset": 749
                                                     },
                                                     "indent": []
                                                 }
@@ -733,12 +793,12 @@
                                             "start": {
                                                 "line": 20,
                                                 "column": 3,
-                                                "offset": 720
+                                                "offset": 726
                                             },
                                             "end": {
                                                 "line": 20,
                                                 "column": 26,
-                                                "offset": 743
+                                                "offset": 749
                                             },
                                             "indent": []
                                         }
@@ -748,12 +808,12 @@
                                     "start": {
                                         "line": 20,
                                         "column": 1,
-                                        "offset": 718
+                                        "offset": 724
                                     },
                                     "end": {
                                         "line": 20,
                                         "column": 26,
-                                        "offset": 743
+                                        "offset": 749
                                     },
                                     "indent": []
                                 }
@@ -763,12 +823,12 @@
                             "start": {
                                 "line": 11,
                                 "column": 1,
-                                "offset": 436
+                                "offset": 442
                             },
                             "end": {
                                 "line": 20,
                                 "column": 26,
-                                "offset": 743
+                                "offset": 749
                             },
                             "indent": [
                                 1,
@@ -782,41 +842,6 @@
                                 1
                             ]
                         }
-                    },
-                    {
-                        "type": "paragraph",
-                        "children": [
-                            {
-                                "type": "text",
-                                "value": "Index",
-                                "position": {
-                                    "start": {
-                                        "line": 22,
-                                        "column": 1,
-                                        "offset": 745
-                                    },
-                                    "end": {
-                                        "line": 22,
-                                        "column": 6,
-                                        "offset": 750
-                                    },
-                                    "indent": []
-                                }
-                            }
-                        ],
-                        "position": {
-                            "start": {
-                                "line": 22,
-                                "column": 1,
-                                "offset": 745
-                            },
-                            "end": {
-                                "line": 22,
-                                "column": 6,
-                                "offset": 750
-                            },
-                            "indent": []
-                        }
                     }
                 ],
                 "position": {
@@ -826,8 +851,8 @@
                         "offset": 0
                     },
                     "end": {
-                        "line": 22,
-                        "column": 6,
+                        "line": 21,
+                        "column": 1,
                         "offset": 750
                     }
                 }

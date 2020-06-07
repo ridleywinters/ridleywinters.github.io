@@ -7,6 +7,7 @@ build: ensure
 	npx webpack-cli \
 		--mode production \
 		--entry ./src/client.jsx \
+		--output-public-path dist \
 		--output-filename client.bundle.js	
 
 build-database: ensure
@@ -41,6 +42,7 @@ npx nodemon --watch data --ext js,jsx,mdx --exec make build-database &
 npx webpack-dev-server \
 		--mode development \
 		--entry ./src/client.jsx \
+		--output-public-path dist \
 		--output-filename client.bundle.js &
 wait
 endef
