@@ -150,7 +150,7 @@ function Status({
 function RelatedArticles({ database, page }) {
 
     const pages = _.keyBy(database.pages, 'id');
-    
+
     // This absurd functional chain is taking the set of keywords on this
     // page and unioning it with the set of pages that also have that keyword.
     const related = _.chain(database.index_words)
@@ -195,6 +195,89 @@ function RelatedArticles({ database, page }) {
             </div>
         </div>
     );
+}
+
+function MDXUserStory({ story, acceptance_criteria }) {
+    return (
+        <div
+            style={{
+                width: '32rem',
+                padding: '0.5rem',
+                border: 'solid 1px #CCC',
+            }}
+        >
+            <div
+                style={{
+                    marginBottom: '12px',
+                    borderBottom: 'dotted 1px #DDD',
+                }}
+            >
+                <strong>User story</strong>
+            </div>
+            <div>{story}</div>
+            <ul>{acceptance_criteria.map((ac, i) => (
+                <li key={i}>{ac}</li>
+            ))}</ul>
+        </div>
+    )
+}
+
+function MDXExpand({ title, content }) {
+
+    const [expanded, setExpanded] = React.useState(true);
+    const handleClick = (evt) => {
+        evt.preventDefault();
+        setExpanded(!expanded);
+    };
+
+    return (
+        <div>
+            <h4
+                style={{
+                    margin: '1rem 0 .25rem',
+                    cursor: 'pointer',
+                    userSelect: 'none',
+                }}
+                onClick={handleClick}
+            >
+                <div style={{ 
+                    display : 'inline-block',
+                    width : '1.2rem',
+                    paddingRight: '8px' 
+                    }}>{expanded ? '	▼' : '▸'}</div>
+                <span>{title}</span>
+            </h4>
+            <div style={{
+                display: expanded ? 'block' : 'none',
+                padding: '12px 0px 12px 8px',
+                marginLeft: '8px',
+                borderTop: '1px dotted #CCC',
+                borderLeft: '5px solid #CCC',
+                borderBottom: '1px dotted #CCC',
+                
+            }}>
+                {content}
+            </div>
+        </div>
+    )
+}
+
+function MDXObject({ kind, value }) {
+    const Delegate = {
+        'Expand': MDXExpand,
+        'UserStory': MDXUserStory,
+    }[kind];
+
+    if (Delegate) {
+        return <Delegate {...value} />;
+    }
+
+    return (
+        <div>
+            <h4>Object: {kind}</h4>
+            <pre style={{ fontSize: '80%' }}>{JSON.stringify(value, null, 4)}</pre>
+        </div>
+    )
 }
 
 /**
@@ -248,6 +331,16 @@ export default function MDXPage({
                             ]
                         }
                     },
+                    object: (h, node) => {
+                        return {
+                            type: 'element',
+                            tagName: 'mdxobject',
+                            properties: {
+                                kind: node.kind,
+                                value: node.value,
+                            },
+                        };
+                    },
                     code: (h, node) => {
 
                         if (node.lang === 'eval-jsx') {
@@ -286,6 +379,7 @@ export default function MDXPage({
                     p: MDXParagraph,
                     codeblock: MDXCodeBlock,
                     evalblock: MDXEvalBlock,
+                    mdxobject: MDXObject,
                 }[tag] || tag;
 
                 return React.createElement(tag, props, children);

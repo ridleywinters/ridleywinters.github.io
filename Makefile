@@ -11,7 +11,7 @@ build: ensure
 		--output-filename client.bundle.js	
 
 build-database: ensure
-	npx babel-node build.js
+	npx babel-node src/build/build.js
 
 publish: build
 	bash $(MONOREPO_ROOT)/deploy/scripts/push-from-monorepo.sh \
@@ -37,7 +37,7 @@ shutdown() {
 }
 trap "shutdown" SIGINT SIGTERM
 
-npx nodemon --watch data --ext js,jsx,mdx --exec make build-database &
+npx nodemon --watch data --watch src/build --ext js,jsx,mdx --exec make build-database &
 
 sleep 1
 

@@ -13,7 +13,7 @@ import path from 'path';
 import _ from 'lodash';
 import YAML from 'yaml';
 
-import wikilinks from './src/codecs/mdx/wikilinks.js'
+import wikilinks from '../codecs/mdx/wikilinks.js'
 
 
 
@@ -152,7 +152,24 @@ async function postprocessMDX({ entry }) {
     });
 
     entry.ast = unifMap(entry.ast, (node) => {
-        if (node.type === 'code' && node.lang === 'eval-jsx') {
+        if (node.type === 'code' && node.lang &&  node.lang.match(/^object:/)) {
+            let m = node.lang.match(/^object:([^\s]+)/);
+            try {
+                return {
+                    type: 'object',
+                    kind: m[1],
+                    value: YAML.parse(node.value),
+                }
+            } catch (err) {
+                console.log(err);
+                return {
+                    type: 'code',
+                    lang: "yaml",
+                    value: node.value,
+                };
+            }
+
+        } else if (node.type === 'code' && node.lang === 'eval-jsx') {
             try {
                 const source = `return <React.Fragment>${node.value}</React.Fragment>;`;
                 node.value2 = parseES6(source);
