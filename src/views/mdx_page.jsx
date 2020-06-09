@@ -230,6 +230,8 @@ function MDXExpand({ title, content }) {
         setExpanded(!expanded);
     };
 
+    content = renderComponents(null, content);
+
     return (
         <div>
             <h4
@@ -250,7 +252,7 @@ function MDXExpand({ title, content }) {
             <div style={{
                 display: expanded ? 'block' : 'none',
                 padding: '12px 0px 12px 8px',
-                marginLeft: '8px',
+                marginLeft: '0px',
                 borderTop: '1px dotted #CCC',
                 borderLeft: '5px solid #CCC',
                 borderBottom: '1px dotted #CCC',
@@ -280,6 +282,104 @@ function MDXObject({ kind, value }) {
     )
 }
 
+function renderComponents(database, root) {
+    return unified()
+    .use(remark2react, {
+        // Don't strip out unrecognized properties because we're intentionally extending 
+        // standard markdown syntax.
+        sanitize: false,
+
+        // The default Hast handler drops the language tag, so add a custom
+        // processor
+        toHast: {
+            handlers: {
+                wikilink: (h, node) => {
+                    let match = _.find(database.pages, (page) => page.id == node.id);
+
+                    // Link to Github to create a new file if there is not a match.
+                    // An inexpensive way to create a wiki.
+                    let href;
+                    let title = node.text;
+                    if (match) {
+                        href = `/?page=${node.id}`;
+                        title = match.title || node.text;
+                    } else {
+                        const repo = `ridleywinters/ridleywinters.github.io`;
+                        const dbpath = 'data/ridley'
+                        href = `https://github.com/${repo}/new/master/${dbpath}/pages/q?filename=${node.id}.mdx`;
+                    }
+
+
+                    return {
+                        type: 'element',
+                        tagName: 'a',
+                        properties: {
+                            href,
+                        },
+                        children: [
+                            { type: 'text', value: title }
+                        ]
+                    }
+                },
+                object: (h, node) => {
+                    return {
+                        type: 'element',
+                        tagName: 'mdxobject',
+                        properties: {
+                            kind: node.kind,
+                            value: node.value,
+                        },
+                    };
+                },
+                code: (h, node) => {
+
+                    if (node.lang === 'eval-jsx') {
+                        return {
+                            type: 'element',
+                            tagName: 'evalblock',
+                            properties: {
+                                language: node.lang,
+                                value: node.value,
+                                value2: node.value2,
+                                db: database,
+                            },
+                            children: [],
+                        };
+                    }
+
+                    return {
+                        type: 'element',
+                        tagName: 'codeblock',
+                        properties: {
+                            language: node.lang,
+                            value: node.value,
+                        },
+                        children: [],
+                    };
+                }
+            },
+        },
+        // Hook into the createElement as this makes the mapping from 
+        // HAST -> React more transparent (while retaining some of the
+        // clean-up remark-react does).
+        createElement: (tag, props, children) => {
+
+            tag = {
+                a: MDXLink,
+                p: MDXParagraph,
+                codeblock: MDXCodeBlock,
+                evalblock: MDXEvalBlock,
+                mdxobject: MDXObject,
+            }[tag] || tag;
+
+            return React.createElement(tag, props, children);
+        },
+    })
+    .stringify(root);
+    
+
+}
+
 /**
  * remark2react converts the mdast -> hast -> react components. Some data is lost in the
  * conversion through hast, for example the "language" on a code block.
@@ -293,106 +393,13 @@ export default function MDXPage({
     database,
     page,
 }) {
-    const components = unified()
-        .use(remark2react, {
-            // Don't strip out unrecognized properties because we're intentionally extending 
-            // standard markdown syntax.
-            sanitize: false,
 
-            // The default Hast handler drops the language tag, so add a custom
-            // processor
-            toHast: {
-                handlers: {
-                    wikilink: (h, node) => {
-                        let match = _.find(database.pages, (page) => page.id == node.id);
-
-                        // Link to Github to create a new file if there is not a match.
-                        // An inexpensive way to create a wiki.
-                        let href;
-                        let title = node.text;
-                        if (match) {
-                            href = `/?page=${node.id}`;
-                            title = match.title || node.text;
-                        } else {
-                            const repo = `ridleywinters/ridleywinters.github.io`;
-                            const dbpath = 'data/ridley'
-                            href = `https://github.com/${repo}/new/master/${dbpath}/pages/q?filename=${node.id}.mdx`;
-                        }
-
-
-                        return {
-                            type: 'element',
-                            tagName: 'a',
-                            properties: {
-                                href,
-                            },
-                            children: [
-                                { type: 'text', value: title }
-                            ]
-                        }
-                    },
-                    object: (h, node) => {
-                        return {
-                            type: 'element',
-                            tagName: 'mdxobject',
-                            properties: {
-                                kind: node.kind,
-                                value: node.value,
-                            },
-                        };
-                    },
-                    code: (h, node) => {
-
-                        if (node.lang === 'eval-jsx') {
-                            return {
-                                type: 'element',
-                                tagName: 'evalblock',
-                                properties: {
-                                    language: node.lang,
-                                    value: node.value,
-                                    value2: node.value2,
-                                    db: database,
-                                },
-                                children: [],
-                            };
-                        }
-
-                        return {
-                            type: 'element',
-                            tagName: 'codeblock',
-                            properties: {
-                                language: node.lang,
-                                value: node.value,
-                            },
-                            children: [],
-                        };
-                    }
-                },
-            },
-            // Hook into the createElement as this makes the mapping from 
-            // HAST -> React more transparent (while retaining some of the
-            // clean-up remark-react does).
-            createElement: (tag, props, children) => {
-
-                tag = {
-                    a: MDXLink,
-                    p: MDXParagraph,
-                    codeblock: MDXCodeBlock,
-                    evalblock: MDXEvalBlock,
-                    mdxobject: MDXObject,
-                }[tag] || tag;
-
-                return React.createElement(tag, props, children);
-            },
-        })
-        .stringify(page.ast)
-        ;
 
     document.title = page.title;
     return (
         <MDXLayout>
             <Status database={database} page={page} />
-            <div>{components}</div>
+            <div>{renderComponents(database, page.ast)}</div>
             <RelatedArticles database={database} page={page} />
         </MDXLayout>
     )

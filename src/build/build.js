@@ -111,6 +111,21 @@ function evaluateDefaultExport(source, additionalContext = {}) {
 
 
 
+function processMDXString(s) {
+    const ast = remark()
+        .use(mdx)
+        .use(frontmatter, ['yaml', 'toml'])
+        .use(wikilinks, { inlineMode: true })
+        .use(() => tree => {
+            visit(tree, 'jsx', node => {
+                node.type = "code";
+                node.value = node.value;
+            });
+        })
+        .parse(s);
+    return ast;
+}
+
 /**
  * Convert the MDX (Markdown + JSX) to an abstract syntax tree (AST).
  */
@@ -152,13 +167,33 @@ async function postprocessMDX({ entry }) {
     });
 
     entry.ast = unifMap(entry.ast, (node) => {
-        if (node.type === 'code' && node.lang &&  node.lang.match(/^object:/)) {
+        if (node.type === 'code' && node.lang && node.lang.match(/^object:/)) {
             let m = node.lang.match(/^object:([^\s]+)/);
+
             try {
+                let value = YAML.parse(node.value);
+                value = _.cloneDeepWith(value, function (value) {
+
+                    if (_.isObject(value)) {
+                        let t = {};
+                        _.each(value, (v, k) => {
+                            let m;
+                            m = k.match(/(.+?)\$(.+)$/);
+                            if (m) {
+                                k = m[1];
+                                v = processMDXString(v);
+                            }
+                            t[k] = v;
+                        })
+                        return t;
+                    }
+                });
+                console.log('VALUE=====\n', value)
+
                 return {
                     type: 'object',
                     kind: m[1],
-                    value: YAML.parse(node.value),
+                    value,
                 }
             } catch (err) {
                 console.log(err);
