@@ -127,7 +127,6 @@ function parseShortcode(text) {
 		node.id = base.normalizeID(parts[1]);
 	} else {
 		node.id = base.normalizeID(parts[0]);
-		node.text = parts[0].trim();
 	}
 	return node;
 }

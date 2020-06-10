@@ -1,0 +1,30 @@
+
+
+## Page Index
+
+```eval-jsx
+<table>
+    <thead>
+        <tr>
+            <th style={{ textAlign: 'left' }}>Page</th>
+            <th style={{ textAlign: 'left' }}>Path</th>
+            <th style={{ textAlign: 'left' }}>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+    {_.map(database.pages, (page) => ( 
+        <tr key={page.id}>
+            <td style={{ paddingRight : '2rem' }}>
+                <MDXLink href={`/?page=${page.id}`}>{page.title}</MDXLink>
+            </td>
+            <td style={{ paddingRight: '2rem', color: '#777' }}>
+                {page.path.join(' / ')}
+            </td>
+            <td style={{ paddingRight: '1rem', color: '#777' }}>
+                {page.properties.status}
+            </td>            
+        </tr>
+    ))}
+    </tbody>
+</table>
+```

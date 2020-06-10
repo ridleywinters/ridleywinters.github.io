@@ -233,10 +233,10 @@ function renderComponents(database, root) {
                     // Link to Github to create a new file if there is not a match.
                     // An inexpensive way to create a wiki.
                     let href;
-                    let title = node.text;
+                    let title = node.text || node.id;
                     if (match) {
                         href = `/?page=${node.id}`;
-                        title = match.title || node.text;
+                        title = node.text || match.title || node.id;
                     } else {
                         const repo = `ridleywinters/ridleywinters.github.io`;
                         const dbpath = 'data/ridley'

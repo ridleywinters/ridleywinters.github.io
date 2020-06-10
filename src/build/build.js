@@ -13,7 +13,7 @@ import path from 'path';
 import _ from 'lodash';
 import YAML from 'yaml';
 
-import wikilinks from '../codecs/mdx/wikilinks.js'
+import wikilinks from './parsers/wikilinks.js'
 
 
 
@@ -269,11 +269,13 @@ async function scanFiles({
     for (let i = 0; i < files.length; i++) {
         const filename = files[i];
         const shortpath = path.relative(`data/${databaseName}/${type}`, files[i]);
-        const id = shortpath.replace(/\..+?$/i, '');
+        const pagepath = shortpath.split('/');
+        const id = pagepath.pop().replace(/\..+?$/i, '');
         const entry = {
             filename: shortpath,
             extension,
             id,
+            path : pagepath,
         };
 
         if (processors) {

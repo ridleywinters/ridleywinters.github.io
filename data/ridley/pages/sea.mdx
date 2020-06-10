@@ -7,11 +7,58 @@ Sea is an extension of Markdown into multiple files to create a customizable dat
 
 Note: Sea is more of a _technology_ than it is a _product_. It's very flexible and customizable. Sea templates can overlay an opinion on the technology, creating a clear, immediately usable use cases - thus making Sea into more of a product.
 
+Can be thought of as a programming language.
+
+## What problems does it solve?
+
+Semantic wiki, TiddlyWiki, MediaWiki, Markdown, Gatsby, database, spreadsheets, etc. Another swing at a balance of that functionality.  Incremental development of ideas.  Allow things to be "finished" and published sooner yet continually improved.
+
 ## How does it work?
 
 Sea operates on a directory of files, typically stored in git (for personal knowledge bases) or in a database for large multi-user use cases. Each file represents a **Card** - a sttarting point, think of that as a fairly standard Markdown document. Sea parses the whole set of Cards and creates a tree of data with indices so that a renderer can then easily render the documents as well cross-reference information in other Cards.
 
+Markdown with a couple extensions:
 
+* Data objects (YAML syntax)
+* Presentation objects (JSX syntax)
+
+Database:
+
+* All files parsed together and indexed for cross-referencing
+
+Server
+
+* Separate data from the presentation
+* API for operating on the data
+
+
+
+## Roadmap
+
+#### v0.1
+
+* [ ] Create a command-line distributable with proper installation instructions
+* [ ] Create some basic documentation
+* [ ] Create a page to host it
+* [ ] Create a CHANGELOG
+
+#### v0.3
+
+* [ ] Create a complementary web server 
+* [ ] Create a flexible data source backend
+
+#### v0.4
+
+* [ ] Create an API on the web server with edit commands
+
+### v0.5
+
+### vX.X
+
+* [ ] Add templates 
+* [ ] Add UI editors
+* [ ] Add a TableOfContents component
+* [ ] Rust / WASM support
 
 
 ## Test Area

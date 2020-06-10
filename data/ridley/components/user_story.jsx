@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function MDXUserStory({ 
+export default function ({ 
     story, 
     acceptance_criteria 
 }) {
