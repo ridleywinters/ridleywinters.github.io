@@ -167,8 +167,16 @@ async function postprocessMDX({ entry }) {
     });
 
     entry.ast = unifMap(entry.ast, (node) => {
-        if (node.type === 'code' && node.lang && node.lang.match(/^object:/)) {
-            let m = node.lang.match(/^object:([^\s]+)/);
+        if (
+            node.type === 'code' &&
+            node.lang && (
+                node.lang.match(/^object:/) ||
+                node.lang.match(/^@([^\s]+)/)
+            )
+        ) {
+            let m = node.lang.match(/^object:([^\s]+)/)
+                || node.lang.match(/^@([^\s]+)/)
+                ;
 
             try {
                 let value = YAML.parse(node.value);
@@ -188,7 +196,6 @@ async function postprocessMDX({ entry }) {
                         return t;
                     }
                 });
-                console.log('VALUE=====\n', value)
 
                 return {
                     type: 'object',
@@ -275,7 +282,7 @@ async function scanFiles({
             }
         }
         if (postprocess) {
-            await postprocess({ entry });
+            await postprocess({ filename, entry });
         }
 
         entries.push(entry);
@@ -283,6 +290,13 @@ async function scanFiles({
     return entries;
 }
 
+
+const fsp = require("fs").promises;
+
+async function postProcessComponent({ filename, entry }) {
+    entry.text = await fsp.readFile(filename, 'utf8');
+    entry.parsed = parseES6(entry.text);
+}
 
 async function scanDatabase(databaseName) {
     const database = {};
@@ -302,6 +316,7 @@ async function scanDatabase(databaseName) {
         databaseName,
         type: 'components',
         extension: 'jsx',
+        postprocess: postProcessComponent,
     });
 
     const words = {};

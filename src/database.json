@@ -9962,104 +9962,9 @@
             "title": "Rust WebGL"
         },
         {
-            "filename": "test-wikilinks.mdx",
+            "filename": "sea.mdx",
             "extension": "mdx",
-            "id": "test-wikilinks",
-            "ast": {
-                "type": "root",
-                "children": [
-                    {
-                        "type": "paragraph",
-                        "children": [
-                            {
-                                "type": "text",
-                                "value": "This is a page with a link to ",
-                                "position": {
-                                    "start": {
-                                        "line": 2,
-                                        "column": 1,
-                                        "offset": 1
-                                    },
-                                    "end": {
-                                        "line": 2,
-                                        "column": 31,
-                                        "offset": 31
-                                    },
-                                    "indent": []
-                                }
-                            },
-                            {
-                                "type": "wikilink",
-                                "id": "rust",
-                                "text": "rust",
-                                "position": {
-                                    "start": {
-                                        "line": 2,
-                                        "column": 31,
-                                        "offset": 31
-                                    },
-                                    "end": {
-                                        "line": 2,
-                                        "column": 39,
-                                        "offset": 39
-                                    },
-                                    "indent": []
-                                }
-                            },
-                            {
-                                "type": "text",
-                                "value": ".",
-                                "position": {
-                                    "start": {
-                                        "line": 2,
-                                        "column": 39,
-                                        "offset": 39
-                                    },
-                                    "end": {
-                                        "line": 2,
-                                        "column": 40,
-                                        "offset": 40
-                                    },
-                                    "indent": []
-                                }
-                            }
-                        ],
-                        "position": {
-                            "start": {
-                                "line": 2,
-                                "column": 1,
-                                "offset": 1
-                            },
-                            "end": {
-                                "line": 2,
-                                "column": 40,
-                                "offset": 40
-                            },
-                            "indent": []
-                        }
-                    }
-                ],
-                "position": {
-                    "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                    },
-                    "end": {
-                        "line": 2,
-                        "column": 40,
-                        "offset": 40
-                    }
-                }
-            },
-            "tags": [],
-            "properties": {},
-            "title": "test-wikilinks"
-        },
-        {
-            "filename": "test.mdx",
-            "extension": "mdx",
-            "id": "test",
+            "id": "sea",
             "ast": {
                 "type": "root",
                 "children": [
@@ -10105,7 +10010,7 @@
                         "children": [
                             {
                                 "type": "text",
-                                "value": "Sea",
+                                "value": "What is Sea?",
                                 "position": {
                                     "start": {
                                         "line": 4,
@@ -10114,8 +10019,8 @@
                                     },
                                     "end": {
                                         "line": 4,
-                                        "column": 9,
-                                        "offset": 16
+                                        "column": 18,
+                                        "offset": 25
                                     },
                                     "indent": []
                                 }
@@ -10129,8 +10034,8 @@
                             },
                             "end": {
                                 "line": 4,
-                                "column": 9,
-                                "offset": 16
+                                "column": 19,
+                                "offset": 26
                             },
                             "indent": []
                         }
@@ -10140,17 +10045,17 @@
                         "children": [
                             {
                                 "type": "text",
-                                "value": "What is Sea? Sea is an extension of Markdown into multiple files to create a customizable database of information.  It has the fluency of Markdown for simply writing text with minimal markup to support specifying data and formatting. It is customizable in that additional data types and renderers can be added to the database ",
+                                "value": "Sea is an extension of Markdown into multiple files to create a customizable database of information.  It has the fluency of Markdown for simply writing text with minimal markup to support specifying data and formatting. It is customizable in that additional data types and renderers can be added to the database ",
                                 "position": {
                                     "start": {
                                         "line": 6,
                                         "column": 1,
-                                        "offset": 18
+                                        "offset": 28
                                     },
                                     "end": {
                                         "line": 6,
-                                        "column": 327,
-                                        "offset": 344
+                                        "column": 314,
+                                        "offset": 341
                                     },
                                     "indent": []
                                 }
@@ -10164,13 +10069,13 @@
                                         "position": {
                                             "start": {
                                                 "line": 6,
-                                                "column": 328,
-                                                "offset": 345
+                                                "column": 315,
+                                                "offset": 342
                                             },
                                             "end": {
                                                 "line": 6,
-                                                "column": 336,
-                                                "offset": 353
+                                                "column": 323,
+                                                "offset": 350
                                             },
                                             "indent": []
                                         }
@@ -10179,13 +10084,13 @@
                                 "position": {
                                     "start": {
                                         "line": 6,
-                                        "column": 327,
-                                        "offset": 344
+                                        "column": 314,
+                                        "offset": 341
                                     },
                                     "end": {
                                         "line": 6,
-                                        "column": 337,
-                                        "offset": 354
+                                        "column": 324,
+                                        "offset": 351
                                     },
                                     "indent": []
                                 }
@@ -10196,13 +10101,13 @@
                                 "position": {
                                     "start": {
                                         "line": 6,
-                                        "column": 337,
-                                        "offset": 354
+                                        "column": 324,
+                                        "offset": 351
                                     },
                                     "end": {
                                         "line": 6,
-                                        "column": 411,
-                                        "offset": 428
+                                        "column": 398,
+                                        "offset": 425
                                     },
                                     "indent": []
                                 }
@@ -10212,12 +10117,12 @@
                             "start": {
                                 "line": 6,
                                 "column": 1,
-                                "offset": 18
+                                "offset": 28
                             },
                             "end": {
                                 "line": 6,
-                                "column": 411,
-                                "offset": 428
+                                "column": 398,
+                                "offset": 425
                             },
                             "indent": []
                         }
@@ -10232,12 +10137,12 @@
                                     "start": {
                                         "line": 8,
                                         "column": 1,
-                                        "offset": 430
+                                        "offset": 427
                                     },
                                     "end": {
                                         "line": 8,
                                         "column": 24,
-                                        "offset": 453
+                                        "offset": 450
                                     },
                                     "indent": []
                                 }
@@ -10252,12 +10157,12 @@
                                             "start": {
                                                 "line": 8,
                                                 "column": 25,
-                                                "offset": 454
+                                                "offset": 451
                                             },
                                             "end": {
                                                 "line": 8,
                                                 "column": 35,
-                                                "offset": 464
+                                                "offset": 461
                                             },
                                             "indent": []
                                         }
@@ -10267,12 +10172,12 @@
                                     "start": {
                                         "line": 8,
                                         "column": 24,
-                                        "offset": 453
+                                        "offset": 450
                                     },
                                     "end": {
                                         "line": 8,
                                         "column": 36,
-                                        "offset": 465
+                                        "offset": 462
                                     },
                                     "indent": []
                                 }
@@ -10284,12 +10189,12 @@
                                     "start": {
                                         "line": 8,
                                         "column": 36,
-                                        "offset": 465
+                                        "offset": 462
                                     },
                                     "end": {
                                         "line": 8,
                                         "column": 50,
-                                        "offset": 479
+                                        "offset": 476
                                     },
                                     "indent": []
                                 }
@@ -10304,12 +10209,12 @@
                                             "start": {
                                                 "line": 8,
                                                 "column": 51,
-                                                "offset": 480
+                                                "offset": 477
                                             },
                                             "end": {
                                                 "line": 8,
                                                 "column": 58,
-                                                "offset": 487
+                                                "offset": 484
                                             },
                                             "indent": []
                                         }
@@ -10319,12 +10224,12 @@
                                     "start": {
                                         "line": 8,
                                         "column": 50,
-                                        "offset": 479
+                                        "offset": 476
                                     },
                                     "end": {
                                         "line": 8,
                                         "column": 59,
-                                        "offset": 488
+                                        "offset": 485
                                     },
                                     "indent": []
                                 }
@@ -10336,12 +10241,12 @@
                                     "start": {
                                         "line": 8,
                                         "column": 59,
-                                        "offset": 488
+                                        "offset": 485
                                     },
                                     "end": {
                                         "line": 8,
                                         "column": 242,
-                                        "offset": 671
+                                        "offset": 668
                                     },
                                     "indent": []
                                 }
@@ -10351,12 +10256,12 @@
                             "start": {
                                 "line": 8,
                                 "column": 1,
-                                "offset": 430
+                                "offset": 427
                             },
                             "end": {
                                 "line": 8,
                                 "column": 242,
-                                "offset": 671
+                                "offset": 668
                             },
                             "indent": []
                         }
@@ -10372,12 +10277,12 @@
                                     "start": {
                                         "line": 10,
                                         "column": 4,
-                                        "offset": 676
+                                        "offset": 673
                                     },
                                     "end": {
                                         "line": 10,
                                         "column": 21,
-                                        "offset": 693
+                                        "offset": 690
                                     },
                                     "indent": []
                                 }
@@ -10387,12 +10292,12 @@
                             "start": {
                                 "line": 10,
                                 "column": 1,
-                                "offset": 673
+                                "offset": 670
                             },
                             "end": {
                                 "line": 10,
                                 "column": 21,
-                                "offset": 693
+                                "offset": 690
                             },
                             "indent": []
                         }
@@ -10407,12 +10312,12 @@
                                     "start": {
                                         "line": 12,
                                         "column": 1,
-                                        "offset": 695
+                                        "offset": 692
                                     },
                                     "end": {
                                         "line": 12,
                                         "column": 166,
-                                        "offset": 860
+                                        "offset": 857
                                     },
                                     "indent": []
                                 }
@@ -10427,12 +10332,12 @@
                                             "start": {
                                                 "line": 12,
                                                 "column": 168,
-                                                "offset": 862
+                                                "offset": 859
                                             },
                                             "end": {
                                                 "line": 12,
                                                 "column": 172,
-                                                "offset": 866
+                                                "offset": 863
                                             },
                                             "indent": []
                                         }
@@ -10442,12 +10347,12 @@
                                     "start": {
                                         "line": 12,
                                         "column": 166,
-                                        "offset": 860
+                                        "offset": 857
                                     },
                                     "end": {
                                         "line": 12,
                                         "column": 174,
-                                        "offset": 868
+                                        "offset": 865
                                     },
                                     "indent": []
                                 }
@@ -10459,12 +10364,12 @@
                                     "start": {
                                         "line": 12,
                                         "column": 174,
-                                        "offset": 868
+                                        "offset": 865
                                     },
                                     "end": {
                                         "line": 12,
                                         "column": 431,
-                                        "offset": 1125
+                                        "offset": 1122
                                     },
                                     "indent": []
                                 }
@@ -10474,12 +10379,12 @@
                             "start": {
                                 "line": 12,
                                 "column": 1,
-                                "offset": 695
+                                "offset": 692
                             },
                             "end": {
                                 "line": 12,
                                 "column": 431,
-                                "offset": 1125
+                                "offset": 1122
                             },
                             "indent": []
                         }
@@ -10495,12 +10400,12 @@
                                     "start": {
                                         "line": 17,
                                         "column": 4,
-                                        "offset": 1133
+                                        "offset": 1130
                                     },
                                     "end": {
                                         "line": 17,
                                         "column": 13,
-                                        "offset": 1142
+                                        "offset": 1139
                                     },
                                     "indent": []
                                 }
@@ -10510,12 +10415,12 @@
                             "start": {
                                 "line": 17,
                                 "column": 1,
-                                "offset": 1130
+                                "offset": 1127
                             },
                             "end": {
                                 "line": 17,
                                 "column": 13,
-                                "offset": 1142
+                                "offset": 1139
                             },
                             "indent": []
                         }
@@ -10530,12 +10435,12 @@
                                     "start": {
                                         "line": 19,
                                         "column": 1,
-                                        "offset": 1144
+                                        "offset": 1141
                                     },
                                     "end": {
                                         "line": 19,
                                         "column": 13,
-                                        "offset": 1156
+                                        "offset": 1153
                                     },
                                     "indent": []
                                 }
@@ -10545,12 +10450,12 @@
                             "start": {
                                 "line": 19,
                                 "column": 1,
-                                "offset": 1144
+                                "offset": 1141
                             },
                             "end": {
                                 "line": 19,
                                 "column": 13,
-                                "offset": 1156
+                                "offset": 1153
                             },
                             "indent": []
                         }
@@ -10562,12 +10467,12 @@
                             "start": {
                                 "line": 21,
                                 "column": 1,
-                                "offset": 1158
+                                "offset": 1155
                             },
                             "end": {
                                 "line": 23,
                                 "column": 13,
-                                "offset": 1218
+                                "offset": 1215
                             },
                             "indent": [
                                 1,
@@ -10582,12 +10487,12 @@
                             "start": {
                                 "line": 25,
                                 "column": 1,
-                                "offset": 1220
+                                "offset": 1217
                             },
                             "end": {
                                 "line": 28,
                                 "column": 13,
-                                "offset": 1275
+                                "offset": 1272
                             },
                             "indent": [
                                 1,
@@ -10606,12 +10511,12 @@
                                     "start": {
                                         "line": 31,
                                         "column": 1,
-                                        "offset": 1278
+                                        "offset": 1275
                                     },
                                     "end": {
                                         "line": 31,
                                         "column": 12,
-                                        "offset": 1289
+                                        "offset": 1286
                                     },
                                     "indent": []
                                 }
@@ -10623,12 +10528,12 @@
                                     "start": {
                                         "line": 31,
                                         "column": 12,
-                                        "offset": 1289
+                                        "offset": 1286
                                     },
                                     "end": {
                                         "line": 31,
                                         "column": 23,
-                                        "offset": 1300
+                                        "offset": 1297
                                     },
                                     "indent": []
                                 }
@@ -10640,12 +10545,12 @@
                                     "start": {
                                         "line": 31,
                                         "column": 23,
-                                        "offset": 1300
+                                        "offset": 1297
                                     },
                                     "end": {
                                         "line": 31,
                                         "column": 27,
-                                        "offset": 1304
+                                        "offset": 1301
                                     },
                                     "indent": []
                                 }
@@ -10657,12 +10562,12 @@
                                     "start": {
                                         "line": 31,
                                         "column": 27,
-                                        "offset": 1304
+                                        "offset": 1301
                                     },
                                     "end": {
                                         "line": 31,
                                         "column": 39,
-                                        "offset": 1316
+                                        "offset": 1313
                                     },
                                     "indent": []
                                 }
@@ -10674,12 +10579,12 @@
                                     "start": {
                                         "line": 31,
                                         "column": 39,
-                                        "offset": 1316
+                                        "offset": 1313
                                     },
                                     "end": {
                                         "line": 31,
                                         "column": 56,
-                                        "offset": 1333
+                                        "offset": 1330
                                     },
                                     "indent": []
                                 }
@@ -10689,14 +10594,302 @@
                             "start": {
                                 "line": 31,
                                 "column": 1,
-                                "offset": 1278
+                                "offset": 1275
                             },
                             "end": {
                                 "line": 31,
                                 "column": 56,
-                                "offset": 1333
+                                "offset": 1330
                             },
                             "indent": []
+                        }
+                    },
+                    {
+                        "type": "heading",
+                        "depth": 3,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Truly custom objects",
+                                "position": {
+                                    "start": {
+                                        "line": 33,
+                                        "column": 5,
+                                        "offset": 1336
+                                    },
+                                    "end": {
+                                        "line": 33,
+                                        "column": 25,
+                                        "offset": 1356
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 33,
+                                "column": 1,
+                                "offset": 1332
+                            },
+                            "end": {
+                                "line": 33,
+                                "column": 25,
+                                "offset": 1356
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "object",
+                        "kind": "section",
+                        "value": {
+                            "style": {
+                                "padding": "2px 8px",
+                                "background": "rgba(20, 60, 200, 0.25)"
+                            },
+                            "content": {
+                                "type": "root",
+                                "children": [
+                                    {
+                                        "type": "heading",
+                                        "depth": 3,
+                                        "children": [
+                                            {
+                                                "type": "text",
+                                                "value": "Hello world.",
+                                                "position": {
+                                                    "start": {
+                                                        "line": 1,
+                                                        "column": 5,
+                                                        "offset": 4
+                                                    },
+                                                    "end": {
+                                                        "line": 1,
+                                                        "column": 17,
+                                                        "offset": 16
+                                                    },
+                                                    "indent": []
+                                                }
+                                            }
+                                        ],
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 1,
+                                                "offset": 0
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 17,
+                                                "offset": 16
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "list",
+                                        "ordered": false,
+                                        "start": null,
+                                        "spread": false,
+                                        "children": [
+                                            {
+                                                "type": "listItem",
+                                                "spread": false,
+                                                "checked": null,
+                                                "children": [
+                                                    {
+                                                        "type": "paragraph",
+                                                        "children": [
+                                                            {
+                                                                "type": "text",
+                                                                "value": "This is the beginning.",
+                                                                "position": {
+                                                                    "start": {
+                                                                        "line": 2,
+                                                                        "column": 3,
+                                                                        "offset": 19
+                                                                    },
+                                                                    "end": {
+                                                                        "line": 2,
+                                                                        "column": 25,
+                                                                        "offset": 41
+                                                                    },
+                                                                    "indent": []
+                                                                }
+                                                            }
+                                                        ],
+                                                        "position": {
+                                                            "start": {
+                                                                "line": 2,
+                                                                "column": 3,
+                                                                "offset": 19
+                                                            },
+                                                            "end": {
+                                                                "line": 2,
+                                                                "column": 25,
+                                                                "offset": 41
+                                                            },
+                                                            "indent": []
+                                                        }
+                                                    }
+                                                ],
+                                                "position": {
+                                                    "start": {
+                                                        "line": 2,
+                                                        "column": 1,
+                                                        "offset": 17
+                                                    },
+                                                    "end": {
+                                                        "line": 2,
+                                                        "column": 25,
+                                                        "offset": 41
+                                                    },
+                                                    "indent": []
+                                                }
+                                            },
+                                            {
+                                                "type": "listItem",
+                                                "spread": false,
+                                                "checked": null,
+                                                "children": [
+                                                    {
+                                                        "type": "paragraph",
+                                                        "children": [
+                                                            {
+                                                                "type": "text",
+                                                                "value": "This is the middle.",
+                                                                "position": {
+                                                                    "start": {
+                                                                        "line": 3,
+                                                                        "column": 3,
+                                                                        "offset": 44
+                                                                    },
+                                                                    "end": {
+                                                                        "line": 3,
+                                                                        "column": 22,
+                                                                        "offset": 63
+                                                                    },
+                                                                    "indent": []
+                                                                }
+                                                            }
+                                                        ],
+                                                        "position": {
+                                                            "start": {
+                                                                "line": 3,
+                                                                "column": 3,
+                                                                "offset": 44
+                                                            },
+                                                            "end": {
+                                                                "line": 3,
+                                                                "column": 22,
+                                                                "offset": 63
+                                                            },
+                                                            "indent": []
+                                                        }
+                                                    }
+                                                ],
+                                                "position": {
+                                                    "start": {
+                                                        "line": 3,
+                                                        "column": 1,
+                                                        "offset": 42
+                                                    },
+                                                    "end": {
+                                                        "line": 3,
+                                                        "column": 22,
+                                                        "offset": 63
+                                                    },
+                                                    "indent": []
+                                                }
+                                            },
+                                            {
+                                                "type": "listItem",
+                                                "spread": false,
+                                                "checked": null,
+                                                "children": [
+                                                    {
+                                                        "type": "paragraph",
+                                                        "children": [
+                                                            {
+                                                                "type": "text",
+                                                                "value": "This is the end.",
+                                                                "position": {
+                                                                    "start": {
+                                                                        "line": 4,
+                                                                        "column": 3,
+                                                                        "offset": 66
+                                                                    },
+                                                                    "end": {
+                                                                        "line": 4,
+                                                                        "column": 19,
+                                                                        "offset": 82
+                                                                    },
+                                                                    "indent": []
+                                                                }
+                                                            }
+                                                        ],
+                                                        "position": {
+                                                            "start": {
+                                                                "line": 4,
+                                                                "column": 3,
+                                                                "offset": 66
+                                                            },
+                                                            "end": {
+                                                                "line": 4,
+                                                                "column": 19,
+                                                                "offset": 82
+                                                            },
+                                                            "indent": []
+                                                        }
+                                                    }
+                                                ],
+                                                "position": {
+                                                    "start": {
+                                                        "line": 4,
+                                                        "column": 1,
+                                                        "offset": 64
+                                                    },
+                                                    "end": {
+                                                        "line": 4,
+                                                        "column": 19,
+                                                        "offset": 82
+                                                    },
+                                                    "indent": []
+                                                }
+                                            }
+                                        ],
+                                        "position": {
+                                            "start": {
+                                                "line": 2,
+                                                "column": 1,
+                                                "offset": 17
+                                            },
+                                            "end": {
+                                                "line": 4,
+                                                "column": 19,
+                                                "offset": 82
+                                            },
+                                            "indent": [
+                                                1,
+                                                1
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 5,
+                                        "column": 1,
+                                        "offset": 83
+                                    }
+                                }
+                            }
                         }
                     },
                     {
@@ -10708,14 +10901,14 @@
                                 "value": "Trying custom objects",
                                 "position": {
                                     "start": {
-                                        "line": 34,
+                                        "line": 47,
                                         "column": 5,
-                                        "offset": 1340
+                                        "offset": 1565
                                     },
                                     "end": {
-                                        "line": 34,
+                                        "line": 47,
                                         "column": 26,
-                                        "offset": 1361
+                                        "offset": 1586
                                     },
                                     "indent": []
                                 }
@@ -10723,21 +10916,21 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 34,
+                                "line": 47,
                                 "column": 1,
-                                "offset": 1336
+                                "offset": 1561
                             },
                             "end": {
-                                "line": 34,
+                                "line": 47,
                                 "column": 26,
-                                "offset": 1361
+                                "offset": 1586
                             },
                             "indent": []
                         }
                     },
                     {
                         "type": "object",
-                        "kind": "UserStory",
+                        "kind": "user_story",
                         "value": {
                             "story": "As a user of this application, I want to specify custom objects in YAML so I can implement more visually appealing custom rendering.",
                             "acceptance_criteria": [
@@ -10751,17 +10944,17 @@
                         "children": [
                             {
                                 "type": "inlineCode",
-                                "value": "object:UserStory",
+                                "value": "@user_story",
                                 "position": {
                                     "start": {
-                                        "line": 43,
+                                        "line": 56,
                                         "column": 1,
-                                        "offset": 1587
+                                        "offset": 1807
                                     },
                                     "end": {
-                                        "line": 43,
-                                        "column": 19,
-                                        "offset": 1605
+                                        "line": 56,
+                                        "column": 14,
+                                        "offset": 1820
                                     },
                                     "indent": []
                                 }
@@ -10769,14 +10962,14 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 43,
+                                "line": 56,
                                 "column": 1,
-                                "offset": 1587
+                                "offset": 1807
                             },
                             "end": {
-                                "line": 43,
-                                "column": 19,
-                                "offset": 1605
+                                "line": 56,
+                                "column": 14,
+                                "offset": 1820
                             },
                             "indent": []
                         }
@@ -10788,14 +10981,14 @@
                         "value": "story: As a user of this application, I want to specify custom objects in YAML so I can implement more visually appealing custom rendering. \nacceptance_criteria:\n    - Must work\n    - Must work well",
                         "position": {
                             "start": {
-                                "line": 45,
+                                "line": 58,
                                 "column": 1,
-                                "offset": 1607
+                                "offset": 1822
                             },
                             "end": {
-                                "line": 50,
+                                "line": 63,
                                 "column": 4,
-                                "offset": 1813
+                                "offset": 2028
                             },
                             "indent": [
                                 1,
@@ -10808,7 +11001,7 @@
                     },
                     {
                         "type": "object",
-                        "kind": "Expand",
+                        "kind": "expand",
                         "value": {
                             "title": "This is an Expand object",
                             "content": {
@@ -11068,15 +11261,110 @@
                         "offset": 0
                     },
                     "end": {
-                        "line": 66,
+                        "line": 79,
                         "column": 1,
-                        "offset": 2113
+                        "offset": 2322
                     }
                 }
             },
             "tags": [],
             "properties": {},
             "title": "Sea"
+        },
+        {
+            "filename": "test-wikilinks.mdx",
+            "extension": "mdx",
+            "id": "test-wikilinks",
+            "ast": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "This is a page with a link to ",
+                                "position": {
+                                    "start": {
+                                        "line": 2,
+                                        "column": 1,
+                                        "offset": 1
+                                    },
+                                    "end": {
+                                        "line": 2,
+                                        "column": 31,
+                                        "offset": 31
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "wikilink",
+                                "id": "rust",
+                                "text": "rust",
+                                "position": {
+                                    "start": {
+                                        "line": 2,
+                                        "column": 31,
+                                        "offset": 31
+                                    },
+                                    "end": {
+                                        "line": 2,
+                                        "column": 39,
+                                        "offset": 39
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": ".",
+                                "position": {
+                                    "start": {
+                                        "line": 2,
+                                        "column": 39,
+                                        "offset": 39
+                                    },
+                                    "end": {
+                                        "line": 2,
+                                        "column": 40,
+                                        "offset": 40
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 2,
+                                "column": 1,
+                                "offset": 1
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 40,
+                                "offset": 40
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 40,
+                        "offset": 40
+                    }
+                }
+            },
+            "tags": [],
+            "properties": {},
+            "title": "test-wikilinks"
         },
         {
             "filename": "user_stories.mdx",
@@ -12879,16 +13167,32 @@
     ],
     "components": [
         {
-            "filename": "hello_world.jsx",
+            "filename": "expand.jsx",
             "extension": "jsx",
-            "id": "hello_world"
+            "id": "expand",
+            "text": "import React from 'react';\n\n\nexport default function ({ \n    database, \n    title, \n    content,\n    renderComponents \n}) {\n\n    const [expanded, setExpanded] = React.useState(true);\n    const handleClick = (evt) => {\n        evt.preventDefault();\n        setExpanded(!expanded);\n    };\n\n    content = renderComponents(database, content);\n\n    return (\n        <div>\n            <h4\n                style={{\n                    margin: '1rem 0 .25rem',\n                    cursor: 'pointer',\n                    userSelect: 'none',\n                }}\n                onClick={handleClick}\n            >\n                <div style={{ \n                    display : 'inline-block',\n                    width : '1.2rem',\n                    paddingRight: '8px' \n                    }}>{expanded ? '\t▼' : '▸'}</div>\n                <span>{title}</span>\n            </h4>\n            <div style={{\n                display: expanded ? 'block' : 'none',\n                padding: '12px 0px 12px 8px',\n                marginLeft: '0px',\n                borderTop: '1px dotted #CCC',\n                borderLeft: '5px solid #CCC',\n                borderBottom: '1px dotted #CCC',\n                \n            }}>\n                {content}\n            </div>\n        </div>\n    )\n}",
+            "parsed": "(function() {\n\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = _default;\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _default({\n  database,\n  title,\n  content,\n  renderComponents\n}) {\n  const [expanded, setExpanded] = _react.default.useState(true);\n\n  const handleClick = evt => {\n    evt.preventDefault();\n    setExpanded(!expanded);\n  };\n\n  content = renderComponents(database, content);\n  return /*#__PURE__*/_react.default.createElement(\"div\", null, /*#__PURE__*/_react.default.createElement(\"h4\", {\n    style: {\n      margin: '1rem 0 .25rem',\n      cursor: 'pointer',\n      userSelect: 'none'\n    },\n    onClick: handleClick\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'inline-block',\n      width: '1.2rem',\n      paddingRight: '8px'\n    }\n  }, expanded ? '\t▼' : '▸'), /*#__PURE__*/_react.default.createElement(\"span\", null, title)), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: expanded ? 'block' : 'none',\n      padding: '12px 0px 12px 8px',\n      marginLeft: '0px',\n      borderTop: '1px dotted #CCC',\n      borderLeft: '5px solid #CCC',\n      borderBottom: '1px dotted #CCC'\n    }\n  }, content));\n}\n})()"
+        },
+        {
+            "filename": "section.jsx",
+            "extension": "jsx",
+            "id": "section",
+            "text": "import React from 'react';\n\nexport default function({ \n    style, \n    content,\n    renderComponents,\n}) {\n    return (\n        <div style={style}>\n            {renderComponents(null, content)}\n        </div> \n    )\n}",
+            "parsed": "(function() {\n\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = _default;\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _default({\n  style,\n  content,\n  renderComponents\n}) {\n  return /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: style\n  }, renderComponents(null, content));\n}\n})()"
+        },
+        {
+            "filename": "user_story.jsx",
+            "extension": "jsx",
+            "id": "user_story",
+            "text": "import React from 'react';\n\nexport default function MDXUserStory({ \n    story, \n    acceptance_criteria \n}) {\n    return (\n        <div\n            style={{\n                width: '32rem',\n                padding: '0.5rem',\n                border: 'solid 1px #CCC',\n            }}\n        >\n            <div\n                style={{\n                    marginBottom: '12px',\n                    borderBottom: 'dotted 1px #DDD',\n                }}\n            >\n                <strong>User story</strong>\n            </div>\n            <div>{story}</div>\n            <ul>{acceptance_criteria.map((ac, i) => (\n                <li key={i}>{ac}</li>\n            ))}</ul>\n        </div>\n    )\n}\n",
+            "parsed": "(function() {\n\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = MDXUserStory;\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction MDXUserStory({\n  story,\n  acceptance_criteria\n}) {\n  return /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      width: '32rem',\n      padding: '0.5rem',\n      border: 'solid 1px #CCC'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      marginBottom: '12px',\n      borderBottom: 'dotted 1px #DDD'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"strong\", null, \"User story\")), /*#__PURE__*/_react.default.createElement(\"div\", null, story), /*#__PURE__*/_react.default.createElement(\"ul\", null, acceptance_criteria.map((ac, i) => /*#__PURE__*/_react.default.createElement(\"li\", {\n    key: i\n  }, ac))));\n}\n})()"
         }
     ],
     "index_words": {
         "product": [
             "creating_user_stories",
             "home",
-            "test"
+            "sea"
         ],
         "development": [
             "creating_user_stories",
@@ -12922,7 +13226,7 @@
         "work": [
             "creating_user_stories",
             "rust_producer_consumer",
-            "test"
+            "sea"
         ],
         "but": [
             "creating_user_stories",
@@ -12944,7 +13248,7 @@
         "what": [
             "creating_user_stories",
             "example_user_stories",
-            "test"
+            "sea"
         ],
         "generated": [
             "creating_user_stories",
@@ -12965,7 +13269,7 @@
         "can": [
             "creating_user_stories",
             "example_user_stories",
-            "test"
+            "sea"
         ],
         "projects": [
             "creating_user_stories",
@@ -12981,7 +13285,7 @@
         ],
         "set": [
             "creating_user_stories",
-            "test"
+            "sea"
         ],
         "together": [
             "creating_user_stories",
@@ -12989,7 +13293,7 @@
         ],
         "has": [
             "creating_user_stories",
-            "test"
+            "sea"
         ],
         "why": [
             "creating_user_stories",
@@ -13034,7 +13338,7 @@
         "more": [
             "creating_user_stories",
             "example_user_stories",
-            "test"
+            "sea"
         ],
         "we": [
             "creating_user_stories",
@@ -13050,7 +13354,7 @@
         ],
         "about": [
             "creating_user_stories",
-            "test"
+            "sea"
         ],
         "learning": [
             "creating_user_stories",
@@ -13097,12 +13401,12 @@
         "each": [
             "creating_user_stories",
             "rust_producer_consumer",
-            "test"
+            "sea"
         ],
         "an": [
             "creating_user_stories",
             "rust_producer_consumer",
-            "test"
+            "sea"
         ],
         "which": [
             "creating_user_stories",
@@ -13122,12 +13426,12 @@
         ],
         "minimal": [
             "creating_user_stories",
-            "test",
+            "sea",
             "webpack_notes"
         ],
         "thus": [
             "creating_user_stories",
-            "test"
+            "sea"
         ],
         "must": [
             "creating_user_stories",
@@ -13206,7 +13510,7 @@
         "easily": [
             "creating_user_stories",
             "example_user_stories",
-            "test"
+            "sea"
         ],
         "find": [
             "creating_user_stories",
@@ -13231,7 +13535,7 @@
         ],
         "making": [
             "creating_user_stories",
-            "test"
+            "sea"
         ],
         "vision": [
             "creating_user_stories",
@@ -13255,7 +13559,7 @@
         ],
         "large": [
             "creating_user_stories",
-            "test"
+            "sea"
         ],
         "need": [
             "creating_user_stories",
@@ -13268,7 +13572,7 @@
         "then": [
             "creating_user_stories",
             "rust_producer_consumer",
-            "test"
+            "sea"
         ],
         "validation": [
             "creating_user_stories",
@@ -13297,11 +13601,11 @@
         ],
         "etc": [
             "creating_user_stories",
-            "test"
+            "sea"
         ],
         "than": [
             "creating_user_stories",
-            "test"
+            "sea"
         ],
         "without": [
             "creating_user_stories",
@@ -13322,12 +13626,12 @@
         "hello": [
             "end-to-end_development_of_a_distributed_system",
             "home",
-            "test"
+            "sea"
         ],
         "world": [
             "example_user_stories",
             "home",
-            "test"
+            "sea"
         ],
         "easy": [
             "example_user_stories",
@@ -13340,7 +13644,7 @@
         "trying": [
             "example_user_stories",
             "rust_webgl",
-            "test"
+            "sea"
         ],
         "build": [
             "example_user_stories",
@@ -13348,11 +13652,11 @@
         ],
         "creating": [
             "example_user_stories",
-            "test"
+            "sea"
         ],
         "plug-ins": [
             "example_user_stories",
-            "test"
+            "sea"
         ],
         "simple": [
             "example_user_stories",
@@ -13388,7 +13692,7 @@
         ],
         "writing": [
             "home",
-            "test"
+            "sea"
         ],
         "raytracer": [
             "home",
@@ -13432,11 +13736,11 @@
         ],
         "note": [
             "rust_producer_consumer",
-            "test"
+            "sea"
         ],
         "render": [
             "rust_producer_consumer",
-            "test"
+            "sea"
         ],
         "code": [
             "rust_producer_consumer",
@@ -13453,26 +13757,26 @@
         ],
         "other": [
             "rust_webgl",
-            "test"
+            "sea"
         ],
         "database": [
-            "test",
+            "sea",
             "webpack_notes"
         ],
         "support": [
-            "test",
+            "sea",
             "webpack_notes"
         ],
         "directly": [
-            "test",
+            "sea",
             "webpack_notes"
         ],
         "installation": [
-            "test",
+            "sea",
             "webpack_notes"
         ],
         "clear": [
-            "test",
+            "sea",
             "webpack_notes"
         ]
     }

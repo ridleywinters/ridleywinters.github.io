@@ -1,9 +1,9 @@
 
 # Sea
 
-#### Sea
+#### What is Sea? 
 
-What is Sea? Sea is an extension of Markdown into multiple files to create a customizable database of information.  It has the fluency of Markdown for simply writing text with minimal markup to support specifying data and formatting. It is customizable in that additional data types and renderers can be added to the database _directly_ as part of the database itself (no plug-ins, installation config, etc.). 
+Sea is an extension of Markdown into multiple files to create a customizable database of information.  It has the fluency of Markdown for simply writing text with minimal markup to support specifying data and formatting. It is customizable in that additional data types and renderers can be added to the database _directly_ as part of the database itself (no plug-ins, installation config, etc.). 
 
 Note: Sea is more of a _technology_ than it is a _product_. It's very flexible and customizable. Sea templates can overlay an opinion on the technology, creating a clear, immediately usable use cases - thus making Sea into more of a product.
 
@@ -30,17 +30,30 @@ Hello world!
 
 What about <Component>test</Component>, does this work?
 
+### Truly custom objects
+
+```@section
+style:
+    padding: '2px 8px'
+    background: "rgba(20, 60, 200, 0.25)"
+content$md: |
+    ### Hello world.
+    * This is the beginning.
+    * This is the middle.
+    * This is the end.
+```
+
 
 ### Trying custom objects
 
-```object:UserStory
+```@user_story
 story: As a user of this application, I want to specify custom objects in YAML so I can implement more visually appealing custom rendering. 
 acceptance_criteria:
     - Must work
     - Must work well
 ```
 
-`object:UserStory`
+`@user_story`
 
 ```
 story: As a user of this application, I want to specify custom objects in YAML so I can implement more visually appealing custom rendering. 
@@ -50,7 +63,7 @@ acceptance_criteria:
 ```
 
 
-```object:Expand
+```@expand
 title: This is an Expand object
 content$markdown: |
     This is a longer bit of content.  I would prefer if this supported markdown

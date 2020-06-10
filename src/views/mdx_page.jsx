@@ -197,79 +197,13 @@ function RelatedArticles({ database, page }) {
     );
 }
 
-function MDXUserStory({ story, acceptance_criteria }) {
-    return (
-        <div
-            style={{
-                width: '32rem',
-                padding: '0.5rem',
-                border: 'solid 1px #CCC',
-            }}
-        >
-            <div
-                style={{
-                    marginBottom: '12px',
-                    borderBottom: 'dotted 1px #DDD',
-                }}
-            >
-                <strong>User story</strong>
-            </div>
-            <div>{story}</div>
-            <ul>{acceptance_criteria.map((ac, i) => (
-                <li key={i}>{ac}</li>
-            ))}</ul>
-        </div>
-    )
-}
 
-function MDXExpand({ title, content }) {
 
-    const [expanded, setExpanded] = React.useState(true);
-    const handleClick = (evt) => {
-        evt.preventDefault();
-        setExpanded(!expanded);
-    };
 
-    content = renderComponents(null, content);
+function MDXObject({ database, kind, value }) {
+    value.renderComponents = renderComponents;       
 
-    return (
-        <div>
-            <h4
-                style={{
-                    margin: '1rem 0 .25rem',
-                    cursor: 'pointer',
-                    userSelect: 'none',
-                }}
-                onClick={handleClick}
-            >
-                <div style={{ 
-                    display : 'inline-block',
-                    width : '1.2rem',
-                    paddingRight: '8px' 
-                    }}>{expanded ? '	▼' : '▸'}</div>
-                <span>{title}</span>
-            </h4>
-            <div style={{
-                display: expanded ? 'block' : 'none',
-                padding: '12px 0px 12px 8px',
-                marginLeft: '0px',
-                borderTop: '1px dotted #CCC',
-                borderLeft: '5px solid #CCC',
-                borderBottom: '1px dotted #CCC',
-                
-            }}>
-                {content}
-            </div>
-        </div>
-    )
-}
-
-function MDXObject({ kind, value }) {
-    const Delegate = {
-        'Expand': MDXExpand,
-        'UserStory': MDXUserStory,
-    }[kind];
-
+    const Delegate = database.renderers[kind];
     if (Delegate) {
         return <Delegate {...value} />;
     }
@@ -364,6 +298,11 @@ function renderComponents(database, root) {
         // clean-up remark-react does).
         createElement: (tag, props, children) => {
 
+            if (tag === 'mdxobject') {
+                props = props || {};
+                props.database = props.database || database;         
+            }
+
             tag = {
                 a: MDXLink,
                 p: MDXParagraph,
@@ -372,6 +311,7 @@ function renderComponents(database, root) {
                 mdxobject: MDXObject,
             }[tag] || tag;
 
+            
             return React.createElement(tag, props, children);
         },
     })
