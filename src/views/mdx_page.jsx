@@ -23,6 +23,7 @@ function MDXLayout({ children }) {
     );
 }
 
+// TODO: this definitely shouldn't be in the core project! This was from early experiments.
 function GitHubIcon({ size = 16, style = {} }) {
     return (
         <svg
@@ -68,9 +69,16 @@ function MDXCodeBlock({ language, value }) {
     );
 }
 
-function MDXEvalBlock({ db, language, value, value2 }) {
-
-
+function MDXEvalBlock({ db, value2 }) {
+    
+    // Set up the default context. As convenience is a priority, we populate (pollute?) the
+    // default context for JSX to include:
+    // * The database
+    // * The page itself (TODO)
+    // * React and Lodash
+    // * All core Renderers
+    // * All custom Renderers
+    //
     const context = {
         database: db,
         _,
@@ -78,15 +86,25 @@ function MDXEvalBlock({ db, language, value, value2 }) {
         MDXLink,
         console,
     };
+    _.each(db.index.rendererByName, (value, key) => {
+        context[key] = value;
+    });
+
     const contextKeys = Object.keys(context);
     const contextValues = contextKeys.map((key) => context[key]);
-
     try {
         const f = new Function(...contextKeys, `return ${value2}`);
         const e = f(...contextValues);
         return e;
     } catch (err) {
-        return (<pre>{JSON.stringify(err, null, 4)}</pre>);
+        return (
+            <div style={{ padding : '1rem', border : 'solid 2px red' }}>
+                <div>
+                    <strong>Error: {`${err}`}</strong>
+                </div>
+                <pre>{JSON.stringify(err, null, 4)}</pre>
+            </div>
+        );
     }
 }
 
@@ -197,13 +215,20 @@ function RelatedArticles({ database, page }) {
     );
 }
 
-
+function MDXJSX(props) {
+    return (
+        MDXEvalBlock({
+            db : props.database,
+            value2 : props.parsed,
+        })
+    );
+}
 
 
 function MDXObject({ database, kind, value }) {
     value.renderComponents = renderComponents;       
 
-    const Delegate = database.renderers[kind];
+    const Delegate = database.index.rendererByType[kind];
     if (Delegate) {
         return <Delegate {...value} />;
     }
@@ -266,30 +291,30 @@ function renderComponents(database, root) {
                     };
                 },
                 code: (h, node) => {
-
-                    if (node.lang === 'eval-jsx') {
-                        return {
-                            type: 'element',
-                            tagName: 'evalblock',
-                            properties: {
-                                language: node.lang,
-                                value: node.value,
-                                value2: node.value2,
-                                db: database,
-                            },
-                            children: [],
-                        };
-                    }
-
+                    // Rename this to avoid the default processing to HAST, which loses the language
+                    // information so custom syntax highlighting is harder. There may be a cleaner
+                    // way to do this.
                     return {
                         type: 'element',
-                        tagName: 'codeblock',
+                        tagName: 'code-proxy',
                         properties: {
                             language: node.lang,
                             value: node.value,
                         },
                         children: [],
                     };
+                },
+                jsx : (h, node) => {
+                    // NOTE: this is a workaround. This prevents remark-react from consuming
+                    // the JSX node before createElement is called so that it makes it untouched
+                    // the custom createElement handler.
+                    return {
+                        type : 'element',
+                        tagName : 'jsx-proxy',
+                        properties : {...node},
+                        children : node.children,
+                        value : node.value,
+                    }
                 }
             },
         },
@@ -298,7 +323,7 @@ function renderComponents(database, root) {
         // clean-up remark-react does).
         createElement: (tag, props, children) => {
 
-            if (tag === 'mdxobject') {
+            if (tag === 'mdxobject' || tag === 'jsx-proxy') {
                 props = props || {};
                 props.database = props.database || database;         
             }
@@ -306,9 +331,9 @@ function renderComponents(database, root) {
             tag = {
                 a: MDXLink,
                 p: MDXParagraph,
-                codeblock: MDXCodeBlock,
-                evalblock: MDXEvalBlock,
+                'code-proxy': MDXCodeBlock,
                 mdxobject: MDXObject,
+                'jsx-proxy' : MDXJSX,
             }[tag] || tag;
 
             

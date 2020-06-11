@@ -5,19 +5,7 @@ import RustRaytracer from './pages/rust_raytracer.jsx';
 import database from '../database.json';
 import MDXPage from './mdx_page.jsx';
 
-(() => {
 
-    const tagIndex = {};
-    database.pages.forEach((page) => {
-        page.tags.forEach((tag) => {
-            tagIndex[tag] = tagIndex[tag] || [];
-            tagIndex[tag].push(page);
-        })
-    });
-    database.index = {
-        tag : tagIndex,
-    };
-})();
 
 function evaluateDefaultExport(source, additionalContext = {}) {
     const exports = {};
@@ -51,8 +39,41 @@ function evaluateDefaultExport(source, additionalContext = {}) {
     return exports.default;
 }
 
+// NOTE: it's possible that these index generators should exist in the data directory
+// as plug-ins and be generated server-side.  One complication is the indices won't be
+// able to refer to the in-memory objects (which is inconvenient), but architecturally
+// having "all" the data generated server-side seems more consistent.
+
+database.index = {};
+
+database.index.tag = (() => {
+    const tagIndex = {};
+    database.pages.forEach((page) => {
+        page.tags.forEach((tag) => {
+            tagIndex[tag] = tagIndex[tag] || [];
+            tagIndex[tag].push(page);
+        })
+    });
+    return tagIndex;
+})();
+
+database.index.rendererByType = {};
+database.index.rendererByName = {};
+database.components.forEach((comp) => {
+    const obj = evaluateDefaultExport(`return ${comp.parsed};`);
+    const type = comp.filename.replace(/\.jsx$/, '');
+    const camel = type.substr(1).replace(/[_\-]+([a-z])/g, (_unused, letter) => {
+        return letter.toUpperCase();
+    });
+    const name = `${type[0].toUpperCase()}${camel}`;
+    database.index.rendererByType[type] = obj;
+    database.index.rendererByName[name] = obj;
+})
+
+console.log(database);
 
 export default function Application() {
+    
     database.pages.forEach((page) => {
         page.href = `/?page=${page.id}`;
     });
@@ -62,13 +83,7 @@ export default function Application() {
     };
     database.pages.forEach((page) => {
         routes[page.id] = () => <MDXPage database={database} page={page} />
-    });
-
-    database.renderers = {};
-    database.components.forEach((comp) => {
-        const obj = evaluateDefaultExport(`return ${comp.parsed};`);
-        database.renderers[comp.filename.replace(/\.jsx$/, '')] = obj;
-    })
+    });    
 
     return (
         <Layout>

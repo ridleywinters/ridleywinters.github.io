@@ -11,15 +11,15 @@ I'm still learning so please take everything you find on this site with a grain 
 
 ### How To's
 
-```eval-jsx
+
 <ul>
 {_.map(database.index.tag["how-to"], (page) => (
-        <li key={page.id}>
-            <MDXLink href={`/?page=${page.id}`}>{page.title}</MDXLink>
-        </li>
-    ))}
+    <li key={page.id}>
+        <MDXLink href={`/?page=${page.id}`}>{page.title}</MDXLink>
+    </li>
+))}
 </ul>
-```
+
 
 ### Exercises
 

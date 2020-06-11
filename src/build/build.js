@@ -116,12 +116,6 @@ function processMDXString(s) {
         .use(mdx)
         .use(frontmatter, ['yaml', 'toml'])
         .use(wikilinks, { inlineMode: true })
-        .use(() => tree => {
-            visit(tree, 'jsx', node => {
-                node.type = "code";
-                node.value = node.value;
-            });
-        })
         .parse(s);
     return ast;
 }
@@ -135,12 +129,6 @@ async function processMDXAST({ filename }) {
         .use(mdx)
         .use(frontmatter, ['yaml', 'toml'])
         .use(wikilinks, { inlineMode: true })
-        .use(() => tree => {
-            visit(tree, 'jsx', node => {
-                node.type = "code";
-                node.value = node.value;
-            });
-        })
         .parse(file);
     return ast;
 }
@@ -228,6 +216,9 @@ async function postprocessMDX({ entry }) {
 
                 };
             }
+        } else if (node.type === 'jsx') {
+            // This is a JSX expression, so we need to put a "return" in front of it
+            node.parsed = parseES6(`return ${node.value}`);
         }
         return node;
     })

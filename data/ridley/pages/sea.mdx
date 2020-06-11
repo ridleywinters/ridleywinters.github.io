@@ -13,9 +13,24 @@ Can be thought of as a programming language.
 
 Semantic wiki, TiddlyWiki, MediaWiki, Markdown, Gatsby, database, spreadsheets, etc. Another swing at a balance of that functionality.  Incremental development of ideas.  Allow things to be "finished" and published sooner yet continually improved.
 
+## Installation
+
 ## How does it work?
 
 Sea operates on a directory of files, typically stored in git (for personal knowledge bases) or in a database for large multi-user use cases. Each file represents a **Card** - a sttarting point, think of that as a fairly standard Markdown document. Sea parses the whole set of Cards and creates a tree of data with indices so that a renderer can then easily render the documents as well cross-reference information in other Cards.
+
+
+### Concepts
+
+* Data objects
+* Components (Renderers)
+* Parsers
+* Indices
+* Transformations (Graphs)
+* Exporters (Compilers)
+* Templates (?)
+* Style (?)
+
 
 Markdown with a couple extensions:
 
@@ -31,7 +46,9 @@ Server
 * Separate data from the presentation
 * API for operating on the data
 
+## Musings
 
+In one sense, Sea is a literal programming language for iteratively moving from idea to implementation. It's one that "starts" with plain text. Markdown is then layered in to a structure to the text.  Data objects and transformations can then be added in to programmatically turn inputs into new outputs. Exporters can then make these transformations available in external tools (whether that's a binary asset, a code package, etc.).
 
 ## Roadmap
 
@@ -50,6 +67,9 @@ Server
 #### v0.4
 
 * [ ] Create an API on the web server with edit commands
+* [ ] File write-back on API modifications
+* [ ] Page index of named objects
+
 
 ### v0.5
 
@@ -59,23 +79,13 @@ Server
 * [ ] Add UI editors
 * [ ] Add a TableOfContents component
 * [ ] Rust / WASM support
+* [ ] Collaboration
+* [ ] Scale
+* [ ] Connecting pages into a book like mdbook
 
 
 ## Test Area
 
-Hello world!
-
-<Component arg={1}>
-    There's something here.
-</Component>
-
-<Component arg={28}>
-    <Cat/>
-    <Dog/>
-</Component>
-
-
-What about <Component>test</Component>, does this work?
 
 ### Truly custom objects
 
@@ -91,7 +101,20 @@ content$md: |
 ```
 
 
-### Trying custom objects
+### Custom nodes
+
+The following creates a custom node in the AST of type `user_story`. The contents of the fenced section is parsed as YAML.
+
+~~~
+```@user_story
+story: As a user of this application, I want to specify custom objects in YAML so I can implement more visually appealing custom rendering. 
+acceptance_criteria:
+    - Must work
+    - Must work well
+```    
+~~~
+
+By default, the renderer looks for a React renderer of the same name (in this case, `user_story.jsx`) and uses that to display the data object:
 
 ```@user_story
 story: As a user of this application, I want to specify custom objects in YAML so I can implement more visually appealing custom rendering. 
@@ -100,26 +123,38 @@ acceptance_criteria:
     - Must work well
 ```
 
-`@user_story`
+### Embedding specific data types
 
-```
-story: As a user of this application, I want to specify custom objects in YAML so I can implement more visually appealing custom rendering. 
-acceptance_criteria:
-    - Must work
-    - Must work well
-```
+This example uses the `$<type>` suffix on a YAML field to indicate the parser that should be used on that field. In this case, it ensure the YAML field is parsed as Markdown (`$md`) so the `content` field is an AST as well.
 
-
+~~~
 ```@expand
 title: This is an Expand object
-content$markdown: |
+content$md: |
     This is a longer bit of content.  I would prefer if this supported markdown
     and multiple lines, though. I need to consider some way to keep the AST
     going.
 
     * List Item A
+        * Sub-item A1
+        * Sub-item A2
     * List Item B
     * List Item C
+```
+~~~
 
+
+```@expand
+title: This is an Expand object
+content$md: |
+    This is a longer bit of content.  I would prefer if this supported markdown
+    and multiple lines, though. I need to consider some way to keep the AST
+    going.
+
+    * List Item A
+        * Sub-item A1
+        * Sub-item A2
+    * List Item B
+    * List Item C
 ```
 

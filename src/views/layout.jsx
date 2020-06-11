@@ -3,11 +3,15 @@ import React from "react";
 export default function Layout({ children }) {
     return (
         <div className="c-layout">
-            <div style={{
+            <div style={{                
+                display: 'flex',                                
+                flexDirection: 'row',
                 padding: '12px 2rem 6px',
                 backgroundColor: '#ACF',
             }}>
-                <a href="/">home</a>
+                <a style={{ flexGrow: 0}} href="/">home</a>
+                <div style={{ flexGrow:1}} />
+                <a style={{ flexGrow: 0}} href="/?page=index">index</a>
             </div>
             <div style={{
                 minHeight: 'calc(100vh - 120px)'
