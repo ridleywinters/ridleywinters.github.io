@@ -16,11 +16,12 @@ base.setHTMLProperties({
         "body, input, button": {
             fontFamily: 'Catamaran',
         },
-        "a, a:visited": {
+        "a, a:visited, a code": {
             color: 'rgb(31, 136, 180)',
         },
         "code" : {
-            fontSize: '0.85rem'
+            color : '#052',
+            fontSize: '0.85rem',
         },
         "body": {
             fontFamily: 'Catamaran',
