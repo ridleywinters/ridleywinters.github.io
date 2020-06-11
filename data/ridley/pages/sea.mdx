@@ -5,6 +5,23 @@
 
 Sea is an extension of Markdown into multiple files to create a customizable database of information.  It has the fluency of Markdown for simply writing text with minimal markup to support specifying data and formatting. It is customizable in that additional data types and renderers can be added to the database _directly_ as part of the database itself (no plug-ins, installation config, etc.). 
 
+There's one basic tool:
+
+```
+$ sea-build dirname/  # builds database.json
+```
+
+Then to host a site all that is needed is to copy `database.json` into a folder with a a base `index.html` and `sea-site.js`.  Site customization exists entirely in the database itself, so there's no need to modify the host html or script.  Note: this is a _single page static website_ so free hosts like GitHub Pages can easily host this. No operational burden!
+
+For active development, to launch a local server with hot reloading:
+
+``
+$ sea-build dev dirname/
+``
+
+How do I customize it? If you know basic JavaScript and React, it should be very easy: Sea tries to inject as few "framework specific" concepts as possible.
+
+
 Note: Sea is more of a _technology_ than it is a _product_. It's very flexible and customizable. Sea templates can overlay an opinion on the technology, creating a clear, immediately usable use cases - thus making Sea into more of a product.
 
 Can be thought of as a programming language.

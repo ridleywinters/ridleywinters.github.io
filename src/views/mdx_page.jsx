@@ -63,6 +63,8 @@ function MDXLink({ href, children }) {
     )
 }
 
+// Should this be moved to be a component? The render name would just need to 
+// map to the standard MDAST specification name.
 function MDXCodeBlock({ language, value }) {
     return (
         <CodeBlock language={language}>{value}</CodeBlock>
@@ -79,6 +81,11 @@ function MDXEvalBlock({ db, value2 }) {
     // * All core Renderers
     // * All custom Renderers
     //
+    // NOTE: it's worth considering for the future if these should be accessible but
+    // hidden behind a require/import statement so that the React code is not "special"
+    // and theoretically would work in other contexts as well. (This is a weak argument
+    // though since file paths, package names, and reliance on the database itself
+    // complicate the idea of direct reusability in more than just theory.)
     const context = {
         database: db,
         _,
