@@ -12290,10 +12290,1069 @@
             "title": "Rust WebGL"
         },
         {
-            "filename": "sea.mdx",
+            "filename": "sea/data_objects.mdx",
+            "extension": "mdx",
+            "id": "data_objects",
+            "path": [
+                "sea"
+            ],
+            "ast": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "heading",
+                        "depth": 1,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Data Objects",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 3,
+                                        "offset": 2
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 15,
+                                        "offset": 14
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 15,
+                                "offset": 14
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "What are data objects?",
+                                "position": {
+                                    "start": {
+                                        "line": 3,
+                                        "column": 1,
+                                        "offset": 16
+                                    },
+                                    "end": {
+                                        "line": 3,
+                                        "column": 23,
+                                        "offset": 38
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 3,
+                                "column": 1,
+                                "offset": 16
+                            },
+                            "end": {
+                                "line": 3,
+                                "column": 23,
+                                "offset": 38
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Data Objects are a way to specify a common class of data independent of how it is displayed.",
+                                "position": {
+                                    "start": {
+                                        "line": 5,
+                                        "column": 1,
+                                        "offset": 40
+                                    },
+                                    "end": {
+                                        "line": 5,
+                                        "column": 93,
+                                        "offset": 132
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 5,
+                                "column": 1,
+                                "offset": 40
+                            },
+                            "end": {
+                                "line": 5,
+                                "column": 93,
+                                "offset": 132
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "heading",
+                        "depth": 2,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Example",
+                                "position": {
+                                    "start": {
+                                        "line": 7,
+                                        "column": 4,
+                                        "offset": 137
+                                    },
+                                    "end": {
+                                        "line": 7,
+                                        "column": 11,
+                                        "offset": 144
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 7,
+                                "column": 1,
+                                "offset": 134
+                            },
+                            "end": {
+                                "line": 7,
+                                "column": 11,
+                                "offset": 144
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Let's say you want to use Sea to store or share a series of recipes. The recipes may have a common data format and you don't want to duplicate the style and presentation for every individual recipe (and spend a lot of time trying to keep those in sync if you want any changes).",
+                                "position": {
+                                    "start": {
+                                        "line": 9,
+                                        "column": 1,
+                                        "offset": 146
+                                    },
+                                    "end": {
+                                        "line": 9,
+                                        "column": 278,
+                                        "offset": 423
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 9,
+                                "column": 1,
+                                "offset": 146
+                            },
+                            "end": {
+                                "line": 9,
+                                "column": 278,
+                                "offset": 423
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "You could use the following block to represent a recipe:",
+                                "position": {
+                                    "start": {
+                                        "line": 11,
+                                        "column": 1,
+                                        "offset": 425
+                                    },
+                                    "end": {
+                                        "line": 11,
+                                        "column": 57,
+                                        "offset": 481
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 11,
+                                "column": 1,
+                                "offset": 425
+                            },
+                            "end": {
+                                "line": 11,
+                                "column": 57,
+                                "offset": 481
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "code",
+                        "lang": "yaml",
+                        "meta": null,
+                        "value": "```@recipe\nname: Spaghetti Dinner\ningredients:\n    - spaghetti\n    - water\n    - pasta sauce\nsteps:\n    - boil water\n    - heat pasta sauce\n    - put spaghetti in water for 8-10 minutes\n    - drain spaghetti\n    - put spaghetti in a bowl\n    - pour pasta sauce on the spaghetti\n    - serve\n```",
+                        "position": {
+                            "start": {
+                                "line": 13,
+                                "column": 1,
+                                "offset": 483
+                            },
+                            "end": {
+                                "line": 29,
+                                "column": 4,
+                                "offset": 788
+                            },
+                            "indent": [
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1
+                            ]
+                        }
+                    },
+                    {
+                        "type": "heading",
+                        "depth": 4,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Parsing",
+                                "position": {
+                                    "start": {
+                                        "line": 31,
+                                        "column": 6,
+                                        "offset": 795
+                                    },
+                                    "end": {
+                                        "line": 31,
+                                        "column": 13,
+                                        "offset": 802
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 31,
+                                "column": 1,
+                                "offset": 790
+                            },
+                            "end": {
+                                "line": 31,
+                                "column": 13,
+                                "offset": 802
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "The ",
+                                "position": {
+                                    "start": {
+                                        "line": 33,
+                                        "column": 1,
+                                        "offset": 804
+                                    },
+                                    "end": {
+                                        "line": 33,
+                                        "column": 5,
+                                        "offset": 808
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "inlineCode",
+                                "value": "@recipe",
+                                "position": {
+                                    "start": {
+                                        "line": 33,
+                                        "column": 5,
+                                        "offset": 808
+                                    },
+                                    "end": {
+                                        "line": 33,
+                                        "column": 14,
+                                        "offset": 817
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": " label tells Sea to try the block that follows as a Data Object with the type ",
+                                "position": {
+                                    "start": {
+                                        "line": 33,
+                                        "column": 14,
+                                        "offset": 817
+                                    },
+                                    "end": {
+                                        "line": 33,
+                                        "column": 92,
+                                        "offset": 895
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "inlineCode",
+                                "value": "recipe",
+                                "position": {
+                                    "start": {
+                                        "line": 33,
+                                        "column": 92,
+                                        "offset": 895
+                                    },
+                                    "end": {
+                                        "line": 33,
+                                        "column": 100,
+                                        "offset": 903
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": ". Sea then parses the contents of the code section as YAML. This YAML then gets added to the Sea Tree as the parsed YAML data (rather than as a code block). ",
+                                "position": {
+                                    "start": {
+                                        "line": 33,
+                                        "column": 100,
+                                        "offset": 903
+                                    },
+                                    "end": {
+                                        "line": 33,
+                                        "column": 257,
+                                        "offset": 1060
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 33,
+                                "column": 1,
+                                "offset": 804
+                            },
+                            "end": {
+                                "line": 33,
+                                "column": 257,
+                                "offset": 1060
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "heading",
+                        "depth": 4,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Rendering",
+                                "position": {
+                                    "start": {
+                                        "line": 35,
+                                        "column": 6,
+                                        "offset": 1067
+                                    },
+                                    "end": {
+                                        "line": 35,
+                                        "column": 15,
+                                        "offset": 1076
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 35,
+                                "column": 1,
+                                "offset": 1062
+                            },
+                            "end": {
+                                "line": 35,
+                                "column": 15,
+                                "offset": 1076
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "When the renderer comes across a Data Object it looks for a ",
+                                "position": {
+                                    "start": {
+                                        "line": 37,
+                                        "column": 1,
+                                        "offset": 1078
+                                    },
+                                    "end": {
+                                        "line": 37,
+                                        "column": 61,
+                                        "offset": 1138
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "inlineCode",
+                                "value": "Renderer",
+                                "position": {
+                                    "start": {
+                                        "line": 37,
+                                        "column": 61,
+                                        "offset": 1138
+                                    },
+                                    "end": {
+                                        "line": 37,
+                                        "column": 71,
+                                        "offset": 1148
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": " with the same name as the type of the Data Object. In this case, that means it looks for a ",
+                                "position": {
+                                    "start": {
+                                        "line": 37,
+                                        "column": 71,
+                                        "offset": 1148
+                                    },
+                                    "end": {
+                                        "line": 37,
+                                        "column": 163,
+                                        "offset": 1240
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "inlineCode",
+                                "value": "recipe.jsx",
+                                "position": {
+                                    "start": {
+                                        "line": 37,
+                                        "column": 163,
+                                        "offset": 1240
+                                    },
+                                    "end": {
+                                        "line": 37,
+                                        "column": 175,
+                                        "offset": 1252
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": " (or ",
+                                "position": {
+                                    "start": {
+                                        "line": 37,
+                                        "column": 175,
+                                        "offset": 1252
+                                    },
+                                    "end": {
+                                        "line": 37,
+                                        "column": 180,
+                                        "offset": 1257
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "inlineCode",
+                                "value": "Recipe",
+                                "position": {
+                                    "start": {
+                                        "line": 37,
+                                        "column": 180,
+                                        "offset": 1257
+                                    },
+                                    "end": {
+                                        "line": 37,
+                                        "column": 188,
+                                        "offset": 1265
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": " React Component).  This Renderer will be passed the YAML data to render the Node.",
+                                "position": {
+                                    "start": {
+                                        "line": 37,
+                                        "column": 188,
+                                        "offset": 1265
+                                    },
+                                    "end": {
+                                        "line": 37,
+                                        "column": 270,
+                                        "offset": 1347
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 37,
+                                "column": 1,
+                                "offset": 1078
+                            },
+                            "end": {
+                                "line": 37,
+                                "column": 270,
+                                "offset": 1347
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "heading",
+                        "depth": 2,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Features",
+                                "position": {
+                                    "start": {
+                                        "line": 40,
+                                        "column": 4,
+                                        "offset": 1353
+                                    },
+                                    "end": {
+                                        "line": 40,
+                                        "column": 12,
+                                        "offset": 1361
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 40,
+                                "column": 1,
+                                "offset": 1350
+                            },
+                            "end": {
+                                "line": 40,
+                                "column": 12,
+                                "offset": 1361
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "heading",
+                        "depth": 3,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Parsing fields as Sea content",
+                                "position": {
+                                    "start": {
+                                        "line": 42,
+                                        "column": 5,
+                                        "offset": 1367
+                                    },
+                                    "end": {
+                                        "line": 42,
+                                        "column": 34,
+                                        "offset": 1396
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 42,
+                                "column": 1,
+                                "offset": 1363
+                            },
+                            "end": {
+                                "line": 42,
+                                "column": 34,
+                                "offset": 1396
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "An important use case to support is allowing individual field values to be parsed as Sea content.  Field names with a suffix of  ",
+                                "position": {
+                                    "start": {
+                                        "line": 44,
+                                        "column": 1,
+                                        "offset": 1398
+                                    },
+                                    "end": {
+                                        "line": 44,
+                                        "column": 130,
+                                        "offset": 1527
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "inlineCode",
+                                "value": "$[type]",
+                                "position": {
+                                    "start": {
+                                        "line": 44,
+                                        "column": 130,
+                                        "offset": 1527
+                                    },
+                                    "end": {
+                                        "line": 44,
+                                        "column": 139,
+                                        "offset": 1536
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": " are parsed as that type (unrecognized types are trimmed from the field name and ignored, per the principle that Sea should have reasonable default behavior for unavailable extensions):",
+                                "position": {
+                                    "start": {
+                                        "line": 44,
+                                        "column": 139,
+                                        "offset": 1536
+                                    },
+                                    "end": {
+                                        "line": 44,
+                                        "column": 324,
+                                        "offset": 1721
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 44,
+                                "column": 1,
+                                "offset": 1398
+                            },
+                            "end": {
+                                "line": 44,
+                                "column": 324,
+                                "offset": 1721
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "code",
+                        "lang": null,
+                        "meta": null,
+                        "value": "```@two_columns\ncolumnA:  Hello **world**!\ncolumnB$sea:  Hello **world**!\n```",
+                        "position": {
+                            "start": {
+                                "line": 46,
+                                "column": 1,
+                                "offset": 1723
+                            },
+                            "end": {
+                                "line": 51,
+                                "column": 4,
+                                "offset": 1808
+                            },
+                            "indent": [
+                                1,
+                                1,
+                                1,
+                                1,
+                                1
+                            ]
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "In the above example, ",
+                                "position": {
+                                    "start": {
+                                        "line": 53,
+                                        "column": 1,
+                                        "offset": 1810
+                                    },
+                                    "end": {
+                                        "line": 53,
+                                        "column": 23,
+                                        "offset": 1832
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "inlineCode",
+                                "value": "columnA",
+                                "position": {
+                                    "start": {
+                                        "line": 53,
+                                        "column": 23,
+                                        "offset": 1832
+                                    },
+                                    "end": {
+                                        "line": 53,
+                                        "column": 32,
+                                        "offset": 1841
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": " will be parsed as plain text (the ",
+                                "position": {
+                                    "start": {
+                                        "line": 53,
+                                        "column": 32,
+                                        "offset": 1841
+                                    },
+                                    "end": {
+                                        "line": 53,
+                                        "column": 67,
+                                        "offset": 1876
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "inlineCode",
+                                "value": "**",
+                                "position": {
+                                    "start": {
+                                        "line": 53,
+                                        "column": 67,
+                                        "offset": 1876
+                                    },
+                                    "end": {
+                                        "line": 53,
+                                        "column": 71,
+                                        "offset": 1880
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": " will remain) and ",
+                                "position": {
+                                    "start": {
+                                        "line": 53,
+                                        "column": 71,
+                                        "offset": 1880
+                                    },
+                                    "end": {
+                                        "line": 53,
+                                        "column": 89,
+                                        "offset": 1898
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "inlineCode",
+                                "value": "columnB",
+                                "position": {
+                                    "start": {
+                                        "line": 53,
+                                        "column": 89,
+                                        "offset": 1898
+                                    },
+                                    "end": {
+                                        "line": 53,
+                                        "column": 98,
+                                        "offset": 1907
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": " will be parsed into an Sea Tree.",
+                                "position": {
+                                    "start": {
+                                        "line": 53,
+                                        "column": 98,
+                                        "offset": 1907
+                                    },
+                                    "end": {
+                                        "line": 53,
+                                        "column": 131,
+                                        "offset": 1940
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 53,
+                                "column": 1,
+                                "offset": 1810
+                            },
+                            "end": {
+                                "line": 53,
+                                "column": 131,
+                                "offset": 1940
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "heading",
+                        "depth": 2,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Reference",
+                                "position": {
+                                    "start": {
+                                        "line": 56,
+                                        "column": 4,
+                                        "offset": 1946
+                                    },
+                                    "end": {
+                                        "line": 56,
+                                        "column": 13,
+                                        "offset": 1955
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 56,
+                                "column": 1,
+                                "offset": 1943
+                            },
+                            "end": {
+                                "line": 56,
+                                "column": 13,
+                                "offset": 1955
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "heading",
+                        "depth": 3,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "FAQ",
+                                "position": {
+                                    "start": {
+                                        "line": 58,
+                                        "column": 5,
+                                        "offset": 1961
+                                    },
+                                    "end": {
+                                        "line": 58,
+                                        "column": 8,
+                                        "offset": 1964
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 58,
+                                "column": 1,
+                                "offset": 1957
+                            },
+                            "end": {
+                                "line": 58,
+                                "column": 8,
+                                "offset": 1964
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "object",
+                        "kind": "expand",
+                        "value": {
+                            "title": "Why YAML? Aren't there cleaner, better options?",
+                            "content": {
+                                "type": "root",
+                                "children": [
+                                    {
+                                        "type": "paragraph",
+                                        "children": [
+                                            {
+                                                "type": "text",
+                                                "value": "YAML has its flaws, but is fairly common as a object-notation language.  It also is biased towards \"ease of input\" so is, arguably, a good match to the goals of Sea.",
+                                                "position": {
+                                                    "start": {
+                                                        "line": 1,
+                                                        "column": 1,
+                                                        "offset": 0
+                                                    },
+                                                    "end": {
+                                                        "line": 1,
+                                                        "column": 166,
+                                                        "offset": 165
+                                                    },
+                                                    "indent": []
+                                                }
+                                            }
+                                        ],
+                                        "position": {
+                                            "start": {
+                                                "line": 1,
+                                                "column": 1,
+                                                "offset": 0
+                                            },
+                                            "end": {
+                                                "line": 1,
+                                                "column": 166,
+                                                "offset": 165
+                                            },
+                                            "indent": []
+                                        }
+                                    },
+                                    {
+                                        "type": "paragraph",
+                                        "children": [
+                                            {
+                                                "type": "text",
+                                                "value": "Future versions of Sea may support other data object specification languages via custom parsers as Sea is intended to be extensible in data specification.",
+                                                "position": {
+                                                    "start": {
+                                                        "line": 3,
+                                                        "column": 1,
+                                                        "offset": 167
+                                                    },
+                                                    "end": {
+                                                        "line": 3,
+                                                        "column": 155,
+                                                        "offset": 321
+                                                    },
+                                                    "indent": []
+                                                }
+                                            }
+                                        ],
+                                        "position": {
+                                            "start": {
+                                                "line": 3,
+                                                "column": 1,
+                                                "offset": 167
+                                            },
+                                            "end": {
+                                                "line": 3,
+                                                "column": 155,
+                                                "offset": 321
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 1,
+                                        "offset": 0
+                                    },
+                                    "end": {
+                                        "line": 4,
+                                        "column": 1,
+                                        "offset": 322
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 66,
+                        "column": 4,
+                        "offset": 2379
+                    }
+                }
+            },
+            "tags": [],
+            "properties": {},
+            "title": "Data Objects"
+        },
+        {
+            "filename": "sea/sea.mdx",
             "extension": "mdx",
             "id": "sea",
-            "path": [],
+            "path": [
+                "sea"
+            ],
             "ast": {
                 "type": "root",
                 "children": [
@@ -20274,6 +21333,7 @@
         ],
         "what": [
             "creating_user_stories",
+            "data_objects",
             "example_user_stories",
             "sea"
         ],
@@ -20296,6 +21356,13 @@
             "example_user_stories",
             "rust_webgl",
             "webpack_notes"
+        ],
+        "rust": [
+            "example_user_stories",
+            "home",
+            "rust_producer_consumer",
+            "rust_webgl",
+            "sea"
         ],
         "user": [
             "common_user_stories",
@@ -20363,6 +21430,7 @@
         ],
         "trying": [
             "common_user_stories",
+            "data_objects",
             "example_user_stories",
             "rust_webgl"
         ],
@@ -20420,6 +21488,7 @@
         ],
         "when": [
             "creating_user_stories",
+            "data_objects",
             "example_user_stories"
         ],
         "tooling": [
@@ -20467,6 +21536,7 @@
         ],
         "are": [
             "creating_user_stories",
+            "data_objects",
             "example_user_stories",
             "rust_producer_consumer",
             "webpack_notes"
@@ -20504,6 +21574,10 @@
             "example_user_stories",
             "rust_webgl"
         ],
+        "principle": [
+            "data_objects",
+            "example_user_stories"
+        ],
         "external": [
             "creating_user_stories",
             "example_user_stories",
@@ -20512,6 +21586,10 @@
         "website": [
             "home",
             "sea"
+        ],
+        "share": [
+            "data_objects",
+            "home"
         ],
         "engineering": [
             "creating_user_stories",
@@ -20578,6 +21656,7 @@
         ],
         "you": [
             "creating_user_stories",
+            "data_objects",
             "home",
             "sea"
         ],
@@ -20601,6 +21680,10 @@
             "home",
             "sea"
         ],
+        "every": [
+            "data_objects",
+            "home"
+        ],
         "bash": [
             "how-to-embed-a-long-script-in-a-makefile",
             "webpack_notes"
@@ -20618,13 +21701,25 @@
             "creating_user_stories",
             "how-to-embed-a-long-script-in-a-makefile"
         ],
+        "make": [
+            "creating_user_stories",
+            "how-to-embed-a-long-script-in-a-makefile",
+            "rust_producer_consumer",
+            "sea",
+            "webpack_notes"
+        ],
         "features": [
+            "data_objects",
             "how-to-embed-a-long-script-in-a-makefile",
             "sea"
         ],
         "basic": [
             "how-to-embed-a-long-script-in-a-makefile",
             "sea"
+        ],
+        "specify": [
+            "data_objects",
+            "how-to-embed-a-long-script-in-a-makefile"
         ],
         "variable": [
             "how-to-embed-a-long-script-in-a-makefile",
@@ -20636,6 +21731,7 @@
             "sea"
         ],
         "example": [
+            "data_objects",
             "how-to-embed-a-long-script-in-a-makefile",
             "sea"
         ],
@@ -20666,6 +21762,7 @@
         ],
         "into": [
             "creating_user_stories",
+            "data_objects",
             "how-to-embed-a-long-script-in-a-makefile",
             "rust_producer_consumer",
             "sea"
@@ -20730,6 +21827,7 @@
         "following": [
             "changelog_tips",
             "creating_user_stories",
+            "data_objects",
             "sea"
         ],
         "something": [
@@ -20754,6 +21852,7 @@
         ],
         "added": [
             "changelog_tips",
+            "data_objects",
             "sea"
         ],
         "prior": [
@@ -20790,7 +21889,8 @@
         ],
         "way": [
             "changelog_tips",
-            "creating_user_stories"
+            "creating_user_stories",
+            "data_objects"
         ],
         "not": [
             "changelog_tips",
@@ -20806,11 +21906,17 @@
         ],
         "content": [
             "changelog_tips",
+            "data_objects",
             "sea"
         ],
         "data": [
             "changelog_tips",
+            "data_objects",
             "sea"
+        ],
+        "common": [
+            "common_user_stories",
+            "data_objects"
         ],
         "products": [
             "common_user_stories",
@@ -20819,11 +21925,13 @@
         "time": [
             "common_user_stories",
             "creating_user_stories",
+            "data_objects",
             "rust_producer_consumer"
         ],
         "try": [
             "common_user_stories",
             "creating_user_stories",
+            "data_objects",
             "webpack_notes"
         ],
         "value": [
@@ -20833,6 +21941,7 @@
         "will": [
             "common_user_stories",
             "creating_user_stories",
+            "data_objects",
             "sea"
         ],
         "see": [
@@ -20935,6 +22044,7 @@
         ],
         "section": [
             "creating_user_stories",
+            "data_objects",
             "sea"
         ],
         "re": [
@@ -20943,6 +22053,7 @@
         ],
         "from": [
             "creating_user_stories",
+            "data_objects",
             "rust_producer_consumer",
             "sea"
         ],
@@ -20961,6 +22072,10 @@
         "ll": [
             "creating_user_stories",
             "rust_producer_consumer"
+        ],
+        "rather": [
+            "creating_user_stories",
+            "data_objects"
         ],
         "start": [
             "creating_user_stories",
@@ -20987,8 +22102,13 @@
         ],
         "should": [
             "creating_user_stories",
+            "data_objects",
             "rust_producer_consumer",
             "sea"
+        ],
+        "format": [
+            "creating_user_stories",
+            "data_objects"
         ],
         "desire": [
             "creating_user_stories",
@@ -21018,6 +22138,7 @@
         ],
         "an": [
             "creating_user_stories",
+            "data_objects",
             "rust_producer_consumer",
             "sea"
         ],
@@ -21052,8 +22173,13 @@
             "creating_user_stories",
             "sea"
         ],
+        "don": [
+            "creating_user_stories",
+            "data_objects"
+        ],
         "t": [
             "creating_user_stories",
+            "data_objects",
             "webpack_notes"
         ],
         "where": [
@@ -21067,6 +22193,7 @@
         ],
         "if": [
             "creating_user_stories",
+            "data_objects",
             "five_whys",
             "sea"
         ],
@@ -21105,6 +22232,7 @@
         ],
         "may": [
             "creating_user_stories",
+            "data_objects",
             "five_whys"
         ],
         "roadmap": [
@@ -21115,9 +22243,17 @@
             "creating_user_stories",
             "sea"
         ],
+        "those": [
+            "creating_user_stories",
+            "data_objects"
+        ],
         "implementation": [
             "creating_user_stories",
             "sea"
+        ],
+        "keep": [
+            "creating_user_stories",
+            "data_objects"
         ],
         "large": [
             "creating_user_stories",
@@ -21130,6 +22266,7 @@
         ],
         "then": [
             "creating_user_stories",
+            "data_objects",
             "rust_producer_consumer",
             "sea"
         ],
@@ -21137,12 +22274,21 @@
             "creating_user_stories",
             "sea"
         ],
+        "series": [
+            "creating_user_stories",
+            "data_objects"
+        ],
+        "faq": [
+            "creating_user_stories",
+            "data_objects"
+        ],
         "ideas": [
             "creating_user_stories",
             "sea"
         ],
         "name": [
             "creating_user_stories",
+            "data_objects",
             "sea"
         ],
         "helpful": [
@@ -21156,15 +22302,29 @@
         ],
         "than": [
             "creating_user_stories",
+            "data_objects",
             "sea"
         ],
         "same": [
             "creating_user_stories",
+            "data_objects",
             "sea"
+        ],
+        "across": [
+            "creating_user_stories",
+            "data_objects"
+        ],
+        "individual": [
+            "creating_user_stories",
+            "data_objects"
         ],
         "article": [
             "creating_user_stories",
             "rust_producer_consumer"
+        ],
+        "say": [
+            "data_objects",
+            "five_whys"
         ],
         "starts": [
             "five_whys",
@@ -21179,12 +22339,21 @@
             "sea"
         ],
         "render": [
+            "data_objects",
             "rust_producer_consumer",
             "sea"
+        ],
+        "let": [
+            "data_objects",
+            "rust_producer_consumer"
         ],
         "separate": [
             "rust_producer_consumer",
             "sea"
+        ],
+        "passed": [
+            "data_objects",
+            "rust_producer_consumer"
         ],
         "structure": [
             "rust_producer_consumer",
@@ -21194,12 +22363,17 @@
             "rust_producer_consumer",
             "sea"
         ],
+        "rendering": [
+            "data_objects",
+            "rust_producer_consumer"
+        ],
         "copy": [
             "rust_producer_consumer",
             "rust_webgl",
             "sea"
         ],
         "type": [
+            "data_objects",
             "rust_producer_consumer",
             "sea"
         ],
@@ -21227,9 +22401,111 @@
             "rust_webgl",
             "sea"
         ],
+        "objects": [
+            "data_objects",
+            "sea"
+        ],
+        "sea": [
+            "data_objects",
+            "sea"
+        ],
+        "style": [
+            "data_objects",
+            "sea"
+        ],
+        "presentation": [
+            "data_objects",
+            "sea"
+        ],
+        "changes": [
+            "data_objects",
+            "sea"
+        ],
+        "object": [
+            "data_objects",
+            "sea"
+        ],
+        "parses": [
+            "data_objects",
+            "sea"
+        ],
+        "contents": [
+            "data_objects",
+            "sea"
+        ],
+        "yaml": [
+            "data_objects",
+            "sea"
+        ],
+        "tree": [
+            "data_objects",
+            "sea"
+        ],
+        "parsed": [
+            "data_objects",
+            "sea"
+        ],
+        "renderer": [
+            "data_objects",
+            "sea"
+        ],
+        "looks": [
+            "data_objects",
+            "sea"
+        ],
+        "case": [
+            "data_objects",
+            "sea"
+        ],
         "react": [
+            "data_objects",
             "sea",
             "webpack_notes"
+        ],
+        "component": [
+            "data_objects",
+            "sea"
+        ],
+        "node": [
+            "data_objects",
+            "sea"
+        ],
+        "support": [
+            "data_objects",
+            "sea",
+            "webpack_notes"
+        ],
+        "field": [
+            "data_objects",
+            "sea"
+        ],
+        "suffix": [
+            "data_objects",
+            "sea"
+        ],
+        "types": [
+            "data_objects",
+            "sea"
+        ],
+        "default": [
+            "data_objects",
+            "sea"
+        ],
+        "extensions": [
+            "data_objects",
+            "sea"
+        ],
+        "plain": [
+            "data_objects",
+            "sea"
+        ],
+        "text": [
+            "data_objects",
+            "sea"
+        ],
+        "reference": [
+            "data_objects",
+            "sea"
         ],
         "needed": [
             "sea",
@@ -21252,10 +22528,6 @@
             "webpack_notes"
         ],
         "run": [
-            "sea",
-            "webpack_notes"
-        ],
-        "support": [
             "sea",
             "webpack_notes"
         ],
