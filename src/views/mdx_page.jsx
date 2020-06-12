@@ -3,6 +3,7 @@ import unified from 'unified';
 import remark2react from 'remark-react';
 import CodeBlock from './code_block.jsx';
 import _ from 'lodash';
+import { render } from 'react-dom';
 
 function MDXLayout({ children }) {
     return (
@@ -71,8 +72,27 @@ function MDXCodeBlock({ language, value }) {
     );
 }
 
+export function makeSeaComponent(database) {
+    if (!database) {
+        throw new Error('MDXEvalBlock called without a valid database object');
+    }
+
+    const Sea = ({ tree }) => {
+        if (typeof tree === 'string') {
+            return (<span>{tree}</span>);
+        }
+        return renderComponents(database, tree);
+    }
+    return Sea;
+}
+
+
 function MDXEvalBlock({ db, value2 }) {
-    
+    if (!db) {
+        throw new Error('MDXEvalBlock called without a valid database object')
+    }
+
+
     // Set up the default context. As convenience is a priority, we populate (pollute?) the
     // default context for JSX to include:
     // * The database
@@ -105,7 +125,7 @@ function MDXEvalBlock({ db, value2 }) {
         return e;
     } catch (err) {
         return (
-            <div style={{ padding : '1rem', border : 'solid 2px red' }}>
+            <div style={{ padding: '1rem', border: 'solid 2px red' }}>
                 <div>
                     <strong>Error: {`${err}`}</strong>
                 </div>
@@ -225,15 +245,24 @@ function RelatedArticles({ database, page }) {
 function MDXJSX(props) {
     return (
         MDXEvalBlock({
-            db : props.database,
-            value2 : props.parsed,
+            db: props.database,
+            value2: props.parsed,
         })
     );
 }
 
-
 function MDXObject({ database, kind, value }) {
-    value.renderComponents = renderComponents;       
+
+    if (!database) {
+        throw new Error('MDXObject called without a valid database object')
+    }
+
+    function Sea({ tree }) {
+        return renderComponents(database, tree);
+    }
+
+    value.renderComponents = renderComponents;
+    value.Sea = Sea;
 
     const Delegate = database.index.rendererByType[kind];
     if (Delegate) {
@@ -249,106 +278,132 @@ function MDXObject({ database, kind, value }) {
 }
 
 function renderComponents(database, root) {
+    if (!database) {
+        throw new Error('renderComponents called without a valid database object')
+    }
+
     return unified()
-    .use(remark2react, {
-        // Don't strip out unrecognized properties because we're intentionally extending 
-        // standard markdown syntax.
-        sanitize: false,
+        .use(remark2react, {
+            // Don't strip out unrecognized properties because we're intentionally extending 
+            // standard markdown syntax.
+            sanitize: false,
 
-        // The default Hast handler drops the language tag, so add a custom
-        // processor
-        toHast: {
-            handlers: {
-                wikilink: (h, node) => {
-                    let match = _.find(database.pages, (page) => page.id == node.id);
+            // The default Hast handler drops the language tag, so add a custom
+            // processor
+            toHast: {
+                handlers: {
+                    wikilink: (h, node) => {
+                        let match = _.find(database.pages, (page) => page.id == node.id);
 
-                    // Link to Github to create a new file if there is not a match.
-                    // An inexpensive way to create a wiki.
-                    let href;
-                    let title = node.text || node.id;
-                    if (match) {
-                        href = `/?page=${node.id}`;
-                        title = node.text || match.title || node.id;
-                    } else {
-                        const repo = `ridleywinters/ridleywinters.github.io`;
-                        const dbpath = 'data/ridley'
-                        href = `https://github.com/${repo}/new/master/${dbpath}/pages/q?filename=${node.id}.mdx`;
-                    }
+                        // Link to Github to create a new file if there is not a match.
+                        // An inexpensive way to create a wiki.
+                        let href;
+                        let title = node.text || node.id;
+                        if (match) {
+                            href = `/?page=${node.id}`;
+                            title = node.text || match.title || node.id;
+                        } else {
+                            const repo = `ridleywinters/ridleywinters.github.io`;
+                            const dbpath = 'data/ridley'
+                            href = `https://github.com/${repo}/new/master/${dbpath}/pages/q?filename=${node.id}.mdx`;
+                        }
 
 
-                    return {
-                        type: 'element',
-                        tagName: 'a',
-                        properties: {
-                            href,
-                        },
-                        children: [
-                            { type: 'text', value: title }
-                        ]
-                    }
-                },
-                object: (h, node) => {
-                    return {
-                        type: 'element',
-                        tagName: 'mdxobject',
-                        properties: {
-                            kind: node.kind,
+                        return {
+                            type: 'element',
+                            tagName: 'a',
+                            properties: {
+                                href,
+                            },
+                            children: [
+                                { type: 'text', value: title }
+                            ]
+                        }
+                    },
+                    object: (h, node) => {
+                        return {
+                            type: 'element',
+                            tagName: 'mdxobject',
+                            properties: {
+                                kind: node.kind,
+                                value: node.value,
+                            },
+                        };
+                    },
+                    code: (h, node) => {
+                        // Rename this to avoid the default processing to HAST, which loses the language
+                        // information so custom syntax highlighting is harder. There may be a cleaner
+                        // way to do this.
+                        return {
+                            type: 'element',
+                            tagName: 'code-proxy',
+                            properties: {
+                                language: node.lang,
+                                value: node.value,
+                            },
+                            children: [],
+                        };
+                    },
+                    jsx: (h, node) => {
+                        // NOTE: this is a workaround. This prevents remark-react from consuming
+                        // the JSX node before createElement is called so that it makes it untouched
+                        // the custom createElement handler.
+                        return {
+                            type: 'element',
+                            tagName: 'jsx-proxy',
+                            properties: { ...node },
+                            children: node.children,
                             value: node.value,
-                        },
-                    };
-                },
-                code: (h, node) => {
-                    // Rename this to avoid the default processing to HAST, which loses the language
-                    // information so custom syntax highlighting is harder. There may be a cleaner
-                    // way to do this.
-                    return {
-                        type: 'element',
-                        tagName: 'code-proxy',
-                        properties: {
-                            language: node.lang,
-                            value: node.value,
-                        },
-                        children: [],
-                    };
-                },
-                jsx : (h, node) => {
-                    // NOTE: this is a workaround. This prevents remark-react from consuming
-                    // the JSX node before createElement is called so that it makes it untouched
-                    // the custom createElement handler.
-                    return {
-                        type : 'element',
-                        tagName : 'jsx-proxy',
-                        properties : {...node},
-                        children : node.children,
-                        value : node.value,
+                        }
+                    },
+                    image: (h, node) => {
+                        // TODO: this feels fragile.  We're hosting as a single-page webapp but want
+                        // the raw markdown images references to work as well. The approach here is
+                        // to remap the url.
+                        if (node.url &&
+                            !node.url.match(/^([a-zA-z]+):?\/\//) &&
+                            !node.url.match(/^\//)
+                        ) {
+                            node.url = `${database.properties.path}/pages/${node.url}`;
+                        }
+
+                        return {
+                            type: 'element',
+                            tagName: 'img',
+                            properties: {
+                                title: node.title,
+                                src: node.url,
+                                alt: node.alt,
+                            },
+                            children: [],
+                        }
                     }
-                }
+                },
             },
-        },
-        // Hook into the createElement as this makes the mapping from 
-        // HAST -> React more transparent (while retaining some of the
-        // clean-up remark-react does).
-        createElement: (tag, props, children) => {
+            // Hook into the createElement as this makes the mapping from 
+            // HAST -> React more transparent (while retaining some of the
+            // clean-up remark-react does).
+            createElement: (tag, props, children) => {
 
-            if (tag === 'mdxobject' || tag === 'jsx-proxy') {
-                props = props || {};
-                props.database = props.database || database;         
-            }
+                if (tag === 'mdxobject' || tag === 'jsx-proxy') {
+                    props = props || {};
+                    props.database = props.database || database;
+                }
 
-            tag = {
-                a: MDXLink,
-                p: MDXParagraph,
-                'code-proxy': MDXCodeBlock,
-                mdxobject: MDXObject,
-                'jsx-proxy' : MDXJSX,
-            }[tag] || tag;
+                tag = {
+                    a: MDXLink,
+                    p: MDXParagraph,
+                    'code-proxy': MDXCodeBlock,
+                    mdxobject: MDXObject,
+                    'jsx-proxy': MDXJSX,
+                }[tag] || tag;
 
-            
-            return React.createElement(tag, props, children);
-        },
-    })
-    .stringify(root);
-    
+
+                return React.createElement(tag, props, children);
+            },
+        })
+        .stringify(root);
+
 
 }
 

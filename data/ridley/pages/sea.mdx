@@ -1,23 +1,44 @@
+---
+title: Sea
+---
 
-# Sea
+<div style={{
+    textAlign: 'center',
+    color: 'red',
+    margin: '2rem 0',
+    fontSize: '64px',
+}}>
+    Work in progress page!
+</div>
+
+
+```@section
+style:
+    marginTop: 64px
+    textAlign: center
+content$md: |
+    ![](_blobs/sea_logo-v0.0.0.png)
+```
+
+<h1 style={{ textAlign: 'center'}}>Sea</h1>
 
 #### What is Sea? 
 
-Sea is an extension of Markdown into multiple files to create a customizable database of information.  It has the fluency of Markdown for simply writing text with minimal markup to support specifying data and formatting. It is customizable in that additional data types and renderers can be added to the database _directly_ as part of the database itself (no plug-ins, installation config, etc.). 
+Sea is an **extension of Markdown** designed for **data-driven organization** that can be used to build dynamic web sites and knowledge. Sea has the **fluency of Markdown** combined with the data-driven extensibility of **React** and **YAML**.  It is designed for **incremental, progressive improvement** from idea to production-quality work. Think of it as an **agile content and presentation** language.
 
 There's one basic tool:
 
-```
-$ sea-build dirname/  # builds database.json
+```bash
+$ sea build dirname/  --out database.json # builds database.json
 ```
 
 Then to host a site all that is needed is to copy `database.json` into a folder with a a base `index.html` and `sea-site.js`.  Site customization exists entirely in the database itself, so there's no need to modify the host html or script.  Note: this is a _single page static website_ so free hosts like GitHub Pages can easily host this. No operational burden!
 
 For active development, to launch a local server with hot reloading:
 
-``
-$ sea-build dev dirname/
-``
+```bash
+$ sea-build dev .
+```
 
 How do I customize it? If you know basic JavaScript and React, it should be very easy: Sea tries to inject as few "framework specific" concepts as possible.
 
@@ -30,12 +51,69 @@ Can be thought of as a programming language.
 
 Semantic wiki, TiddlyWiki, MediaWiki, Markdown, Gatsby, database, spreadsheets, etc. Another swing at a balance of that functionality.  Incremental development of ideas.  Allow things to be "finished" and published sooner yet continually improved.
 
-## Installation
+## Quick Start
+
+Install the `sea` command-line program:
+
+```bash
+$ npm install --global @ridleywinters/sea
+```
+
+Create a barebones example project (note: if you skip the `--template` argument, a bare-minimal project will be created):
+
+```bash
+$ sea create myproject --template=example
+```
+
+You should now have a directory structure that looks something like this:
+
+```
+myproject\
+    pages\
+        home.mdx
+        page1.mdx
+```
+
+Now run the development server:
+
+```
+$ sea dev
+```
+Lastly:
+
+* Visit http://localhost:8080!
+* Start modifying the MDX files to see the changes livee
+* Check out the [features](#features) section to play with some of the more interesting and unique features of Sea
+
 
 ## How does it work?
 
 Sea operates on a directory of files, typically stored in git (for personal knowledge bases) or in a database for large multi-user use cases. Each file represents a **Card** - a sttarting point, think of that as a fairly standard Markdown document. Sea parses the whole set of Cards and creates a tree of data with indices so that a renderer can then easily render the documents as well cross-reference information in other Cards.
 
+## How does it compare?
+
+Sea is an extension of Markdown into multiple files to create a customizable database of information.  It has the fluency of Markdown for simply writing text with minimal markup to support specifying data and formatting. It is customizable in that additional data types and renderers can be added to the database _directly_ as part of the database itself (no plug-ins, installation config, etc.). 
+
+```@expand 
+title: How does it compare to [Notion](https://www.notion.so/)?
+content$md: |
+    Leaner as it is command-line and file-based, it allows greater customization (it is easy to create custom "blocks"). However, it lacks the fluid UI, permissions model, and may other features that come out of the box with an app like Notion.
+```
+
+```@expand 
+title$md: How does it compare to [TiddlyWiki](https://tiddlywiki.com/)?
+content$md: |
+    TODO!
+```
+
+```@expand 
+title: How does it compare to Evernote?
+content$md: |
+    * Content is captured in files in git, giving full content and transparent on your data
+    * No UI
+    * No cross-platform syncing across multiple convenient apps
+    * No features for quickly capturing data from other sources
+```
 
 ### Concepts
 
@@ -175,3 +253,6 @@ content$md: |
     * List Item C
 ```
 
+## reference
+
+* https://github.com/syntax-tree/mdast

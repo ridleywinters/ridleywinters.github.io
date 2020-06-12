@@ -5,21 +5,21 @@ export default function ({
     database, 
     title, 
     content,
-    renderComponents 
 }) {
 
-    const [expanded, setExpanded] = React.useState(true);
+    const [expanded, setExpanded] = React.useState(false);
     const handleClick = (evt) => {
         evt.preventDefault();
         setExpanded(!expanded);
     };
 
-    content = renderComponents(database, content);
-
     return (
         <div>
             <h4
                 style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    alignItems: 'center',
                     margin: '1rem 0 .25rem',
                     cursor: 'pointer',
                     userSelect: 'none',
@@ -31,7 +31,7 @@ export default function ({
                     width : '1.2rem',
                     paddingRight: '8px' 
                     }}>{expanded ? '	▼' : '▸'}</div>
-                <span>{title}</span>
+                <Sea tree={title} />
             </h4>
             <div style={{
                 display: expanded ? 'block' : 'none',
@@ -42,7 +42,7 @@ export default function ({
                 borderBottom: '1px dotted #CCC',
                 
             }}>
-                {content}
+                <Sea tree={content} />
             </div>
         </div>
     )

@@ -3,7 +3,7 @@ import Router from '../base/routing/router.jsx';
 import Layout from './layout.jsx';
 import RustRaytracer from './pages/rust_raytracer.jsx';
 import database from '../database.json';
-import MDXPage from './mdx_page.jsx';
+import MDXPage, { makeSeaComponent } from './mdx_page.jsx';
 
 
 
@@ -59,8 +59,10 @@ database.index.tag = (() => {
 
 database.index.rendererByType = {};
 database.index.rendererByName = {};
+
+const Sea = makeSeaComponent(database);
 database.components.forEach((comp) => {
-    const obj = evaluateDefaultExport(`return ${comp.parsed};`);
+    const obj = evaluateDefaultExport(`return ${comp.parsed};`, { Sea });
     const type = comp.filename.replace(/\.jsx$/, '');
     const camel = type.substr(1).replace(/[_\-]+([a-z])/g, (_unused, letter) => {
         return letter.toUpperCase();

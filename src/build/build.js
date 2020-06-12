@@ -294,6 +294,10 @@ async function postProcessComponent({ filename, entry }) {
 async function scanDatabase(databaseName) {
     const database = {};
 
+    database.properties = {
+        path : `data/${databaseName}`,
+    };
+
     database.pages = await scanFiles({
         databaseName,
         type: 'pages',
