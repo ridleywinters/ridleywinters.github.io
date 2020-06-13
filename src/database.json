@@ -1735,7 +1735,7 @@
                         "children": [
                             {
                                 "type": "text",
-                                "value": "I'm Ridley Winters. This is my website that I use to share some my software engineering hobby projects and tools. I'm a former product manager and now part-time software engineer. For my hobby projects, I am focused on learning Deno and Rust - and a small side obsession with Vulkan and WebGL.",
+                                "value": "I'm Ridley Winters. This is my work-in-progress website (built using ",
                                 "position": {
                                     "start": {
                                         "line": 7,
@@ -1744,8 +1744,43 @@
                                     },
                                     "end": {
                                         "line": 7,
-                                        "column": 294,
-                                        "offset": 350
+                                        "column": 70,
+                                        "offset": 126
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "wikilink",
+                                "id": "sea",
+                                "text": null,
+                                "position": {
+                                    "start": {
+                                        "line": 7,
+                                        "column": 70,
+                                        "offset": 126
+                                    },
+                                    "end": {
+                                        "line": 7,
+                                        "column": 77,
+                                        "offset": 133
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": ") that I use to share some my software engineering hobby projects and tools. I'm a former product manager and now part-time software engineer. For my hobby projects, I am focused on learning more about effective web development as well as learning Rust - and a small side obsession with graphics via Vulkan and WebGL.",
+                                "position": {
+                                    "start": {
+                                        "line": 7,
+                                        "column": 77,
+                                        "offset": 133
+                                    },
+                                    "end": {
+                                        "line": 7,
+                                        "column": 394,
+                                        "offset": 450
                                     },
                                     "indent": []
                                 }
@@ -1759,8 +1794,8 @@
                             },
                             "end": {
                                 "line": 7,
-                                "column": 294,
-                                "offset": 350
+                                "column": 394,
+                                "offset": 450
                             },
                             "indent": []
                         }
@@ -1775,12 +1810,12 @@
                                     "start": {
                                         "line": 9,
                                         "column": 1,
-                                        "offset": 352
+                                        "offset": 452
                                     },
                                     "end": {
                                         "line": 9,
                                         "column": 89,
-                                        "offset": 440
+                                        "offset": 540
                                     },
                                     "indent": []
                                 }
@@ -1790,12 +1825,12 @@
                             "start": {
                                 "line": 9,
                                 "column": 1,
-                                "offset": 352
+                                "offset": 452
                             },
                             "end": {
                                 "line": 9,
                                 "column": 89,
-                                "offset": 440
+                                "offset": 540
                             },
                             "indent": []
                         }
@@ -1811,12 +1846,12 @@
                                     "start": {
                                         "line": 12,
                                         "column": 5,
-                                        "offset": 447
+                                        "offset": 547
                                     },
                                     "end": {
                                         "line": 12,
                                         "column": 13,
-                                        "offset": 455
+                                        "offset": 555
                                     },
                                     "indent": []
                                 }
@@ -1826,12 +1861,12 @@
                             "start": {
                                 "line": 12,
                                 "column": 1,
-                                "offset": 443
+                                "offset": 543
                             },
                             "end": {
                                 "line": 12,
                                 "column": 13,
-                                "offset": 455
+                                "offset": 555
                             },
                             "indent": []
                         }
@@ -1843,12 +1878,12 @@
                             "start": {
                                 "line": 15,
                                 "column": 1,
-                                "offset": 458
+                                "offset": 558
                             },
                             "end": {
                                 "line": 21,
                                 "column": 6,
-                                "offset": 621
+                                "offset": 721
                             },
                             "indent": [
                                 1,
@@ -1872,12 +1907,12 @@
                                     "start": {
                                         "line": 24,
                                         "column": 5,
-                                        "offset": 628
+                                        "offset": 728
                                     },
                                     "end": {
                                         "line": 24,
                                         "column": 14,
-                                        "offset": 637
+                                        "offset": 737
                                     },
                                     "indent": []
                                 }
@@ -1887,12 +1922,12 @@
                             "start": {
                                 "line": 24,
                                 "column": 1,
-                                "offset": 624
+                                "offset": 724
                             },
                             "end": {
                                 "line": 24,
                                 "column": 14,
-                                "offset": 637
+                                "offset": 737
                             },
                             "indent": []
                         }
@@ -1923,12 +1958,12 @@
                                                             "start": {
                                                                 "line": 26,
                                                                 "column": 4,
-                                                                "offset": 642
+                                                                "offset": 742
                                                             },
                                                             "end": {
                                                                 "line": 26,
                                                                 "column": 31,
-                                                                "offset": 669
+                                                                "offset": 769
                                                             },
                                                             "indent": []
                                                         }
@@ -1938,12 +1973,12 @@
                                                     "start": {
                                                         "line": 26,
                                                         "column": 3,
-                                                        "offset": 641
+                                                        "offset": 741
                                                     },
                                                     "end": {
                                                         "line": 26,
                                                         "column": 66,
-                                                        "offset": 704
+                                                        "offset": 804
                                                     },
                                                     "indent": []
                                                 }
@@ -1953,12 +1988,12 @@
                                             "start": {
                                                 "line": 26,
                                                 "column": 3,
-                                                "offset": 641
+                                                "offset": 741
                                             },
                                             "end": {
                                                 "line": 26,
                                                 "column": 66,
-                                                "offset": 704
+                                                "offset": 804
                                             },
                                             "indent": []
                                         }
@@ -1968,12 +2003,12 @@
                                     "start": {
                                         "line": 26,
                                         "column": 1,
-                                        "offset": 639
+                                        "offset": 739
                                     },
                                     "end": {
                                         "line": 26,
                                         "column": 66,
-                                        "offset": 704
+                                        "offset": 804
                                     },
                                     "indent": []
                                 }
@@ -1994,12 +2029,12 @@
                                                     "start": {
                                                         "line": 27,
                                                         "column": 3,
-                                                        "offset": 707
+                                                        "offset": 807
                                                     },
                                                     "end": {
                                                         "line": 27,
                                                         "column": 29,
-                                                        "offset": 733
+                                                        "offset": 833
                                                     },
                                                     "indent": []
                                                 }
@@ -2009,12 +2044,12 @@
                                             "start": {
                                                 "line": 27,
                                                 "column": 3,
-                                                "offset": 707
+                                                "offset": 807
                                             },
                                             "end": {
                                                 "line": 27,
                                                 "column": 29,
-                                                "offset": 733
+                                                "offset": 833
                                             },
                                             "indent": []
                                         }
@@ -2024,12 +2059,12 @@
                                     "start": {
                                         "line": 27,
                                         "column": 1,
-                                        "offset": 705
+                                        "offset": 805
                                     },
                                     "end": {
                                         "line": 27,
                                         "column": 29,
-                                        "offset": 733
+                                        "offset": 833
                                     },
                                     "indent": []
                                 }
@@ -2050,12 +2085,12 @@
                                                     "start": {
                                                         "line": 28,
                                                         "column": 3,
-                                                        "offset": 736
+                                                        "offset": 836
                                                     },
                                                     "end": {
                                                         "line": 28,
                                                         "column": 17,
-                                                        "offset": 750
+                                                        "offset": 850
                                                     },
                                                     "indent": []
                                                 }
@@ -2065,12 +2100,12 @@
                                             "start": {
                                                 "line": 28,
                                                 "column": 3,
-                                                "offset": 736
+                                                "offset": 836
                                             },
                                             "end": {
                                                 "line": 28,
                                                 "column": 17,
-                                                "offset": 750
+                                                "offset": 850
                                             },
                                             "indent": []
                                         }
@@ -2080,12 +2115,12 @@
                                     "start": {
                                         "line": 28,
                                         "column": 1,
-                                        "offset": 734
+                                        "offset": 834
                                     },
                                     "end": {
                                         "line": 28,
                                         "column": 17,
-                                        "offset": 750
+                                        "offset": 850
                                     },
                                     "indent": []
                                 }
@@ -2106,12 +2141,12 @@
                                                     "start": {
                                                         "line": 29,
                                                         "column": 3,
-                                                        "offset": 753
+                                                        "offset": 853
                                                     },
                                                     "end": {
                                                         "line": 29,
                                                         "column": 53,
-                                                        "offset": 803
+                                                        "offset": 903
                                                     },
                                                     "indent": []
                                                 }
@@ -2121,12 +2156,12 @@
                                             "start": {
                                                 "line": 29,
                                                 "column": 3,
-                                                "offset": 753
+                                                "offset": 853
                                             },
                                             "end": {
                                                 "line": 29,
                                                 "column": 53,
-                                                "offset": 803
+                                                "offset": 903
                                             },
                                             "indent": []
                                         }
@@ -2136,12 +2171,12 @@
                                     "start": {
                                         "line": 29,
                                         "column": 1,
-                                        "offset": 751
+                                        "offset": 851
                                     },
                                     "end": {
                                         "line": 29,
                                         "column": 53,
-                                        "offset": 803
+                                        "offset": 903
                                     },
                                     "indent": []
                                 }
@@ -2151,12 +2186,12 @@
                             "start": {
                                 "line": 26,
                                 "column": 1,
-                                "offset": 639
+                                "offset": 739
                             },
                             "end": {
                                 "line": 29,
                                 "column": 53,
-                                "offset": 803
+                                "offset": 903
                             },
                             "indent": [
                                 1,
@@ -2176,12 +2211,12 @@
                                     "start": {
                                         "line": 31,
                                         "column": 5,
-                                        "offset": 809
+                                        "offset": 909
                                     },
                                     "end": {
                                         "line": 31,
                                         "column": 21,
-                                        "offset": 825
+                                        "offset": 925
                                     },
                                     "indent": []
                                 }
@@ -2191,12 +2226,12 @@
                             "start": {
                                 "line": 31,
                                 "column": 1,
-                                "offset": 805
+                                "offset": 905
                             },
                             "end": {
                                 "line": 31,
                                 "column": 21,
-                                "offset": 825
+                                "offset": 925
                             },
                             "indent": []
                         }
@@ -2223,12 +2258,12 @@
                                                     "start": {
                                                         "line": 33,
                                                         "column": 3,
-                                                        "offset": 829
+                                                        "offset": 929
                                                     },
                                                     "end": {
                                                         "line": 33,
                                                         "column": 16,
-                                                        "offset": 842
+                                                        "offset": 942
                                                     },
                                                     "indent": []
                                                 }
@@ -2238,12 +2273,12 @@
                                             "start": {
                                                 "line": 33,
                                                 "column": 3,
-                                                "offset": 829
+                                                "offset": 929
                                             },
                                             "end": {
                                                 "line": 33,
                                                 "column": 16,
-                                                "offset": 842
+                                                "offset": 942
                                             },
                                             "indent": []
                                         }
@@ -2253,12 +2288,12 @@
                                     "start": {
                                         "line": 33,
                                         "column": 1,
-                                        "offset": 827
+                                        "offset": 927
                                     },
                                     "end": {
                                         "line": 33,
                                         "column": 16,
-                                        "offset": 842
+                                        "offset": 942
                                     },
                                     "indent": []
                                 }
@@ -2279,12 +2314,12 @@
                                                     "start": {
                                                         "line": 34,
                                                         "column": 3,
-                                                        "offset": 845
+                                                        "offset": 945
                                                     },
                                                     "end": {
                                                         "line": 34,
                                                         "column": 28,
-                                                        "offset": 870
+                                                        "offset": 970
                                                     },
                                                     "indent": []
                                                 }
@@ -2294,12 +2329,12 @@
                                             "start": {
                                                 "line": 34,
                                                 "column": 3,
-                                                "offset": 845
+                                                "offset": 945
                                             },
                                             "end": {
                                                 "line": 34,
                                                 "column": 28,
-                                                "offset": 870
+                                                "offset": 970
                                             },
                                             "indent": []
                                         }
@@ -2309,12 +2344,12 @@
                                     "start": {
                                         "line": 34,
                                         "column": 1,
-                                        "offset": 843
+                                        "offset": 943
                                     },
                                     "end": {
                                         "line": 34,
                                         "column": 28,
-                                        "offset": 870
+                                        "offset": 970
                                     },
                                     "indent": []
                                 }
@@ -2324,12 +2359,12 @@
                             "start": {
                                 "line": 33,
                                 "column": 1,
-                                "offset": 827
+                                "offset": 927
                             },
                             "end": {
                                 "line": 34,
                                 "column": 28,
-                                "offset": 870
+                                "offset": 970
                             },
                             "indent": [
                                 1
@@ -2347,12 +2382,12 @@
                                     "start": {
                                         "line": 36,
                                         "column": 5,
-                                        "offset": 876
+                                        "offset": 976
                                     },
                                     "end": {
                                         "line": 36,
                                         "column": 19,
-                                        "offset": 890
+                                        "offset": 990
                                     },
                                     "indent": []
                                 }
@@ -2362,12 +2397,12 @@
                             "start": {
                                 "line": 36,
                                 "column": 1,
-                                "offset": 872
+                                "offset": 972
                             },
                             "end": {
                                 "line": 36,
                                 "column": 19,
-                                "offset": 890
+                                "offset": 990
                             },
                             "indent": []
                         }
@@ -2394,12 +2429,12 @@
                                                     "start": {
                                                         "line": 38,
                                                         "column": 3,
-                                                        "offset": 894
+                                                        "offset": 994
                                                     },
                                                     "end": {
                                                         "line": 38,
                                                         "column": 10,
-                                                        "offset": 901
+                                                        "offset": 1001
                                                     },
                                                     "indent": []
                                                 }
@@ -2409,12 +2444,12 @@
                                             "start": {
                                                 "line": 38,
                                                 "column": 3,
-                                                "offset": 894
+                                                "offset": 994
                                             },
                                             "end": {
                                                 "line": 38,
                                                 "column": 10,
-                                                "offset": 901
+                                                "offset": 1001
                                             },
                                             "indent": []
                                         }
@@ -2424,12 +2459,12 @@
                                     "start": {
                                         "line": 38,
                                         "column": 1,
-                                        "offset": 892
+                                        "offset": 992
                                     },
                                     "end": {
                                         "line": 38,
                                         "column": 10,
-                                        "offset": 901
+                                        "offset": 1001
                                     },
                                     "indent": []
                                 }
@@ -2449,12 +2484,12 @@
                                                     "start": {
                                                         "line": 39,
                                                         "column": 3,
-                                                        "offset": 904
+                                                        "offset": 1004
                                                     },
                                                     "end": {
                                                         "line": 39,
                                                         "column": 10,
-                                                        "offset": 911
+                                                        "offset": 1011
                                                     },
                                                     "indent": []
                                                 }
@@ -2464,12 +2499,12 @@
                                             "start": {
                                                 "line": 39,
                                                 "column": 3,
-                                                "offset": 904
+                                                "offset": 1004
                                             },
                                             "end": {
                                                 "line": 39,
                                                 "column": 10,
-                                                "offset": 911
+                                                "offset": 1011
                                             },
                                             "indent": []
                                         }
@@ -2479,12 +2514,12 @@
                                     "start": {
                                         "line": 39,
                                         "column": 1,
-                                        "offset": 902
+                                        "offset": 1002
                                     },
                                     "end": {
                                         "line": 39,
                                         "column": 10,
-                                        "offset": 911
+                                        "offset": 1011
                                     },
                                     "indent": []
                                 }
@@ -2504,12 +2539,12 @@
                                                     "start": {
                                                         "line": 40,
                                                         "column": 3,
-                                                        "offset": 914
+                                                        "offset": 1014
                                                     },
                                                     "end": {
                                                         "line": 40,
                                                         "column": 10,
-                                                        "offset": 921
+                                                        "offset": 1021
                                                     },
                                                     "indent": []
                                                 }
@@ -2519,12 +2554,12 @@
                                             "start": {
                                                 "line": 40,
                                                 "column": 3,
-                                                "offset": 914
+                                                "offset": 1014
                                             },
                                             "end": {
                                                 "line": 40,
                                                 "column": 10,
-                                                "offset": 921
+                                                "offset": 1021
                                             },
                                             "indent": []
                                         }
@@ -2534,12 +2569,12 @@
                                     "start": {
                                         "line": 40,
                                         "column": 1,
-                                        "offset": 912
+                                        "offset": 1012
                                     },
                                     "end": {
                                         "line": 40,
                                         "column": 10,
-                                        "offset": 921
+                                        "offset": 1021
                                     },
                                     "indent": []
                                 }
@@ -2549,12 +2584,12 @@
                             "start": {
                                 "line": 38,
                                 "column": 1,
-                                "offset": 892
+                                "offset": 992
                             },
                             "end": {
                                 "line": 40,
                                 "column": 10,
-                                "offset": 921
+                                "offset": 1021
                             },
                             "indent": [
                                 1,
@@ -2573,12 +2608,12 @@
                                     "start": {
                                         "line": 42,
                                         "column": 5,
-                                        "offset": 927
+                                        "offset": 1027
                                     },
                                     "end": {
                                         "line": 42,
                                         "column": 12,
-                                        "offset": 934
+                                        "offset": 1034
                                     },
                                     "indent": []
                                 }
@@ -2588,12 +2623,12 @@
                             "start": {
                                 "line": 42,
                                 "column": 1,
-                                "offset": 923
+                                "offset": 1023
                             },
                             "end": {
                                 "line": 42,
                                 "column": 12,
-                                "offset": 934
+                                "offset": 1034
                             },
                             "indent": []
                         }
@@ -2609,12 +2644,12 @@
                                     "start": {
                                         "line": 45,
                                         "column": 5,
-                                        "offset": 941
+                                        "offset": 1041
                                     },
                                     "end": {
                                         "line": 45,
                                         "column": 28,
-                                        "offset": 964
+                                        "offset": 1064
                                     },
                                     "indent": []
                                 }
@@ -2624,12 +2659,12 @@
                             "start": {
                                 "line": 45,
                                 "column": 1,
-                                "offset": 937
+                                "offset": 1037
                             },
                             "end": {
                                 "line": 45,
                                 "column": 28,
-                                "offset": 964
+                                "offset": 1064
                             },
                             "indent": []
                         }
@@ -2645,12 +2680,12 @@
                                     "start": {
                                         "line": 47,
                                         "column": 5,
-                                        "offset": 970
+                                        "offset": 1070
                                     },
                                     "end": {
                                         "line": 47,
                                         "column": 13,
-                                        "offset": 978
+                                        "offset": 1078
                                     },
                                     "indent": []
                                 }
@@ -2660,12 +2695,12 @@
                             "start": {
                                 "line": 47,
                                 "column": 1,
-                                "offset": 966
+                                "offset": 1066
                             },
                             "end": {
                                 "line": 47,
                                 "column": 13,
-                                "offset": 978
+                                "offset": 1078
                             },
                             "indent": []
                         }
@@ -2692,12 +2727,12 @@
                                                     "start": {
                                                         "line": 49,
                                                         "column": 3,
-                                                        "offset": 982
+                                                        "offset": 1082
                                                     },
                                                     "end": {
                                                         "line": 49,
                                                         "column": 31,
-                                                        "offset": 1010
+                                                        "offset": 1110
                                                     },
                                                     "indent": []
                                                 }
@@ -2707,12 +2742,12 @@
                                             "start": {
                                                 "line": 49,
                                                 "column": 3,
-                                                "offset": 982
+                                                "offset": 1082
                                             },
                                             "end": {
                                                 "line": 49,
                                                 "column": 31,
-                                                "offset": 1010
+                                                "offset": 1110
                                             },
                                             "indent": []
                                         }
@@ -2722,12 +2757,12 @@
                                     "start": {
                                         "line": 49,
                                         "column": 1,
-                                        "offset": 980
+                                        "offset": 1080
                                     },
                                     "end": {
                                         "line": 49,
                                         "column": 31,
-                                        "offset": 1010
+                                        "offset": 1110
                                     },
                                     "indent": []
                                 }
@@ -2737,12 +2772,12 @@
                             "start": {
                                 "line": 49,
                                 "column": 1,
-                                "offset": 980
+                                "offset": 1080
                             },
                             "end": {
                                 "line": 49,
                                 "column": 31,
-                                "offset": 1010
+                                "offset": 1110
                             },
                             "indent": []
                         }
@@ -2757,7 +2792,7 @@
                     "end": {
                         "line": 49,
                         "column": 31,
-                        "offset": 1010
+                        "offset": 1110
                     }
                 }
             },
@@ -21645,8 +21680,8 @@
             "extension": "jsx",
             "id": "page_layout",
             "path": [],
-            "text": "import React from 'react';\n\n\nfunction Outer({ children }) {\n    return (\n        <div className=\"c-layout\">\n            <div style={{\n                display: 'flex',\n                flexDirection: 'row',\n                padding: '12px 2rem 6px',\n                backgroundColor: '#ACF',\n            }}>\n                <a style={{ flexGrow: 0 }} href=\"/\">home</a>\n                <div style={{ flexGrow: 1 }} />\n                <a style={{ flexGrow: 0 }} href=\"/?page=index\">index</a>\n            </div>\n            <div style={{\n                minHeight: 'calc(100vh - 120px)'\n            }}\n            >{children}\n            </div>\n            <div style={{\n                minHeight: '120px',\n                padding: '12px 2rem 6px',\n                backgroundColor: '#ACF',\n            }}>\n                <div>\n                    Twitter: <a href=\"https://twitter.com/RidleyWinters\">RidleyWinters</a>\n                </div>\n                <div>\n                    Favicon designed by\n                    {' '}<a href=\"https://www.flaticon.com/authors/good-ware\">Good Ware</a>{' '}\n                    available at\n                    {' '}<a href=\"https://www.flaticon.com/free-icon/woodland_2933738?term=landscape&page=1&position=\">flaticon</a>.\n                </div>\n            </div>\n        </div>\n    );\n}\n\nexport default function PageLayout({ children }) {\n    return (\n        <Outer>\n            <div\n                style={{\n                    margin: '0 auto',\n                    maxWidth: '80rem',\n                }}\n            >\n                <div\n                    style={{\n                        margin: '0 2rem',\n                    }}\n                >\n                    {children}\n                </div>\n            </div>\n        </Outer>\n    );\n}\n\n",
-            "parsed": "(function() {\n\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = PageLayout;\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction Outer({\n  children\n}) {\n  return /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"c-layout\"\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      flexDirection: 'row',\n      padding: '12px 2rem 6px',\n      backgroundColor: '#ACF'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"a\", {\n    style: {\n      flexGrow: 0\n    },\n    href: \"/\"\n  }, \"home\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 1\n    }\n  }), /*#__PURE__*/_react.default.createElement(\"a\", {\n    style: {\n      flexGrow: 0\n    },\n    href: \"/?page=index\"\n  }, \"index\")), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      minHeight: 'calc(100vh - 120px)'\n    }\n  }, children), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      minHeight: '120px',\n      padding: '12px 2rem 6px',\n      backgroundColor: '#ACF'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", null, \"Twitter: \", /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://twitter.com/RidleyWinters\"\n  }, \"RidleyWinters\")), /*#__PURE__*/_react.default.createElement(\"div\", null, \"Favicon designed by\", ' ', /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://www.flaticon.com/authors/good-ware\"\n  }, \"Good Ware\"), ' ', \"available at\", ' ', /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://www.flaticon.com/free-icon/woodland_2933738?term=landscape&page=1&position=\"\n  }, \"flaticon\"), \".\")));\n}\n\nfunction PageLayout({\n  children\n}) {\n  return /*#__PURE__*/_react.default.createElement(Outer, null, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      margin: '0 auto',\n      maxWidth: '80rem'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      margin: '0 2rem'\n    }\n  }, children)));\n}\n})()"
+            "text": "import React from 'react';\n\n\nfunction Outer({ children }) {\n    return (\n        <div>\n            <div style={{                \n                padding: '12px 2rem 6px',\n                backgroundColor: '#ACF',\n            }}>\n                <div style={{\n                    display: 'flex',\n                    flexDirection: 'row',\n                    maxWidth: '80rem',\n                margin: '0 auto',\n                }}>\n                    <a href=\"https://blacklivesmatter.com/\" style={{ textDecoration: 'none' }}>🖤</a>                    \n                    <div style={{ flexGrow: 1 }} />\n                    <a style={{ flexGrow: 0 }} href=\"/\">home</a>                   \n                    <div style={{ flexGrow: 1 }} />\n                    <a style={{ flexGrow: 0 }} href=\"/?page=index\">index</a>\n                    <div style={{ flexGrow: 50 }} />\n                </div>\n            </div>\n            <div style={{\n                minHeight: 'calc(100vh - 120px)'\n            }}\n            >{children}\n            </div>\n            <div style={{\n                minHeight: '120px',\n                padding: '12px 2rem 6px',\n                backgroundColor: '#ACF',\n            }}>\n                <div>\n                    Twitter: <a href=\"https://twitter.com/RidleyWinters\">RidleyWinters</a>\n                </div>\n                <div>\n                    Favicon designed by\n                    {' '}<a href=\"https://www.flaticon.com/authors/good-ware\">Good Ware</a>{' '}\n                    available at\n                    {' '}<a href=\"https://www.flaticon.com/free-icon/woodland_2933738?term=landscape&page=1&position=\">flaticon</a>.\n                </div>\n            </div>\n        </div>\n    );\n}\n\nexport default function PageLayout({ children }) {\n    return (\n        <Outer>\n            <div\n                style={{\n                    margin: '0 auto',\n                    maxWidth: '80rem',\n                }}\n            >\n                <div\n                    style={{\n                        margin: '0 2rem',\n                    }}\n                >\n                    {children}\n                </div>\n            </div>\n        </Outer>\n    );\n}\n\n",
+            "parsed": "(function() {\n\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = PageLayout;\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction Outer({\n  children\n}) {\n  return /*#__PURE__*/_react.default.createElement(\"div\", null, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      padding: '12px 2rem 6px',\n      backgroundColor: '#ACF'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      flexDirection: 'row',\n      maxWidth: '80rem',\n      margin: '0 auto'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://blacklivesmatter.com/\",\n    style: {\n      textDecoration: 'none'\n    }\n  }, \"\\uD83D\\uDDA4\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 1\n    }\n  }), /*#__PURE__*/_react.default.createElement(\"a\", {\n    style: {\n      flexGrow: 0\n    },\n    href: \"/\"\n  }, \"home\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 1\n    }\n  }), /*#__PURE__*/_react.default.createElement(\"a\", {\n    style: {\n      flexGrow: 0\n    },\n    href: \"/?page=index\"\n  }, \"index\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 50\n    }\n  }))), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      minHeight: 'calc(100vh - 120px)'\n    }\n  }, children), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      minHeight: '120px',\n      padding: '12px 2rem 6px',\n      backgroundColor: '#ACF'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", null, \"Twitter: \", /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://twitter.com/RidleyWinters\"\n  }, \"RidleyWinters\")), /*#__PURE__*/_react.default.createElement(\"div\", null, \"Favicon designed by\", ' ', /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://www.flaticon.com/authors/good-ware\"\n  }, \"Good Ware\"), ' ', \"available at\", ' ', /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://www.flaticon.com/free-icon/woodland_2933738?term=landscape&page=1&position=\"\n  }, \"flaticon\"), \".\")));\n}\n\nfunction PageLayout({\n  children\n}) {\n  return /*#__PURE__*/_react.default.createElement(Outer, null, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      margin: '0 auto',\n      maxWidth: '80rem'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      margin: '0 2rem'\n    }\n  }, children)));\n}\n})()"
         },
         {
             "filename": "section.jsx",
@@ -21725,6 +21760,7 @@
         "using": [
             "creating_user_stories",
             "example_user_stories",
+            "home",
             "rust_webgl",
             "webpack_notes"
         ],
@@ -21913,6 +21949,7 @@
         "more": [
             "creating_user_stories",
             "example_user_stories",
+            "home",
             "sea"
         ],
         "interesting": [
@@ -21994,9 +22031,28 @@
             "creating_user_stories",
             "home"
         ],
-        "deno": [
+        "about": [
+            "creating_user_stories",
+            "home"
+        ],
+        "effective": [
+            "creating_user_stories",
+            "home"
+        ],
+        "web": [
             "home",
+            "rust_webgl",
+            "sea"
+        ],
+        "development": [
+            "creating_user_stories",
+            "home",
+            "sea",
             "webpack_notes"
+        ],
+        "well": [
+            "home",
+            "sea"
         ],
         "small": [
             "creating_user_stories",
@@ -22326,11 +22382,6 @@
         "tests": [
             "common_user_stories",
             "creating_user_stories"
-        ],
-        "development": [
-            "creating_user_stories",
-            "sea",
-            "webpack_notes"
         ],
         "there": [
             "creating_user_stories",
@@ -22768,10 +22819,6 @@
         "type": [
             "data_objects",
             "rust_producer_consumer",
-            "sea"
-        ],
-        "web": [
-            "rust_webgl",
             "sea"
         ],
         "webpack": [

@@ -3,16 +3,24 @@ import React from 'react';
 
 function Outer({ children }) {
     return (
-        <div className="c-layout">
-            <div style={{
-                display: 'flex',
-                flexDirection: 'row',
+        <div>
+            <div style={{                
                 padding: '12px 2rem 6px',
                 backgroundColor: '#ACF',
             }}>
-                <a style={{ flexGrow: 0 }} href="/">home</a>
-                <div style={{ flexGrow: 1 }} />
-                <a style={{ flexGrow: 0 }} href="/?page=index">index</a>
+                <div style={{
+                    display: 'flex',
+                    flexDirection: 'row',
+                    maxWidth: '80rem',
+                margin: '0 auto',
+                }}>
+                    <a href="https://blacklivesmatter.com/" style={{ textDecoration: 'none' }}>🖤</a>                    
+                    <div style={{ flexGrow: 1 }} />
+                    <a style={{ flexGrow: 0 }} href="/">home</a>                   
+                    <div style={{ flexGrow: 1 }} />
+                    <a style={{ flexGrow: 0 }} href="/?page=index">index</a>
+                    <div style={{ flexGrow: 50 }} />
+                </div>
             </div>
             <div style={{
                 minHeight: 'calc(100vh - 120px)'
