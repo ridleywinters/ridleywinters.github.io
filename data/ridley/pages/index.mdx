@@ -11,18 +11,21 @@
         </tr>
     </thead>
     <tbody>
-    {_.map(database.pages, (page) => ( 
-        <tr key={page.id}>
-            <td style={{ paddingRight : '2rem' }}>
-                <MDXLink href={`/?page=${page.id}`}>{page.title}</MDXLink>
-            </td>
-            <td style={{ paddingRight: '2rem', color: '#777' }}>
-                {page.path.join(' / ')}
-            </td>
-            <td style={{ paddingRight: '1rem', color: '#777' }}>
-                {page.properties.status}
-            </td>            
-        </tr>
-    ))}
+    {_.chain(database.pages)
+        .sortBy((page) => page.title)
+        .map((page) => ( 
+            <tr key={page.id}>
+                <td style={{ paddingRight : '2rem' }}>
+                    <a href={`/?page=${page.id}`}>{page.title}</a>
+                </td>
+                <td style={{ paddingRight: '2rem', color: '#777' }}>
+                    {page.path.join(' / ')}
+                </td>
+                <td style={{ paddingRight: '1rem', color: '#777' }}>
+                    {page.properties.status}
+                </td>            
+            </tr>
+        ))
+        .value()}
     </tbody>
 </table>

@@ -1,0 +1,20 @@
+
+# Data Table
+
+```@data name=list, pizza = salad
+- Backblaze
+- Google One
+- Visual Studio Code
+- Blender
+- GIMP
+- Chrome
+
+```
+
+<div>
+    <ul>
+    {_.map(page.name.list.value, (item) => (
+        <li>{item}</li>
+    ))}
+    </ul>
+</div>

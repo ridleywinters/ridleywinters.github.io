@@ -169,8 +169,7 @@ async function postprocessMDX({ entry }) {
             try {
                 let value = YAML.parse(node.value);
                 value = _.cloneDeepWith(value, function (value) {
-
-                    if (_.isObject(value)) {
+                    if (_.isObject(value) && !_.isArray(value)) {
                         let t = {};
                         _.each(value, (v, k) => {
                             let m;
@@ -185,10 +184,33 @@ async function postprocessMDX({ entry }) {
                     }
                 });
 
+                // Parse additional text ("meta") as comma-delimited URI decoded
+                let params = {};
+                let name = undefined;
+                if (node.meta) {
+                    node.meta
+                        .split(',')
+                        .map((s) => s.trim().split('=', 2).map(
+                            (s) => decodeURIComponent(s.trim())
+                        ))
+                        .forEach((pair) => {
+                            params[pair[0]] = pair[1];
+                        });
+
+                    if (params.name) {
+                        name = params.name;
+                    }
+                }
+                
+
                 return {
                     type: 'object',
                     kind: m[1],
                     value,
+                    meta: node.meta,
+                    params,
+                    name,
+
                 }
             } catch (err) {
                 console.log(err);
@@ -218,7 +240,9 @@ async function postprocessMDX({ entry }) {
             }
         } else if (node.type === 'jsx') {
             // This is a JSX expression, so we need to put a "return" in front of it
+            node.text = node.value;
             node.parsed = parseES6(`return ${node.value}`);
+            delete node.value;
         }
         return node;
     })
@@ -266,7 +290,7 @@ async function scanFiles({
             filename: shortpath,
             extension,
             id,
-            path : pagepath,
+            path: pagepath,
         };
 
         if (processors) {
@@ -295,7 +319,7 @@ async function scanDatabase(databaseName) {
     const database = {};
 
     database.properties = {
-        path : `data/${databaseName}`,
+        path: `data/${databaseName}`,
     };
 
     database.pages = await scanFiles({

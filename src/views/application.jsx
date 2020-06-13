@@ -3,6 +3,7 @@ import Router from '../base/routing/router.jsx';
 import database from '../database.json';
 import MDXPage from './mdx_page.jsx';
 import _ from 'lodash';
+import visit from "unist-util-visit";
 
 function evaluateDefaultExport(source, additionalContext = {}) {
     const exports = {};
@@ -13,7 +14,7 @@ function evaluateDefaultExport(source, additionalContext = {}) {
             switch (name) {
                 case 'lodash': return _;
                 case 'react': return React;
-                default: 
+                default:
                     throw new Error(`Unknown module '${name}`);
             }
         },
@@ -75,6 +76,24 @@ database.components.forEach((comp) => {
     }
     database.index.rendererByType[type] = obj;
     database.index.rendererByName[name] = obj;
+});
+
+database.pages.forEach((page) => {
+    function visit(node, cb) {
+        cb(node);
+        if (node.children) {
+            node.children.forEach((child) => {
+                visit(child, cb);
+            })
+        }
+    }
+
+    page.name = {};
+    visit(page.ast, (node) => {
+        if (node.name) {
+            page.name[node.name] = node;
+        }
+    });
 })
 
 export default function Application() {
@@ -90,7 +109,7 @@ export default function Application() {
 
     const SiteLayout = database.index.rendererByName.SiteLayout;
     let siteLayoutProps = {};
-    if (SiteLayout)    {
+    if (SiteLayout) {
         siteLayoutProps = {
             database,
         }

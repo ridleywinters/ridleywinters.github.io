@@ -15,7 +15,7 @@ I'm still learning so please take everything you find on this site with a grain 
 <ul>
 {_.map(database.index.tag["how-to"], (page) => (
     <li key={page.id}>
-        <MDXLink href={`/?page=${page.id}`}>{page.title}</MDXLink>
+        <a href={`/?page=${page.id}`}>{page.title}</a>
     </li>
 ))}
 </ul>

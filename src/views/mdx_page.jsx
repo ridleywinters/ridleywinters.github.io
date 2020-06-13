@@ -37,11 +37,15 @@ function makeSeaComponent(database, page) {
 }
 
 
-function MDXEvalBlock({ db, value2 }) {
-    if (!db) {
+function MDXEvalBlock({ 
+    database, 
+    page, 
+    parsed, 
+    text ,
+}) {
+    if (!database) {
         throw new Error('MDXEvalBlock called without a valid database object')
     }
-
 
     // Set up the default context. As convenience is a priority, we populate (pollute?) the
     // default context for JSX to include:
@@ -57,21 +61,26 @@ function MDXEvalBlock({ db, value2 }) {
     // though since file paths, package names, and reliance on the database itself
     // complicate the idea of direct reusability in more than just theory.)
     const context = {
-        database: db,
+        database,
+        page,
         _,
         React,
-        MDXLink,
         console,
     };
-    _.each(db.index.rendererByName, (value, key) => {
+    _.each(database.index.rendererByName, (value, key) => {
         context[key] = value;
     });
 
     const contextKeys = Object.keys(context);
     const contextValues = contextKeys.map((key) => context[key]);
     try {
-        const f = new Function(...contextKeys, `return ${value2}`);
+        const f = new Function(...contextKeys, `return ${parsed}`);
         const e = f(...contextValues);
+
+        if (!page.id) {
+            throw new Error();
+        }
+        console.log('PARSED', { context })
         return e;
     } catch (err) {
         return (
@@ -80,6 +89,10 @@ function MDXEvalBlock({ db, value2 }) {
                     <strong>Error: {`${err}`}</strong>
                 </div>
                 <pre>{JSON.stringify(err, null, 4)}</pre>
+                <hr />
+                <pre>{text}</pre>
+                <hr />
+                <pre>{parsed}</pre>
             </div>
         );
     }
@@ -146,15 +159,6 @@ function RelatedArticles({ database, page }) {
     );
 }
 
-function MDXJSX(props) {
-    return (
-        MDXEvalBlock({
-            db: props.database,
-            value2: props.parsed,
-        })
-    );
-}
-
 function MDXObject({
     database,
     page,
@@ -167,9 +171,16 @@ function MDXObject({
         throw new Error('MDXObject called without a valid database object')
     }
 
-    value.database = value.database || database;
-    value.page = value.page || page;
-    value.Sea = value.Sea || Sea;
+    // @data means pure data - don't display it
+    if (kind === 'data') {
+        return null;
+    }
+
+    if (_.isObject(value)) {
+        value.database = value.database || database;
+        value.page = value.page || page;
+        value.Sea = value.Sea || Sea;
+    }
 
     const Delegate = database.index.rendererByType[kind];
     if (Delegate) {
@@ -314,17 +325,18 @@ function renderComponents(database, root, page) {
             // clean-up remark-react does).
             createElement: (tag, props, children) => {
 
-                
-                
-
                 // Remap any elements that Sea has custom renderers for.
                 const CustomComponent = {
                     a: MDXLink,
                     p: MDXParagraph,
                     'code-proxy': MDXCodeBlock,
                     'object-proxy': MDXObject,
-                    'jsx-proxy': MDXJSX,
+                    'jsx-proxy': MDXEvalBlock,
                 }[tag];
+
+                if (tag === 'jsx-proxy') {
+                    console.log(tag, props, children)
+                }
 
                 // Inject the current context into any elements with customer handlers
                 if (CustomComponent) {

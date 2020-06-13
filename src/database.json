@@ -38,7 +38,7 @@
                         "children": [
                             {
                                 "type": "text",
-                                "value": "Hello",
+                                "value": "End-to-end Distributed System",
                                 "position": {
                                     "start": {
                                         "line": 6,
@@ -47,8 +47,8 @@
                                     },
                                     "end": {
                                         "line": 6,
-                                        "column": 8,
-                                        "offset": 71
+                                        "column": 32,
+                                        "offset": 95
                                     },
                                     "indent": []
                                 }
@@ -62,8 +62,8 @@
                             },
                             "end": {
                                 "line": 6,
-                                "column": 8,
-                                "offset": 71
+                                "column": 32,
+                                "offset": 95
                             },
                             "indent": []
                         }
@@ -78,7 +78,7 @@
                     "end": {
                         "line": 7,
                         "column": 1,
-                        "offset": 72
+                        "offset": 96
                     }
                 }
             },
@@ -95,7 +95,7 @@
                     "dogs"
                 ]
             },
-            "title": "Hello"
+            "title": "End-to-end Distributed System"
         },
         {
             "filename": "example_user_stories.mdx",
@@ -1873,7 +1873,6 @@
                     },
                     {
                         "type": "jsx",
-                        "value": "<ul>\n{_.map(database.index.tag[\"how-to\"], (page) => (\n    <li key={page.id}>\n        <MDXLink href={`/?page=${page.id}`}>{page.title}</MDXLink>\n    </li>\n))}\n</ul>",
                         "position": {
                             "start": {
                                 "line": 15,
@@ -1883,7 +1882,7 @@
                             "end": {
                                 "line": 21,
                                 "column": 6,
-                                "offset": 719
+                                "offset": 707
                             },
                             "indent": [
                                 1,
@@ -1894,7 +1893,8 @@
                                 1
                             ]
                         },
-                        "parsed": "(function() {\n\"use strict\";\n\nreturn /*#__PURE__*/React.createElement(\"ul\", null, _.map(database.index.tag[\"how-to\"], page => /*#__PURE__*/React.createElement(\"li\", {\n  key: page.id\n}, /*#__PURE__*/React.createElement(MDXLink, {\n  href: `/?page=${page.id}`\n}, page.title))));\n})()"
+                        "text": "<ul>\n{_.map(database.index.tag[\"how-to\"], (page) => (\n    <li key={page.id}>\n        <a href={`/?page=${page.id}`}>{page.title}</a>\n    </li>\n))}\n</ul>",
+                        "parsed": "(function() {\n\"use strict\";\n\nreturn /*#__PURE__*/React.createElement(\"ul\", null, _.map(database.index.tag[\"how-to\"], page => /*#__PURE__*/React.createElement(\"li\", {\n  key: page.id\n}, /*#__PURE__*/React.createElement(\"a\", {\n  href: `/?page=${page.id}`\n}, page.title))));\n})()"
                     },
                     {
                         "type": "heading",
@@ -1907,12 +1907,12 @@
                                     "start": {
                                         "line": 24,
                                         "column": 5,
-                                        "offset": 726
+                                        "offset": 714
                                     },
                                     "end": {
                                         "line": 24,
                                         "column": 14,
-                                        "offset": 735
+                                        "offset": 723
                                     },
                                     "indent": []
                                 }
@@ -1922,12 +1922,12 @@
                             "start": {
                                 "line": 24,
                                 "column": 1,
-                                "offset": 722
+                                "offset": 710
                             },
                             "end": {
                                 "line": 24,
                                 "column": 14,
-                                "offset": 735
+                                "offset": 723
                             },
                             "indent": []
                         }
@@ -1954,12 +1954,12 @@
                                                     "start": {
                                                         "line": 26,
                                                         "column": 3,
-                                                        "offset": 739
+                                                        "offset": 727
                                                     },
                                                     "end": {
                                                         "line": 26,
                                                         "column": 21,
-                                                        "offset": 757
+                                                        "offset": 745
                                                     },
                                                     "indent": []
                                                 }
@@ -1969,12 +1969,12 @@
                                             "start": {
                                                 "line": 26,
                                                 "column": 3,
-                                                "offset": 739
+                                                "offset": 727
                                             },
                                             "end": {
                                                 "line": 26,
                                                 "column": 21,
-                                                "offset": 757
+                                                "offset": 745
                                             },
                                             "indent": []
                                         }
@@ -1984,12 +1984,12 @@
                                     "start": {
                                         "line": 26,
                                         "column": 1,
-                                        "offset": 737
+                                        "offset": 725
                                     },
                                     "end": {
                                         "line": 26,
                                         "column": 21,
-                                        "offset": 757
+                                        "offset": 745
                                     },
                                     "indent": []
                                 }
@@ -2010,12 +2010,12 @@
                                                     "start": {
                                                         "line": 27,
                                                         "column": 3,
-                                                        "offset": 760
+                                                        "offset": 748
                                                     },
                                                     "end": {
                                                         "line": 27,
                                                         "column": 29,
-                                                        "offset": 786
+                                                        "offset": 774
                                                     },
                                                     "indent": []
                                                 }
@@ -2025,12 +2025,12 @@
                                             "start": {
                                                 "line": 27,
                                                 "column": 3,
-                                                "offset": 760
+                                                "offset": 748
                                             },
                                             "end": {
                                                 "line": 27,
                                                 "column": 29,
-                                                "offset": 786
+                                                "offset": 774
                                             },
                                             "indent": []
                                         }
@@ -2040,12 +2040,12 @@
                                     "start": {
                                         "line": 27,
                                         "column": 1,
-                                        "offset": 758
+                                        "offset": 746
                                     },
                                     "end": {
                                         "line": 27,
                                         "column": 29,
-                                        "offset": 786
+                                        "offset": 774
                                     },
                                     "indent": []
                                 }
@@ -2066,12 +2066,12 @@
                                                     "start": {
                                                         "line": 28,
                                                         "column": 3,
-                                                        "offset": 789
+                                                        "offset": 777
                                                     },
                                                     "end": {
                                                         "line": 28,
                                                         "column": 17,
-                                                        "offset": 803
+                                                        "offset": 791
                                                     },
                                                     "indent": []
                                                 }
@@ -2081,12 +2081,12 @@
                                             "start": {
                                                 "line": 28,
                                                 "column": 3,
-                                                "offset": 789
+                                                "offset": 777
                                             },
                                             "end": {
                                                 "line": 28,
                                                 "column": 17,
-                                                "offset": 803
+                                                "offset": 791
                                             },
                                             "indent": []
                                         }
@@ -2096,12 +2096,12 @@
                                     "start": {
                                         "line": 28,
                                         "column": 1,
-                                        "offset": 787
+                                        "offset": 775
                                     },
                                     "end": {
                                         "line": 28,
                                         "column": 17,
-                                        "offset": 803
+                                        "offset": 791
                                     },
                                     "indent": []
                                 }
@@ -2122,12 +2122,12 @@
                                                     "start": {
                                                         "line": 29,
                                                         "column": 3,
-                                                        "offset": 806
+                                                        "offset": 794
                                                     },
                                                     "end": {
                                                         "line": 29,
                                                         "column": 53,
-                                                        "offset": 856
+                                                        "offset": 844
                                                     },
                                                     "indent": []
                                                 }
@@ -2137,12 +2137,12 @@
                                             "start": {
                                                 "line": 29,
                                                 "column": 3,
-                                                "offset": 806
+                                                "offset": 794
                                             },
                                             "end": {
                                                 "line": 29,
                                                 "column": 53,
-                                                "offset": 856
+                                                "offset": 844
                                             },
                                             "indent": []
                                         }
@@ -2152,12 +2152,12 @@
                                     "start": {
                                         "line": 29,
                                         "column": 1,
-                                        "offset": 804
+                                        "offset": 792
                                     },
                                     "end": {
                                         "line": 29,
                                         "column": 53,
-                                        "offset": 856
+                                        "offset": 844
                                     },
                                     "indent": []
                                 }
@@ -2167,12 +2167,12 @@
                             "start": {
                                 "line": 26,
                                 "column": 1,
-                                "offset": 737
+                                "offset": 725
                             },
                             "end": {
                                 "line": 29,
                                 "column": 53,
-                                "offset": 856
+                                "offset": 844
                             },
                             "indent": [
                                 1,
@@ -2192,12 +2192,12 @@
                                     "start": {
                                         "line": 31,
                                         "column": 5,
-                                        "offset": 862
+                                        "offset": 850
                                     },
                                     "end": {
                                         "line": 31,
                                         "column": 21,
-                                        "offset": 878
+                                        "offset": 866
                                     },
                                     "indent": []
                                 }
@@ -2207,12 +2207,12 @@
                             "start": {
                                 "line": 31,
                                 "column": 1,
-                                "offset": 858
+                                "offset": 846
                             },
                             "end": {
                                 "line": 31,
                                 "column": 21,
-                                "offset": 878
+                                "offset": 866
                             },
                             "indent": []
                         }
@@ -2239,12 +2239,12 @@
                                                     "start": {
                                                         "line": 33,
                                                         "column": 3,
-                                                        "offset": 882
+                                                        "offset": 870
                                                     },
                                                     "end": {
                                                         "line": 33,
                                                         "column": 16,
-                                                        "offset": 895
+                                                        "offset": 883
                                                     },
                                                     "indent": []
                                                 }
@@ -2254,12 +2254,12 @@
                                             "start": {
                                                 "line": 33,
                                                 "column": 3,
-                                                "offset": 882
+                                                "offset": 870
                                             },
                                             "end": {
                                                 "line": 33,
                                                 "column": 16,
-                                                "offset": 895
+                                                "offset": 883
                                             },
                                             "indent": []
                                         }
@@ -2269,12 +2269,12 @@
                                     "start": {
                                         "line": 33,
                                         "column": 1,
-                                        "offset": 880
+                                        "offset": 868
                                     },
                                     "end": {
                                         "line": 33,
                                         "column": 16,
-                                        "offset": 895
+                                        "offset": 883
                                     },
                                     "indent": []
                                 }
@@ -2295,12 +2295,12 @@
                                                     "start": {
                                                         "line": 34,
                                                         "column": 3,
-                                                        "offset": 898
+                                                        "offset": 886
                                                     },
                                                     "end": {
                                                         "line": 34,
                                                         "column": 28,
-                                                        "offset": 923
+                                                        "offset": 911
                                                     },
                                                     "indent": []
                                                 }
@@ -2310,12 +2310,12 @@
                                             "start": {
                                                 "line": 34,
                                                 "column": 3,
-                                                "offset": 898
+                                                "offset": 886
                                             },
                                             "end": {
                                                 "line": 34,
                                                 "column": 28,
-                                                "offset": 923
+                                                "offset": 911
                                             },
                                             "indent": []
                                         }
@@ -2325,12 +2325,12 @@
                                     "start": {
                                         "line": 34,
                                         "column": 1,
-                                        "offset": 896
+                                        "offset": 884
                                     },
                                     "end": {
                                         "line": 34,
                                         "column": 28,
-                                        "offset": 923
+                                        "offset": 911
                                     },
                                     "indent": []
                                 }
@@ -2340,12 +2340,12 @@
                             "start": {
                                 "line": 33,
                                 "column": 1,
-                                "offset": 880
+                                "offset": 868
                             },
                             "end": {
                                 "line": 34,
                                 "column": 28,
-                                "offset": 923
+                                "offset": 911
                             },
                             "indent": [
                                 1
@@ -2363,12 +2363,12 @@
                                     "start": {
                                         "line": 36,
                                         "column": 5,
-                                        "offset": 929
+                                        "offset": 917
                                     },
                                     "end": {
                                         "line": 36,
                                         "column": 19,
-                                        "offset": 943
+                                        "offset": 931
                                     },
                                     "indent": []
                                 }
@@ -2378,12 +2378,12 @@
                             "start": {
                                 "line": 36,
                                 "column": 1,
-                                "offset": 925
+                                "offset": 913
                             },
                             "end": {
                                 "line": 36,
                                 "column": 19,
-                                "offset": 943
+                                "offset": 931
                             },
                             "indent": []
                         }
@@ -2410,12 +2410,12 @@
                                                     "start": {
                                                         "line": 38,
                                                         "column": 3,
-                                                        "offset": 947
+                                                        "offset": 935
                                                     },
                                                     "end": {
                                                         "line": 38,
                                                         "column": 10,
-                                                        "offset": 954
+                                                        "offset": 942
                                                     },
                                                     "indent": []
                                                 }
@@ -2425,12 +2425,12 @@
                                             "start": {
                                                 "line": 38,
                                                 "column": 3,
-                                                "offset": 947
+                                                "offset": 935
                                             },
                                             "end": {
                                                 "line": 38,
                                                 "column": 10,
-                                                "offset": 954
+                                                "offset": 942
                                             },
                                             "indent": []
                                         }
@@ -2440,12 +2440,12 @@
                                     "start": {
                                         "line": 38,
                                         "column": 1,
-                                        "offset": 945
+                                        "offset": 933
                                     },
                                     "end": {
                                         "line": 38,
                                         "column": 10,
-                                        "offset": 954
+                                        "offset": 942
                                     },
                                     "indent": []
                                 }
@@ -2465,12 +2465,12 @@
                                                     "start": {
                                                         "line": 39,
                                                         "column": 3,
-                                                        "offset": 957
+                                                        "offset": 945
                                                     },
                                                     "end": {
                                                         "line": 39,
                                                         "column": 10,
-                                                        "offset": 964
+                                                        "offset": 952
                                                     },
                                                     "indent": []
                                                 }
@@ -2480,12 +2480,12 @@
                                             "start": {
                                                 "line": 39,
                                                 "column": 3,
-                                                "offset": 957
+                                                "offset": 945
                                             },
                                             "end": {
                                                 "line": 39,
                                                 "column": 10,
-                                                "offset": 964
+                                                "offset": 952
                                             },
                                             "indent": []
                                         }
@@ -2495,12 +2495,12 @@
                                     "start": {
                                         "line": 39,
                                         "column": 1,
-                                        "offset": 955
+                                        "offset": 943
                                     },
                                     "end": {
                                         "line": 39,
                                         "column": 10,
-                                        "offset": 964
+                                        "offset": 952
                                     },
                                     "indent": []
                                 }
@@ -2520,12 +2520,12 @@
                                                     "start": {
                                                         "line": 40,
                                                         "column": 3,
-                                                        "offset": 967
+                                                        "offset": 955
                                                     },
                                                     "end": {
                                                         "line": 40,
                                                         "column": 10,
-                                                        "offset": 974
+                                                        "offset": 962
                                                     },
                                                     "indent": []
                                                 }
@@ -2535,12 +2535,12 @@
                                             "start": {
                                                 "line": 40,
                                                 "column": 3,
-                                                "offset": 967
+                                                "offset": 955
                                             },
                                             "end": {
                                                 "line": 40,
                                                 "column": 10,
-                                                "offset": 974
+                                                "offset": 962
                                             },
                                             "indent": []
                                         }
@@ -2550,12 +2550,12 @@
                                     "start": {
                                         "line": 40,
                                         "column": 1,
-                                        "offset": 965
+                                        "offset": 953
                                     },
                                     "end": {
                                         "line": 40,
                                         "column": 10,
-                                        "offset": 974
+                                        "offset": 962
                                     },
                                     "indent": []
                                 }
@@ -2565,12 +2565,12 @@
                             "start": {
                                 "line": 38,
                                 "column": 1,
-                                "offset": 945
+                                "offset": 933
                             },
                             "end": {
                                 "line": 40,
                                 "column": 10,
-                                "offset": 974
+                                "offset": 962
                             },
                             "indent": [
                                 1,
@@ -2589,12 +2589,12 @@
                                     "start": {
                                         "line": 42,
                                         "column": 5,
-                                        "offset": 980
+                                        "offset": 968
                                     },
                                     "end": {
                                         "line": 42,
                                         "column": 12,
-                                        "offset": 987
+                                        "offset": 975
                                     },
                                     "indent": []
                                 }
@@ -2604,12 +2604,12 @@
                             "start": {
                                 "line": 42,
                                 "column": 1,
-                                "offset": 976
+                                "offset": 964
                             },
                             "end": {
                                 "line": 42,
                                 "column": 12,
-                                "offset": 987
+                                "offset": 975
                             },
                             "indent": []
                         }
@@ -2625,12 +2625,12 @@
                                     "start": {
                                         "line": 45,
                                         "column": 5,
-                                        "offset": 994
+                                        "offset": 982
                                     },
                                     "end": {
                                         "line": 45,
                                         "column": 28,
-                                        "offset": 1017
+                                        "offset": 1005
                                     },
                                     "indent": []
                                 }
@@ -2640,12 +2640,12 @@
                             "start": {
                                 "line": 45,
                                 "column": 1,
-                                "offset": 990
+                                "offset": 978
                             },
                             "end": {
                                 "line": 45,
                                 "column": 28,
-                                "offset": 1017
+                                "offset": 1005
                             },
                             "indent": []
                         }
@@ -2661,12 +2661,12 @@
                                     "start": {
                                         "line": 47,
                                         "column": 5,
-                                        "offset": 1023
+                                        "offset": 1011
                                     },
                                     "end": {
                                         "line": 47,
                                         "column": 13,
-                                        "offset": 1031
+                                        "offset": 1019
                                     },
                                     "indent": []
                                 }
@@ -2676,12 +2676,12 @@
                             "start": {
                                 "line": 47,
                                 "column": 1,
-                                "offset": 1019
+                                "offset": 1007
                             },
                             "end": {
                                 "line": 47,
                                 "column": 13,
-                                "offset": 1031
+                                "offset": 1019
                             },
                             "indent": []
                         }
@@ -2708,12 +2708,12 @@
                                                     "start": {
                                                         "line": 49,
                                                         "column": 3,
-                                                        "offset": 1035
+                                                        "offset": 1023
                                                     },
                                                     "end": {
                                                         "line": 49,
                                                         "column": 31,
-                                                        "offset": 1063
+                                                        "offset": 1051
                                                     },
                                                     "indent": []
                                                 }
@@ -2723,12 +2723,12 @@
                                             "start": {
                                                 "line": 49,
                                                 "column": 3,
-                                                "offset": 1035
+                                                "offset": 1023
                                             },
                                             "end": {
                                                 "line": 49,
                                                 "column": 31,
-                                                "offset": 1063
+                                                "offset": 1051
                                             },
                                             "indent": []
                                         }
@@ -2738,12 +2738,12 @@
                                     "start": {
                                         "line": 49,
                                         "column": 1,
-                                        "offset": 1033
+                                        "offset": 1021
                                     },
                                     "end": {
                                         "line": 49,
                                         "column": 31,
-                                        "offset": 1063
+                                        "offset": 1051
                                     },
                                     "indent": []
                                 }
@@ -2753,12 +2753,12 @@
                             "start": {
                                 "line": 49,
                                 "column": 1,
-                                "offset": 1033
+                                "offset": 1021
                             },
                             "end": {
                                 "line": 49,
                                 "column": 31,
-                                "offset": 1063
+                                "offset": 1051
                             },
                             "indent": []
                         }
@@ -2773,7 +2773,7 @@
                     "end": {
                         "line": 49,
                         "column": 31,
-                        "offset": 1063
+                        "offset": 1051
                     }
                 }
             },
@@ -3650,7 +3650,6 @@
                     },
                     {
                         "type": "jsx",
-                        "value": "<table>\n    <thead>\n        <tr>\n            <th style={{ textAlign: 'left' }}>Page</th>\n            <th style={{ textAlign: 'left' }}>Path</th>\n            <th style={{ textAlign: 'left' }}>Status</th>\n        </tr>\n    </thead>\n    <tbody>\n    {_.map(database.pages, (page) => ( \n        <tr key={page.id}>\n            <td style={{ paddingRight : '2rem' }}>\n                <MDXLink href={`/?page=${page.id}`}>{page.title}</MDXLink>\n            </td>\n            <td style={{ paddingRight: '2rem', color: '#777' }}>\n                {page.path.join(' / ')}\n            </td>\n            <td style={{ paddingRight: '1rem', color: '#777' }}>\n                {page.properties.status}\n            </td>            \n        </tr>\n    ))}\n    </tbody>\n</table>",
                         "position": {
                             "start": {
                                 "line": 5,
@@ -3658,11 +3657,14 @@
                                 "offset": 17
                             },
                             "end": {
-                                "line": 28,
+                                "line": 31,
                                 "column": 9,
-                                "offset": 772
+                                "offset": 878
                             },
                             "indent": [
+                                1,
+                                1,
+                                1,
                                 1,
                                 1,
                                 1,
@@ -3688,7 +3690,8 @@
                                 1
                             ]
                         },
-                        "parsed": "(function() {\n\"use strict\";\n\nreturn /*#__PURE__*/React.createElement(\"table\", null, /*#__PURE__*/React.createElement(\"thead\", null, /*#__PURE__*/React.createElement(\"tr\", null, /*#__PURE__*/React.createElement(\"th\", {\n  style: {\n    textAlign: 'left'\n  }\n}, \"Page\"), /*#__PURE__*/React.createElement(\"th\", {\n  style: {\n    textAlign: 'left'\n  }\n}, \"Path\"), /*#__PURE__*/React.createElement(\"th\", {\n  style: {\n    textAlign: 'left'\n  }\n}, \"Status\"))), /*#__PURE__*/React.createElement(\"tbody\", null, _.map(database.pages, page => /*#__PURE__*/React.createElement(\"tr\", {\n  key: page.id\n}, /*#__PURE__*/React.createElement(\"td\", {\n  style: {\n    paddingRight: '2rem'\n  }\n}, /*#__PURE__*/React.createElement(MDXLink, {\n  href: `/?page=${page.id}`\n}, page.title)), /*#__PURE__*/React.createElement(\"td\", {\n  style: {\n    paddingRight: '2rem',\n    color: '#777'\n  }\n}, page.path.join(' / ')), /*#__PURE__*/React.createElement(\"td\", {\n  style: {\n    paddingRight: '1rem',\n    color: '#777'\n  }\n}, page.properties.status)))));\n})()"
+                        "text": "<table>\n    <thead>\n        <tr>\n            <th style={{ textAlign: 'left' }}>Page</th>\n            <th style={{ textAlign: 'left' }}>Path</th>\n            <th style={{ textAlign: 'left' }}>Status</th>\n        </tr>\n    </thead>\n    <tbody>\n    {_.chain(database.pages)\n        .sortBy((page) => page.title)\n        .map((page) => ( \n            <tr key={page.id}>\n                <td style={{ paddingRight : '2rem' }}>\n                    <a href={`/?page=${page.id}`}>{page.title}</a>\n                </td>\n                <td style={{ paddingRight: '2rem', color: '#777' }}>\n                    {page.path.join(' / ')}\n                </td>\n                <td style={{ paddingRight: '1rem', color: '#777' }}>\n                    {page.properties.status}\n                </td>            \n            </tr>\n        ))\n        .value()}\n    </tbody>\n</table>",
+                        "parsed": "(function() {\n\"use strict\";\n\nreturn /*#__PURE__*/React.createElement(\"table\", null, /*#__PURE__*/React.createElement(\"thead\", null, /*#__PURE__*/React.createElement(\"tr\", null, /*#__PURE__*/React.createElement(\"th\", {\n  style: {\n    textAlign: 'left'\n  }\n}, \"Page\"), /*#__PURE__*/React.createElement(\"th\", {\n  style: {\n    textAlign: 'left'\n  }\n}, \"Path\"), /*#__PURE__*/React.createElement(\"th\", {\n  style: {\n    textAlign: 'left'\n  }\n}, \"Status\"))), /*#__PURE__*/React.createElement(\"tbody\", null, _.chain(database.pages).sortBy(page => page.title).map(page => /*#__PURE__*/React.createElement(\"tr\", {\n  key: page.id\n}, /*#__PURE__*/React.createElement(\"td\", {\n  style: {\n    paddingRight: '2rem'\n  }\n}, /*#__PURE__*/React.createElement(\"a\", {\n  href: `/?page=${page.id}`\n}, page.title)), /*#__PURE__*/React.createElement(\"td\", {\n  style: {\n    paddingRight: '2rem',\n    color: '#777'\n  }\n}, page.path.join(' / ')), /*#__PURE__*/React.createElement(\"td\", {\n  style: {\n    paddingRight: '1rem',\n    color: '#777'\n  }\n}, page.properties.status))).value()));\n})()"
                     }
                 ],
                 "position": {
@@ -3698,9 +3701,9 @@
                         "offset": 0
                     },
                     "end": {
-                        "line": 28,
+                        "line": 31,
                         "column": 9,
-                        "offset": 772
+                        "offset": 878
                     }
                 }
             },
@@ -14969,7 +14972,9 @@
                                     }
                                 }
                             }
-                        }
+                        },
+                        "meta": null,
+                        "params": {}
                     }
                 ],
                 "position": {
@@ -14988,6 +14993,114 @@
             "tags": [],
             "properties": {},
             "title": "Data Objects"
+        },
+        {
+            "filename": "sea/examples/data_table.mdx",
+            "extension": "mdx",
+            "id": "data_table",
+            "path": [
+                "sea",
+                "examples"
+            ],
+            "ast": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "heading",
+                        "depth": 1,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Data Table",
+                                "position": {
+                                    "start": {
+                                        "line": 2,
+                                        "column": 3,
+                                        "offset": 3
+                                    },
+                                    "end": {
+                                        "line": 2,
+                                        "column": 13,
+                                        "offset": 13
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 2,
+                                "column": 1,
+                                "offset": 1
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 13,
+                                "offset": 13
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "object",
+                        "kind": "data",
+                        "value": [
+                            "Backblaze",
+                            "Google One",
+                            "Visual Studio Code",
+                            "Blender",
+                            "GIMP",
+                            "Chrome"
+                        ],
+                        "meta": "name=list, pizza = salad",
+                        "params": {
+                            "name": "list",
+                            "pizza": "salad"
+                        },
+                        "name": "list"
+                    },
+                    {
+                        "type": "jsx",
+                        "position": {
+                            "start": {
+                                "line": 14,
+                                "column": 1,
+                                "offset": 127
+                            },
+                            "end": {
+                                "line": 20,
+                                "column": 7,
+                                "offset": 235
+                            },
+                            "indent": [
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1
+                            ]
+                        },
+                        "text": "<div>\n    <ul>\n    {_.map(page.name.list.value, (item) => (\n        <li>{item}</li>\n    ))}\n    </ul>\n</div>",
+                        "parsed": "(function() {\n\"use strict\";\n\nreturn /*#__PURE__*/React.createElement(\"div\", null, /*#__PURE__*/React.createElement(\"ul\", null, _.map(page.name.list.value, item => /*#__PURE__*/React.createElement(\"li\", null, item))));\n})()"
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 20,
+                        "column": 7,
+                        "offset": 235
+                    }
+                }
+            },
+            "tags": [],
+            "properties": {},
+            "title": "Data Table"
         },
         {
             "filename": "sea/layouts.mdx",
@@ -15189,7 +15302,6 @@
                     },
                     {
                         "type": "jsx",
-                        "value": "<div style={{\n    textAlign: 'center',\n    color: 'red',\n    margin: '2rem 0',\n    fontSize: '64px',\n}}>\n    Work in progress page!\n</div>",
                         "position": {
                             "start": {
                                 "line": 5,
@@ -15211,6 +15323,7 @@
                                 1
                             ]
                         },
+                        "text": "<div style={{\n    textAlign: 'center',\n    color: 'red',\n    margin: '2rem 0',\n    fontSize: '64px',\n}}>\n    Work in progress page!\n</div>",
                         "parsed": "(function() {\n\"use strict\";\n\nreturn /*#__PURE__*/React.createElement(\"div\", {\n  style: {\n    textAlign: 'center',\n    color: 'red',\n    margin: '2rem 0',\n    fontSize: '64px'\n  }\n}, \"Work in progress page!\");\n})()"
                     },
                     {
@@ -15275,11 +15388,12 @@
                                     }
                                 }
                             }
-                        }
+                        },
+                        "meta": null,
+                        "params": {}
                     },
                     {
                         "type": "jsx",
-                        "value": "<h1 style={{ textAlign: 'center'}}>Sea</h1>",
                         "position": {
                             "start": {
                                 "line": 23,
@@ -15293,6 +15407,7 @@
                             },
                             "indent": []
                         },
+                        "text": "<h1 style={{ textAlign: 'center'}}>Sea</h1>",
                         "parsed": "(function() {\n\"use strict\";\n\nreturn /*#__PURE__*/React.createElement(\"h1\", {\n  style: {\n    textAlign: 'center'\n  }\n}, \"Sea\");\n})()"
                     },
                     {
@@ -17386,7 +17501,9 @@
                                     }
                                 }
                             }
-                        }
+                        },
+                        "meta": null,
+                        "params": {}
                     },
                     {
                         "type": "object",
@@ -17550,7 +17667,9 @@
                                     }
                                 }
                             }
-                        }
+                        },
+                        "meta": null,
+                        "params": {}
                     },
                     {
                         "type": "object",
@@ -17819,7 +17938,9 @@
                                     }
                                 }
                             }
-                        }
+                        },
+                        "meta": null,
+                        "params": {}
                     },
                     {
                         "type": "heading",
@@ -20557,7 +20678,9 @@
                                     }
                                 }
                             }
-                        }
+                        },
+                        "meta": null,
+                        "params": {}
                     },
                     {
                         "type": "heading",
@@ -20769,7 +20892,9 @@
                                 "Must work",
                                 "Must work well"
                             ]
-                        }
+                        },
+                        "meta": null,
+                        "params": {}
                     },
                     {
                         "type": "heading",
@@ -21368,7 +21493,9 @@
                                     }
                                 }
                             }
-                        }
+                        },
+                        "meta": null,
+                        "params": {}
                     },
                     {
                         "type": "heading",
@@ -21719,7 +21846,9 @@
                                     }
                                 }
                             }
-                        }
+                        },
+                        "meta": null,
+                        "params": {}
                     }
                 ],
                 "position": {
@@ -23498,11 +23627,6 @@
         }
     ],
     "index_words": {
-        "hello": [
-            "end-to-end_development_of_a_distributed_system",
-            "home",
-            "test"
-        ],
         "charter": [
             "creating_user_stories",
             "example_user_stories"
@@ -23800,6 +23924,10 @@
             "creating_user_stories",
             "example_user_stories",
             "sea"
+        ],
+        "hello": [
+            "home",
+            "test"
         ],
         "website": [
             "home",
@@ -24159,6 +24287,7 @@
         "data": [
             "changelog_tips",
             "data_objects",
+            "data_table",
             "sea"
         ],
         "common": [
