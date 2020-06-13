@@ -1,6 +1,5 @@
 import React from "react";
 import Router from '../base/routing/router.jsx';
-import Layout from './layout.jsx';
 import RustRaytracer from './pages/rust_raytracer.jsx';
 import database from '../database.json';
 import MDXPage, { makeSeaComponent } from './mdx_page.jsx';
@@ -12,7 +11,7 @@ function evaluateDefaultExport(source, additionalContext = {}) {
     const context = {
         ...additionalContext,
         exports,
-        require : function(name) {
+        require: function (name) {
             switch (name) {
                 case 'react': return React;
                 default: return null;
@@ -75,7 +74,7 @@ database.components.forEach((comp) => {
 console.log(database);
 
 export default function Application() {
-    
+
     database.pages.forEach((page) => {
         page.href = `/?page=${page.id}`;
     });
@@ -85,14 +84,12 @@ export default function Application() {
     };
     database.pages.forEach((page) => {
         routes[page.id] = () => <MDXPage database={database} page={page} />
-    });    
+    });
 
     return (
-        <Layout>
-            <Router
-                routes={routes}
-                defaultRoute={routes.home}
-            />
-        </Layout>
+        <Router
+            routes={routes}
+            defaultRoute={routes.home}
+        />
     );
 }

@@ -61,7 +61,7 @@ $ npm install --global @ridleywinters/sea
 
 Create a barebones example project (note: if you skip the `--template` argument, a bare-minimal project will be created):
 
-```bash
+```console
 $ sea create myproject --template=example
 ```
 
@@ -140,6 +140,13 @@ Server
 
 * Separate data from the presentation
 * API for operating on the data
+
+## Publishing
+
+### Publishing to GitHub
+
+Include an empty `.nojekyll` file in the root of your repository to [avoid having relative paths break](https://stackoverflow.com/questions/31611969/broken-image-paths-on-github-pages-without-jekyll)!
+
 
 ## Musings
 

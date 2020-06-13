@@ -1,17 +1,18 @@
-import React from "react";
+import React from 'react';
 
-export default function Layout({ children }) {
+
+function Outer({ children }) {
     return (
         <div className="c-layout">
-            <div style={{                
-                display: 'flex',                                
+            <div style={{
+                display: 'flex',
                 flexDirection: 'row',
                 padding: '12px 2rem 6px',
                 backgroundColor: '#ACF',
             }}>
-                <a style={{ flexGrow: 0}} href="/">home</a>
-                <div style={{ flexGrow:1}} />
-                <a style={{ flexGrow: 0}} href="/?page=index">index</a>
+                <a style={{ flexGrow: 0 }} href="/">home</a>
+                <div style={{ flexGrow: 1 }} />
+                <a style={{ flexGrow: 0 }} href="/?page=index">index</a>
             </div>
             <div style={{
                 minHeight: 'calc(100vh - 120px)'
@@ -36,3 +37,25 @@ export default function Layout({ children }) {
         </div>
     );
 }
+
+export default function PageLayout({ children }) {
+    return (
+        <Outer>
+            <div
+                style={{
+                    margin: '0 auto',
+                    maxWidth: '80rem',
+                }}
+            >
+                <div
+                    style={{
+                        margin: '0 2rem',
+                    }}
+                >
+                    {children}
+                </div>
+            </div>
+        </Outer>
+    );
+}
+
