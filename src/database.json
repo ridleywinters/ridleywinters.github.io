@@ -76,12 +76,13 @@
                         "offset": 0
                     },
                     "end": {
-                        "line": 7,
+                        "line": 8,
                         "column": 1,
-                        "offset": 96
+                        "offset": 97
                     }
                 }
             },
+            "string": "status: placeholder\ntags:  does this work, cats, dogs\n\n# End-to-end Distributed System\n",
             "tags": [
                 "does this work",
                 "cats",
@@ -1660,6 +1661,7 @@
                     }
                 }
             },
+            "string": "status: draft\n\n# Charter\n\n## Vision\n\nCreate a world creation engine for adventure games that is easy to incrementally contribute to without sacrificing the scope of what can be done.\n\n## Mission\n\nUsing Rust and voxels\n\n## User Roles\n\nHobbyist Worldbuilder\n\n## Timeline\n\nAs this is a hobby-project, the timeline makes Epics at most a month in length.\n\n-   June:\n-   July:\n-   August:\n-   September:\n-   October:\n-   November:\n-   December:\n\n* * *\n\n## Epics\n\nAs a hobbyist worldbuilder, I want a program that lets me visual voxel terrain segments in 3D quickly and easily so that I can experiment with building my own terrains procedurally.\n\n-   Must be in Rust as the organization is trying to build expertise in Rust\n\n## User Stories\n\nAs a hobbyist worldbuilder, I want to \n\nI want to be able to play with creating a bunch of heightmap terrains.\n\nI want to be able to quickyl plug-in experimental modifiers on terrain building mechanisms.\n\nI want to be able to write plug-ins and modify existing terrain algorithms with simple JavaScript scripts.\n\nI want to be able to use WASM when contributing so that I have the benefits of Rust's tooling (which makes me a better engineer).\n\nAs a Fountain user, I want to have Similar Pages to have better matching on multiple words like \"user story\" because word pairs are often some of the more interesting connections.\n\n* * *\n\n## Notes\n\n-   Statement\n-   Refinement\n-   Validation\n    -   Written Principle\n    -   External evidence\n",
             "tags": [],
             "properties": {
                 "status": "draft"
@@ -2777,6 +2779,7 @@
                     }
                 }
             },
+            "string": "title: Ridley Winter's Homepage\n\n# Hello World!\n\nI'm Ridley Winters. This is my learn-by-doing website (built using TODO-WIKILINK) that I use to share some my software engineering hobby projects and tools. I'm a former product manager and now part-time software engineer. For my hobby projects, I am focused on learning more about effective web development as well as learning Rust - and a small side obsession with graphics via Vulkan and WebGL.\n\nI'm still learning so please take everything you find on this site with a grain of salt.\n\n### How To's\n\n<ul>\n{_.map(database.index.tag[\"how-to\"], (page) => (\n    <li key={page.id}>\n        <a href={`/?page=${page.id}`}>{page.title}</a>\n    </li>\n))}\n</ul>\n\n### Exercises\n\n-   TODO-WIKILINK\n-   TODO-WIKILINK\n-   TODO-WIKILINK\n-   TODO-WIKILINK\n\n### Product Thoughts\n\n-   TODO-WIKILINK\n-   TODO-WIKILINK\n\n### Hobby Projects\n\n-   TODO-WIKILINK\n-   Kestrel\n-   Raiment\n\n### Musings\n\n### Every Day Routine (EDR)\n\n### Appendix\n\n-   TODO-WIKILINK\n",
             "tags": [],
             "properties": {
                 "title": "Ridley Winter's Homepage"
@@ -3594,6 +3597,7 @@
                     }
                 }
             },
+            "string": "tags: how-to\n\n# How to embed a bash script inside a Makefile\n\n## Overview\n\nRelies on Make's features:\n\n-   [`define`](https://www.gnu.org/software/make/manual/html_node/Multi_002dLine.html)\n-   [`export`](https://www.gnu.org/software/make/manual/html_node/Variables_002fRecursion.html)\n\nThe basic concept is this:\n\n-   Use `define` to specify a multiline variable\n-   Use `export` to ensure the multiline variable expands correct to the bash subshell\n\n## Example\n\nIn this particular example, a bash script is used to wrap running multiple background \nprocesses together into logically a single Makefile command. \n\n```makefile\n#\n# Use a bash script since we want a single make command to run multiple\n# background processes.\n#\ndefine DEV_SCRIPT\nshutdown() {\n    echo kill $(jobs -l |awk '$2 == \"|\" {print $1; next} {print $2}')\n    kill $(jobs -l |awk '$2 == \"|\" {print $1; next} {print $2}')\n    exit 0\n}\ntrap \"shutdown\" SIGINT SIGTERM\n\nnpx nodemon --watch data --ext js,jsx,mdx --exec make build-database &\n\nnpx webpack-dev-server \\\n\t\t--mode development \\\n\t\t--entry ./src/client.jsx \\\n\t\t--output-public-path dist \\\n\t\t--output-filename client.bundle.js &\nwait\nendef\nexport DEV_SCRIPT\n\ndev:\n\t@bash -c \"$$DEV_SCRIPT\"\n```\n\n## References\n\n-   <https://stackoverflow.com/questions/7281395/output-multiline-variable-to-a-file-with-gnu-make>\n",
             "tags": [
                 "how-to"
             ],
@@ -3707,6 +3711,7 @@
                     }
                 }
             },
+            "string": "## Page Index\n\n<table>\n    <thead>\n        <tr>\n            <th style={{ textAlign: 'left' }}>Page</th>\n            <th style={{ textAlign: 'left' }}>Path</th>\n            <th style={{ textAlign: 'left' }}>Status</th>\n        </tr>\n    </thead>\n    <tbody>\n    {_.chain(database.pages)\n        .sortBy((page) => page.title)\n        .map((page) => ( \n            <tr key={page.id}>\n                <td style={{ paddingRight : '2rem' }}>\n                    <a href={`/?page=${page.id}`}>{page.title}</a>\n                </td>\n                <td style={{ paddingRight: '2rem', color: '#777' }}>\n                    {page.path.join(' / ')}\n                </td>\n                <td style={{ paddingRight: '1rem', color: '#777' }}>\n                    {page.properties.status}\n                </td>            \n            </tr>\n        ))\n        .value()}\n    </tbody>\n</table>\n",
             "tags": [],
             "properties": {},
             "title": "Page Index"
@@ -4265,6 +4270,7 @@
                     }
                 }
             },
+            "string": "# Changelog Tips\n\nIn a changelog list, consider starting each bullet with one of the following verbs:\n\n-   `Add` - something new has been added, prior functionality is unaffected\n-   `Remove` - something has been removed entirely \n-   `Change` - some functionality still exists but has been modified in how it works\n-   `Replace` - some functionality still exists but is accessed in a different way\n-   `Fix` - some functionality that did not work correctly now works correctly\n-   `Update` - content or data has been refreshed or added to in a backward compatible way\n",
             "tags": [],
             "properties": {},
             "title": "Changelog Tips"
@@ -4538,6 +4544,7 @@
                     }
                 }
             },
+            "string": "# Common User Stories\n\n-   As a new user, I want to be able to understand how this compares/competes with similar technologies/products so I can have confidence trying this is worth my time.\n-   As a new user, I want to be able to quickly try it for myself so that I can concretely understand the value it will have for me.\n\n\n-   As a developer, I want to see a set of passing unit tests so that I am higher confidence I can modify the code without causing regressions.\n",
             "tags": [],
             "properties": {},
             "title": "Common User Stories"
@@ -9394,6 +9401,7 @@
                     }
                 }
             },
+            "string": "status: draft\n\n# Product Development through User Stories\n\n_There are many approaches to product development, this is just one possible take on it..._\n\n## Goal\n\nThe goal of this **user story centered** approach is to create a lightweight approach that both helps guide effective day-to-day work but also covers strategic, year-long planning in a connected way.  \n\n## Overview\n\nThis approach puts **TODO-WIKILINK** at the forefront of what is generated and iterated on. These are collected into fixed size **epics** so a timeline can be formed to allow for stakeholders planning around the projects.  As these initially evolve a short **project charter** is created to set a long-term north-star for the team. These work together to create a balance of customer value deliverability, predictiability, and iteration on what is learned along the way.\n\nThis approach has a bias towards scope-reduction over schedule or resourcing adjustment (in the traditional scoped-schedule-resources balance of product development).\n\n## Checklist\n\n_Skipping \"the why\" here's a checklist_\n\n-   Brainstorm \"I want...\" statements\n-   Refinement\n    -   Put statements into \"As a {user role}, I want {goal} so that {why}.\"\n    -   Split and combine user stories, group into Epics\n    -   Add acceptance criteria\n-   Move into Backlog\n\n## Getting started\n\nThis section assumes you're starting from scratch on this process. After working in this fashion for a while, it becomes a more natural, iterative processs of improving on the prior work: we'll get to that in the next section.\n\nAssuming you're working with great people, they're probably not excited about learning a new process, but rather getting start to doing higher-quality work: this section tries to speed start to the value and layer in the process that matters as it goes.\n\n### Product Owner\n\nTODO: something about the decision-maker, moderator. Someone accountable to make decisions when not everyone agrees.\n\n### Sketch the team's charter\n\nTODO\n\n### Generate a set of user stories\n\nExpect the user stories to be varied and disorganized. The team is not yet aligned, so that's to be expected. Remember the following:\n\n-   Anyone can write a story\n-   The story should fit the format: _As a {user role}, I want to {goal or desire} so that {why}._\n-   During brainstorming, do allow and record _I want to {goal}_: this can be refined later. Capture what people care about first.\n-   These can be refined, grouped, and prioritized over time, but all are valid\n\n### First pass of refining stories\n\nTODO: Add user role\n\nTODO: Split out **functional stories**\n\nPair each with an **acceptance criteria**, which is a set of 1-3 unambiguous questions that, when all can be answered yes, the work can be considered done. This is also called the \"definition of done.\"  This piece is critical to enable people to scope work back to the minimal viable solution (and thus meet a value-delivery timeline).\n\n-   The acceptance critiera fit the format: _The {specific detail} must {detail}, so that {why this matters}._\n\nAside: functional stories are not often part of Agile process. The reason being they don't deliver direct customer value, which is supposed to be the entire intent of product development, right? Having worked as a product manager at a highly technical company (where much of the company value was based on some expert-class engineering), I found ignoring the functional stories can remove engineers excellent skill in identifying opportunities, economic advantages. This ignores a major value add.\n\nTry not confuse user stories or functional stories with tasks. If you have tasks that feel exciting, write them down but hold off on bringing them up until the planning phase.\n\n### Refining user stories\n\nThis isn't a discrete step, but rather should happen as naturally as possible as part of either the generation or review of user stories.  User stories should not aim for perfection, but do look for ways to improve them:\n\n-   Is the goal focused on the user value? If not, can the story be rewritten in a way that expressed why the user cares about this?\n-   Does the story emphasize how this needs to be implemented? If yes, can that be removed and still express the user value?  If yes _but there's a functional requirement that really matters embedded there_, move that to the acceptance critiera.\n-   Does is acceptance criteria short? If not, TODO\n-   Does it have fuzzy words like \"quickly\" and \"easily\"? If yes, try to find ways to be more specific to avoid misaligned expectations and unclear goals.\n\n### Group into epics\n\n-   Decide on _maximum_ Epic length\n-   Depending on team size, this may be best as 2 weeks, a month, or a quarter\n-\n\nTODO: estimation of user stories\nTODO: estimation of epics\n\n### Create a draft timeline\n\nTODO: avoiding the word roadmap here\n\nLay out the order of the Epics\n\n-   The team is making a commitment to pursue those Epics on that timeline\n-   The commitment is to the value being pursued, not a set scope of implementation\n-   The team's estimation are only estimations, not certainties\n\n### Create a project charter\n\nKeep it at 1-page.\n\n-   Vision: why is this work being done? Is this inspiring?\n-   Mission: How will this play out in rough terms that everyone can agree to\n-   Success criteria: how & when are measurably successful\n-   Timeline\n\nMaybe a team charter?  \n\nTODO: Is this a Project, a Team, or a Product?\n\n## Steady state\n\n## Refinement\n\n### Charter\n\n### User stories\n\nDo you have a small set of consistent user roles: if it's a large set, many you need to split products\n\n-   Is the why about the external need? If not, put it in terms of the user's need\n\nThen group these by theme (TODO: what does this mean?)\n\n## Epics\n\n## TODO\n\nTODO: Where to principles fit into this?\n\nTODO: How does validation and prototyping fit in?\n\nQuestions, spikes.\n\nProject charter (1-page)\n\n-   Vision: why? inspiring\n-   Mission: how? How will it play out\n-   Success Criteria: 1 sentence tests\n-   Timline: series of Epics?\n\n## FAQ\n\n### How do I keep the product cohesive? Everyone on my team has good ideas but they're all so different!\n\nOne approach - usually not best when first getting started - is bridging user stories before beginning work on them. Combine a succesffully completed user story and the new story:\n\n_As a {user rule}, I use {product name} to {prior want} so {goal/why}.  I {new want} so that {goal/why}._\n\nThis can be helpful when existing user flows in the product may need attention due to their being incomplete, problematic for users, or there're opportunities to get more value from it. Generally if using this approach do not impose that the team must use a specific prior user story during the brainstorming process: this will stifle creativity. Instead rely on the charter to guide attention on the right areas.\n\n### What do I do when the scope is enormous? (My team wants to do everything, the CEO has impossible demands, the minimal requirements for this to succeed are huge, etc.)\n\nTODO\n\n### Why use User Roles rather than personas?\n\nUser Roles intend to places more emphasis on the activities the person wants or needs to do. This avoids getting caught up in the job titles (which do not always map to the same responsibilities across companies) or irrelevant individual demographics biases.\n\n### What do I do when the team chooses user stories that I don't agree with?\n\nTODO: validation without using validation to \"prove you're right\", asking why, being precise about your discomfort, disagree and commit.\n\n### There's a constant tension between being specific for clarity and being general to avoid being prescriptive about the solution: what do I do?\n\nTODO\n\n## Article TODO\n\n-   Make this shorter, possibly split it into parts\n\n## References\n\n-   <https://www.linkedin.com/learning/agile-at-work-planning-with-agile-user-stories>\n",
             "tags": [],
             "properties": {
                 "status": "draft"
@@ -9837,6 +9845,7 @@
                     }
                 }
             },
+            "string": "# Five Whys\n\n-   Guideline, not process\n\n\n-   Start with a question that feels unbounded or hard to answer\n-   Say the first logical answer\n-   Connect why a piece of the prior answer\n-   If starts feeling off-course, start over\n-   Record prior iterations, may be helpful\n",
             "tags": [],
             "properties": {},
             "title": "Five Whys"
@@ -9938,6 +9947,7 @@
                     }
                 }
             },
+            "string": "status: placeholder\n\n_As a {user role}, I want to {goal or desire} so that {why}._\n",
             "tags": [],
             "properties": {
                 "status": "placeholder"
@@ -11459,6 +11469,7 @@
                     }
                 }
             },
+            "string": "status: draft\n\n# Multithreaded Worker Queue in Rust\n\n_Note: this was originally going to be an article on the Producer-Consumer pattern, but it went a different direction. I need to clean up the naming a bit!_\n\nSee the [full repository here](https://github.com/ridleywinters/rust-producer-consumer).\n\n## Goals and Context\n\nAs part of the [Rust Raytracer](/?page=challenges-rust_raytracer), I've been looking into leaning how to do multithreaded programming in Rust. The scenario I have in mind is to split the render buffer into tiles and let separate threads render each time, where the number of worker threads is a variable.\n\nThis requires some mechanism where a pool of threads is created, the tiles are dispatched to the threads awaiting work (i.e. some simple [scheduling algorithm](https://en.wikipedia.org/wiki/Scheduling_(computing)#Scheduling_disciplines)), the tiles then rendered to a memory buffer, that then is passed back to the main thread to be copied into the main buffer.\n\n## Algorithm\n\n    Create a pool of a small number worker threads\n\n    Create a buffer for a 4k x 4k image\n    Iterate over  the image as a set of 128x128 tiles\n        Assign the tile to over of the worker threads\n        Have the thread fill in the tile's pixels\n\n    Stitch together the tiles as they are completed\n    Write the final buffer to disk\n\n## Step 1: Single-threaded version\n\nLet's start with a single-threaded version to ensure the code is working as expected.\n\n### Defining the tile\n\nLet's define the `Tile` structure. It needs the rectangular region of the overall buffer that is covers: from `x0,y0` to `x1,y1` (non-inclusive). We'll also give a `id` since this might be helpful in future threaded version. Lastly, let's give it a `buffer` representing the generated pixels.\n\nFor the `buffer`, we're eventually going to be queuing these `Tile`s up to rendered in separate threads, so we use an `Option` to defer allocating the vector until the rendering takes place. \n\n```rust\nstruct Tile {\n    id: usize,\n    x0: usize,\n    y0: usize,\n    x1: usize,\n    y1: usize,\n    buffer: Option<Vec<f32>>,\n}\n\nimpl Tile {\n    fn width(&self) -> usize {\n        self.x1 - self.x0\n    }\n    fn height(&self) -> usize {\n        self.y1 - self.y0\n    }\n}\n```\n\n### Rendering the tile\n\nTODO: does the return statement make a **copy** of the buffer? Should it be `Box` type?\n\n```rust\n// We want this function to be totally unaware of any threading considerations.\n// It is simply handed a Tile and needs to populate it.\nfn render_tile(tile: Tile) -> Tile {\n\n    let mut buffer = vec![0.0; tile.width() * tile.height()];\n    let mut ti = 0;\n\n    for ty in tile.y0..tile.y1 {\n        for tx in tile.x0..tile.x1 {\n\n            let fx = (tx - tile.x0) as f32;\n            let fy = (ty - tile.y0) as f32;\n\n            let sx = (fx + 0.5) / ((tile.x1 - tile.x0) as f32) - 0.5f32;\n            let sy = (fy + 0.5) / ((tile.y1 - tile.y0) as f32) - 0.5f32;\n\n            let d = (sx * sx + sy * sy).sqrt();\n            let value = 0.5 - d;\n            buffer[ti] = value.sqrt();\n            ti += 1;\n        }\n    }\n    Tile{ \n        id :tile.id,\n        x0 : tile.x0,\n        y0 : tile.y0,\n        x1 : tile.x1,\n        y1 : tile.y1,\n        buffer: Some(buffer),\n    }\n}\n```\n\n### The main loop\n\n```rust\nfn main() {\n    // Create a 4k x 4k buffer\n    let buffer_size = 4096;\n    let tile_size = 128;\n    let mut buffer = vec![0u8; 4 * buffer_size * buffer_size];\n\n    // Loop through the buffer, creating 128x128 tiles that are processed\n    // individually.\n    let mut tile_id = 0;\n    for y in (0..buffer_size).step_by(tile_size) {\n        for x in (0..buffer_size).step_by(tile_size) {\n            let tile = Tile {\n                id: tile_id,\n                x0: x,\n                y0: y,\n                x1: std::cmp::min(x + tile_size, buffer_size),\n                y1: std::cmp::min(y + tile_size, buffer_size),\n                buffer: None,\n            };\n            let tile = render_tile(tile);\n\n            // Copy the result back into the main buffer\n            let mut ti = 0;\n            let tile_buffer = tile.buffer.unwrap();\n            for ty in tile.y0..tile.y1 {\n                let mut bi = (ty * buffer_size + tile.x0) * 4;\n                for _tx in tile.x0..tile.x1 {\n                    let v = tile_buffer[ti];\n                    let c = (v.max(0f32).min(1f32) * 255f32) as u8;\n                    buffer[bi + 0] = c * if tile.id % 3 == 0 { 1 } else { 0 };\n                    buffer[bi + 1] = c * if tile.id % 4 == 0 { 1 } else { 0 };\n                    buffer[bi + 2] = c * if tile.id % 5 == 0 { 1 } else { 0 };\n                    buffer[bi + 3] = 255;                    \n                    ti += 1;\n                    bi += 4;\n                }\n            }\n            tile_id += 1;\n        }\n    }\n\n    println!(\"Writing out PNG...\");\n    let _ = lodepng::encode32_file(\"output/image-00.png\", &buffer, buffer_size, buffer_size);\n    println!(\"done.\");\n}\n```\n\n## Step 2: ???\n\n## Step 3: ???\n\n## Step 4: ???\n\n```rust\n\nstruct WorkerThread {\n    tx: Sender<Tile>,\n}\n\nimpl WorkerThread {\n    fn new(parent_tx: &Sender<Tile>, f: fn(tile: Tile) -> Tile) -> WorkerThread {\n        let (tx, rx): (Sender<Tile>, Receiver<Tile>) = channel();\n        let parent_tx = Sender::clone(&parent_tx);\n        let g = Arc::new(Box::new(f));\n        std::thread::spawn(move || {\n            while let Ok(tile) = rx.recv() {\n                let tile = g(tile);\n                if let Err(err) = parent_tx.send(tile) {\n                    panic!(err);\n                }\n            }\n        });\n        return WorkerThread { tx };\n    }\n}\n\nfn main() {\n    // Create a 4k x 4k buffer\n    let buffer_size = 4096;\n    let tile_size = 128;\n\n    // Create the work pool and the communications channel\n    let (tx, rx) = channel();\n    let mut pool = Vec::new();\n    let thread_count = 4;\n    for _ in 0..thread_count {\n        let worker = WorkerThread::new(&tx, |tile| {\n            println!(\"Hello tile {}!\", tile.id);\n            render_tile(tile)\n        });\n        pool.push(worker);\n    }\n    drop(tx); // Parent tx is for cloning to threads only\n\n    // Loop through the buffer, creating 128x128 tiles that are processed\n    // individually.\n    let mut tile_id = 0;\n    for y in (0..buffer_size).step_by(tile_size) {\n        for x in (0..buffer_size).step_by(tile_size) {\n            let tile = Tile {\n                id: tile_id,\n                x0: x,\n                y0: y,\n                x1: std::cmp::min(x + tile_size, buffer_size),\n                y1: std::cmp::min(y + tile_size, buffer_size),\n                buffer: None,\n            };\n            if let Err(err) = pool[tile_id % pool.len()].tx.send(tile) {\n                panic!(err);\n            }\n            tile_id += 1;\n        }\n    }\n    drop(pool); // No longer sending data to the pool\n\n    // Copy the results back into a single buffer\n    let mut buffer = vec![0u8; 4 * buffer_size * buffer_size];\n    for tile in rx {\n        let mut ti = 0;\n        if let Some(tile_buffer) = tile.buffer {\n            for ty in tile.y0..tile.y1 {\n                let mut bi = (ty * buffer_size + tile.x0) * 4;\n                for _tx in tile.x0..tile.x1 {\n                    let v = tile_buffer[ti];\n                    let c = (v.max(0f32).min(1f32) * 255f32) as u8;\n                    buffer[bi + 0] = c * if tile.id % 3 == 0 { 1 } else { 0 };\n                    buffer[bi + 1] = c * if tile.id % 4 == 0 { 1 } else { 0 };\n                    buffer[bi + 2] = c * if tile.id % 5 == 0 { 1 } else { 0 };\n                    buffer[bi + 3] = 255;\n                    ti += 1;\n                    bi += 4;\n                }\n            }\n        } else {\n            println!(\"Blank tile.\")\n        }\n    }\n\n    println!(\"Writing out PNG...\");\n    let _ = lodepng::encode32_file(\"out.png\", &buffer, buffer_size, buffer_size);\n    println!(\"done.\");\n}\n```\n",
             "tags": [],
             "properties": {
                 "status": "draft"
@@ -13088,6 +13099,7 @@
                     }
                 }
             },
+            "string": "# Rust Raytracer (Work-in-Progress!)\n\n## Goals\n\nBuild a pretty simple raytracer that:\n\n-   Shows the basics of Rust\n-   Is packaged as a library\n-   Multithreaded Worker Queue in Rustct Browser rendering\n-   Has a server interface for Browser API calls\n-   Is documented, benchmarked, tested, and all the good things\n                  \n\n## Prerequisites\n\n-   Assumes you are comfortable with basic bash, Makefiles, and code editing\n-   Assumes you have a recent version of Rust installed\n\n## Basic setup\n\nWe'll move quickly through this section of the challenge as the goal is writing the\nraytracer, not setting up the Rust toolchain.\n\n```console\n$ cargo new rust_raytracer --bin\n$ cargo build\n```\n\n```console\nAdd .gitignore\n        /target/                    \n```\n\nMakefile\n\n-   Link to zero-config musings  \n                      \n\n## The main loop\n\nTODO: Clean this section up!\n\nBefore getting into anything too interesting, let's start with a basic program to fill a buffer\nwith values to get some Rust basics out of the way. We'll be approaching raytracing by looping\nover a buffer of pixels and determining the color for each, so using let's use this basic\npattern to get something going first. It's often easier and more enjoyable to improve working\ncode than try get everything in there all at once.\n\n```rust\nfn main() {\nMultithreaded Worker Queue in Rust\n    let mut buffer = vec!['x'; 32 * 32];\n    for y in 0..32 {\n        for x in 0..32 {\n            let i = y * 32 + x;\n            buffer[i] = if (x%2) + (y%2) != 1 { '-' } else { '*' }\n        }\n    }\n    \n    // Loop over the buffer \"row by row\" and print to the console\n    for y in 0..32 {\n      let i = y * 32;\n      let s : String = buffer[i..(i+32)].iter().map(|&c| c.to_string()).collect();\n      println!(\"{}\", s);\n    }\n}\n```\n\n### Output\n\n```console\n$ rustc -o main main.rs\n$ ./main\nHello, raytracer!\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*\n*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-\n```\n\n## Writing to an image\n\nWe'll use [lodepng-rust](https://github.com/kornelski/lodepng-rust) to handle the PNG encoding.\n\n```toml\n[dependencies]\nlodepng = \"2.5.0\"\n```\n\n```rust\nuse lodepng;\n\nfn main() {\n    println!(\"Hello, raytracer!\");\n\n    let width: usize = 512;\n    let height: usize = 512;\n    let mut buffer = vec![0u8; width * height * 4];\n    for y in 0..height {\n        for x in 0..width {\n            let i = y * width + x;\n\n            let dx = (x as i64 - (width / 2) as i64).abs();\n            let dy = (y as i64 - (height / 2) as i64).abs();\n            let d = (((dx * dx) + (dy * dy)) as f64).sqrt();\n            let mut c64 = 255.0 - d * (255.0 / (width / 2) as f64);\n            c64 = if c64 > 255.0 {\n                255.0\n            } else if c64 < 0.0 {\n                0.0\n            } else {\n                c64\n            };\n\n            let c = c64 as u8;\n            buffer[i * 4 + 0] = c;\n            buffer[i * 4 + 1] = c;\n            buffer[i * 4 + 2] = c;\n            buffer[i * 4 + 3] = 255;\n        }\n    }\n    let _ = lodepng::encode32_file(\"out.png\", &buffer, width, height);\n\n    println!(\"Done!\");\n}\n```\n\n## Adding baseline benchmarks\n\n> Yes! Do this early, not after! Measure but don't optimize yet.\n\n> <https://bheisler.github.io/criterion.rs/book/getting_started.html>\n\n## Writing to an image\n\n```rust\nuse lodepng;\n\nstruct RGBAF32 {\n    r: f32,\n    g: f32,\n    b: f32,\n    a: f32,\n}\n\nstruct Frame {\n    width: usize,\n    height: usize,\n}\n\nfn clamp_to_byte(v: f32, min: u8, max: u8) -> u8 {\n    return if v < min as f32 {\n        min\n    } else if v > max as f32 {\n        max\n    } else {\n        v as u8\n    };\n}\n\nfn trace_pixel(frame: &Frame, x: f32, y: f32) -> RGBAF32 {\n    let half_width = (frame.width / 2) as f32;\n    let half_height = (frame.height / 2) as f32;\n\n    let dx = (x - half_width).abs();\n    let dy = (y - half_height).abs();\n    let d = ((dx * dx) + (dy * dy)).sqrt() / half_width;\n    let mut c64 = 1.0f32 - d;\n    c64 = c64.sqrt();\n\n    let c = if c64 > 1.0 {\n        1.0\n    } else if c64 < 0.0 {\n        0.0\n    } else {\n        c64\n    };\n\n    RGBAF32 {\n        r: c,\n        g: c,\n        b: c,\n        a: 1.0,\n    }\n}\n\nfn main() {\n    println!(\"Hello, raytracer!\");\n\n    let frame = Frame {\n        width: 512,\n        height: 512,\n    };\n\n    let mut buffer = vec![0u8; frame.width * frame.height * 4];\n    for y in 0..frame.height {\n        for x in 0..frame.width {\n            let i = y * frame.width + x;\n\n            let c = trace_pixel(&frame, x as f32, y as f32);\n            buffer[i * 4 + 0] = clamp_to_byte(c.r * 255f32, 0, 255);\n            buffer[i * 4 + 1] = clamp_to_byte(c.g * 255f32, 0, 255);\n            buffer[i * 4 + 2] = clamp_to_byte(c.b * 255f32, 0, 255);\n            buffer[i * 4 + 3] = clamp_to_byte(c.a * 255f32, 0, 255);\n        }\n    }\n    let _ = lodepng::encode32_file(\"out.png\", &buffer, frame.width, frame.height);\n\n    println!(\"Done!\");\n}\n                                        \n```\n",
             "tags": [],
             "properties": {},
             "title": "Rust Raytracer (Work-in-Progress!)"
@@ -13931,6 +13943,7 @@
                     }
                 }
             },
+            "string": "# Rust WebGL\n\n## Goals\n\n-   Written in Rust TODO-WIKILINK\n-   Runnable on the web so it's easy to publish\n-   Trying to avoid using webpack and other non-browser web tooling\n\n## Steps\n\n1.  Copy this code <https://rustwasm.github.io/wasm-bindgen/examples/webgl.html>!\n2.  Install wasm-pack (<https://rustwasm.github.io/wasm-pack/installer/>)\n\n## TODO\n\n-   [ ] Wrap this in a `Dockerfile`\n\n## References\n\n-   <https://rustwasm.github.io/wasm-bindgen/examples/webgl.html>\n",
             "tags": [],
             "properties": {},
             "title": "Rust WebGL"
@@ -14990,6 +15003,7 @@
                     }
                 }
             },
+            "string": "# Data Objects\n\nWhat are data objects?\n\nData Objects are a way to specify a common class of data independent of how it is displayed.\n\n## Example\n\nLet's say you want to use Sea to store or share a series of recipes. The recipes may have a common data format and you don't want to duplicate the style and presentation for every individual recipe (and spend a lot of time trying to keep those in sync if you want any changes).\n\nYou could use the following block to represent a recipe:\n\n````yaml\n```@recipe\nname: Spaghetti Dinner\ningredients:\n    - spaghetti\n    - water\n    - pasta sauce\nsteps:\n    - boil water\n    - heat pasta sauce\n    - put spaghetti in water for 8-10 minutes\n    - drain spaghetti\n    - put spaghetti in a bowl\n    - pour pasta sauce on the spaghetti\n    - serve\n```\n````\n\n#### Parsing\n\nThe `@recipe` label tells Sea to try the block that follows as a Data Object with the type `recipe`. Sea then parses the contents of the code section as YAML. This YAML then gets added to the Sea Tree as the parsed YAML data (rather than as a code block). \n\n#### Rendering\n\nWhen the renderer comes across a Data Object it looks for a `Renderer` with the same name as the type of the Data Object. In this case, that means it looks for a `recipe.jsx` (or `Recipe` React Component).  This Renderer will be passed the YAML data to render the Node.\n\n## Features\n\n### Parsing fields as Sea content\n\nAn important use case to support is allowing individual field values to be parsed as Sea content.  Field names with a suffix of  `$[type]` are parsed as that type (unrecognized types are trimmed from the field name and ignored, per the principle that Sea should have reasonable default behavior for unavailable extensions):\n\n    ```@two_columns\n    columnA:  Hello **world**!\n    columnB$sea:  Hello **world**!\n    ```\n\nIn the above example, `columnA` will be parsed as plain text (the `**` will remain) and `columnB` will be parsed into an Sea Tree.\n\n## Reference\n\n### FAQ\n\n```@expand\ntitle: Why YAML? Aren't there cleaner, better options?\ncontent$md: |\n    YAML has its flaws, but is fairly common as a object-notation language.  It also is biased towards \"ease of input\" so is, arguably, a good match to the goals of Sea.\n\n    Future versions of Sea may support other data object specification languages via custom parsers as Sea is intended to be extensible in data specification.\n```\n",
             "tags": [],
             "properties": {},
             "title": "Data Objects"
@@ -15042,6 +15056,146 @@
                         }
                     },
                     {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Sometimes it may be helpful to have a one-off presentation of data for a specific page, where creating a global ",
+                                "position": {
+                                    "start": {
+                                        "line": 4,
+                                        "column": 1,
+                                        "offset": 15
+                                    },
+                                    "end": {
+                                        "line": 4,
+                                        "column": 113,
+                                        "offset": 127
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "inlineCode",
+                                "value": "Renderer",
+                                "position": {
+                                    "start": {
+                                        "line": 4,
+                                        "column": 113,
+                                        "offset": 127
+                                    },
+                                    "end": {
+                                        "line": 4,
+                                        "column": 123,
+                                        "offset": 137
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": " and broader in scope than needed.",
+                                "position": {
+                                    "start": {
+                                        "line": 4,
+                                        "column": 123,
+                                        "offset": 137
+                                    },
+                                    "end": {
+                                        "line": 4,
+                                        "column": 157,
+                                        "offset": 171
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 4,
+                                "column": 1,
+                                "offset": 15
+                            },
+                            "end": {
+                                "line": 4,
+                                "column": 157,
+                                "offset": 171
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Here's an example. This is a list of tools/technologies/products that we want to create Google search links for each. Rather than typing out each, let's create a simple list of product names and some inline JSX to display that inline list.",
+                                "position": {
+                                    "start": {
+                                        "line": 6,
+                                        "column": 1,
+                                        "offset": 173
+                                    },
+                                    "end": {
+                                        "line": 6,
+                                        "column": 240,
+                                        "offset": 412
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 6,
+                                "column": 1,
+                                "offset": 173
+                            },
+                            "end": {
+                                "line": 6,
+                                "column": 240,
+                                "offset": 412
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "heading",
+                        "depth": 3,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Results",
+                                "position": {
+                                    "start": {
+                                        "line": 8,
+                                        "column": 5,
+                                        "offset": 418
+                                    },
+                                    "end": {
+                                        "line": 8,
+                                        "column": 12,
+                                        "offset": 425
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 8,
+                                "column": 1,
+                                "offset": 414
+                            },
+                            "end": {
+                                "line": 8,
+                                "column": 12,
+                                "offset": 425
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
                         "type": "object",
                         "kind": "data",
                         "value": [
@@ -15052,7 +15206,7 @@
                             "GIMP",
                             "Chrome"
                         ],
-                        "meta": "name=list, pizza = salad",
+                        "meta": "name=list, pizza=salad",
                         "params": {
                             "name": "list",
                             "pizza": "salad"
@@ -15063,16 +15217,19 @@
                         "type": "jsx",
                         "position": {
                             "start": {
-                                "line": 14,
+                                "line": 19,
                                 "column": 1,
-                                "offset": 127
+                                "offset": 536
                             },
                             "end": {
-                                "line": 20,
+                                "line": 28,
                                 "column": 7,
-                                "offset": 235
+                                "offset": 923
                             },
                             "indent": [
+                                1,
+                                1,
+                                1,
                                 1,
                                 1,
                                 1,
@@ -15081,8 +15238,248 @@
                                 1
                             ]
                         },
-                        "text": "<div>\n    <ul>\n    {_.map(page.name.list.value, (item) => (\n        <li>{item}</li>\n    ))}\n    </ul>\n</div>",
-                        "parsed": "(function() {\n\"use strict\";\n\nreturn /*#__PURE__*/React.createElement(\"div\", null, /*#__PURE__*/React.createElement(\"ul\", null, _.map(page.name.list.value, item => /*#__PURE__*/React.createElement(\"li\", null, item))));\n})()"
+                        "text": "<div>\n    {_.map(page.name.list.value, (item, i) => (\n        <div key={i} style={{ display : 'flex', flexDirection: 'row', alignItems: 'center' }}>\n            <div style={{ fontSize: '24px', paddingRight : '12px' }}>• </div>\n            <div>\n                <a href={`http://google.com/search?q=${encodeURIComponent(item)}`}>{item}</a>\n            </div>\n        </div>\n    ))}\n</div>",
+                        "parsed": "(function() {\n\"use strict\";\n\nreturn /*#__PURE__*/React.createElement(\"div\", null, _.map(page.name.list.value, (item, i) => /*#__PURE__*/React.createElement(\"div\", {\n  key: i,\n  style: {\n    display: 'flex',\n    flexDirection: 'row',\n    alignItems: 'center'\n  }\n}, /*#__PURE__*/React.createElement(\"div\", {\n  style: {\n    fontSize: '24px',\n    paddingRight: '12px'\n  }\n}, \"\\u2022 \"), /*#__PURE__*/React.createElement(\"div\", null, /*#__PURE__*/React.createElement(\"a\", {\n  href: `http://google.com/search?q=${encodeURIComponent(item)}`\n}, item)))));\n})()"
+                    },
+                    {
+                        "type": "heading",
+                        "depth": 3,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Concepts",
+                                "position": {
+                                    "start": {
+                                        "line": 30,
+                                        "column": 5,
+                                        "offset": 929
+                                    },
+                                    "end": {
+                                        "line": 30,
+                                        "column": 13,
+                                        "offset": 937
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 30,
+                                "column": 1,
+                                "offset": 925
+                            },
+                            "end": {
+                                "line": 30,
+                                "column": 13,
+                                "offset": 937
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "ordered": false,
+                        "start": null,
+                        "spread": false,
+                        "children": [
+                            {
+                                "type": "listItem",
+                                "spread": false,
+                                "checked": null,
+                                "children": [
+                                    {
+                                        "type": "paragraph",
+                                        "children": [
+                                            {
+                                                "type": "inlineCode",
+                                                "value": "@data",
+                                                "position": {
+                                                    "start": {
+                                                        "line": 32,
+                                                        "column": 3,
+                                                        "offset": 941
+                                                    },
+                                                    "end": {
+                                                        "line": 32,
+                                                        "column": 10,
+                                                        "offset": 948
+                                                    },
+                                                    "indent": []
+                                                }
+                                            },
+                                            {
+                                                "type": "text",
+                                                "value": " objects",
+                                                "position": {
+                                                    "start": {
+                                                        "line": 32,
+                                                        "column": 10,
+                                                        "offset": 948
+                                                    },
+                                                    "end": {
+                                                        "line": 32,
+                                                        "column": 18,
+                                                        "offset": 956
+                                                    },
+                                                    "indent": []
+                                                }
+                                            }
+                                        ],
+                                        "position": {
+                                            "start": {
+                                                "line": 32,
+                                                "column": 3,
+                                                "offset": 941
+                                            },
+                                            "end": {
+                                                "line": 32,
+                                                "column": 18,
+                                                "offset": 956
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 32,
+                                        "column": 1,
+                                        "offset": 939
+                                    },
+                                    "end": {
+                                        "line": 32,
+                                        "column": 18,
+                                        "offset": 956
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "listItem",
+                                "spread": false,
+                                "checked": null,
+                                "children": [
+                                    {
+                                        "type": "paragraph",
+                                        "children": [
+                                            {
+                                                "type": "text",
+                                                "value": "Inline JSX",
+                                                "position": {
+                                                    "start": {
+                                                        "line": 33,
+                                                        "column": 3,
+                                                        "offset": 959
+                                                    },
+                                                    "end": {
+                                                        "line": 33,
+                                                        "column": 13,
+                                                        "offset": 969
+                                                    },
+                                                    "indent": []
+                                                }
+                                            }
+                                        ],
+                                        "position": {
+                                            "start": {
+                                                "line": 33,
+                                                "column": 3,
+                                                "offset": 959
+                                            },
+                                            "end": {
+                                                "line": 33,
+                                                "column": 13,
+                                                "offset": 969
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 33,
+                                        "column": 1,
+                                        "offset": 957
+                                    },
+                                    "end": {
+                                        "line": 33,
+                                        "column": 13,
+                                        "offset": 969
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 32,
+                                "column": 1,
+                                "offset": 939
+                            },
+                            "end": {
+                                "line": 33,
+                                "column": 13,
+                                "offset": 969
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    },
+                    {
+                        "type": "heading",
+                        "depth": 3,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Source",
+                                "position": {
+                                    "start": {
+                                        "line": 36,
+                                        "column": 5,
+                                        "offset": 976
+                                    },
+                                    "end": {
+                                        "line": 36,
+                                        "column": 11,
+                                        "offset": 982
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 36,
+                                "column": 1,
+                                "offset": 972
+                            },
+                            "end": {
+                                "line": 36,
+                                "column": 11,
+                                "offset": 982
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "jsx",
+                        "position": {
+                            "start": {
+                                "line": 38,
+                                "column": 1,
+                                "offset": 984
+                            },
+                            "end": {
+                                "line": 38,
+                                "column": 52,
+                                "offset": 1035
+                            },
+                            "indent": []
+                        },
+                        "text": "<pre style={{fontSize: '12px'}}>{page.string}</pre>",
+                        "parsed": "(function() {\n\"use strict\";\n\nreturn /*#__PURE__*/React.createElement(\"pre\", {\n  style: {\n    fontSize: '12px'\n  }\n}, page.string);\n})()"
                     }
                 ],
                 "position": {
@@ -15092,12 +15489,13 @@
                         "offset": 0
                     },
                     "end": {
-                        "line": 20,
-                        "column": 7,
-                        "offset": 235
+                        "line": 42,
+                        "column": 1,
+                        "offset": 1039
                     }
                 }
             },
+            "string": "# Data Table\n\nSometimes it may be helpful to have a one-off presentation of data for a specific page, where creating a global `Renderer` and broader in scope than needed.\n\nHere's an example. This is a list of tools/technologies/products that we want to create Google search links for each. Rather than typing out each, let's create a simple list of product names and some inline JSX to display that inline list.\n\n### Results\n\n```@data name=list, pizza=salad\n- Backblaze\n- Google One\n- Visual Studio Code\n- Blender\n- GIMP\n- Chrome\n```\n\n<div>\n    {_.map(page.name.list.value, (item, i) => (\n        <div key={i} style={{ display : 'flex', flexDirection: 'row', alignItems: 'center' }}>\n            <div style={{ fontSize: '24px', paddingRight : '12px' }}>• </div>\n            <div>\n                <a href={`http://google.com/search?q=${encodeURIComponent(item)}`}>{item}</a>\n            </div>\n        </div>\n    ))}\n</div>\n\n### Concepts\n\n-   `@data` objects\n-   Inline JSX\n\n### Source\n\n<pre style={{fontSize: '12px'}}>{page.string}</pre>\n",
             "tags": [],
             "properties": {},
             "title": "Data Table"
@@ -15266,6 +15664,7 @@
                     }
                 }
             },
+            "string": "# Page Layouts\n\nSea is convention-based but tries to limit the number of conventions.\n\nPages are rendered as children of the optional `components/page_layout.jsx` file.  If no such file exists, there is no layout wrapper on the page content.\n",
             "tags": [],
             "properties": {},
             "title": "Page Layouts"
@@ -21643,6 +22042,7 @@
                     }
                 }
             },
+            "string": "title: Sea\n\n<div style={{\n    textAlign: 'center',\n    color: 'red',\n    margin: '2rem 0',\n    fontSize: '64px',\n}}>\n    Work in progress page!\n</div>\n\n```@section\nstyle:\n    marginTop: 64px\n    textAlign: center\ncontent$md: |\n    ![](sea_logo-v0.0.0.png)\n```\n\n<h1 style={{ textAlign: 'center'}}>Sea</h1>\n\n#### What is Sea?\n\nSea is an **extension of Markdown** designed for **data-driven organization** that can be used to build dynamic web sites and knowledge. Sea has the **fluency of Markdown** combined with the data-driven extensibility of **React** and **YAML**.  It is designed for **incremental, progressive improvement** from idea to production-quality work. Think of it as an **agile content and presentation** language.  It intentionally tries to be as **minimal** as possible while acheiving these goals.\n\nThere's one basic tool:\n\n```bash\n$ sea build dirname/  --out database.json # builds database.json\n```\n\nThen to host a site all that is needed is to copy `database.json` into a folder with a a base `index.html` and `sea-site.js`.  Site customization exists entirely in the database itself, so there's no need to modify the host html or script.  Note: this is a _single page static website_ so free hosts like GitHub Pages can easily host this. No operational burden!\n\nFor active development, to launch a local server with hot reloading:\n\n```bash\n$ sea-build dev .\n```\n\nHow do I customize it? If you know basic JavaScript and React, it should be very easy: Sea tries to inject as few \"framework specific\" concepts as possible.\n\nNote: Sea is more of a _technology_ than it is a _product_. It's very flexible and customizable. Sea templates can overlay an opinion on the technology, creating a clear, immediately usable use cases - thus making Sea into more of a product.\n\nCan be thought of as a programming language.\n\n## What problems does it solve?\n\nSemantic wiki, TiddlyWiki, MediaWiki, Markdown, Gatsby, database, spreadsheets, etc. Another swing at a balance of that functionality.  Incremental development of ideas.  Allow things to be \"finished\" and published sooner yet continually improved.\n\n## Quick Start\n\nInstall the `sea` command-line program:\n\n```bash\n$ npm install --global @ridleywinters/sea\n```\n\nCreate a barebones example project (note: if you skip the `--template` argument, a bare-minimal project will be created):\n\n```console\n$ sea create myproject --template=example\n```\n\nYou should now have a directory structure that looks something like this:\n\n    myproject\\\n        pages\\\n            home.mdx\n            page1.mdx\n\nNow run the development server:\n\n    $ sea dev\n\nLastly:\n\n-   Visit http&#x3A;//localhost:8080!\n-   Start modifying the MDX files to see the changes livee\n-   Check out the [features](#features) section to play with some of the more interesting and unique features of Sea\n\n## How does it work?\n\nSea operates on a directory of files, typically stored in git (for personal knowledge bases) or in a database for large multi-user use cases. Each file represents a **Card** - a sttarting point, think of that as a fairly standard Markdown document. Sea parses the whole set of Cards and creates a tree of data with indices so that a renderer can then easily render the documents as well cross-reference information in other Cards.\n\n## How does it compare?\n\nSea is an extension of Markdown into multiple files to create a customizable database of information.  It has the fluency of Markdown for simply writing text with minimal markup to support specifying data and formatting. It is customizable in that additional data types and renderers can be added to the database _directly_ as part of the database itself (no plug-ins, installation config, etc.). \n\n```@expand\ntitle$md: How does it compare to [Notion](https://www.notion.so/)?\ncontent$md: |\n    Leaner as it is command-line and file-based, it allows greater customization (it is easy to create custom \"blocks\"). However, it lacks the fluid UI, permissions model, and may other features that come out of the box with an app like Notion.\n```\n\n```@expand\ntitle$md: How does it compare to [TiddlyWiki](https://tiddlywiki.com/)?\ncontent$md: |\n    TODO!\n```\n\n```@expand\ntitle: How does it compare to Evernote?\ncontent$md: |\n    * Content is captured in files in git, giving full content and transparent on your data\n    * No UI\n    * No cross-platform syncing across multiple convenient apps\n    * No features for quickly capturing data from other sources\n```\n\n### Concepts\n\n-   Data objects\n-   Components (Renderers)\n-   Parsers\n-   Indices\n-   Transformations (Graphs)\n-   Exporters (Compilers)\n-   Templates (?)\n-   Style (?)\n\nMarkdown with a couple extensions:\n\n-   Data objects (YAML syntax)\n-   Presentation objects (JSX syntax)\n\nDatabase:\n\n-   All files parsed together and indexed for cross-referencing\n\nServer\n\n-   Separate data from the presentation\n-   API for operating on the data\n\n## Publishing\n\n### Publishing to GitHub\n\nInclude an empty `.nojekyll` file in the root of your repository to [avoid having relative paths break](https://stackoverflow.com/questions/31611969/broken-image-paths-on-github-pages-without-jekyll)!\n\n## Musings\n\nIn one sense, Sea is a literal programming language for iteratively moving from idea to implementation. It's one that \"starts\" with plain text. Markdown is then layered in to a structure to the text.  Data objects and transformations can then be added in to programmatically turn inputs into new outputs. Exporters can then make these transformations available in external tools (whether that's a binary asset, a code package, etc.).\n\n## Roadmap\n\n#### v0.1\n\n-   [ ] Create a command-line distributable with proper installation instructions\n-   [ ] Create some basic documentation\n-   [ ] Create a page to host it\n-   [ ] Create a CHANGELOG\n\n#### v0.3\n\n-   [ ] Create a complementary web server \n-   [ ] Create a flexible data source backend\n\n#### v0.4\n\n-   [ ] Create an API on the web server with edit commands\n-   [ ] File write-back on API modifications\n-   [ ] Page index of named objects\n\n### v0.5\n\n### vX.X\n\n-   [ ] Add templates \n-   [ ] Add UI editors\n-   [ ] Add a TableOfContents component\n-   [ ] Rust / WASM support\n-   [ ] Collaboration\n-   [ ] Scale\n-   [ ] Connecting pages into a book like mdbook\n\n## Test Area\n\n### Truly custom objects\n\n```@section\nstyle:\n    padding: '2px 8px'\n    background: \"rgba(20, 60, 200, 0.25)\"\ncontent$md: |\n    ### Hello world.\n    * This is the beginning.\n    * This is the middle.\n    * This is the end.\n```\n\n### Custom nodes\n\nThe following creates a custom node in the AST of type `user_story`. The contents of the fenced section is parsed as YAML.\n\n    ```@user_story\n    story: As a user of this application, I want to specify custom objects in YAML so I can implement more visually appealing custom rendering. \n    acceptance_criteria:\n        - Must work\n        - Must work well\n    ```    \n\nBy default, the renderer looks for a React renderer of the same name (in this case, `user_story.jsx`) and uses that to display the data object:\n\n```@user_story\nstory: As a user of this application, I want to specify custom objects in YAML so I can implement more visually appealing custom rendering. \nacceptance_criteria:\n    - Must work\n    - Must work well\n```\n\n### Embedding specific data types\n\nThis example uses the `$<type>` suffix on a YAML field to indicate the parser that should be used on that field. In this case, it ensure the YAML field is parsed as Markdown (`$md`) so the `content` field is an AST as well.\n\n    ```@expand\n    title: This is an Expand object\n    content$md: |\n        This is a longer bit of content.  I would prefer if this supported markdown\n        and multiple lines, though. I need to consider some way to keep the AST\n        going.\n\n        * List Item A\n            * Sub-item A1\n            * Sub-item A2\n        * List Item B\n        * List Item C\n    ```\n\n```@expand\ntitle: This is an Expand object\ncontent$md: |\n    This is a longer bit of content.  I would prefer if this supported markdown\n    and multiple lines, though. I need to consider some way to keep the AST\n    going.\n\n    * List Item A\n        * Sub-item A1\n        * Sub-item A2\n    * List Item B\n    * List Item C\n```\n\n## reference\n\n-   <https://github.com/syntax-tree/mdast>\n",
             "tags": [],
             "properties": {
                 "title": "Sea"
@@ -21741,6 +22141,7 @@
                     }
                 }
             },
+            "string": "This is a page with a link to TODO-WIKILINK.\n",
             "tags": [],
             "properties": {},
             "title": "test-wikilinks"
@@ -21864,6 +22265,7 @@
                     }
                 }
             },
+            "string": "# Hello\n\n```@expand\ntitle: test\ncontent$sea: Hi\n```\n",
             "tags": [],
             "properties": {},
             "title": "Hello"
@@ -23563,6 +23965,7 @@
                     }
                 }
             },
+            "string": "# Webpack Notes\n\n## Goals, constraints, and background\n\n-   Background\n    -   I started with Deno to avoid Babel configuration, but how to build client React code was not clear to me\n    -   Webpack complex-feeling configuration turned me to try parcel\n    -   Parcel does not seem to do hot loading or impl\n-   Goals\n    -   Minimal configuration webpack development server\n\n## Installation\n\n```bash\nnpm i --save-dev webpack webpack-cli webpack-dev-server\nnpm i --save-dev babel-loader\n```\n\n```make\ndev:\n    npx webpack-dev-server\n```\n\n-   Using `npx` so global installs are not needed\n\n## Babel configuration\n\nIn `webpack.config.js`:\n\n```js\nmodule.exports = {\n    module: {\n        rules: [\n            {\n                test: /\\.(js|jsx)$/,\n                exclude: /node_modules/,\n                use: {\n                    loader: \"babel-loader\"\n                }\n            }\n        ]\n    }\n};\n```\n\n## Makefile configuration\n\n-   Goals\n    -   Want `nodemon` watching the database\n    -   Want `webpack-dev-server` watching the source code\n    -   Want to hide this in a single `make` command\n-   Constraints\n    -   Make doesn't seem to directly support running multiple processes in the background as part of the command\n\n### Approach\n\n-   Use `make`'s `define` command and `export` command to create a long-string\n-   Encapsulate the bash script to run multiple watchers in that long-string\n\n```make\n#\n# Use a bash script since we want a single make command to run multiple\n# background processes.\n#\ndefine DEV_SCRIPT\nshutdown() {\n    echo kill $(jobs -l |awk '$2 == \"|\" {print $1; next} {print $2}')\n    kill $(jobs -l |awk '$2 == \"|\" {print $1; next} {print $2}')\n    exit 0\n}\ntrap \"shutdown\" SIGINT SIGTERM\n\nnpx nodemon --watch data --ext js,jsx,mdx --exec make build-database &\n\nnpx webpack-dev-server \\\n\t\t--mode development \\\n\t\t--entry ./src/client.jsx \\\n\t\t--output-filename client.bundle.js &\nwait\nendef\nexport DEV_SCRIPT\n\ndev:\n\tbash -c \"$$DEV_SCRIPT\"\n```\n",
             "tags": [],
             "properties": {},
             "title": "Webpack Notes"
@@ -23637,6 +24040,7 @@
         ],
         "create": [
             "creating_user_stories",
+            "data_table",
             "example_user_stories",
             "sea",
             "webpack_notes"
@@ -23657,6 +24061,7 @@
         ],
         "scope": [
             "creating_user_stories",
+            "data_table",
             "example_user_stories"
         ],
         "what": [
@@ -23727,14 +24132,6 @@
             "creating_user_stories",
             "example_user_stories"
         ],
-        "want": [
-            "common_user_stories",
-            "creating_user_stories",
-            "data_objects",
-            "example_user_stories",
-            "user_stories",
-            "webpack_notes"
-        ],
         "program": [
             "example_user_stories",
             "rust_raytracer",
@@ -23797,6 +24194,7 @@
             "sea"
         ],
         "creating": [
+            "data_table",
             "example_user_stories",
             "sea"
         ],
@@ -23818,6 +24216,7 @@
             "example_user_stories"
         ],
         "simple": [
+            "data_table",
             "example_user_stories",
             "rust_producer_consumer",
             "rust_raytracer"
@@ -23946,11 +24345,13 @@
             "home"
         ],
         "tools": [
+            "data_table",
             "home",
             "sea"
         ],
         "product": [
             "creating_user_stories",
+            "data_table",
             "home",
             "sea"
         ],
@@ -24095,6 +24496,7 @@
         ],
         "example": [
             "data_objects",
+            "data_table",
             "how-to-embed-a-long-script-in-a-makefile",
             "sea"
         ],
@@ -24162,6 +24564,7 @@
             "how-to-embed-a-long-script-in-a-makefile"
         ],
         "page": [
+            "data_table",
             "index",
             "layouts",
             "sea",
@@ -24175,6 +24578,10 @@
             "changelog_tips",
             "sea"
         ],
+        "list": [
+            "changelog_tips",
+            "data_table"
+        ],
         "starting": [
             "changelog_tips",
             "creating_user_stories"
@@ -24182,6 +24589,7 @@
         "each": [
             "changelog_tips",
             "creating_user_stories",
+            "data_table",
             "rust_producer_consumer",
             "rust_raytracer",
             "sea"
@@ -24294,9 +24702,14 @@
             "common_user_stories",
             "data_objects"
         ],
+        "technologies": [
+            "common_user_stories",
+            "data_table"
+        ],
         "products": [
             "common_user_stories",
-            "creating_user_stories"
+            "creating_user_stories",
+            "data_table"
         ],
         "time": [
             "common_user_stories",
@@ -24404,6 +24817,7 @@
         ],
         "here": [
             "creating_user_stories",
+            "data_table",
             "rust_producer_consumer"
         ],
         "role": [
@@ -24469,6 +24883,7 @@
         ],
         "we": [
             "creating_user_stories",
+            "data_table",
             "rust_producer_consumer",
             "rust_raytracer"
         ],
@@ -24483,7 +24898,8 @@
         ],
         "rather": [
             "creating_user_stories",
-            "data_objects"
+            "data_objects",
+            "data_table"
         ],
         "start": [
             "creating_user_stories",
@@ -24549,12 +24965,14 @@
         ],
         "out": [
             "creating_user_stories",
+            "data_table",
             "rust_raytracer",
             "sea"
         ],
         "an": [
             "creating_user_stories",
             "data_objects",
+            "data_table",
             "rust_producer_consumer",
             "rust_raytracer",
             "sea"
@@ -24582,6 +25000,7 @@
         ],
         "specific": [
             "creating_user_stories",
+            "data_table",
             "sea"
         ],
         "part": [
@@ -24611,6 +25030,7 @@
         ],
         "where": [
             "creating_user_stories",
+            "data_table",
             "rust_producer_consumer"
         ],
         "was": [
@@ -24669,6 +25089,7 @@
         "may": [
             "creating_user_stories",
             "data_objects",
+            "data_table",
             "five_whys"
         ],
         "roadmap": [
@@ -24738,6 +25159,7 @@
         ],
         "helpful": [
             "creating_user_stories",
+            "data_table",
             "five_whys",
             "rust_producer_consumer"
         ],
@@ -24748,6 +25170,7 @@
         "than": [
             "creating_user_stories",
             "data_objects",
+            "data_table",
             "rust_raytracer",
             "sea"
         ],
@@ -24831,6 +25254,7 @@
         ],
         "let": [
             "data_objects",
+            "data_table",
             "rust_producer_consumer",
             "rust_raytracer"
         ],
@@ -24946,6 +25370,7 @@
         ],
         "objects": [
             "data_objects",
+            "data_table",
             "sea"
         ],
         "sea": [
@@ -24959,6 +25384,7 @@
         ],
         "presentation": [
             "data_objects",
+            "data_table",
             "sea"
         ],
         "changes": [
@@ -25023,6 +25449,10 @@
             "data_objects",
             "sea"
         ],
+        "names": [
+            "data_objects",
+            "data_table"
+        ],
         "suffix": [
             "data_objects",
             "sea"
@@ -25051,6 +25481,32 @@
             "data_objects",
             "sea"
         ],
+        "global": [
+            "data_table",
+            "webpack_notes"
+        ],
+        "needed": [
+            "data_table",
+            "sea",
+            "webpack_notes"
+        ],
+        "jsx": [
+            "data_table",
+            "sea"
+        ],
+        "display": [
+            "data_table",
+            "sea"
+        ],
+        "concepts": [
+            "data_table",
+            "sea"
+        ],
+        "source": [
+            "data_table",
+            "sea",
+            "webpack_notes"
+        ],
         "file": [
             "layouts",
             "sea"
@@ -25058,10 +25514,6 @@
         "no": [
             "layouts",
             "sea"
-        ],
-        "needed": [
-            "sea",
-            "webpack_notes"
         ],
         "database": [
             "sea",
@@ -25084,10 +25536,6 @@
             "webpack_notes"
         ],
         "installation": [
-            "sea",
-            "webpack_notes"
-        ],
-        "source": [
             "sea",
             "webpack_notes"
         ]

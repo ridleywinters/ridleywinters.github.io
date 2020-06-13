@@ -3,7 +3,8 @@ const remark = require('remark');
 const mdx = require('remark-mdx');
 const visit = require('unist-util-visit');
 const util = require('util');
-var frontmatter = require('remark-frontmatter')
+var frontmatter = require('remark-frontmatter');
+const stringify = require('remark-stringify');
 var unifMap = require('unist-util-map');
 
 const glob = util.promisify(require('glob'));
@@ -26,6 +27,7 @@ import babelPlugin0 from '@babel/plugin-proposal-class-properties';
 import babelPlugin1 from '@babel/plugin-proposal-object-rest-spread';
 import babelPlugin2 from '@babel/plugin-proposal-async-generator-functions';
 import babelPlugin3 from '@babel/plugin-transform-async-to-generator';
+import unified from 'unified';
 
 /**
  * Given ES6/JSX source code transforms it into a cross-browser JavaScript
@@ -73,50 +75,14 @@ function parseES6(source) {
     return code;
 }
 
-function parseES6Expression(expr) {
-    return parseES6(`return (${expr})`);
-}
-
-/**
- * context is a map of variable names to values
- */
-function evaluateJSExpression(sourceExpr, context = {}) {
-    const f = new Function(...Object.keys(context), `return (${sourceExpr})`);
-    return f(...Object.values(context));
-}
-
-function evaluateDefaultExport(source, additionalContext = {}) {
-    const exports = {};
-    const context = {
-        ...additionalContext,
-        exports,
-    };
-    let f;
-    try {
-        f = new Function(...Object.keys(context), source);
-    } catch (err) {
-        // eslint-disable-next-line
-        console.error('Exception constructing function:', source);
-        throw err;
-    }
-    try {
-        f(...Object.values(context));
-    } catch (err) {
-        // eslint-disable-next-line
-        console.error('Exception evaluating:', source);
-        throw err;
-    }
-    return exports.default;
-}
-
-
 
 function processMDXString(s) {
     const ast = remark()
         .use(mdx)
         .use(frontmatter, ['yaml', 'toml'])
         .use(wikilinks, { inlineMode: true })
-        .parse(s);
+        .parse(s);   
+
     return ast;
 }
 
@@ -134,6 +100,27 @@ async function processMDXAST({ filename }) {
 }
 
 async function postprocessMDX({ entry }) {
+
+
+
+    const compiler = stringify.Compiler;
+
+    compiler.prototype.visitors.data = function (node) {
+        return 'TODO-DATA';
+    }
+    compiler.prototype.visitors.yaml = function (node) {
+        return node.value;
+    }
+    compiler.prototype.visitors.wikilink = function (node) {
+        return 'TODO-WIKILINK';
+    }
+    compiler.prototype.visitors.jsx = function (node) {
+        return node.value;
+    }
+
+    entry.string = unified()
+        .use(stringify)
+        .stringify(entry.ast);
 
     entry.tags = [];
 
