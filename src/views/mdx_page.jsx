@@ -19,16 +19,19 @@ function MDXCodeBlock({ language, value }) {
     );
 }
 
-export function makeSeaComponent(database) {
+function makeSeaComponent(database, page) {
     if (!database) {
-        throw new Error('MDXEvalBlock called without a valid database object');
+        throw new Error('Called without a valid database object');
+    }
+    if (!page) {
+        throw new Error('Called without a valid page object');
     }
 
     const Sea = ({ tree }) => {
         if (typeof tree === 'string') {
             return (<span>{tree}</span>);
         }
-        return renderComponents(database, tree);
+        return renderComponents(database, tree, page);
     }
     return Sea;
 }
@@ -93,52 +96,6 @@ function MDXParagraph({ children }) {
     )
 }
 
-function Status({
-    database,
-    page,
-}) {
-    switch (page.properties.status) {
-        case 'placeholder':
-            return (
-                <div
-                    style={{
-                        margin: '0.5rem 0',
-                        padding: '0.5rem 1rem',
-                        border: 'solid 1px rgba(140,60,80, 0.25)',
-                        borderRadius: '8px',
-                        background: 'rgba(140,60,80, 0.25)',
-                    }}
-                >
-                    <strong>Status: Placeholder</strong><br />
-                    This article isn't ready! Just a reminder to myself that I wanted
-                    to write about this topic.
-                </div>
-            );
-        case 'draft':
-            return (
-                <div
-                    style={{
-                        margin: '0.5rem 0',
-                        padding: '0.5rem 1rem',
-                        border: 'solid 1px rgba(80,192,80, 0.25)',
-                        borderRadius: '8px',
-                        background: 'rgba(80,192,80, 0.25)',
-                    }}
-                >
-                    <strong>Status: Draft</strong><br />
-                    This article is still a work-in-progress. Take what is written here
-                    with a grain of salt.
-                    Please feel free to log a
-                    {' '}<a href="https://github.com/ridleywinters/ridleywinters.github.io/issues">GitHub issue</a>{' '}
-                    if you see a problem. Thank you!
-                </div>
-            );
-
-        default:
-            return null;
-    }
-}
-
 function RelatedArticles({ database, page }) {
 
     const pages = _.keyBy(database.pages, 'id');
@@ -198,22 +155,32 @@ function MDXJSX(props) {
     );
 }
 
-function MDXObject({ database, kind, value }) {
+function MDXObject({
+    database,
+    page,
+    Sea,
+    kind,
+    value,
+}) {
 
     if (!database) {
         throw new Error('MDXObject called without a valid database object')
     }
 
-    function Sea({ tree }) {
-        return renderComponents(database, tree);
-    }
-
-    value.renderComponents = renderComponents;
-    value.Sea = Sea;
+    value.database = value.database || database;
+    value.page = value.page || page;
+    value.Sea = value.Sea || Sea;
 
     const Delegate = database.index.rendererByType[kind];
     if (Delegate) {
-        return <Delegate {...value} />;
+        // https://stackoverflow.com/questions/43356073/how-to-set-displayname-in-a-functional-component-react
+        Delegate.displayName = kind;
+
+        try {
+            return <Delegate {...value} />;
+        } catch (err) {
+            console.log(err);
+        }
     }
 
     return (
@@ -224,9 +191,12 @@ function MDXObject({ database, kind, value }) {
     )
 }
 
-function renderComponents(database, root) {
+function renderComponents(database, root, page) {
     if (!database) {
         throw new Error('renderComponents called without a valid database object')
+    }
+    if (!page) {
+        console.warn(`Page not specified`, new Error().stack);
     }
 
     return unified()
@@ -267,16 +237,22 @@ function renderComponents(database, root) {
                             ]
                         }
                     },
+
+                    //
+                    // ```@object -> kind
+                    // YAML content -> value
+                    // ```
                     object: (h, node) => {
                         return {
                             type: 'element',
-                            tagName: 'mdxobject',
+                            tagName: 'object-proxy',
                             properties: {
                                 kind: node.kind,
                                 value: node.value,
                             },
                         };
                     },
+
                     code: (h, node) => {
                         // Rename this to avoid the default processing to HAST, which loses the language
                         // information so custom syntax highlighting is harder. There may be a cleaner
@@ -307,11 +283,16 @@ function renderComponents(database, root) {
                         // TODO: this feels fragile.  We're hosting as a single-page webapp but want
                         // the raw markdown images references to work as well. The approach here is
                         // to remap the url.
+                        let url = node.url;
                         if (node.url &&
                             !node.url.match(/^([a-zA-z]+):?\/\//) &&
                             !node.url.match(/^\//)
                         ) {
-                            node.url = `${database.properties.path}/pages/${node.url}`;
+                            let subPath = '';
+                            if (page) {
+                                subPath = `${page.path.join('/')}/`;
+                            }
+                            url = `${database.properties.path}/pages/${subPath}${node.url}`;
                         }
 
                         return {
@@ -319,7 +300,7 @@ function renderComponents(database, root) {
                             tagName: 'img',
                             properties: {
                                 title: node.title,
-                                src: node.url,
+                                src: url,
                                 alt: node.alt,
                             },
                             children: [],
@@ -327,25 +308,33 @@ function renderComponents(database, root) {
                     }
                 },
             },
+
             // Hook into the createElement as this makes the mapping from 
             // HAST -> React more transparent (while retaining some of the
             // clean-up remark-react does).
             createElement: (tag, props, children) => {
 
-                if (tag === 'mdxobject' || tag === 'jsx-proxy') {
-                    props = props || {};
-                    props.database = props.database || database;
-                }
+                
+                
 
-                tag = {
+                // Remap any elements that Sea has custom renderers for.
+                const CustomComponent = {
                     a: MDXLink,
                     p: MDXParagraph,
                     'code-proxy': MDXCodeBlock,
-                    mdxobject: MDXObject,
+                    'object-proxy': MDXObject,
                     'jsx-proxy': MDXJSX,
-                }[tag] || tag;
+                }[tag];
 
+                // Inject the current context into any elements with customer handlers
+                if (CustomComponent) {
+                    props = props || {};
+                    props.database = props.database || database;
+                    props.page = props.page || page;
+                    props.Sea = makeSeaComponent(database, page);
 
+                    return React.createElement(CustomComponent, props, children);
+                }
                 return React.createElement(tag, props, children);
             },
         })
@@ -367,16 +356,13 @@ export default function MDXPage({
     database,
     page,
 }) {
-    console.log(database)
-
     const Layout = database.index.rendererByName.PageLayout || React.Fragment;
 
     document.title = page.title;
 
     return (
         <Layout>
-            <Status database={database} page={page} />
-            <div>{renderComponents(database, page.ast)}</div>
+            <div>{renderComponents(database, page.ast, page)}</div>
             <RelatedArticles database={database} page={page} />
         </Layout>
     )

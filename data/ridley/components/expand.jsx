@@ -1,10 +1,10 @@
 import React from 'react';
 
-
 export default function ({ 
     database, 
     title, 
     content,
+    Sea,
 }) {
 
     const [expanded, setExpanded] = React.useState(false);

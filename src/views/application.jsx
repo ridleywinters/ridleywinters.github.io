@@ -1,8 +1,8 @@
 import React from "react";
 import Router from '../base/routing/router.jsx';
 import database from '../database.json';
-import MDXPage, { makeSeaComponent } from './mdx_page.jsx';
-
+import MDXPage from './mdx_page.jsx';
+import _ from 'lodash';
 
 function evaluateDefaultExport(source, additionalContext = {}) {
     const exports = {};
@@ -11,8 +11,10 @@ function evaluateDefaultExport(source, additionalContext = {}) {
         exports,
         require: function (name) {
             switch (name) {
+                case 'lodash': return _;
                 case 'react': return React;
-                default: return null;
+                default: 
+                    throw new Error(`Unknown module '${name}`);
             }
         },
     };
@@ -57,14 +59,20 @@ database.index.tag = (() => {
 database.index.rendererByType = {};
 database.index.rendererByName = {};
 
-const Sea = makeSeaComponent(database);
 database.components.forEach((comp) => {
-    const obj = evaluateDefaultExport(`return ${comp.parsed};`, { Sea });
     const type = comp.filename.replace(/\.jsx$/, '');
     const camel = type.substr(1).replace(/[_\-]+([a-z])/g, (_unused, letter) => {
         return letter.toUpperCase();
     });
     const name = `${type[0].toUpperCase()}${camel}`;
+
+
+    let obj;
+    try {
+        obj = evaluateDefaultExport(`return ${comp.parsed};`, {});
+    } catch (err) {
+        console.error(`Error parsing component '${type}'`, err);
+    }
     database.index.rendererByType[type] = obj;
     database.index.rendererByName[name] = obj;
 })
@@ -80,10 +88,22 @@ export default function Application() {
         routes[page.id] = () => <MDXPage database={database} page={page} />
     });
 
+    const SiteLayout = database.index.rendererByName.SiteLayout;
+    let siteLayoutProps = {};
+    if (SiteLayout)    {
+        siteLayoutProps = {
+            database,
+        }
+    } else {
+        SiteLayout = React.Fragment;
+    }
+
     return (
-        <Router
-            routes={routes}
-            defaultRoute={routes.home}
-        />
+        <SiteLayout {...siteLayoutProps}>
+            <Router
+                routes={routes}
+                defaultRoute={routes.home}
+            />
+        </SiteLayout>
     );
 }

@@ -47,6 +47,7 @@ function Outer({ children }) {
 }
 
 export default function PageLayout({ children }) {
+    
     return (
         <Outer>
             <div
