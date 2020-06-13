@@ -1,9 +1,7 @@
 import React from "react";
 import Router from '../base/routing/router.jsx';
-import RustRaytracer from './pages/rust_raytracer.jsx';
 import database from '../database.json';
 import MDXPage, { makeSeaComponent } from './mdx_page.jsx';
-
 
 
 function evaluateDefaultExport(source, additionalContext = {}) {
@@ -71,17 +69,13 @@ database.components.forEach((comp) => {
     database.index.rendererByName[name] = obj;
 })
 
-console.log(database);
-
 export default function Application() {
 
     database.pages.forEach((page) => {
         page.href = `/?page=${page.id}`;
     });
 
-    const routes = {
-        'challenges-rust_raytracer': () => <RustRaytracer />,
-    };
+    const routes = {};
     database.pages.forEach((page) => {
         routes[page.id] = () => <MDXPage database={database} page={page} />
     });
