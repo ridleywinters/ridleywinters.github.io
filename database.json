@@ -10541,6 +10541,147 @@
             "title": "user_stories"
         },
         {
+            "filename": "projects/wishlist.mdx",
+            "extension": "mdx",
+            "id": "wishlist",
+            "path": [
+                "projects"
+            ],
+            "ast": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "heading",
+                        "depth": 1,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Projects I wish existed (or I implemented!)...",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 3,
+                                        "offset": 2
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 49,
+                                        "offset": 48
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 49,
+                                "offset": 48
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "ordered": false,
+                        "start": null,
+                        "spread": false,
+                        "children": [
+                            {
+                                "type": "listItem",
+                                "spread": false,
+                                "checked": null,
+                                "children": [
+                                    {
+                                        "type": "paragraph",
+                                        "children": [
+                                            {
+                                                "type": "text",
+                                                "value": "GNOME Disk Usage Analyzer auto-detect duplicate files & directories",
+                                                "position": {
+                                                    "start": {
+                                                        "line": 3,
+                                                        "column": 3,
+                                                        "offset": 52
+                                                    },
+                                                    "end": {
+                                                        "line": 3,
+                                                        "column": 70,
+                                                        "offset": 119
+                                                    },
+                                                    "indent": []
+                                                }
+                                            }
+                                        ],
+                                        "position": {
+                                            "start": {
+                                                "line": 3,
+                                                "column": 3,
+                                                "offset": 52
+                                            },
+                                            "end": {
+                                                "line": 3,
+                                                "column": 70,
+                                                "offset": 119
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 3,
+                                        "column": 1,
+                                        "offset": 50
+                                    },
+                                    "end": {
+                                        "line": 3,
+                                        "column": 70,
+                                        "offset": 119
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 3,
+                                "column": 1,
+                                "offset": 50
+                            },
+                            "end": {
+                                "line": 3,
+                                "column": 70,
+                                "offset": 119
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 4,
+                        "column": 1,
+                        "offset": 120
+                    }
+                }
+            },
+            "string": "# Projects I wish existed (or I implemented!)...\n\n-   GNOME Disk Usage Analyzer auto-detect duplicate files & directories\n",
+            "tags": [],
+            "properties": {},
+            "title": "Projects I wish existed (or I implemented!)..."
+        },
+        {
             "filename": "rust_producer_consumer.mdx",
             "extension": "mdx",
             "id": "rust_producer_consumer",
@@ -25009,7 +25150,8 @@
         ],
         "projects": [
             "creating_user_stories",
-            "home"
+            "home",
+            "wishlist"
         ],
         "tools": [
             "data_table",
@@ -25381,15 +25523,6 @@
             "layouts",
             "sea"
         ],
-        "or": [
-            "changelog_tips",
-            "creating_user_stories",
-            "data_objects",
-            "five_whys",
-            "sea",
-            "user_stories",
-            "webpack_notes"
-        ],
         "data": [
             "changelog_tips",
             "data_objects",
@@ -25735,6 +25868,10 @@
             "creating_user_stories",
             "rust_producer_consumer"
         ],
+        "implemented": [
+            "creating_user_stories",
+            "wishlist"
+        ],
         "avoid": [
             "creating_user_stories",
             "rust_webgl",
@@ -25861,6 +25998,14 @@
         "starts": [
             "five_whys",
             "sea"
+        ],
+        "duplicate": [
+            "data_objects",
+            "wishlist"
+        ],
+        "files": [
+            "sea",
+            "wishlist"
         ],
         "multithreaded": [
             "rust_producer_consumer",

@@ -11,7 +11,11 @@ build: ensure
 		--output-filename client.bundle.js	
 
 build-database: ensure
-	npx babel-node src/build/build.js build data/ridley src/database.json
+	cd $(MONOREPO_ROOT)/source/node/cmd/sea && \
+		npx babel-node src/build.js \
+		build \
+		$(MONOREPO_ROOT)/source/html/sites/ridleywinters.github.io/data/ridley  \
+		$(MONOREPO_ROOT)/source/html/sites/ridleywinters.github.io/database.json 
 
 publish: build
 	bash $(MONOREPO_ROOT)/deploy/scripts/push-from-monorepo.sh \
@@ -37,7 +41,8 @@ shutdown() {
 }
 trap "shutdown" SIGINT SIGTERM
 
-npx nodemon --watch data --watch src/build --ext js,jsx,mdx --exec make build-database &
+npx nodemon --watch data --watch ${MONOREPO_ROOT}/source/node/cmd/sea/src --ext js,jsx,mdx --exec make build-database &
+npx nodemon --watch data --watch data --ext js,jsx,mdx --exec make build-database &
 
 sleep 1
 

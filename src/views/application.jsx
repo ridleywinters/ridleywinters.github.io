@@ -1,9 +1,8 @@
 import React from "react";
-import Router from '../base/routing/router.jsx';
-import database from '../database.json';
+import Router from './router.jsx';
+import database from '../../database.json';
 import MDXPage from './mdx_page.jsx';
 import _ from 'lodash';
-import visit from "unist-util-visit";
 
 function evaluateDefaultExport(source, additionalContext = {}) {
     const exports = {};

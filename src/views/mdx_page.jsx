@@ -318,8 +318,7 @@ function renderComponents(database, root, page) {
 export default function MDXPage({
     database,
     page,
-}) {
-    
+}) {   
     let Layout = database.index.rendererByName.PageLayout
     let layoutProps ={};
     if (Layout) {
