@@ -81,7 +81,7 @@ function processMDXString(s) {
         .use(mdx)
         .use(frontmatter, ['yaml', 'toml'])
         .use(wikilinks, { inlineMode: true })
-        .parse(s);   
+        .parse(s);
 
     return ast;
 }
@@ -100,8 +100,6 @@ async function processMDXAST({ filename }) {
 }
 
 async function postprocessMDX({ entry }) {
-
-
 
     const compiler = stringify.Compiler;
 
@@ -188,7 +186,7 @@ async function postprocessMDX({ entry }) {
                         name = params.name;
                     }
                 }
-                
+
 
                 return {
                     type: 'object',
@@ -302,11 +300,12 @@ async function postProcessComponent({ filename, entry }) {
     entry.parsed = parseES6(entry.text);
 }
 
-async function scanDatabase(databaseName) {
+async function scanDatabase(databasePath) {
     const database = {};
+    const databaseName = path.basename(databasePath);
 
     database.properties = {
-        path: `data/${databaseName}`,
+        path: databasePath,
     };
 
     database.pages = await scanFiles({
@@ -366,9 +365,53 @@ async function scanDatabase(databaseName) {
 }
 
 
-(async () => {
-    const database = await scanDatabase("ridley");
-    console.log('Rebuilt database');
-    fs.writeFileSync('./src/database.json', JSON.stringify(database, null, 4));
-})();
+async function run(src, dst) {
+    if (!src) {
+        throw new Error('Source directory required');
+    }
+    if (!dst) {
+        throw new Error('Destination directory required');
+    }
 
+    let srcStat = await fs.promises.stat(src);
+    let dstStat = await fs.promises.stat(src);
+
+    if (!srcStat.isDirectory()) {
+        throw new Error('Source directory is not a directory');
+    }
+
+    const database = await scanDatabase(src);
+    console.log('Rebuilt database');
+    fs.writeFileSync(dst, JSON.stringify(database, null, 4));
+}
+
+//
+// TODO: I don't really understand yargs but it seems fully capable. Add strict
+// argument checking!
+//
+const yargs = require('yargs');
+yargs
+    .usage("$0 <cmd> [args]")
+    .command("build", "build a Sea database", (yargs) => {
+        const argv = yargs
+            .usage('$0 build <source_directory> <destination_filename>')
+            .positional('source', {
+                describe: 'directory to read source files from'
+            })
+            .positional('destination', {
+                describe: 'directory where to write database.json'
+            })
+            .argv
+            ;
+        const srcDirectory = argv._[1];
+        const dstDirectory = argv._[2];
+        run(srcDirectory, dstDirectory);
+    })
+    .command("dev", "run a development server", (yargs) => {
+        console.log('TODO')
+    })
+    .help('help')
+    .showHelpOnFail(true)
+    .demandCommand()
+    .recommendCommands()
+    .argv;

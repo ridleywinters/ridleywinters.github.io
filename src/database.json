@@ -4,6 +4,367 @@
     },
     "pages": [
         {
+            "filename": "edr/principles.mdx",
+            "extension": "mdx",
+            "id": "principles",
+            "path": [
+                "edr"
+            ],
+            "ast": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "heading",
+                        "depth": 1,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Principles",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 3,
+                                        "offset": 2
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 13,
+                                        "offset": 12
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 13,
+                                "offset": 12
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "heading",
+                        "depth": 4,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "You must...",
+                                "position": {
+                                    "start": {
+                                        "line": 3,
+                                        "column": 6,
+                                        "offset": 19
+                                    },
+                                    "end": {
+                                        "line": 3,
+                                        "column": 17,
+                                        "offset": 30
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 3,
+                                "column": 1,
+                                "offset": 14
+                            },
+                            "end": {
+                                "line": 3,
+                                "column": 17,
+                                "offset": 30
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "ordered": false,
+                        "start": null,
+                        "spread": false,
+                        "children": [
+                            {
+                                "type": "listItem",
+                                "spread": false,
+                                "checked": null,
+                                "children": [
+                                    {
+                                        "type": "paragraph",
+                                        "children": [
+                                            {
+                                                "type": "text",
+                                                "value": "Decide a goal",
+                                                "position": {
+                                                    "start": {
+                                                        "line": 5,
+                                                        "column": 3,
+                                                        "offset": 34
+                                                    },
+                                                    "end": {
+                                                        "line": 5,
+                                                        "column": 16,
+                                                        "offset": 47
+                                                    },
+                                                    "indent": []
+                                                }
+                                            }
+                                        ],
+                                        "position": {
+                                            "start": {
+                                                "line": 5,
+                                                "column": 3,
+                                                "offset": 34
+                                            },
+                                            "end": {
+                                                "line": 5,
+                                                "column": 16,
+                                                "offset": 47
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 5,
+                                        "column": 1,
+                                        "offset": 32
+                                    },
+                                    "end": {
+                                        "line": 5,
+                                        "column": 16,
+                                        "offset": 47
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "listItem",
+                                "spread": false,
+                                "checked": null,
+                                "children": [
+                                    {
+                                        "type": "paragraph",
+                                        "children": [
+                                            {
+                                                "type": "text",
+                                                "value": "Understand there are not options",
+                                                "position": {
+                                                    "start": {
+                                                        "line": 6,
+                                                        "column": 3,
+                                                        "offset": 50
+                                                    },
+                                                    "end": {
+                                                        "line": 6,
+                                                        "column": 35,
+                                                        "offset": 82
+                                                    },
+                                                    "indent": []
+                                                }
+                                            }
+                                        ],
+                                        "position": {
+                                            "start": {
+                                                "line": 6,
+                                                "column": 3,
+                                                "offset": 50
+                                            },
+                                            "end": {
+                                                "line": 6,
+                                                "column": 35,
+                                                "offset": 82
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 6,
+                                        "column": 1,
+                                        "offset": 48
+                                    },
+                                    "end": {
+                                        "line": 6,
+                                        "column": 35,
+                                        "offset": 82
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "listItem",
+                                "spread": false,
+                                "checked": null,
+                                "children": [
+                                    {
+                                        "type": "paragraph",
+                                        "children": [
+                                            {
+                                                "type": "text",
+                                                "value": "You simply must if you are committed to that goal",
+                                                "position": {
+                                                    "start": {
+                                                        "line": 7,
+                                                        "column": 3,
+                                                        "offset": 85
+                                                    },
+                                                    "end": {
+                                                        "line": 7,
+                                                        "column": 52,
+                                                        "offset": 134
+                                                    },
+                                                    "indent": []
+                                                }
+                                            }
+                                        ],
+                                        "position": {
+                                            "start": {
+                                                "line": 7,
+                                                "column": 3,
+                                                "offset": 85
+                                            },
+                                            "end": {
+                                                "line": 7,
+                                                "column": 52,
+                                                "offset": 134
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 7,
+                                        "column": 1,
+                                        "offset": 83
+                                    },
+                                    "end": {
+                                        "line": 7,
+                                        "column": 52,
+                                        "offset": 134
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 5,
+                                "column": 1,
+                                "offset": 32
+                            },
+                            "end": {
+                                "line": 7,
+                                "column": 52,
+                                "offset": 134
+                            },
+                            "indent": [
+                                1,
+                                1
+                            ]
+                        }
+                    },
+                    {
+                        "type": "heading",
+                        "depth": 4,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Routines",
+                                "position": {
+                                    "start": {
+                                        "line": 10,
+                                        "column": 6,
+                                        "offset": 142
+                                    },
+                                    "end": {
+                                        "line": 10,
+                                        "column": 14,
+                                        "offset": 150
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 10,
+                                "column": 1,
+                                "offset": 137
+                            },
+                            "end": {
+                                "line": 10,
+                                "column": 14,
+                                "offset": 150
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Follow from the \"You must\" principle. Fooling your brain.",
+                                "position": {
+                                    "start": {
+                                        "line": 12,
+                                        "column": 1,
+                                        "offset": 152
+                                    },
+                                    "end": {
+                                        "line": 12,
+                                        "column": 58,
+                                        "offset": 209
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 12,
+                                "column": 1,
+                                "offset": 152
+                            },
+                            "end": {
+                                "line": 12,
+                                "column": 58,
+                                "offset": 209
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 12,
+                        "column": 58,
+                        "offset": 209
+                    }
+                }
+            },
+            "string": "# Principles\n\n#### You must...\n\n-   Decide a goal\n-   Understand there are not options\n-   You simply must if you are committed to that goal\n\n#### Routines\n\nFollow from the \"You must\" principle. Fooling your brain.\n",
+            "tags": [],
+            "properties": {},
+            "title": "Principles"
+        },
+        {
             "filename": "end-to-end_development_of_a_distributed_system.mdx",
             "extension": "mdx",
             "id": "end-to-end_development_of_a_distributed_system",
@@ -9648,7 +10009,7 @@
                         "type": "list",
                         "ordered": false,
                         "start": null,
-                        "spread": false,
+                        "spread": true,
                         "children": [
                             {
                                 "type": "listItem",
@@ -9660,7 +10021,7 @@
                                         "children": [
                                             {
                                                 "type": "text",
-                                                "value": "Guideline, not process",
+                                                "value": "This is a ",
                                                 "position": {
                                                     "start": {
                                                         "line": 4,
@@ -9669,8 +10030,60 @@
                                                     },
                                                     "end": {
                                                         "line": 4,
-                                                        "column": 25,
-                                                        "offset": 38
+                                                        "column": 13,
+                                                        "offset": 26
+                                                    },
+                                                    "indent": []
+                                                }
+                                            },
+                                            {
+                                                "type": "strong",
+                                                "children": [
+                                                    {
+                                                        "type": "text",
+                                                        "value": "guideline",
+                                                        "position": {
+                                                            "start": {
+                                                                "line": 4,
+                                                                "column": 15,
+                                                                "offset": 28
+                                                            },
+                                                            "end": {
+                                                                "line": 4,
+                                                                "column": 24,
+                                                                "offset": 37
+                                                            },
+                                                            "indent": []
+                                                        }
+                                                    }
+                                                ],
+                                                "position": {
+                                                    "start": {
+                                                        "line": 4,
+                                                        "column": 13,
+                                                        "offset": 26
+                                                    },
+                                                    "end": {
+                                                        "line": 4,
+                                                        "column": 26,
+                                                        "offset": 39
+                                                    },
+                                                    "indent": []
+                                                }
+                                            },
+                                            {
+                                                "type": "text",
+                                                "value": ", not a process",
+                                                "position": {
+                                                    "start": {
+                                                        "line": 4,
+                                                        "column": 26,
+                                                        "offset": 39
+                                                    },
+                                                    "end": {
+                                                        "line": 4,
+                                                        "column": 41,
+                                                        "offset": 54
                                                     },
                                                     "indent": []
                                                 }
@@ -9684,8 +10097,8 @@
                                             },
                                             "end": {
                                                 "line": 4,
-                                                "column": 25,
-                                                "offset": 38
+                                                "column": 41,
+                                                "offset": 54
                                             },
                                             "indent": []
                                         }
@@ -9698,34 +10111,15 @@
                                         "offset": 14
                                     },
                                     "end": {
-                                        "line": 4,
-                                        "column": 25,
-                                        "offset": 38
+                                        "line": 5,
+                                        "column": 1,
+                                        "offset": 55
                                     },
-                                    "indent": []
+                                    "indent": [
+                                        1
+                                    ]
                                 }
-                            }
-                        ],
-                        "position": {
-                            "start": {
-                                "line": 4,
-                                "column": 1,
-                                "offset": 14
                             },
-                            "end": {
-                                "line": 4,
-                                "column": 25,
-                                "offset": 38
-                            },
-                            "indent": []
-                        }
-                    },
-                    {
-                        "type": "list",
-                        "ordered": false,
-                        "start": null,
-                        "spread": false,
-                        "children": [
                             {
                                 "type": "listItem",
                                 "spread": false,
@@ -9739,14 +10133,14 @@
                                                 "value": "Start with a question that feels unbounded or hard to answer",
                                                 "position": {
                                                     "start": {
-                                                        "line": 7,
+                                                        "line": 6,
                                                         "column": 3,
-                                                        "offset": 43
+                                                        "offset": 58
                                                     },
                                                     "end": {
-                                                        "line": 7,
+                                                        "line": 6,
                                                         "column": 63,
-                                                        "offset": 103
+                                                        "offset": 118
                                                     },
                                                     "indent": []
                                                 }
@@ -9754,14 +10148,14 @@
                                         ],
                                         "position": {
                                             "start": {
-                                                "line": 7,
+                                                "line": 6,
                                                 "column": 3,
-                                                "offset": 43
+                                                "offset": 58
                                             },
                                             "end": {
-                                                "line": 7,
+                                                "line": 6,
                                                 "column": 63,
-                                                "offset": 103
+                                                "offset": 118
                                             },
                                             "indent": []
                                         }
@@ -9769,14 +10163,14 @@
                                 ],
                                 "position": {
                                     "start": {
-                                        "line": 7,
+                                        "line": 6,
                                         "column": 1,
-                                        "offset": 41
+                                        "offset": 56
                                     },
                                     "end": {
-                                        "line": 7,
+                                        "line": 6,
                                         "column": 63,
-                                        "offset": 103
+                                        "offset": 118
                                     },
                                     "indent": []
                                 }
@@ -9794,14 +10188,14 @@
                                                 "value": "Say the first logical answer",
                                                 "position": {
                                                     "start": {
-                                                        "line": 8,
+                                                        "line": 7,
                                                         "column": 3,
-                                                        "offset": 106
+                                                        "offset": 121
                                                     },
                                                     "end": {
-                                                        "line": 8,
+                                                        "line": 7,
                                                         "column": 31,
-                                                        "offset": 134
+                                                        "offset": 149
                                                     },
                                                     "indent": []
                                                 }
@@ -9809,14 +10203,14 @@
                                         ],
                                         "position": {
                                             "start": {
-                                                "line": 8,
+                                                "line": 7,
                                                 "column": 3,
-                                                "offset": 106
+                                                "offset": 121
                                             },
                                             "end": {
-                                                "line": 8,
+                                                "line": 7,
                                                 "column": 31,
-                                                "offset": 134
+                                                "offset": 149
                                             },
                                             "indent": []
                                         }
@@ -9824,14 +10218,14 @@
                                 ],
                                 "position": {
                                     "start": {
-                                        "line": 8,
+                                        "line": 7,
                                         "column": 1,
-                                        "offset": 104
+                                        "offset": 119
                                     },
                                     "end": {
-                                        "line": 8,
+                                        "line": 7,
                                         "column": 31,
-                                        "offset": 134
+                                        "offset": 149
                                     },
                                     "indent": []
                                 }
@@ -9849,14 +10243,14 @@
                                                 "value": "Connect why a piece of the prior answer",
                                                 "position": {
                                                     "start": {
-                                                        "line": 9,
+                                                        "line": 8,
                                                         "column": 3,
-                                                        "offset": 137
+                                                        "offset": 152
                                                     },
                                                     "end": {
-                                                        "line": 9,
+                                                        "line": 8,
                                                         "column": 42,
-                                                        "offset": 176
+                                                        "offset": 191
                                                     },
                                                     "indent": []
                                                 }
@@ -9864,14 +10258,14 @@
                                         ],
                                         "position": {
                                             "start": {
-                                                "line": 9,
+                                                "line": 8,
                                                 "column": 3,
-                                                "offset": 137
+                                                "offset": 152
                                             },
                                             "end": {
-                                                "line": 9,
+                                                "line": 8,
                                                 "column": 42,
-                                                "offset": 176
+                                                "offset": 191
                                             },
                                             "indent": []
                                         }
@@ -9879,14 +10273,14 @@
                                 ],
                                 "position": {
                                     "start": {
-                                        "line": 9,
+                                        "line": 8,
                                         "column": 1,
-                                        "offset": 135
+                                        "offset": 150
                                     },
                                     "end": {
-                                        "line": 9,
+                                        "line": 8,
                                         "column": 42,
-                                        "offset": 176
+                                        "offset": 191
                                     },
                                     "indent": []
                                 }
@@ -9904,14 +10298,14 @@
                                                 "value": "If starts feeling off-course, start over",
                                                 "position": {
                                                     "start": {
-                                                        "line": 10,
+                                                        "line": 9,
                                                         "column": 3,
-                                                        "offset": 179
+                                                        "offset": 194
                                                     },
                                                     "end": {
-                                                        "line": 10,
+                                                        "line": 9,
                                                         "column": 43,
-                                                        "offset": 219
+                                                        "offset": 234
                                                     },
                                                     "indent": []
                                                 }
@@ -9919,14 +10313,14 @@
                                         ],
                                         "position": {
                                             "start": {
-                                                "line": 10,
+                                                "line": 9,
                                                 "column": 3,
-                                                "offset": 179
+                                                "offset": 194
                                             },
                                             "end": {
-                                                "line": 10,
+                                                "line": 9,
                                                 "column": 43,
-                                                "offset": 219
+                                                "offset": 234
                                             },
                                             "indent": []
                                         }
@@ -9934,14 +10328,14 @@
                                 ],
                                 "position": {
                                     "start": {
-                                        "line": 10,
+                                        "line": 9,
                                         "column": 1,
-                                        "offset": 177
+                                        "offset": 192
                                     },
                                     "end": {
-                                        "line": 10,
+                                        "line": 9,
                                         "column": 43,
-                                        "offset": 219
+                                        "offset": 234
                                     },
                                     "indent": []
                                 }
@@ -9959,14 +10353,14 @@
                                                 "value": "Record prior iterations, may be helpful",
                                                 "position": {
                                                     "start": {
-                                                        "line": 11,
+                                                        "line": 10,
                                                         "column": 3,
-                                                        "offset": 222
+                                                        "offset": 237
                                                     },
                                                     "end": {
-                                                        "line": 11,
+                                                        "line": 10,
                                                         "column": 42,
-                                                        "offset": 261
+                                                        "offset": 276
                                                     },
                                                     "indent": []
                                                 }
@@ -9974,14 +10368,14 @@
                                         ],
                                         "position": {
                                             "start": {
-                                                "line": 11,
+                                                "line": 10,
                                                 "column": 3,
-                                                "offset": 222
+                                                "offset": 237
                                             },
                                             "end": {
-                                                "line": 11,
+                                                "line": 10,
                                                 "column": 42,
-                                                "offset": 261
+                                                "offset": 276
                                             },
                                             "indent": []
                                         }
@@ -9989,14 +10383,14 @@
                                 ],
                                 "position": {
                                     "start": {
-                                        "line": 11,
+                                        "line": 10,
                                         "column": 1,
-                                        "offset": 220
+                                        "offset": 235
                                     },
                                     "end": {
-                                        "line": 11,
+                                        "line": 10,
                                         "column": 42,
-                                        "offset": 261
+                                        "offset": 276
                                     },
                                     "indent": []
                                 }
@@ -10004,16 +10398,18 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 7,
+                                "line": 4,
                                 "column": 1,
-                                "offset": 41
+                                "offset": 14
                             },
                             "end": {
-                                "line": 11,
+                                "line": 10,
                                 "column": 42,
-                                "offset": 261
+                                "offset": 276
                             },
                             "indent": [
+                                1,
+                                1,
                                 1,
                                 1,
                                 1,
@@ -10029,13 +10425,13 @@
                         "offset": 0
                     },
                     "end": {
-                        "line": 11,
+                        "line": 10,
                         "column": 42,
-                        "offset": 261
+                        "offset": 276
                     }
                 }
             },
-            "string": "# Five Whys\n\n-   Guideline, not process\n\n\n-   Start with a question that feels unbounded or hard to answer\n-   Say the first logical answer\n-   Connect why a piece of the prior answer\n-   If starts feeling off-course, start over\n-   Record prior iterations, may be helpful\n",
+            "string": "# Five Whys\n\n-   This is a **guideline**, not a process\n\n-   Start with a question that feels unbounded or hard to answer\n\n-   Say the first logical answer\n\n-   Connect why a piece of the prior answer\n\n-   If starts feeling off-course, start over\n\n-   Record prior iterations, may be helpful\n",
             "tags": [],
             "properties": {},
             "title": "Five Whys"
@@ -24220,6 +24616,81 @@
         }
     ],
     "index_words": {
+        "principles": [
+            "creating_user_stories",
+            "principles"
+        ],
+        "you": [
+            "creating_user_stories",
+            "data_objects",
+            "home",
+            "principles",
+            "rust_raytracer",
+            "sea"
+        ],
+        "must": [
+            "creating_user_stories",
+            "example_user_stories",
+            "principles"
+        ],
+        "decide": [
+            "creating_user_stories",
+            "principles"
+        ],
+        "goal": [
+            "creating_user_stories",
+            "principles",
+            "rust_raytracer",
+            "user_stories"
+        ],
+        "understand": [
+            "common_user_stories",
+            "principles"
+        ],
+        "there": [
+            "creating_user_stories",
+            "layouts",
+            "principles",
+            "rust_raytracer",
+            "sea"
+        ],
+        "not": [
+            "changelog_tips",
+            "creating_user_stories",
+            "five_whys",
+            "principles",
+            "rust_raytracer",
+            "webpack_notes"
+        ],
+        "simply": [
+            "principles",
+            "sea"
+        ],
+        "if": [
+            "creating_user_stories",
+            "data_objects",
+            "five_whys",
+            "layouts",
+            "principles",
+            "sea"
+        ],
+        "from": [
+            "creating_user_stories",
+            "data_objects",
+            "principles",
+            "rust_producer_consumer",
+            "sea"
+        ],
+        "principle": [
+            "data_objects",
+            "example_user_stories",
+            "principles"
+        ],
+        "your": [
+            "creating_user_stories",
+            "principles",
+            "sea"
+        ],
         "charter": [
             "creating_user_stories",
             "example_user_stories"
@@ -24327,6 +24798,15 @@
             "creating_user_stories",
             "example_user_stories"
         ],
+        "want": [
+            "common_user_stories",
+            "creating_user_stories",
+            "data_objects",
+            "data_table",
+            "example_user_stories",
+            "user_stories",
+            "webpack_notes"
+        ],
         "program": [
             "example_user_stories",
             "rust_raytracer",
@@ -24353,10 +24833,6 @@
             "creating_user_stories",
             "example_user_stories",
             "home"
-        ],
-        "must": [
-            "creating_user_stories",
-            "example_user_stories"
         ],
         "organization": [
             "example_user_stories",
@@ -24510,10 +24986,6 @@
             "example_user_stories",
             "rust_webgl"
         ],
-        "principle": [
-            "data_objects",
-            "example_user_stories"
-        ],
         "external": [
             "creating_user_stories",
             "example_user_stories",
@@ -24615,13 +25087,6 @@
             "creating_user_stories",
             "home",
             "rust_raytracer"
-        ],
-        "you": [
-            "creating_user_stories",
-            "data_objects",
-            "home",
-            "rust_raytracer",
-            "sea"
         ],
         "find": [
             "creating_user_stories",
@@ -24774,6 +25239,15 @@
             "creating_user_stories",
             "kestrel"
         ],
+        "an": [
+            "creating_user_stories",
+            "data_objects",
+            "data_table",
+            "kestrel",
+            "rust_producer_consumer",
+            "rust_raytracer",
+            "sea"
+        ],
         "idea": [
             "kestrel",
             "sea"
@@ -24895,13 +25369,6 @@
             "data_objects",
             "rust_raytracer"
         ],
-        "not": [
-            "changelog_tips",
-            "creating_user_stories",
-            "five_whys",
-            "rust_raytracer",
-            "webpack_notes"
-        ],
         "work": [
             "changelog_tips",
             "creating_user_stories",
@@ -24913,6 +25380,15 @@
             "data_objects",
             "layouts",
             "sea"
+        ],
+        "or": [
+            "changelog_tips",
+            "creating_user_stories",
+            "data_objects",
+            "five_whys",
+            "sea",
+            "user_stories",
+            "webpack_notes"
         ],
         "data": [
             "changelog_tips",
@@ -24958,24 +25434,22 @@
             "common_user_stories",
             "creating_user_stories"
         ],
+        "code": [
+            "common_user_stories",
+            "data_objects",
+            "rust_producer_consumer",
+            "rust_raytracer",
+            "rust_webgl",
+            "sea",
+            "webpack_notes"
+        ],
         "through": [
             "creating_user_stories",
             "rust_raytracer"
         ],
-        "there": [
-            "creating_user_stories",
-            "layouts",
-            "rust_raytracer",
-            "sea"
-        ],
         "possible": [
             "creating_user_stories",
             "sea"
-        ],
-        "goal": [
-            "creating_user_stories",
-            "rust_raytracer",
-            "user_stories"
         ],
         "approach": [
             "creating_user_stories",
@@ -25067,12 +25541,6 @@
         "re": [
             "creating_user_stories",
             "rust_producer_consumer"
-        ],
-        "from": [
-            "creating_user_stories",
-            "data_objects",
-            "rust_producer_consumer",
-            "sea"
         ],
         "process": [
             "creating_user_stories",
@@ -25240,13 +25708,6 @@
             "rust_producer_consumer",
             "webpack_notes"
         ],
-        "if": [
-            "creating_user_stories",
-            "data_objects",
-            "five_whys",
-            "layouts",
-            "sea"
-        ],
         "up": [
             "creating_user_stories",
             "rust_producer_consumer",
@@ -25388,10 +25849,6 @@
         "individual": [
             "creating_user_stories",
             "data_objects"
-        ],
-        "your": [
-            "creating_user_stories",
-            "sea"
         ],
         "article": [
             "creating_user_stories",

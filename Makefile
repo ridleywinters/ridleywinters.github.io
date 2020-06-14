@@ -11,7 +11,7 @@ build: ensure
 		--output-filename client.bundle.js	
 
 build-database: ensure
-	npx babel-node src/build/build.js
+	npx babel-node src/build/build.js build data/ridley src/database.json
 
 publish: build
 	bash $(MONOREPO_ROOT)/deploy/scripts/push-from-monorepo.sh \
