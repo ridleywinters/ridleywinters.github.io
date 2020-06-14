@@ -2461,8 +2461,9 @@
                                         "type": "paragraph",
                                         "children": [
                                             {
-                                                "type": "text",
-                                                "value": "Kestrel",
+                                                "type": "wikilink",
+                                                "id": "kestrel",
+                                                "text": null,
                                                 "position": {
                                                     "start": {
                                                         "line": 39,
@@ -2471,8 +2472,8 @@
                                                     },
                                                     "end": {
                                                         "line": 39,
-                                                        "column": 10,
-                                                        "offset": 952
+                                                        "column": 14,
+                                                        "offset": 956
                                                     },
                                                     "indent": []
                                                 }
@@ -2486,8 +2487,8 @@
                                             },
                                             "end": {
                                                 "line": 39,
-                                                "column": 10,
-                                                "offset": 952
+                                                "column": 14,
+                                                "offset": 956
                                             },
                                             "indent": []
                                         }
@@ -2501,8 +2502,8 @@
                                     },
                                     "end": {
                                         "line": 39,
-                                        "column": 10,
-                                        "offset": 952
+                                        "column": 14,
+                                        "offset": 956
                                     },
                                     "indent": []
                                 }
@@ -2522,12 +2523,12 @@
                                                     "start": {
                                                         "line": 40,
                                                         "column": 3,
-                                                        "offset": 955
+                                                        "offset": 959
                                                     },
                                                     "end": {
                                                         "line": 40,
                                                         "column": 10,
-                                                        "offset": 962
+                                                        "offset": 966
                                                     },
                                                     "indent": []
                                                 }
@@ -2537,12 +2538,12 @@
                                             "start": {
                                                 "line": 40,
                                                 "column": 3,
-                                                "offset": 955
+                                                "offset": 959
                                             },
                                             "end": {
                                                 "line": 40,
                                                 "column": 10,
-                                                "offset": 962
+                                                "offset": 966
                                             },
                                             "indent": []
                                         }
@@ -2552,12 +2553,12 @@
                                     "start": {
                                         "line": 40,
                                         "column": 1,
-                                        "offset": 953
+                                        "offset": 957
                                     },
                                     "end": {
                                         "line": 40,
                                         "column": 10,
-                                        "offset": 962
+                                        "offset": 966
                                     },
                                     "indent": []
                                 }
@@ -2572,7 +2573,7 @@
                             "end": {
                                 "line": 40,
                                 "column": 10,
-                                "offset": 962
+                                "offset": 966
                             },
                             "indent": [
                                 1,
@@ -2591,12 +2592,12 @@
                                     "start": {
                                         "line": 42,
                                         "column": 5,
-                                        "offset": 968
+                                        "offset": 972
                                     },
                                     "end": {
                                         "line": 42,
                                         "column": 12,
-                                        "offset": 975
+                                        "offset": 979
                                     },
                                     "indent": []
                                 }
@@ -2606,12 +2607,12 @@
                             "start": {
                                 "line": 42,
                                 "column": 1,
-                                "offset": 964
+                                "offset": 968
                             },
                             "end": {
                                 "line": 42,
                                 "column": 12,
-                                "offset": 975
+                                "offset": 979
                             },
                             "indent": []
                         }
@@ -2627,12 +2628,12 @@
                                     "start": {
                                         "line": 45,
                                         "column": 5,
-                                        "offset": 982
+                                        "offset": 986
                                     },
                                     "end": {
                                         "line": 45,
                                         "column": 28,
-                                        "offset": 1005
+                                        "offset": 1009
                                     },
                                     "indent": []
                                 }
@@ -2642,12 +2643,12 @@
                             "start": {
                                 "line": 45,
                                 "column": 1,
-                                "offset": 978
+                                "offset": 982
                             },
                             "end": {
                                 "line": 45,
                                 "column": 28,
-                                "offset": 1005
+                                "offset": 1009
                             },
                             "indent": []
                         }
@@ -2663,12 +2664,12 @@
                                     "start": {
                                         "line": 47,
                                         "column": 5,
-                                        "offset": 1011
+                                        "offset": 1015
                                     },
                                     "end": {
                                         "line": 47,
                                         "column": 13,
-                                        "offset": 1019
+                                        "offset": 1023
                                     },
                                     "indent": []
                                 }
@@ -2678,12 +2679,12 @@
                             "start": {
                                 "line": 47,
                                 "column": 1,
-                                "offset": 1007
+                                "offset": 1011
                             },
                             "end": {
                                 "line": 47,
                                 "column": 13,
-                                "offset": 1019
+                                "offset": 1023
                             },
                             "indent": []
                         }
@@ -2710,12 +2711,12 @@
                                                     "start": {
                                                         "line": 49,
                                                         "column": 3,
-                                                        "offset": 1023
+                                                        "offset": 1027
                                                     },
                                                     "end": {
                                                         "line": 49,
                                                         "column": 31,
-                                                        "offset": 1051
+                                                        "offset": 1055
                                                     },
                                                     "indent": []
                                                 }
@@ -2725,12 +2726,12 @@
                                             "start": {
                                                 "line": 49,
                                                 "column": 3,
-                                                "offset": 1023
+                                                "offset": 1027
                                             },
                                             "end": {
                                                 "line": 49,
                                                 "column": 31,
-                                                "offset": 1051
+                                                "offset": 1055
                                             },
                                             "indent": []
                                         }
@@ -2740,12 +2741,12 @@
                                     "start": {
                                         "line": 49,
                                         "column": 1,
-                                        "offset": 1021
+                                        "offset": 1025
                                     },
                                     "end": {
                                         "line": 49,
                                         "column": 31,
-                                        "offset": 1051
+                                        "offset": 1055
                                     },
                                     "indent": []
                                 }
@@ -2755,12 +2756,12 @@
                             "start": {
                                 "line": 49,
                                 "column": 1,
-                                "offset": 1021
+                                "offset": 1025
                             },
                             "end": {
                                 "line": 49,
                                 "column": 31,
-                                "offset": 1051
+                                "offset": 1055
                             },
                             "indent": []
                         }
@@ -2775,11 +2776,11 @@
                     "end": {
                         "line": 49,
                         "column": 31,
-                        "offset": 1051
+                        "offset": 1055
                     }
                 }
             },
-            "string": "title: Ridley Winter's Homepage\n\n# Hello World!\n\nI'm Ridley Winters. This is my learn-by-doing website (built using TODO-WIKILINK) that I use to share some my software engineering hobby projects and tools. I'm a former product manager and now part-time software engineer. For my hobby projects, I am focused on learning more about effective web development as well as learning Rust - and a small side obsession with graphics via Vulkan and WebGL.\n\nI'm still learning so please take everything you find on this site with a grain of salt.\n\n### How To's\n\n<ul>\n{_.map(database.index.tag[\"how-to\"], (page) => (\n    <li key={page.id}>\n        <a href={`/?page=${page.id}`}>{page.title}</a>\n    </li>\n))}\n</ul>\n\n### Exercises\n\n-   TODO-WIKILINK\n-   TODO-WIKILINK\n-   TODO-WIKILINK\n-   TODO-WIKILINK\n\n### Product Thoughts\n\n-   TODO-WIKILINK\n-   TODO-WIKILINK\n\n### Hobby Projects\n\n-   TODO-WIKILINK\n-   Kestrel\n-   Raiment\n\n### Musings\n\n### Every Day Routine (EDR)\n\n### Appendix\n\n-   TODO-WIKILINK\n",
+            "string": "title: Ridley Winter's Homepage\n\n# Hello World!\n\nI'm Ridley Winters. This is my learn-by-doing website (built using TODO-WIKILINK) that I use to share some my software engineering hobby projects and tools. I'm a former product manager and now part-time software engineer. For my hobby projects, I am focused on learning more about effective web development as well as learning Rust - and a small side obsession with graphics via Vulkan and WebGL.\n\nI'm still learning so please take everything you find on this site with a grain of salt.\n\n### How To's\n\n<ul>\n{_.map(database.index.tag[\"how-to\"], (page) => (\n    <li key={page.id}>\n        <a href={`/?page=${page.id}`}>{page.title}</a>\n    </li>\n))}\n</ul>\n\n### Exercises\n\n-   TODO-WIKILINK\n-   TODO-WIKILINK\n-   TODO-WIKILINK\n-   TODO-WIKILINK\n\n### Product Thoughts\n\n-   TODO-WIKILINK\n-   TODO-WIKILINK\n\n### Hobby Projects\n\n-   TODO-WIKILINK\n-   TODO-WIKILINK\n-   Raiment\n\n### Musings\n\n### Every Day Routine (EDR)\n\n### Appendix\n\n-   TODO-WIKILINK\n",
             "tags": [],
             "properties": {
                 "title": "Ridley Winter's Homepage"
@@ -3715,6 +3716,195 @@
             "tags": [],
             "properties": {},
             "title": "Page Index"
+        },
+        {
+            "filename": "kestrel/kestrel.mdx",
+            "extension": "mdx",
+            "id": "kestrel",
+            "path": [
+                "kestrel"
+            ],
+            "ast": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "heading",
+                        "depth": 1,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Kestrel",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 3,
+                                        "offset": 2
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 10,
+                                        "offset": 9
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 10,
+                                "offset": 9
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "A single-player, story-based adventure mod for ",
+                                "position": {
+                                    "start": {
+                                        "line": 3,
+                                        "column": 1,
+                                        "offset": 11
+                                    },
+                                    "end": {
+                                        "line": 3,
+                                        "column": 48,
+                                        "offset": 58
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "link",
+                                "title": null,
+                                "url": "https://veloren.net/",
+                                "children": [
+                                    {
+                                        "type": "text",
+                                        "value": "Veloren",
+                                        "position": {
+                                            "start": {
+                                                "line": 3,
+                                                "column": 49,
+                                                "offset": 59
+                                            },
+                                            "end": {
+                                                "line": 3,
+                                                "column": 56,
+                                                "offset": 66
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 3,
+                                        "column": 48,
+                                        "offset": 58
+                                    },
+                                    "end": {
+                                        "line": 3,
+                                        "column": 79,
+                                        "offset": 89
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": ".",
+                                "position": {
+                                    "start": {
+                                        "line": 3,
+                                        "column": 79,
+                                        "offset": 89
+                                    },
+                                    "end": {
+                                        "line": 3,
+                                        "column": 80,
+                                        "offset": 90
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 3,
+                                "column": 1,
+                                "offset": 11
+                            },
+                            "end": {
+                                "line": 3,
+                                "column": 80,
+                                "offset": 90
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "This is just an idea at this point! Hopefully this page will grow as time passes!",
+                                "position": {
+                                    "start": {
+                                        "line": 5,
+                                        "column": 1,
+                                        "offset": 92
+                                    },
+                                    "end": {
+                                        "line": 5,
+                                        "column": 82,
+                                        "offset": 173
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 5,
+                                "column": 1,
+                                "offset": 92
+                            },
+                            "end": {
+                                "line": 5,
+                                "column": 82,
+                                "offset": 173
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 5,
+                        "column": 82,
+                        "offset": 173
+                    }
+                }
+            },
+            "string": "# Kestrel\n\nA single-player, story-based adventure mod for [Veloren](https://veloren.net/).\n\nThis is just an idea at this point! Hopefully this page will grow as time passes!\n",
+            "tags": [],
+            "properties": {},
+            "title": "Kestrel"
         },
         {
             "filename": "product/changelog_tips.mdx",
@@ -24001,8 +24191,8 @@
             "extension": "jsx",
             "id": "page_layout",
             "path": [],
-            "text": "import React from 'react';\n\n\nfunction Outer({ children }) {\n    return (\n        <div>\n            <div style={{                \n                padding: '12px 2rem 6px',\n                backgroundColor: '#ACF',\n            }}>\n                <div style={{\n                    display: 'flex',\n                    flexDirection: 'row',\n                    maxWidth: '80rem',\n                margin: '0 auto',\n                }}>\n                    <a href=\"https://blacklivesmatter.com/\" style={{ textDecoration: 'none' }}>🖤</a>                    \n                    <div style={{ flexGrow: 1 }} />\n                    <a style={{ flexGrow: 0 }} href=\"/\">home</a>                   \n                    <div style={{ flexGrow: 1 }} />\n                    <a style={{ flexGrow: 0 }} href=\"/?page=index\">index</a>\n                    <div style={{ flexGrow: 50 }} />\n                </div>\n            </div>\n            <div style={{\n                minHeight: 'calc(100vh - 120px)'\n            }}\n            >{children}\n            </div>\n            <div style={{\n                minHeight: '120px',\n                padding: '12px 2rem 6px',\n                backgroundColor: '#ACF',\n            }}>\n                <div>\n                    Twitter: <a href=\"https://twitter.com/RidleyWinters\">RidleyWinters</a>\n                </div>\n                <div>\n                    Favicon designed by\n                    {' '}<a href=\"https://www.flaticon.com/authors/good-ware\">Good Ware</a>{' '}\n                    available at\n                    {' '}<a href=\"https://www.flaticon.com/free-icon/woodland_2933738?term=landscape&page=1&position=\">flaticon</a>.\n                </div>\n            </div>\n        </div>\n    );\n}\n\nexport default function PageLayout({ children }) {\n    \n    return (\n        <Outer>\n            <div\n                style={{\n                    margin: '0 auto',\n                    maxWidth: '80rem',\n                }}\n            >\n                <div\n                    style={{\n                        margin: '0 2rem',\n                    }}\n                >\n                    {children}\n                </div>\n            </div>\n        </Outer>\n    );\n}\n\n",
-            "parsed": "(function() {\n\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = PageLayout;\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction Outer({\n  children\n}) {\n  return /*#__PURE__*/_react.default.createElement(\"div\", null, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      padding: '12px 2rem 6px',\n      backgroundColor: '#ACF'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      flexDirection: 'row',\n      maxWidth: '80rem',\n      margin: '0 auto'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://blacklivesmatter.com/\",\n    style: {\n      textDecoration: 'none'\n    }\n  }, \"\\uD83D\\uDDA4\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 1\n    }\n  }), /*#__PURE__*/_react.default.createElement(\"a\", {\n    style: {\n      flexGrow: 0\n    },\n    href: \"/\"\n  }, \"home\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 1\n    }\n  }), /*#__PURE__*/_react.default.createElement(\"a\", {\n    style: {\n      flexGrow: 0\n    },\n    href: \"/?page=index\"\n  }, \"index\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 50\n    }\n  }))), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      minHeight: 'calc(100vh - 120px)'\n    }\n  }, children), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      minHeight: '120px',\n      padding: '12px 2rem 6px',\n      backgroundColor: '#ACF'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", null, \"Twitter: \", /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://twitter.com/RidleyWinters\"\n  }, \"RidleyWinters\")), /*#__PURE__*/_react.default.createElement(\"div\", null, \"Favicon designed by\", ' ', /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://www.flaticon.com/authors/good-ware\"\n  }, \"Good Ware\"), ' ', \"available at\", ' ', /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://www.flaticon.com/free-icon/woodland_2933738?term=landscape&page=1&position=\"\n  }, \"flaticon\"), \".\")));\n}\n\nfunction PageLayout({\n  children\n}) {\n  return /*#__PURE__*/_react.default.createElement(Outer, null, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      margin: '0 auto',\n      maxWidth: '80rem'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      margin: '0 2rem'\n    }\n  }, children)));\n}\n})()"
+            "text": "import React from 'react';\n\n\nfunction Outer({ children }) {\n    return (\n        <div>\n            <div style={{                \n                padding: '12px 2rem 6px',\n                backgroundColor: '#ACF',\n            }}>\n                <div style={{\n                    display: 'flex',\n                    flexDirection: 'row',\n                    maxWidth: '80rem',\n                margin: '0 auto',\n                }}>\n                    <a href=\"https://blacklivesmatter.com/\" style={{ textDecoration: 'none' }}>🖤</a>                    \n                    <div style={{ flexGrow: 1 }} />\n                    <a style={{ flexGrow: 0 }} href=\"/\">home</a>                   \n                    <div style={{ flexGrow: 1 }} />\n                    <a style={{ flexGrow: 0 }} href=\"/?page=index\">index</a>\n                    <div style={{ flexGrow: 50 }} />\n                </div>\n            </div>\n            <div style={{\n                display: 'flex',\n                flexDirection: 'column',\n                minHeight: 'calc(100vh - 120px)'\n            }}\n            >\n                {children}\n            </div>\n            <div style={{\n                minHeight: '120px',\n                padding: '12px 2rem 6px',\n                backgroundColor: '#ACF',\n            }}>\n                <div>\n                    Twitter: <a href=\"https://twitter.com/RidleyWinters\">RidleyWinters</a>\n                </div>\n                <div>\n                    Favicon designed by\n                    {' '}<a href=\"https://www.flaticon.com/authors/good-ware\">Good Ware</a>{' '}\n                    available at\n                    {' '}<a href=\"https://www.flaticon.com/free-icon/woodland_2933738?term=landscape&page=1&position=\">flaticon</a>.\n                </div>\n            </div>\n        </div>\n    );\n}\n\n\nfunction RelatedPages({ database, page }) {\n\n    const pages = _.keyBy(database.pages, 'id');\n\n    // This absurd functional chain is taking the set of keywords on this\n    // page and unioning it with the set of pages that also have that keyword.\n    const related = _.chain(database.index_words)\n        .map((list, word) => {\n            for (let i = 0; i < list.length; i++) {\n                if (list[i] === page.id) {\n                    return word;\n                }\n            }\n            return null;\n        })\n        .compact()\n        .sort()\n        .uniq()\n        .map((word) => database.index_words[word])\n        .flatten()\n        .compact()\n        .sort()\n        .filter((id) => id !== page.id)\n        .uniq()\n        .value();\n\n    return (\n        <div\n            style={{\n                margin: '8rem 0 2rem'\n            }}\n        >\n            <h3>Similar pages</h3>\n            <div>\n                {_.map(related, (id, index) => (\n                    <span key={id}>\n                        <a href={`/?page=${id}`}>{pages[id].title}</a>\n                        {index + 1 < related.length\n                            ?\n                            <span style={{ paddingRight: '0.5rem' }}>,</span>\n                            :\n                            null\n                        }\n                    </span>\n                ))}\n            </div>\n        </div>\n    );\n}\n\nexport default function PageLayout({ \n    database,\n    page,\n    children ,\n}) {\n    \n    return (\n        <Outer>\n            <div\n                style={{\n                    display: 'flex',\n                    flexDirection: 'column',\n                    flexGrow: 1,\n                    margin: '0 auto',\n                    maxWidth: '80rem',                    \n                }}\n            >\n                <div\n                    style={{\n                        flexGrow: 1,\n                    }}\n                >\n                    {children}                    \n                </div>\n                <RelatedPages database={database} page={page} />\n            </div>            \n        </Outer>\n    );\n}\n\n",
+            "parsed": "(function() {\n\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = PageLayout;\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction Outer({\n  children\n}) {\n  return /*#__PURE__*/_react.default.createElement(\"div\", null, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      padding: '12px 2rem 6px',\n      backgroundColor: '#ACF'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      flexDirection: 'row',\n      maxWidth: '80rem',\n      margin: '0 auto'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://blacklivesmatter.com/\",\n    style: {\n      textDecoration: 'none'\n    }\n  }, \"\\uD83D\\uDDA4\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 1\n    }\n  }), /*#__PURE__*/_react.default.createElement(\"a\", {\n    style: {\n      flexGrow: 0\n    },\n    href: \"/\"\n  }, \"home\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 1\n    }\n  }), /*#__PURE__*/_react.default.createElement(\"a\", {\n    style: {\n      flexGrow: 0\n    },\n    href: \"/?page=index\"\n  }, \"index\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 50\n    }\n  }))), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      flexDirection: 'column',\n      minHeight: 'calc(100vh - 120px)'\n    }\n  }, children), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      minHeight: '120px',\n      padding: '12px 2rem 6px',\n      backgroundColor: '#ACF'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", null, \"Twitter: \", /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://twitter.com/RidleyWinters\"\n  }, \"RidleyWinters\")), /*#__PURE__*/_react.default.createElement(\"div\", null, \"Favicon designed by\", ' ', /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://www.flaticon.com/authors/good-ware\"\n  }, \"Good Ware\"), ' ', \"available at\", ' ', /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://www.flaticon.com/free-icon/woodland_2933738?term=landscape&page=1&position=\"\n  }, \"flaticon\"), \".\")));\n}\n\nfunction RelatedPages({\n  database,\n  page\n}) {\n  const pages = _.keyBy(database.pages, 'id'); // This absurd functional chain is taking the set of keywords on this\n  // page and unioning it with the set of pages that also have that keyword.\n\n\n  const related = _.chain(database.index_words).map((list, word) => {\n    for (let i = 0; i < list.length; i++) {\n      if (list[i] === page.id) {\n        return word;\n      }\n    }\n\n    return null;\n  }).compact().sort().uniq().map(word => database.index_words[word]).flatten().compact().sort().filter(id => id !== page.id).uniq().value();\n\n  return /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      margin: '8rem 0 2rem'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"h3\", null, \"Similar pages\"), /*#__PURE__*/_react.default.createElement(\"div\", null, _.map(related, (id, index) => /*#__PURE__*/_react.default.createElement(\"span\", {\n    key: id\n  }, /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: `/?page=${id}`\n  }, pages[id].title), index + 1 < related.length ? /*#__PURE__*/_react.default.createElement(\"span\", {\n    style: {\n      paddingRight: '0.5rem'\n    }\n  }, \",\") : null))));\n}\n\nfunction PageLayout({\n  database,\n  page,\n  children\n}) {\n  return /*#__PURE__*/_react.default.createElement(Outer, null, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      flexDirection: 'column',\n      flexGrow: 1,\n      margin: '0 auto',\n      maxWidth: '80rem'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 1\n    }\n  }, children), /*#__PURE__*/_react.default.createElement(RelatedPages, {\n    database: database,\n    page: page\n  })));\n}\n})()"
         },
         {
             "filename": "section.jsx",
@@ -24048,6 +24238,10 @@
         "world": [
             "example_user_stories",
             "home"
+        ],
+        "adventure": [
+            "example_user_stories",
+            "kestrel"
         ],
         "easy": [
             "example_user_stories",
@@ -24121,6 +24315,7 @@
         "at": [
             "creating_user_stories",
             "example_user_stories",
+            "kestrel",
             "rust_raytracer",
             "sea"
         ],
@@ -24566,6 +24761,7 @@
         "page": [
             "data_table",
             "index",
+            "kestrel",
             "layouts",
             "sea",
             "test-wikilinks"
@@ -24573,6 +24769,32 @@
         "index": [
             "index",
             "sea"
+        ],
+        "just": [
+            "creating_user_stories",
+            "kestrel"
+        ],
+        "idea": [
+            "kestrel",
+            "sea"
+        ],
+        "point": [
+            "kestrel",
+            "sea"
+        ],
+        "will": [
+            "common_user_stories",
+            "creating_user_stories",
+            "data_objects",
+            "kestrel",
+            "sea"
+        ],
+        "time": [
+            "common_user_stories",
+            "creating_user_stories",
+            "data_objects",
+            "kestrel",
+            "rust_producer_consumer"
         ],
         "changelog": [
             "changelog_tips",
@@ -24711,12 +24933,6 @@
             "creating_user_stories",
             "data_table"
         ],
-        "time": [
-            "common_user_stories",
-            "creating_user_stories",
-            "data_objects",
-            "rust_producer_consumer"
-        ],
         "try": [
             "common_user_stories",
             "creating_user_stories",
@@ -24727,12 +24943,6 @@
         "value": [
             "common_user_stories",
             "creating_user_stories"
-        ],
-        "will": [
-            "common_user_stories",
-            "creating_user_stories",
-            "data_objects",
-            "sea"
         ],
         "see": [
             "common_user_stories",
@@ -24966,14 +25176,6 @@
         "out": [
             "creating_user_stories",
             "data_table",
-            "rust_raytracer",
-            "sea"
-        ],
-        "an": [
-            "creating_user_stories",
-            "data_objects",
-            "data_table",
-            "rust_producer_consumer",
             "rust_raytracer",
             "sea"
         ],

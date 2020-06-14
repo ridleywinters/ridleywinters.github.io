@@ -23,9 +23,12 @@ function Outer({ children }) {
                 </div>
             </div>
             <div style={{
+                display: 'flex',
+                flexDirection: 'column',
                 minHeight: 'calc(100vh - 120px)'
             }}
-            >{children}
+            >
+                {children}
             </div>
             <div style={{
                 minHeight: '120px',
@@ -46,24 +49,83 @@ function Outer({ children }) {
     );
 }
 
-export default function PageLayout({ children }) {
+
+function RelatedPages({ database, page }) {
+
+    const pages = _.keyBy(database.pages, 'id');
+
+    // This absurd functional chain is taking the set of keywords on this
+    // page and unioning it with the set of pages that also have that keyword.
+    const related = _.chain(database.index_words)
+        .map((list, word) => {
+            for (let i = 0; i < list.length; i++) {
+                if (list[i] === page.id) {
+                    return word;
+                }
+            }
+            return null;
+        })
+        .compact()
+        .sort()
+        .uniq()
+        .map((word) => database.index_words[word])
+        .flatten()
+        .compact()
+        .sort()
+        .filter((id) => id !== page.id)
+        .uniq()
+        .value();
+
+    return (
+        <div
+            style={{
+                margin: '8rem 0 2rem'
+            }}
+        >
+            <h3>Similar pages</h3>
+            <div>
+                {_.map(related, (id, index) => (
+                    <span key={id}>
+                        <a href={`/?page=${id}`}>{pages[id].title}</a>
+                        {index + 1 < related.length
+                            ?
+                            <span style={{ paddingRight: '0.5rem' }}>,</span>
+                            :
+                            null
+                        }
+                    </span>
+                ))}
+            </div>
+        </div>
+    );
+}
+
+export default function PageLayout({ 
+    database,
+    page,
+    children ,
+}) {
     
     return (
         <Outer>
             <div
                 style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    flexGrow: 1,
                     margin: '0 auto',
-                    maxWidth: '80rem',
+                    maxWidth: '80rem',                    
                 }}
             >
                 <div
                     style={{
-                        margin: '0 2rem',
+                        flexGrow: 1,
                     }}
                 >
-                    {children}
+                    {children}                    
                 </div>
-            </div>
+                <RelatedPages database={database} page={page} />
+            </div>            
         </Outer>
     );
 }

@@ -109,55 +109,6 @@ function MDXParagraph({ children }) {
     )
 }
 
-function RelatedArticles({ database, page }) {
-
-    const pages = _.keyBy(database.pages, 'id');
-
-    // This absurd functional chain is taking the set of keywords on this
-    // page and unioning it with the set of pages that also have that keyword.
-    const related = _.chain(database.index_words)
-        .map((list, word) => {
-            for (let i = 0; i < list.length; i++) {
-                if (list[i] === page.id) {
-                    return word;
-                }
-            }
-            return null;
-        })
-        .compact()
-        .sort()
-        .uniq()
-        .map((word) => database.index_words[word])
-        .flatten()
-        .compact()
-        .sort()
-        .filter((id) => id !== page.id)
-        .uniq()
-        .value();
-
-    return (
-        <div
-            style={{
-                margin: '8rem 0 2rem'
-            }}
-        >
-            <h3>Similar pages</h3>
-            <div>
-                {_.map(related, (id, index) => (
-                    <span key={id}>
-                        <MDXLink href={`/?page=${id}`}>{pages[id].title}</MDXLink>
-                        {index + 1 < related.length
-                            ?
-                            <span style={{ paddingRight: '0.5rem' }}>,</span>
-                            :
-                            null
-                        }
-                    </span>
-                ))}
-            </div>
-        </div>
-    );
-}
 
 function MDXObject({
     database,
@@ -368,14 +319,22 @@ export default function MDXPage({
     database,
     page,
 }) {
-    const Layout = database.index.rendererByName.PageLayout || React.Fragment;
+    
+    let Layout = database.index.rendererByName.PageLayout
+    let layoutProps ={};
+    if (Layout) {
+        layoutProps = {
+            database, page
+        }
+    } else {
+        Layout = React.Fragment;
+    }
 
     document.title = page.title;
 
     return (
-        <Layout>
+        <Layout {...layoutProps}>
             <div>{renderComponents(database, page.ast, page)}</div>
-            <RelatedArticles database={database} page={page} />
         </Layout>
     )
 }
