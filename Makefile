@@ -41,7 +41,9 @@ shutdown() {
 }
 trap "shutdown" SIGINT SIGTERM
 
+make -C ${MONOREPO_ROOT}/source/node/cmd/sea build
 npx nodemon --watch data --watch ${MONOREPO_ROOT}/source/node/cmd/sea/src --ext js,jsx,mdx --exec make build-database &
+
 npx nodemon --watch data --watch data --ext js,jsx,mdx --exec make build-database &
 
 sleep 1
