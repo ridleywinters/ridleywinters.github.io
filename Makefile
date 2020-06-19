@@ -11,9 +11,6 @@ ensure: node_modules
 build: ensure
 	npx sea build data .
 
-publish:
-	@echo "NOT YET IMPLEMENTED"
-
 dev:
 	@echo "NOT YET IMPLEMENTED"
 
