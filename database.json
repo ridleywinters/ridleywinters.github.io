@@ -5376,8 +5376,9 @@
                                         "type": "paragraph",
                                         "children": [
                                             {
-                                                "type": "text",
-                                                "value": "Raiment",
+                                                "type": "wikilink",
+                                                "id": "raiment",
+                                                "text": "Raiment",
                                                 "position": {
                                                     "start": {
                                                         "line": 40,
@@ -5386,8 +5387,8 @@
                                                     },
                                                     "end": {
                                                         "line": 40,
-                                                        "column": 10,
-                                                        "offset": 943
+                                                        "column": 22,
+                                                        "offset": 955
                                                     },
                                                     "indent": []
                                                 }
@@ -5401,8 +5402,8 @@
                                             },
                                             "end": {
                                                 "line": 40,
-                                                "column": 10,
-                                                "offset": 943
+                                                "column": 22,
+                                                "offset": 955
                                             },
                                             "indent": []
                                         }
@@ -5416,8 +5417,8 @@
                                     },
                                     "end": {
                                         "line": 40,
-                                        "column": 10,
-                                        "offset": 943
+                                        "column": 22,
+                                        "offset": 955
                                     },
                                     "indent": []
                                 }
@@ -5431,8 +5432,8 @@
                             },
                             "end": {
                                 "line": 40,
-                                "column": 10,
-                                "offset": 943
+                                "column": 22,
+                                "offset": 955
                             },
                             "indent": [
                                 1,
@@ -5451,12 +5452,12 @@
                                     "start": {
                                         "line": 42,
                                         "column": 5,
-                                        "offset": 949
+                                        "offset": 961
                                     },
                                     "end": {
                                         "line": 42,
                                         "column": 12,
-                                        "offset": 956
+                                        "offset": 968
                                     },
                                     "indent": []
                                 }
@@ -5466,12 +5467,12 @@
                             "start": {
                                 "line": 42,
                                 "column": 1,
-                                "offset": 945
+                                "offset": 957
                             },
                             "end": {
                                 "line": 42,
                                 "column": 12,
-                                "offset": 956
+                                "offset": 968
                             },
                             "indent": []
                         }
@@ -5487,12 +5488,12 @@
                                     "start": {
                                         "line": 45,
                                         "column": 5,
-                                        "offset": 963
+                                        "offset": 975
                                     },
                                     "end": {
                                         "line": 45,
                                         "column": 28,
-                                        "offset": 986
+                                        "offset": 998
                                     },
                                     "indent": []
                                 }
@@ -5502,12 +5503,12 @@
                             "start": {
                                 "line": 45,
                                 "column": 1,
-                                "offset": 959
+                                "offset": 971
                             },
                             "end": {
                                 "line": 45,
                                 "column": 28,
-                                "offset": 986
+                                "offset": 998
                             },
                             "indent": []
                         }
@@ -5523,12 +5524,12 @@
                                     "start": {
                                         "line": 47,
                                         "column": 5,
-                                        "offset": 992
+                                        "offset": 1004
                                     },
                                     "end": {
                                         "line": 47,
                                         "column": 13,
-                                        "offset": 1000
+                                        "offset": 1012
                                     },
                                     "indent": []
                                 }
@@ -5538,12 +5539,12 @@
                             "start": {
                                 "line": 47,
                                 "column": 1,
-                                "offset": 988
+                                "offset": 1000
                             },
                             "end": {
                                 "line": 47,
                                 "column": 13,
-                                "offset": 1000
+                                "offset": 1012
                             },
                             "indent": []
                         }
@@ -5570,12 +5571,12 @@
                                                     "start": {
                                                         "line": 49,
                                                         "column": 3,
-                                                        "offset": 1004
+                                                        "offset": 1016
                                                     },
                                                     "end": {
                                                         "line": 49,
                                                         "column": 31,
-                                                        "offset": 1032
+                                                        "offset": 1044
                                                     },
                                                     "indent": []
                                                 }
@@ -5585,12 +5586,12 @@
                                             "start": {
                                                 "line": 49,
                                                 "column": 3,
-                                                "offset": 1004
+                                                "offset": 1016
                                             },
                                             "end": {
                                                 "line": 49,
                                                 "column": 31,
-                                                "offset": 1032
+                                                "offset": 1044
                                             },
                                             "indent": []
                                         }
@@ -5600,12 +5601,12 @@
                                     "start": {
                                         "line": 49,
                                         "column": 1,
-                                        "offset": 1002
+                                        "offset": 1014
                                     },
                                     "end": {
                                         "line": 49,
                                         "column": 31,
-                                        "offset": 1032
+                                        "offset": 1044
                                     },
                                     "indent": []
                                 }
@@ -5615,12 +5616,12 @@
                             "start": {
                                 "line": 49,
                                 "column": 1,
-                                "offset": 1002
+                                "offset": 1014
                             },
                             "end": {
                                 "line": 49,
                                 "column": 31,
-                                "offset": 1032
+                                "offset": 1044
                             },
                             "indent": []
                         }
@@ -5635,11 +5636,11 @@
                     "end": {
                         "line": 49,
                         "column": 31,
-                        "offset": 1032
+                        "offset": 1044
                     }
                 }
             },
-            "string": "title: Ridley Winter's Homepage\n\n# Hello World!\n\nI'm Ridley Winters. This is my learn-by-doing website (built using TODO-WIKILINK) that I use to share some my software engineering hobby projects and tools. I'm a former product manager and now part-time software engineer. I am focused on learning more about effective web development as well as learning Rust - and a small side obsession with graphics via Vulkan and WebGL.\n\nI'm still learning so please take everything you find on this site with a grain of salt.\n\n### How To's\n\n<ul>\n{_.map(database.index.tag[\"how-to\"], (page) => (\n    <li key={page.id}>\n        <a href={`/?page=${page.id}`}>{page.title}</a>\n    </li>\n))}\n</ul>\n\n### Exercises\n\n-   TODO-WIKILINK\n-   TODO-WIKILINK\n-   TODO-WIKILINK\n-   TODO-WIKILINK\n\n### Product Thoughts\n\n-   TODO-WIKILINK\n-   TODO-WIKILINK\n\n### Hobby Projects\n\n-   TODO-WIKILINK\n-   TODO-WIKILINK\n-   Raiment\n\n### Musings\n\n### Every Day Routine (EDR)\n\n### Appendix\n\n-   TODO-WIKILINK\n",
+            "string": "title: Ridley Winter's Homepage\n\n# Hello World!\n\nI'm Ridley Winters. This is my learn-by-doing website (built using TODO-WIKILINK) that I use to share some my software engineering hobby projects and tools. I'm a former product manager and now part-time software engineer. I am focused on learning more about effective web development as well as learning Rust - and a small side obsession with graphics via Vulkan and WebGL.\n\nI'm still learning so please take everything you find on this site with a grain of salt.\n\n### How To's\n\n<ul>\n{_.map(database.index.tag[\"how-to\"], (page) => (\n    <li key={page.id}>\n        <a href={`/?page=${page.id}`}>{page.title}</a>\n    </li>\n))}\n</ul>\n\n### Exercises\n\n-   TODO-WIKILINK\n-   TODO-WIKILINK\n-   TODO-WIKILINK\n-   TODO-WIKILINK\n\n### Product Thoughts\n\n-   TODO-WIKILINK\n-   TODO-WIKILINK\n\n### Hobby Projects\n\n-   TODO-WIKILINK\n-   TODO-WIKILINK\n-   TODO-WIKILINK\n\n### Musings\n\n### Every Day Routine (EDR)\n\n### Appendix\n\n-   TODO-WIKILINK\n",
             "tags": [],
             "properties": {
                 "title": "Ridley Winter's Homepage"
