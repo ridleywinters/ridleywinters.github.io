@@ -4528,9 +4528,831 @@
             "title": "Charter"
         },
         {
-            "filename": "home.mdx",
+            "filename": "how-to-embed-a-long-script-in-a-makefile.mdx",
             "extension": "mdx",
-            "id": "home",
+            "id": "how-to-embed-a-long-script-in-a-makefile",
+            "path": [],
+            "ast": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "yaml",
+                        "value": "tags: how-to",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 3,
+                                "column": 4,
+                                "offset": 20
+                            },
+                            "indent": [
+                                1,
+                                1
+                            ]
+                        }
+                    },
+                    {
+                        "type": "heading",
+                        "depth": 1,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "How to embed a bash script inside a Makefile",
+                                "position": {
+                                    "start": {
+                                        "line": 5,
+                                        "column": 3,
+                                        "offset": 24
+                                    },
+                                    "end": {
+                                        "line": 5,
+                                        "column": 47,
+                                        "offset": 68
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 5,
+                                "column": 1,
+                                "offset": 22
+                            },
+                            "end": {
+                                "line": 5,
+                                "column": 47,
+                                "offset": 68
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "heading",
+                        "depth": 2,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Overview",
+                                "position": {
+                                    "start": {
+                                        "line": 7,
+                                        "column": 4,
+                                        "offset": 73
+                                    },
+                                    "end": {
+                                        "line": 7,
+                                        "column": 12,
+                                        "offset": 81
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 7,
+                                "column": 1,
+                                "offset": 70
+                            },
+                            "end": {
+                                "line": 7,
+                                "column": 12,
+                                "offset": 81
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Relies on Make's features:",
+                                "position": {
+                                    "start": {
+                                        "line": 9,
+                                        "column": 1,
+                                        "offset": 83
+                                    },
+                                    "end": {
+                                        "line": 9,
+                                        "column": 27,
+                                        "offset": 109
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 9,
+                                "column": 1,
+                                "offset": 83
+                            },
+                            "end": {
+                                "line": 9,
+                                "column": 27,
+                                "offset": 109
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "ordered": false,
+                        "start": null,
+                        "spread": false,
+                        "children": [
+                            {
+                                "type": "listItem",
+                                "spread": false,
+                                "checked": null,
+                                "children": [
+                                    {
+                                        "type": "paragraph",
+                                        "children": [
+                                            {
+                                                "type": "link",
+                                                "title": null,
+                                                "url": "https://www.gnu.org/software/make/manual/html_node/Multi_002dLine.html",
+                                                "children": [
+                                                    {
+                                                        "type": "inlineCode",
+                                                        "value": "define",
+                                                        "position": {
+                                                            "start": {
+                                                                "line": 11,
+                                                                "column": 4,
+                                                                "offset": 114
+                                                            },
+                                                            "end": {
+                                                                "line": 11,
+                                                                "column": 12,
+                                                                "offset": 122
+                                                            },
+                                                            "indent": []
+                                                        }
+                                                    }
+                                                ],
+                                                "position": {
+                                                    "start": {
+                                                        "line": 11,
+                                                        "column": 3,
+                                                        "offset": 113
+                                                    },
+                                                    "end": {
+                                                        "line": 11,
+                                                        "column": 85,
+                                                        "offset": 195
+                                                    },
+                                                    "indent": []
+                                                }
+                                            }
+                                        ],
+                                        "position": {
+                                            "start": {
+                                                "line": 11,
+                                                "column": 3,
+                                                "offset": 113
+                                            },
+                                            "end": {
+                                                "line": 11,
+                                                "column": 85,
+                                                "offset": 195
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 11,
+                                        "column": 1,
+                                        "offset": 111
+                                    },
+                                    "end": {
+                                        "line": 11,
+                                        "column": 85,
+                                        "offset": 195
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "listItem",
+                                "spread": false,
+                                "checked": null,
+                                "children": [
+                                    {
+                                        "type": "paragraph",
+                                        "children": [
+                                            {
+                                                "type": "link",
+                                                "title": null,
+                                                "url": "https://www.gnu.org/software/make/manual/html_node/Variables_002fRecursion.html",
+                                                "children": [
+                                                    {
+                                                        "type": "inlineCode",
+                                                        "value": "export",
+                                                        "position": {
+                                                            "start": {
+                                                                "line": 12,
+                                                                "column": 4,
+                                                                "offset": 199
+                                                            },
+                                                            "end": {
+                                                                "line": 12,
+                                                                "column": 12,
+                                                                "offset": 207
+                                                            },
+                                                            "indent": []
+                                                        }
+                                                    }
+                                                ],
+                                                "position": {
+                                                    "start": {
+                                                        "line": 12,
+                                                        "column": 3,
+                                                        "offset": 198
+                                                    },
+                                                    "end": {
+                                                        "line": 12,
+                                                        "column": 94,
+                                                        "offset": 289
+                                                    },
+                                                    "indent": []
+                                                }
+                                            }
+                                        ],
+                                        "position": {
+                                            "start": {
+                                                "line": 12,
+                                                "column": 3,
+                                                "offset": 198
+                                            },
+                                            "end": {
+                                                "line": 12,
+                                                "column": 94,
+                                                "offset": 289
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 12,
+                                        "column": 1,
+                                        "offset": 196
+                                    },
+                                    "end": {
+                                        "line": 12,
+                                        "column": 94,
+                                        "offset": 289
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 11,
+                                "column": 1,
+                                "offset": 111
+                            },
+                            "end": {
+                                "line": 12,
+                                "column": 94,
+                                "offset": 289
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "The basic concept is this:",
+                                "position": {
+                                    "start": {
+                                        "line": 14,
+                                        "column": 1,
+                                        "offset": 291
+                                    },
+                                    "end": {
+                                        "line": 14,
+                                        "column": 27,
+                                        "offset": 317
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 14,
+                                "column": 1,
+                                "offset": 291
+                            },
+                            "end": {
+                                "line": 14,
+                                "column": 27,
+                                "offset": 317
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "ordered": false,
+                        "start": null,
+                        "spread": false,
+                        "children": [
+                            {
+                                "type": "listItem",
+                                "spread": false,
+                                "checked": null,
+                                "children": [
+                                    {
+                                        "type": "paragraph",
+                                        "children": [
+                                            {
+                                                "type": "text",
+                                                "value": "Use ",
+                                                "position": {
+                                                    "start": {
+                                                        "line": 16,
+                                                        "column": 3,
+                                                        "offset": 321
+                                                    },
+                                                    "end": {
+                                                        "line": 16,
+                                                        "column": 7,
+                                                        "offset": 325
+                                                    },
+                                                    "indent": []
+                                                }
+                                            },
+                                            {
+                                                "type": "inlineCode",
+                                                "value": "define",
+                                                "position": {
+                                                    "start": {
+                                                        "line": 16,
+                                                        "column": 7,
+                                                        "offset": 325
+                                                    },
+                                                    "end": {
+                                                        "line": 16,
+                                                        "column": 15,
+                                                        "offset": 333
+                                                    },
+                                                    "indent": []
+                                                }
+                                            },
+                                            {
+                                                "type": "text",
+                                                "value": " to specify a multiline variable",
+                                                "position": {
+                                                    "start": {
+                                                        "line": 16,
+                                                        "column": 15,
+                                                        "offset": 333
+                                                    },
+                                                    "end": {
+                                                        "line": 16,
+                                                        "column": 47,
+                                                        "offset": 365
+                                                    },
+                                                    "indent": []
+                                                }
+                                            }
+                                        ],
+                                        "position": {
+                                            "start": {
+                                                "line": 16,
+                                                "column": 3,
+                                                "offset": 321
+                                            },
+                                            "end": {
+                                                "line": 16,
+                                                "column": 47,
+                                                "offset": 365
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 16,
+                                        "column": 1,
+                                        "offset": 319
+                                    },
+                                    "end": {
+                                        "line": 16,
+                                        "column": 47,
+                                        "offset": 365
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "listItem",
+                                "spread": false,
+                                "checked": null,
+                                "children": [
+                                    {
+                                        "type": "paragraph",
+                                        "children": [
+                                            {
+                                                "type": "text",
+                                                "value": "Use ",
+                                                "position": {
+                                                    "start": {
+                                                        "line": 17,
+                                                        "column": 3,
+                                                        "offset": 368
+                                                    },
+                                                    "end": {
+                                                        "line": 17,
+                                                        "column": 7,
+                                                        "offset": 372
+                                                    },
+                                                    "indent": []
+                                                }
+                                            },
+                                            {
+                                                "type": "inlineCode",
+                                                "value": "export",
+                                                "position": {
+                                                    "start": {
+                                                        "line": 17,
+                                                        "column": 7,
+                                                        "offset": 372
+                                                    },
+                                                    "end": {
+                                                        "line": 17,
+                                                        "column": 15,
+                                                        "offset": 380
+                                                    },
+                                                    "indent": []
+                                                }
+                                            },
+                                            {
+                                                "type": "text",
+                                                "value": " to ensure the multiline variable expands correct to the bash subshell",
+                                                "position": {
+                                                    "start": {
+                                                        "line": 17,
+                                                        "column": 15,
+                                                        "offset": 380
+                                                    },
+                                                    "end": {
+                                                        "line": 17,
+                                                        "column": 85,
+                                                        "offset": 450
+                                                    },
+                                                    "indent": []
+                                                }
+                                            }
+                                        ],
+                                        "position": {
+                                            "start": {
+                                                "line": 17,
+                                                "column": 3,
+                                                "offset": 368
+                                            },
+                                            "end": {
+                                                "line": 17,
+                                                "column": 85,
+                                                "offset": 450
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 17,
+                                        "column": 1,
+                                        "offset": 366
+                                    },
+                                    "end": {
+                                        "line": 17,
+                                        "column": 85,
+                                        "offset": 450
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 16,
+                                "column": 1,
+                                "offset": 319
+                            },
+                            "end": {
+                                "line": 17,
+                                "column": 85,
+                                "offset": 450
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    },
+                    {
+                        "type": "heading",
+                        "depth": 2,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Example",
+                                "position": {
+                                    "start": {
+                                        "line": 20,
+                                        "column": 4,
+                                        "offset": 456
+                                    },
+                                    "end": {
+                                        "line": 20,
+                                        "column": 11,
+                                        "offset": 463
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 20,
+                                "column": 1,
+                                "offset": 453
+                            },
+                            "end": {
+                                "line": 20,
+                                "column": 12,
+                                "offset": 464
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "In this particular example, a bash script is used to wrap running multiple background \nprocesses together into logically a single Makefile command. ",
+                                "position": {
+                                    "start": {
+                                        "line": 22,
+                                        "column": 1,
+                                        "offset": 466
+                                    },
+                                    "end": {
+                                        "line": 23,
+                                        "column": 62,
+                                        "offset": 614
+                                    },
+                                    "indent": [
+                                        1
+                                    ]
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 22,
+                                "column": 1,
+                                "offset": 466
+                            },
+                            "end": {
+                                "line": 23,
+                                "column": 62,
+                                "offset": 614
+                            },
+                            "indent": [
+                                1
+                            ]
+                        }
+                    },
+                    {
+                        "type": "code",
+                        "lang": "makefile",
+                        "meta": null,
+                        "value": "#\n# Use a bash script since we want a single make command to run multiple\n# background processes.\n#\ndefine DEV_SCRIPT\nshutdown() {\n    echo kill $(jobs -l |awk '$2 == \"|\" {print $1; next} {print $2}')\n    kill $(jobs -l |awk '$2 == \"|\" {print $1; next} {print $2}')\n    exit 0\n}\ntrap \"shutdown\" SIGINT SIGTERM\n\nnpx nodemon --watch data --ext js,jsx,mdx --exec make build-database &\n\nnpx webpack-dev-server \\\n\t\t--mode development \\\n\t\t--entry ./src/client.jsx \\\n\t\t--output-public-path dist \\\n\t\t--output-filename client.bundle.js &\nwait\nendef\nexport DEV_SCRIPT\n\ndev:\n\t@bash -c \"$$DEV_SCRIPT\"",
+                        "position": {
+                            "start": {
+                                "line": 25,
+                                "column": 1,
+                                "offset": 616
+                            },
+                            "end": {
+                                "line": 51,
+                                "column": 4,
+                                "offset": 1220
+                            },
+                            "indent": [
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1
+                            ]
+                        }
+                    },
+                    {
+                        "type": "heading",
+                        "depth": 2,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "References",
+                                "position": {
+                                    "start": {
+                                        "line": 53,
+                                        "column": 4,
+                                        "offset": 1225
+                                    },
+                                    "end": {
+                                        "line": 53,
+                                        "column": 14,
+                                        "offset": 1235
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 53,
+                                "column": 1,
+                                "offset": 1222
+                            },
+                            "end": {
+                                "line": 53,
+                                "column": 14,
+                                "offset": 1235
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "ordered": false,
+                        "start": null,
+                        "spread": false,
+                        "children": [
+                            {
+                                "type": "listItem",
+                                "spread": false,
+                                "checked": null,
+                                "children": [
+                                    {
+                                        "type": "paragraph",
+                                        "children": [
+                                            {
+                                                "type": "link",
+                                                "title": null,
+                                                "url": "https://stackoverflow.com/questions/7281395/output-multiline-variable-to-a-file-with-gnu-make",
+                                                "children": [
+                                                    {
+                                                        "type": "text",
+                                                        "value": "https://stackoverflow.com/questions/7281395/output-multiline-variable-to-a-file-with-gnu-make",
+                                                        "position": {
+                                                            "start": {
+                                                                "line": 55,
+                                                                "column": 3,
+                                                                "offset": 1239
+                                                            },
+                                                            "end": {
+                                                                "line": 55,
+                                                                "column": 96,
+                                                                "offset": 1332
+                                                            },
+                                                            "indent": []
+                                                        }
+                                                    }
+                                                ],
+                                                "position": {
+                                                    "start": {
+                                                        "line": 55,
+                                                        "column": 3,
+                                                        "offset": 1239
+                                                    },
+                                                    "end": {
+                                                        "line": 55,
+                                                        "column": 96,
+                                                        "offset": 1332
+                                                    },
+                                                    "indent": []
+                                                }
+                                            }
+                                        ],
+                                        "position": {
+                                            "start": {
+                                                "line": 55,
+                                                "column": 3,
+                                                "offset": 1239
+                                            },
+                                            "end": {
+                                                "line": 55,
+                                                "column": 96,
+                                                "offset": 1332
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 55,
+                                        "column": 1,
+                                        "offset": 1237
+                                    },
+                                    "end": {
+                                        "line": 55,
+                                        "column": 96,
+                                        "offset": 1332
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 55,
+                                "column": 1,
+                                "offset": 1237
+                            },
+                            "end": {
+                                "line": 55,
+                                "column": 96,
+                                "offset": 1332
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 55,
+                        "column": 96,
+                        "offset": 1332
+                    }
+                }
+            },
+            "string": "tags: how-to\n\n# How to embed a bash script inside a Makefile\n\n## Overview\n\nRelies on Make's features:\n\n-   [`define`](https://www.gnu.org/software/make/manual/html_node/Multi_002dLine.html)\n-   [`export`](https://www.gnu.org/software/make/manual/html_node/Variables_002fRecursion.html)\n\nThe basic concept is this:\n\n-   Use `define` to specify a multiline variable\n-   Use `export` to ensure the multiline variable expands correct to the bash subshell\n\n## Example\n\nIn this particular example, a bash script is used to wrap running multiple background \nprocesses together into logically a single Makefile command. \n\n```makefile\n#\n# Use a bash script since we want a single make command to run multiple\n# background processes.\n#\ndefine DEV_SCRIPT\nshutdown() {\n    echo kill $(jobs -l |awk '$2 == \"|\" {print $1; next} {print $2}')\n    kill $(jobs -l |awk '$2 == \"|\" {print $1; next} {print $2}')\n    exit 0\n}\ntrap \"shutdown\" SIGINT SIGTERM\n\nnpx nodemon --watch data --ext js,jsx,mdx --exec make build-database &\n\nnpx webpack-dev-server \\\n\t\t--mode development \\\n\t\t--entry ./src/client.jsx \\\n\t\t--output-public-path dist \\\n\t\t--output-filename client.bundle.js &\nwait\nendef\nexport DEV_SCRIPT\n\ndev:\n\t@bash -c \"$$DEV_SCRIPT\"\n```\n\n## References\n\n-   <https://stackoverflow.com/questions/7281395/output-multiline-variable-to-a-file-with-gnu-make>\n",
+            "tags": [
+                "how-to"
+            ],
+            "properties": {
+                "tags": [
+                    "how-to"
+                ]
+            },
+            "title": "How to embed a bash script inside a Makefile"
+        },
+        {
+            "filename": "index.mdx",
+            "extension": "mdx",
+            "id": "index",
             "path": [],
             "ast": {
                 "type": "root",
@@ -5565,7 +6387,7 @@
                                         "children": [
                                             {
                                                 "type": "wikilink",
-                                                "id": "index",
+                                                "id": "page_index",
                                                 "text": "Index of all pages",
                                                 "position": {
                                                     "start": {
@@ -5575,8 +6397,8 @@
                                                     },
                                                     "end": {
                                                         "line": 49,
-                                                        "column": 31,
-                                                        "offset": 1044
+                                                        "column": 36,
+                                                        "offset": 1049
                                                     },
                                                     "indent": []
                                                 }
@@ -5590,8 +6412,8 @@
                                             },
                                             "end": {
                                                 "line": 49,
-                                                "column": 31,
-                                                "offset": 1044
+                                                "column": 36,
+                                                "offset": 1049
                                             },
                                             "indent": []
                                         }
@@ -5605,8 +6427,8 @@
                                     },
                                     "end": {
                                         "line": 49,
-                                        "column": 31,
-                                        "offset": 1044
+                                        "column": 36,
+                                        "offset": 1049
                                     },
                                     "indent": []
                                 }
@@ -5620,8 +6442,8 @@
                             },
                             "end": {
                                 "line": 49,
-                                "column": 31,
-                                "offset": 1044
+                                "column": 36,
+                                "offset": 1049
                             },
                             "indent": []
                         }
@@ -5635,8 +6457,8 @@
                     },
                     "end": {
                         "line": 49,
-                        "column": 31,
-                        "offset": 1044
+                        "column": 36,
+                        "offset": 1049
                     }
                 }
             },
@@ -5646,936 +6468,6 @@
                 "title": "Ridley Winter's Homepage"
             },
             "title": "Ridley Winter's Homepage"
-        },
-        {
-            "filename": "how-to-embed-a-long-script-in-a-makefile.mdx",
-            "extension": "mdx",
-            "id": "how-to-embed-a-long-script-in-a-makefile",
-            "path": [],
-            "ast": {
-                "type": "root",
-                "children": [
-                    {
-                        "type": "yaml",
-                        "value": "tags: how-to",
-                        "position": {
-                            "start": {
-                                "line": 1,
-                                "column": 1,
-                                "offset": 0
-                            },
-                            "end": {
-                                "line": 3,
-                                "column": 4,
-                                "offset": 20
-                            },
-                            "indent": [
-                                1,
-                                1
-                            ]
-                        }
-                    },
-                    {
-                        "type": "heading",
-                        "depth": 1,
-                        "children": [
-                            {
-                                "type": "text",
-                                "value": "How to embed a bash script inside a Makefile",
-                                "position": {
-                                    "start": {
-                                        "line": 5,
-                                        "column": 3,
-                                        "offset": 24
-                                    },
-                                    "end": {
-                                        "line": 5,
-                                        "column": 47,
-                                        "offset": 68
-                                    },
-                                    "indent": []
-                                }
-                            }
-                        ],
-                        "position": {
-                            "start": {
-                                "line": 5,
-                                "column": 1,
-                                "offset": 22
-                            },
-                            "end": {
-                                "line": 5,
-                                "column": 47,
-                                "offset": 68
-                            },
-                            "indent": []
-                        }
-                    },
-                    {
-                        "type": "heading",
-                        "depth": 2,
-                        "children": [
-                            {
-                                "type": "text",
-                                "value": "Overview",
-                                "position": {
-                                    "start": {
-                                        "line": 7,
-                                        "column": 4,
-                                        "offset": 73
-                                    },
-                                    "end": {
-                                        "line": 7,
-                                        "column": 12,
-                                        "offset": 81
-                                    },
-                                    "indent": []
-                                }
-                            }
-                        ],
-                        "position": {
-                            "start": {
-                                "line": 7,
-                                "column": 1,
-                                "offset": 70
-                            },
-                            "end": {
-                                "line": 7,
-                                "column": 12,
-                                "offset": 81
-                            },
-                            "indent": []
-                        }
-                    },
-                    {
-                        "type": "paragraph",
-                        "children": [
-                            {
-                                "type": "text",
-                                "value": "Relies on Make's features:",
-                                "position": {
-                                    "start": {
-                                        "line": 9,
-                                        "column": 1,
-                                        "offset": 83
-                                    },
-                                    "end": {
-                                        "line": 9,
-                                        "column": 27,
-                                        "offset": 109
-                                    },
-                                    "indent": []
-                                }
-                            }
-                        ],
-                        "position": {
-                            "start": {
-                                "line": 9,
-                                "column": 1,
-                                "offset": 83
-                            },
-                            "end": {
-                                "line": 9,
-                                "column": 27,
-                                "offset": 109
-                            },
-                            "indent": []
-                        }
-                    },
-                    {
-                        "type": "list",
-                        "ordered": false,
-                        "start": null,
-                        "spread": false,
-                        "children": [
-                            {
-                                "type": "listItem",
-                                "spread": false,
-                                "checked": null,
-                                "children": [
-                                    {
-                                        "type": "paragraph",
-                                        "children": [
-                                            {
-                                                "type": "link",
-                                                "title": null,
-                                                "url": "https://www.gnu.org/software/make/manual/html_node/Multi_002dLine.html",
-                                                "children": [
-                                                    {
-                                                        "type": "inlineCode",
-                                                        "value": "define",
-                                                        "position": {
-                                                            "start": {
-                                                                "line": 11,
-                                                                "column": 4,
-                                                                "offset": 114
-                                                            },
-                                                            "end": {
-                                                                "line": 11,
-                                                                "column": 12,
-                                                                "offset": 122
-                                                            },
-                                                            "indent": []
-                                                        }
-                                                    }
-                                                ],
-                                                "position": {
-                                                    "start": {
-                                                        "line": 11,
-                                                        "column": 3,
-                                                        "offset": 113
-                                                    },
-                                                    "end": {
-                                                        "line": 11,
-                                                        "column": 85,
-                                                        "offset": 195
-                                                    },
-                                                    "indent": []
-                                                }
-                                            }
-                                        ],
-                                        "position": {
-                                            "start": {
-                                                "line": 11,
-                                                "column": 3,
-                                                "offset": 113
-                                            },
-                                            "end": {
-                                                "line": 11,
-                                                "column": 85,
-                                                "offset": 195
-                                            },
-                                            "indent": []
-                                        }
-                                    }
-                                ],
-                                "position": {
-                                    "start": {
-                                        "line": 11,
-                                        "column": 1,
-                                        "offset": 111
-                                    },
-                                    "end": {
-                                        "line": 11,
-                                        "column": 85,
-                                        "offset": 195
-                                    },
-                                    "indent": []
-                                }
-                            },
-                            {
-                                "type": "listItem",
-                                "spread": false,
-                                "checked": null,
-                                "children": [
-                                    {
-                                        "type": "paragraph",
-                                        "children": [
-                                            {
-                                                "type": "link",
-                                                "title": null,
-                                                "url": "https://www.gnu.org/software/make/manual/html_node/Variables_002fRecursion.html",
-                                                "children": [
-                                                    {
-                                                        "type": "inlineCode",
-                                                        "value": "export",
-                                                        "position": {
-                                                            "start": {
-                                                                "line": 12,
-                                                                "column": 4,
-                                                                "offset": 199
-                                                            },
-                                                            "end": {
-                                                                "line": 12,
-                                                                "column": 12,
-                                                                "offset": 207
-                                                            },
-                                                            "indent": []
-                                                        }
-                                                    }
-                                                ],
-                                                "position": {
-                                                    "start": {
-                                                        "line": 12,
-                                                        "column": 3,
-                                                        "offset": 198
-                                                    },
-                                                    "end": {
-                                                        "line": 12,
-                                                        "column": 94,
-                                                        "offset": 289
-                                                    },
-                                                    "indent": []
-                                                }
-                                            }
-                                        ],
-                                        "position": {
-                                            "start": {
-                                                "line": 12,
-                                                "column": 3,
-                                                "offset": 198
-                                            },
-                                            "end": {
-                                                "line": 12,
-                                                "column": 94,
-                                                "offset": 289
-                                            },
-                                            "indent": []
-                                        }
-                                    }
-                                ],
-                                "position": {
-                                    "start": {
-                                        "line": 12,
-                                        "column": 1,
-                                        "offset": 196
-                                    },
-                                    "end": {
-                                        "line": 12,
-                                        "column": 94,
-                                        "offset": 289
-                                    },
-                                    "indent": []
-                                }
-                            }
-                        ],
-                        "position": {
-                            "start": {
-                                "line": 11,
-                                "column": 1,
-                                "offset": 111
-                            },
-                            "end": {
-                                "line": 12,
-                                "column": 94,
-                                "offset": 289
-                            },
-                            "indent": [
-                                1
-                            ]
-                        }
-                    },
-                    {
-                        "type": "paragraph",
-                        "children": [
-                            {
-                                "type": "text",
-                                "value": "The basic concept is this:",
-                                "position": {
-                                    "start": {
-                                        "line": 14,
-                                        "column": 1,
-                                        "offset": 291
-                                    },
-                                    "end": {
-                                        "line": 14,
-                                        "column": 27,
-                                        "offset": 317
-                                    },
-                                    "indent": []
-                                }
-                            }
-                        ],
-                        "position": {
-                            "start": {
-                                "line": 14,
-                                "column": 1,
-                                "offset": 291
-                            },
-                            "end": {
-                                "line": 14,
-                                "column": 27,
-                                "offset": 317
-                            },
-                            "indent": []
-                        }
-                    },
-                    {
-                        "type": "list",
-                        "ordered": false,
-                        "start": null,
-                        "spread": false,
-                        "children": [
-                            {
-                                "type": "listItem",
-                                "spread": false,
-                                "checked": null,
-                                "children": [
-                                    {
-                                        "type": "paragraph",
-                                        "children": [
-                                            {
-                                                "type": "text",
-                                                "value": "Use ",
-                                                "position": {
-                                                    "start": {
-                                                        "line": 16,
-                                                        "column": 3,
-                                                        "offset": 321
-                                                    },
-                                                    "end": {
-                                                        "line": 16,
-                                                        "column": 7,
-                                                        "offset": 325
-                                                    },
-                                                    "indent": []
-                                                }
-                                            },
-                                            {
-                                                "type": "inlineCode",
-                                                "value": "define",
-                                                "position": {
-                                                    "start": {
-                                                        "line": 16,
-                                                        "column": 7,
-                                                        "offset": 325
-                                                    },
-                                                    "end": {
-                                                        "line": 16,
-                                                        "column": 15,
-                                                        "offset": 333
-                                                    },
-                                                    "indent": []
-                                                }
-                                            },
-                                            {
-                                                "type": "text",
-                                                "value": " to specify a multiline variable",
-                                                "position": {
-                                                    "start": {
-                                                        "line": 16,
-                                                        "column": 15,
-                                                        "offset": 333
-                                                    },
-                                                    "end": {
-                                                        "line": 16,
-                                                        "column": 47,
-                                                        "offset": 365
-                                                    },
-                                                    "indent": []
-                                                }
-                                            }
-                                        ],
-                                        "position": {
-                                            "start": {
-                                                "line": 16,
-                                                "column": 3,
-                                                "offset": 321
-                                            },
-                                            "end": {
-                                                "line": 16,
-                                                "column": 47,
-                                                "offset": 365
-                                            },
-                                            "indent": []
-                                        }
-                                    }
-                                ],
-                                "position": {
-                                    "start": {
-                                        "line": 16,
-                                        "column": 1,
-                                        "offset": 319
-                                    },
-                                    "end": {
-                                        "line": 16,
-                                        "column": 47,
-                                        "offset": 365
-                                    },
-                                    "indent": []
-                                }
-                            },
-                            {
-                                "type": "listItem",
-                                "spread": false,
-                                "checked": null,
-                                "children": [
-                                    {
-                                        "type": "paragraph",
-                                        "children": [
-                                            {
-                                                "type": "text",
-                                                "value": "Use ",
-                                                "position": {
-                                                    "start": {
-                                                        "line": 17,
-                                                        "column": 3,
-                                                        "offset": 368
-                                                    },
-                                                    "end": {
-                                                        "line": 17,
-                                                        "column": 7,
-                                                        "offset": 372
-                                                    },
-                                                    "indent": []
-                                                }
-                                            },
-                                            {
-                                                "type": "inlineCode",
-                                                "value": "export",
-                                                "position": {
-                                                    "start": {
-                                                        "line": 17,
-                                                        "column": 7,
-                                                        "offset": 372
-                                                    },
-                                                    "end": {
-                                                        "line": 17,
-                                                        "column": 15,
-                                                        "offset": 380
-                                                    },
-                                                    "indent": []
-                                                }
-                                            },
-                                            {
-                                                "type": "text",
-                                                "value": " to ensure the multiline variable expands correct to the bash subshell",
-                                                "position": {
-                                                    "start": {
-                                                        "line": 17,
-                                                        "column": 15,
-                                                        "offset": 380
-                                                    },
-                                                    "end": {
-                                                        "line": 17,
-                                                        "column": 85,
-                                                        "offset": 450
-                                                    },
-                                                    "indent": []
-                                                }
-                                            }
-                                        ],
-                                        "position": {
-                                            "start": {
-                                                "line": 17,
-                                                "column": 3,
-                                                "offset": 368
-                                            },
-                                            "end": {
-                                                "line": 17,
-                                                "column": 85,
-                                                "offset": 450
-                                            },
-                                            "indent": []
-                                        }
-                                    }
-                                ],
-                                "position": {
-                                    "start": {
-                                        "line": 17,
-                                        "column": 1,
-                                        "offset": 366
-                                    },
-                                    "end": {
-                                        "line": 17,
-                                        "column": 85,
-                                        "offset": 450
-                                    },
-                                    "indent": []
-                                }
-                            }
-                        ],
-                        "position": {
-                            "start": {
-                                "line": 16,
-                                "column": 1,
-                                "offset": 319
-                            },
-                            "end": {
-                                "line": 17,
-                                "column": 85,
-                                "offset": 450
-                            },
-                            "indent": [
-                                1
-                            ]
-                        }
-                    },
-                    {
-                        "type": "heading",
-                        "depth": 2,
-                        "children": [
-                            {
-                                "type": "text",
-                                "value": "Example",
-                                "position": {
-                                    "start": {
-                                        "line": 20,
-                                        "column": 4,
-                                        "offset": 456
-                                    },
-                                    "end": {
-                                        "line": 20,
-                                        "column": 11,
-                                        "offset": 463
-                                    },
-                                    "indent": []
-                                }
-                            }
-                        ],
-                        "position": {
-                            "start": {
-                                "line": 20,
-                                "column": 1,
-                                "offset": 453
-                            },
-                            "end": {
-                                "line": 20,
-                                "column": 12,
-                                "offset": 464
-                            },
-                            "indent": []
-                        }
-                    },
-                    {
-                        "type": "paragraph",
-                        "children": [
-                            {
-                                "type": "text",
-                                "value": "In this particular example, a bash script is used to wrap running multiple background \nprocesses together into logically a single Makefile command. ",
-                                "position": {
-                                    "start": {
-                                        "line": 22,
-                                        "column": 1,
-                                        "offset": 466
-                                    },
-                                    "end": {
-                                        "line": 23,
-                                        "column": 62,
-                                        "offset": 614
-                                    },
-                                    "indent": [
-                                        1
-                                    ]
-                                }
-                            }
-                        ],
-                        "position": {
-                            "start": {
-                                "line": 22,
-                                "column": 1,
-                                "offset": 466
-                            },
-                            "end": {
-                                "line": 23,
-                                "column": 62,
-                                "offset": 614
-                            },
-                            "indent": [
-                                1
-                            ]
-                        }
-                    },
-                    {
-                        "type": "code",
-                        "lang": "makefile",
-                        "meta": null,
-                        "value": "#\n# Use a bash script since we want a single make command to run multiple\n# background processes.\n#\ndefine DEV_SCRIPT\nshutdown() {\n    echo kill $(jobs -l |awk '$2 == \"|\" {print $1; next} {print $2}')\n    kill $(jobs -l |awk '$2 == \"|\" {print $1; next} {print $2}')\n    exit 0\n}\ntrap \"shutdown\" SIGINT SIGTERM\n\nnpx nodemon --watch data --ext js,jsx,mdx --exec make build-database &\n\nnpx webpack-dev-server \\\n\t\t--mode development \\\n\t\t--entry ./src/client.jsx \\\n\t\t--output-public-path dist \\\n\t\t--output-filename client.bundle.js &\nwait\nendef\nexport DEV_SCRIPT\n\ndev:\n\t@bash -c \"$$DEV_SCRIPT\"",
-                        "position": {
-                            "start": {
-                                "line": 25,
-                                "column": 1,
-                                "offset": 616
-                            },
-                            "end": {
-                                "line": 51,
-                                "column": 4,
-                                "offset": 1220
-                            },
-                            "indent": [
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1
-                            ]
-                        }
-                    },
-                    {
-                        "type": "heading",
-                        "depth": 2,
-                        "children": [
-                            {
-                                "type": "text",
-                                "value": "References",
-                                "position": {
-                                    "start": {
-                                        "line": 53,
-                                        "column": 4,
-                                        "offset": 1225
-                                    },
-                                    "end": {
-                                        "line": 53,
-                                        "column": 14,
-                                        "offset": 1235
-                                    },
-                                    "indent": []
-                                }
-                            }
-                        ],
-                        "position": {
-                            "start": {
-                                "line": 53,
-                                "column": 1,
-                                "offset": 1222
-                            },
-                            "end": {
-                                "line": 53,
-                                "column": 14,
-                                "offset": 1235
-                            },
-                            "indent": []
-                        }
-                    },
-                    {
-                        "type": "list",
-                        "ordered": false,
-                        "start": null,
-                        "spread": false,
-                        "children": [
-                            {
-                                "type": "listItem",
-                                "spread": false,
-                                "checked": null,
-                                "children": [
-                                    {
-                                        "type": "paragraph",
-                                        "children": [
-                                            {
-                                                "type": "link",
-                                                "title": null,
-                                                "url": "https://stackoverflow.com/questions/7281395/output-multiline-variable-to-a-file-with-gnu-make",
-                                                "children": [
-                                                    {
-                                                        "type": "text",
-                                                        "value": "https://stackoverflow.com/questions/7281395/output-multiline-variable-to-a-file-with-gnu-make",
-                                                        "position": {
-                                                            "start": {
-                                                                "line": 55,
-                                                                "column": 3,
-                                                                "offset": 1239
-                                                            },
-                                                            "end": {
-                                                                "line": 55,
-                                                                "column": 96,
-                                                                "offset": 1332
-                                                            },
-                                                            "indent": []
-                                                        }
-                                                    }
-                                                ],
-                                                "position": {
-                                                    "start": {
-                                                        "line": 55,
-                                                        "column": 3,
-                                                        "offset": 1239
-                                                    },
-                                                    "end": {
-                                                        "line": 55,
-                                                        "column": 96,
-                                                        "offset": 1332
-                                                    },
-                                                    "indent": []
-                                                }
-                                            }
-                                        ],
-                                        "position": {
-                                            "start": {
-                                                "line": 55,
-                                                "column": 3,
-                                                "offset": 1239
-                                            },
-                                            "end": {
-                                                "line": 55,
-                                                "column": 96,
-                                                "offset": 1332
-                                            },
-                                            "indent": []
-                                        }
-                                    }
-                                ],
-                                "position": {
-                                    "start": {
-                                        "line": 55,
-                                        "column": 1,
-                                        "offset": 1237
-                                    },
-                                    "end": {
-                                        "line": 55,
-                                        "column": 96,
-                                        "offset": 1332
-                                    },
-                                    "indent": []
-                                }
-                            }
-                        ],
-                        "position": {
-                            "start": {
-                                "line": 55,
-                                "column": 1,
-                                "offset": 1237
-                            },
-                            "end": {
-                                "line": 55,
-                                "column": 96,
-                                "offset": 1332
-                            },
-                            "indent": []
-                        }
-                    }
-                ],
-                "position": {
-                    "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                    },
-                    "end": {
-                        "line": 55,
-                        "column": 96,
-                        "offset": 1332
-                    }
-                }
-            },
-            "string": "tags: how-to\n\n# How to embed a bash script inside a Makefile\n\n## Overview\n\nRelies on Make's features:\n\n-   [`define`](https://www.gnu.org/software/make/manual/html_node/Multi_002dLine.html)\n-   [`export`](https://www.gnu.org/software/make/manual/html_node/Variables_002fRecursion.html)\n\nThe basic concept is this:\n\n-   Use `define` to specify a multiline variable\n-   Use `export` to ensure the multiline variable expands correct to the bash subshell\n\n## Example\n\nIn this particular example, a bash script is used to wrap running multiple background \nprocesses together into logically a single Makefile command. \n\n```makefile\n#\n# Use a bash script since we want a single make command to run multiple\n# background processes.\n#\ndefine DEV_SCRIPT\nshutdown() {\n    echo kill $(jobs -l |awk '$2 == \"|\" {print $1; next} {print $2}')\n    kill $(jobs -l |awk '$2 == \"|\" {print $1; next} {print $2}')\n    exit 0\n}\ntrap \"shutdown\" SIGINT SIGTERM\n\nnpx nodemon --watch data --ext js,jsx,mdx --exec make build-database &\n\nnpx webpack-dev-server \\\n\t\t--mode development \\\n\t\t--entry ./src/client.jsx \\\n\t\t--output-public-path dist \\\n\t\t--output-filename client.bundle.js &\nwait\nendef\nexport DEV_SCRIPT\n\ndev:\n\t@bash -c \"$$DEV_SCRIPT\"\n```\n\n## References\n\n-   <https://stackoverflow.com/questions/7281395/output-multiline-variable-to-a-file-with-gnu-make>\n",
-            "tags": [
-                "how-to"
-            ],
-            "properties": {
-                "tags": [
-                    "how-to"
-                ]
-            },
-            "title": "How to embed a bash script inside a Makefile"
-        },
-        {
-            "filename": "index.mdx",
-            "extension": "mdx",
-            "id": "index",
-            "path": [],
-            "ast": {
-                "type": "root",
-                "children": [
-                    {
-                        "type": "heading",
-                        "depth": 2,
-                        "children": [
-                            {
-                                "type": "text",
-                                "value": "Page Index",
-                                "position": {
-                                    "start": {
-                                        "line": 3,
-                                        "column": 4,
-                                        "offset": 5
-                                    },
-                                    "end": {
-                                        "line": 3,
-                                        "column": 14,
-                                        "offset": 15
-                                    },
-                                    "indent": []
-                                }
-                            }
-                        ],
-                        "position": {
-                            "start": {
-                                "line": 3,
-                                "column": 1,
-                                "offset": 2
-                            },
-                            "end": {
-                                "line": 3,
-                                "column": 14,
-                                "offset": 15
-                            },
-                            "indent": []
-                        }
-                    },
-                    {
-                        "type": "jsx",
-                        "position": {
-                            "start": {
-                                "line": 5,
-                                "column": 1,
-                                "offset": 17
-                            },
-                            "end": {
-                                "line": 31,
-                                "column": 9,
-                                "offset": 878
-                            },
-                            "indent": [
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
-                                1
-                            ]
-                        },
-                        "text": "<table>\n    <thead>\n        <tr>\n            <th style={{ textAlign: 'left' }}>Page</th>\n            <th style={{ textAlign: 'left' }}>Path</th>\n            <th style={{ textAlign: 'left' }}>Status</th>\n        </tr>\n    </thead>\n    <tbody>\n    {_.chain(database.pages)\n        .sortBy((page) => page.title)\n        .map((page) => ( \n            <tr key={page.id}>\n                <td style={{ paddingRight : '2rem' }}>\n                    <a href={`/?page=${page.id}`}>{page.title}</a>\n                </td>\n                <td style={{ paddingRight: '2rem', color: '#777' }}>\n                    {page.path.join(' / ')}\n                </td>\n                <td style={{ paddingRight: '1rem', color: '#777' }}>\n                    {page.properties.status}\n                </td>            \n            </tr>\n        ))\n        .value()}\n    </tbody>\n</table>",
-                        "parsed": "(function() {\n\"use strict\";\n\nreturn /*#__PURE__*/React.createElement(\"table\", null, /*#__PURE__*/React.createElement(\"thead\", null, /*#__PURE__*/React.createElement(\"tr\", null, /*#__PURE__*/React.createElement(\"th\", {\n  style: {\n    textAlign: 'left'\n  }\n}, \"Page\"), /*#__PURE__*/React.createElement(\"th\", {\n  style: {\n    textAlign: 'left'\n  }\n}, \"Path\"), /*#__PURE__*/React.createElement(\"th\", {\n  style: {\n    textAlign: 'left'\n  }\n}, \"Status\"))), /*#__PURE__*/React.createElement(\"tbody\", null, _.chain(database.pages).sortBy(page => page.title).map(page => /*#__PURE__*/React.createElement(\"tr\", {\n  key: page.id\n}, /*#__PURE__*/React.createElement(\"td\", {\n  style: {\n    paddingRight: '2rem'\n  }\n}, /*#__PURE__*/React.createElement(\"a\", {\n  href: `/?page=${page.id}`\n}, page.title)), /*#__PURE__*/React.createElement(\"td\", {\n  style: {\n    paddingRight: '2rem',\n    color: '#777'\n  }\n}, page.path.join(' / ')), /*#__PURE__*/React.createElement(\"td\", {\n  style: {\n    paddingRight: '1rem',\n    color: '#777'\n  }\n}, page.properties.status))).value()));\n})()"
-                    }
-                ],
-                "position": {
-                    "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                    },
-                    "end": {
-                        "line": 31,
-                        "column": 9,
-                        "offset": 878
-                    }
-                }
-            },
-            "string": "## Page Index\n\n<table>\n    <thead>\n        <tr>\n            <th style={{ textAlign: 'left' }}>Page</th>\n            <th style={{ textAlign: 'left' }}>Path</th>\n            <th style={{ textAlign: 'left' }}>Status</th>\n        </tr>\n    </thead>\n    <tbody>\n    {_.chain(database.pages)\n        .sortBy((page) => page.title)\n        .map((page) => ( \n            <tr key={page.id}>\n                <td style={{ paddingRight : '2rem' }}>\n                    <a href={`/?page=${page.id}`}>{page.title}</a>\n                </td>\n                <td style={{ paddingRight: '2rem', color: '#777' }}>\n                    {page.path.join(' / ')}\n                </td>\n                <td style={{ paddingRight: '1rem', color: '#777' }}>\n                    {page.properties.status}\n                </td>            \n            </tr>\n        ))\n        .value()}\n    </tbody>\n</table>\n",
-            "tags": [],
-            "properties": {},
-            "title": "Page Index"
         },
         {
             "filename": "kestrel/kestrel.mdx",
@@ -6765,6 +6657,114 @@
             "tags": [],
             "properties": {},
             "title": "Kestrel"
+        },
+        {
+            "filename": "page_index.mdx",
+            "extension": "mdx",
+            "id": "page_index",
+            "path": [],
+            "ast": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "heading",
+                        "depth": 2,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Page Index",
+                                "position": {
+                                    "start": {
+                                        "line": 3,
+                                        "column": 4,
+                                        "offset": 5
+                                    },
+                                    "end": {
+                                        "line": 3,
+                                        "column": 14,
+                                        "offset": 15
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 3,
+                                "column": 1,
+                                "offset": 2
+                            },
+                            "end": {
+                                "line": 3,
+                                "column": 14,
+                                "offset": 15
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "jsx",
+                        "position": {
+                            "start": {
+                                "line": 5,
+                                "column": 1,
+                                "offset": 17
+                            },
+                            "end": {
+                                "line": 31,
+                                "column": 9,
+                                "offset": 878
+                            },
+                            "indent": [
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1,
+                                1
+                            ]
+                        },
+                        "text": "<table>\n    <thead>\n        <tr>\n            <th style={{ textAlign: 'left' }}>Page</th>\n            <th style={{ textAlign: 'left' }}>Path</th>\n            <th style={{ textAlign: 'left' }}>Status</th>\n        </tr>\n    </thead>\n    <tbody>\n    {_.chain(database.pages)\n        .sortBy((page) => page.title)\n        .map((page) => ( \n            <tr key={page.id}>\n                <td style={{ paddingRight : '2rem' }}>\n                    <a href={`/?page=${page.id}`}>{page.title}</a>\n                </td>\n                <td style={{ paddingRight: '2rem', color: '#777' }}>\n                    {page.path.join(' / ')}\n                </td>\n                <td style={{ paddingRight: '1rem', color: '#777' }}>\n                    {page.properties.status}\n                </td>            \n            </tr>\n        ))\n        .value()}\n    </tbody>\n</table>",
+                        "parsed": "(function() {\n\"use strict\";\n\nreturn /*#__PURE__*/React.createElement(\"table\", null, /*#__PURE__*/React.createElement(\"thead\", null, /*#__PURE__*/React.createElement(\"tr\", null, /*#__PURE__*/React.createElement(\"th\", {\n  style: {\n    textAlign: 'left'\n  }\n}, \"Page\"), /*#__PURE__*/React.createElement(\"th\", {\n  style: {\n    textAlign: 'left'\n  }\n}, \"Path\"), /*#__PURE__*/React.createElement(\"th\", {\n  style: {\n    textAlign: 'left'\n  }\n}, \"Status\"))), /*#__PURE__*/React.createElement(\"tbody\", null, _.chain(database.pages).sortBy(page => page.title).map(page => /*#__PURE__*/React.createElement(\"tr\", {\n  key: page.id\n}, /*#__PURE__*/React.createElement(\"td\", {\n  style: {\n    paddingRight: '2rem'\n  }\n}, /*#__PURE__*/React.createElement(\"a\", {\n  href: `/?page=${page.id}`\n}, page.title)), /*#__PURE__*/React.createElement(\"td\", {\n  style: {\n    paddingRight: '2rem',\n    color: '#777'\n  }\n}, page.path.join(' / ')), /*#__PURE__*/React.createElement(\"td\", {\n  style: {\n    paddingRight: '1rem',\n    color: '#777'\n  }\n}, page.properties.status))).value()));\n})()"
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 31,
+                        "column": 9,
+                        "offset": 878
+                    }
+                }
+            },
+            "string": "## Page Index\n\n<table>\n    <thead>\n        <tr>\n            <th style={{ textAlign: 'left' }}>Page</th>\n            <th style={{ textAlign: 'left' }}>Path</th>\n            <th style={{ textAlign: 'left' }}>Status</th>\n        </tr>\n    </thead>\n    <tbody>\n    {_.chain(database.pages)\n        .sortBy((page) => page.title)\n        .map((page) => ( \n            <tr key={page.id}>\n                <td style={{ paddingRight : '2rem' }}>\n                    <a href={`/?page=${page.id}`}>{page.title}</a>\n                </td>\n                <td style={{ paddingRight: '2rem', color: '#777' }}>\n                    {page.path.join(' / ')}\n                </td>\n                <td style={{ paddingRight: '1rem', color: '#777' }}>\n                    {page.properties.status}\n                </td>            \n            </tr>\n        ))\n        .value()}\n    </tbody>\n</table>\n",
+            "tags": [],
+            "properties": {},
+            "title": "Page Index"
         },
         {
             "filename": "product/changelog_tips.mdx",
@@ -29355,8 +29355,8 @@
             "extension": "jsx",
             "id": "page_layout",
             "path": [],
-            "text": "import React from 'react';\n\n\nfunction Outer({ children }) {\n    return (\n        <div>\n            <div style={{                \n                padding: '12px 2rem 6px',\n                backgroundColor: '#ACF',\n            }}>\n                <div style={{\n                    display: 'flex',\n                    flexDirection: 'row',\n                    maxWidth: '80rem',\n                margin: '0 auto',\n                }}>\n                    <a href=\"https://blacklivesmatter.com/\" style={{ textDecoration: 'none' }}>🖤</a>                    \n                    <div style={{ flexGrow: 1 }} />\n                    <a style={{ flexGrow: 0 }} href=\"/\">home</a>                   \n                    <div style={{ flexGrow: 1 }} />\n                    <a style={{ flexGrow: 0 }} href=\"/?page=index\">index</a>\n                    <div style={{ flexGrow: 50 }} />\n                </div>\n            </div>\n            <div style={{\n                display: 'flex',\n                flexDirection: 'column',\n                minHeight: 'calc(100vh - 120px)'\n            }}\n            >\n                {children}\n            </div>\n            <div style={{\n                minHeight: '120px',\n                padding: '12px 2rem 6px',\n                backgroundColor: '#ACF',\n            }}>\n                <div>\n                    Twitter: <a href=\"https://twitter.com/RidleyWinters\">RidleyWinters</a>\n                </div>\n                <div>\n                    Favicon designed by\n                    {' '}<a href=\"https://www.flaticon.com/authors/good-ware\">Good Ware</a>{' '}\n                    available at\n                    {' '}<a href=\"https://www.flaticon.com/free-icon/woodland_2933738?term=landscape&page=1&position=\">flaticon</a>.\n                </div>\n            </div>\n        </div>\n    );\n}\n\n\nfunction RelatedPages({ database, page }) {\n\n    const pages = _.keyBy(database.pages, 'id');\n\n    // This absurd functional chain is taking the set of keywords on this\n    // page and unioning it with the set of pages that also have that keyword.\n    const related = _.chain(database.index_words)\n        .map((list, word) => {\n            for (let i = 0; i < list.length; i++) {\n                if (list[i] === page.id) {\n                    return word;\n                }\n            }\n            return null;\n        })\n        .compact()\n        .sort()\n        .uniq()\n        .map((word) => database.index_words[word])\n        .flatten()\n        .compact()\n        .sort()\n        .filter((id) => id !== page.id)\n        .uniq()\n        .value();\n\n    return (\n        <div\n            style={{\n                margin: '8rem 0 2rem'\n            }}\n        >\n            <h3>Similar pages</h3>\n            <div>\n                {_.map(related, (id, index) => (\n                    <span key={id}>\n                        <a href={`/?page=${id}`}>{pages[id].title}</a>\n                        {index + 1 < related.length\n                            ?\n                            <span style={{ paddingRight: '0.5rem' }}>,</span>\n                            :\n                            null\n                        }\n                    </span>\n                ))}\n            </div>\n        </div>\n    );\n}\n\nexport default function PageLayout({ \n    database,\n    page,\n    children ,\n}) {\n    \n    return (\n        <Outer>\n            <div\n                style={{\n                    display: 'flex',\n                    flexDirection: 'column',\n                    flexGrow: 1,\n                    margin: '0 auto',\n                    maxWidth: '80rem',                    \n                }}\n            >\n                <div\n                    style={{\n                        flexGrow: 1,\n                    }}\n                >\n                    {children}                    \n                </div>\n                <RelatedPages database={database} page={page} />\n            </div>            \n        </Outer>\n    );\n}\n\n",
-            "parsed": "(function() {\n\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = PageLayout;\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction Outer({\n  children\n}) {\n  return /*#__PURE__*/_react.default.createElement(\"div\", null, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      padding: '12px 2rem 6px',\n      backgroundColor: '#ACF'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      flexDirection: 'row',\n      maxWidth: '80rem',\n      margin: '0 auto'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://blacklivesmatter.com/\",\n    style: {\n      textDecoration: 'none'\n    }\n  }, \"\\uD83D\\uDDA4\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 1\n    }\n  }), /*#__PURE__*/_react.default.createElement(\"a\", {\n    style: {\n      flexGrow: 0\n    },\n    href: \"/\"\n  }, \"home\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 1\n    }\n  }), /*#__PURE__*/_react.default.createElement(\"a\", {\n    style: {\n      flexGrow: 0\n    },\n    href: \"/?page=index\"\n  }, \"index\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 50\n    }\n  }))), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      flexDirection: 'column',\n      minHeight: 'calc(100vh - 120px)'\n    }\n  }, children), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      minHeight: '120px',\n      padding: '12px 2rem 6px',\n      backgroundColor: '#ACF'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", null, \"Twitter: \", /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://twitter.com/RidleyWinters\"\n  }, \"RidleyWinters\")), /*#__PURE__*/_react.default.createElement(\"div\", null, \"Favicon designed by\", ' ', /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://www.flaticon.com/authors/good-ware\"\n  }, \"Good Ware\"), ' ', \"available at\", ' ', /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://www.flaticon.com/free-icon/woodland_2933738?term=landscape&page=1&position=\"\n  }, \"flaticon\"), \".\")));\n}\n\nfunction RelatedPages({\n  database,\n  page\n}) {\n  const pages = _.keyBy(database.pages, 'id'); // This absurd functional chain is taking the set of keywords on this\n  // page and unioning it with the set of pages that also have that keyword.\n\n\n  const related = _.chain(database.index_words).map((list, word) => {\n    for (let i = 0; i < list.length; i++) {\n      if (list[i] === page.id) {\n        return word;\n      }\n    }\n\n    return null;\n  }).compact().sort().uniq().map(word => database.index_words[word]).flatten().compact().sort().filter(id => id !== page.id).uniq().value();\n\n  return /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      margin: '8rem 0 2rem'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"h3\", null, \"Similar pages\"), /*#__PURE__*/_react.default.createElement(\"div\", null, _.map(related, (id, index) => /*#__PURE__*/_react.default.createElement(\"span\", {\n    key: id\n  }, /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: `/?page=${id}`\n  }, pages[id].title), index + 1 < related.length ? /*#__PURE__*/_react.default.createElement(\"span\", {\n    style: {\n      paddingRight: '0.5rem'\n    }\n  }, \",\") : null))));\n}\n\nfunction PageLayout({\n  database,\n  page,\n  children\n}) {\n  return /*#__PURE__*/_react.default.createElement(Outer, null, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      flexDirection: 'column',\n      flexGrow: 1,\n      margin: '0 auto',\n      maxWidth: '80rem'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 1\n    }\n  }, children), /*#__PURE__*/_react.default.createElement(RelatedPages, {\n    database: database,\n    page: page\n  })));\n}\n})()"
+            "text": "import React from 'react';\n\n\nfunction Outer({ children }) {\n    return (\n        <div>\n            <div style={{                \n                padding: '12px 2rem 6px',\n                backgroundColor: '#ACF',\n            }}>\n                <div style={{\n                    display: 'flex',\n                    flexDirection: 'row',\n                    maxWidth: '80rem',\n                margin: '0 auto',\n                }}>\n                    <a href=\"https://blacklivesmatter.com/\" style={{ textDecoration: 'none' }}>🖤</a>                    \n                    <div style={{ flexGrow: 1 }} />\n                    <a style={{ flexGrow: 0 }} href=\"/\">home</a>                   \n                    <div style={{ flexGrow: 1 }} />\n                    <a style={{ flexGrow: 0 }} href=\"/?page=page_index\">index</a>\n                    <div style={{ flexGrow: 50 }} />\n                </div>\n            </div>\n            <div style={{\n                display: 'flex',\n                flexDirection: 'column',\n                minHeight: 'calc(100vh - 120px)'\n            }}\n            >\n                {children}\n            </div>\n            <div style={{\n                minHeight: '120px',\n                padding: '12px 2rem 6px',\n                backgroundColor: '#ACF',\n            }}>\n                <div>\n                    Twitter: <a href=\"https://twitter.com/RidleyWinters\">RidleyWinters</a>\n                </div>\n                <div>\n                    Favicon designed by\n                    {' '}<a href=\"https://www.flaticon.com/authors/good-ware\">Good Ware</a>{' '}\n                    available at\n                    {' '}<a href=\"https://www.flaticon.com/free-icon/woodland_2933738?term=landscape&page=1&position=\">flaticon</a>.\n                </div>\n            </div>\n        </div>\n    );\n}\n\n\nfunction RelatedPages({ database, page }) {\n\n    const pages = _.keyBy(database.pages, 'id');\n\n    // This absurd functional chain is taking the set of keywords on this\n    // page and unioning it with the set of pages that also have that keyword.\n    const related = _.chain(database.index_words)\n        .map((list, word) => {\n            for (let i = 0; i < list.length; i++) {\n                if (list[i] === page.id) {\n                    return word;\n                }\n            }\n            return null;\n        })\n        .compact()\n        .sort()\n        .uniq()\n        .map((word) => database.index_words[word])\n        .flatten()\n        .compact()\n        .sort()\n        .filter((id) => id !== page.id)\n        .uniq()\n        .value();\n\n    return (\n        <div\n            style={{\n                margin: '8rem 0 2rem'\n            }}\n        >\n            <h3>Similar pages</h3>\n            <div>\n                {_.map(related, (id, index) => (\n                    <span key={id}>\n                        <a href={`/?page=${id}`}>{pages[id].title}</a>\n                        {index + 1 < related.length\n                            ?\n                            <span style={{ paddingRight: '0.5rem' }}>,</span>\n                            :\n                            null\n                        }\n                    </span>\n                ))}\n            </div>\n        </div>\n    );\n}\n\nexport default function PageLayout({ \n    database,\n    page,\n    children ,\n}) {\n    \n    return (\n        <Outer>\n            <div\n                style={{\n                    display: 'flex',\n                    flexDirection: 'column',\n                    flexGrow: 1,\n                    margin: '0 auto',\n                    maxWidth: '80rem',                    \n                }}\n            >\n                <div\n                    style={{\n                        flexGrow: 1,\n                    }}\n                >\n                    {children}                    \n                </div>\n                <RelatedPages database={database} page={page} />\n            </div>            \n        </Outer>\n    );\n}\n\n",
+            "parsed": "(function() {\n\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = PageLayout;\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction Outer({\n  children\n}) {\n  return /*#__PURE__*/_react.default.createElement(\"div\", null, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      padding: '12px 2rem 6px',\n      backgroundColor: '#ACF'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      flexDirection: 'row',\n      maxWidth: '80rem',\n      margin: '0 auto'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://blacklivesmatter.com/\",\n    style: {\n      textDecoration: 'none'\n    }\n  }, \"\\uD83D\\uDDA4\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 1\n    }\n  }), /*#__PURE__*/_react.default.createElement(\"a\", {\n    style: {\n      flexGrow: 0\n    },\n    href: \"/\"\n  }, \"home\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 1\n    }\n  }), /*#__PURE__*/_react.default.createElement(\"a\", {\n    style: {\n      flexGrow: 0\n    },\n    href: \"/?page=page_index\"\n  }, \"index\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 50\n    }\n  }))), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      flexDirection: 'column',\n      minHeight: 'calc(100vh - 120px)'\n    }\n  }, children), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      minHeight: '120px',\n      padding: '12px 2rem 6px',\n      backgroundColor: '#ACF'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", null, \"Twitter: \", /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://twitter.com/RidleyWinters\"\n  }, \"RidleyWinters\")), /*#__PURE__*/_react.default.createElement(\"div\", null, \"Favicon designed by\", ' ', /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://www.flaticon.com/authors/good-ware\"\n  }, \"Good Ware\"), ' ', \"available at\", ' ', /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://www.flaticon.com/free-icon/woodland_2933738?term=landscape&page=1&position=\"\n  }, \"flaticon\"), \".\")));\n}\n\nfunction RelatedPages({\n  database,\n  page\n}) {\n  const pages = _.keyBy(database.pages, 'id'); // This absurd functional chain is taking the set of keywords on this\n  // page and unioning it with the set of pages that also have that keyword.\n\n\n  const related = _.chain(database.index_words).map((list, word) => {\n    for (let i = 0; i < list.length; i++) {\n      if (list[i] === page.id) {\n        return word;\n      }\n    }\n\n    return null;\n  }).compact().sort().uniq().map(word => database.index_words[word]).flatten().compact().sort().filter(id => id !== page.id).uniq().value();\n\n  return /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      margin: '8rem 0 2rem'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"h3\", null, \"Similar pages\"), /*#__PURE__*/_react.default.createElement(\"div\", null, _.map(related, (id, index) => /*#__PURE__*/_react.default.createElement(\"span\", {\n    key: id\n  }, /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: `/?page=${id}`\n  }, pages[id].title), index + 1 < related.length ? /*#__PURE__*/_react.default.createElement(\"span\", {\n    style: {\n      paddingRight: '0.5rem'\n    }\n  }, \",\") : null))));\n}\n\nfunction PageLayout({\n  database,\n  page,\n  children\n}) {\n  return /*#__PURE__*/_react.default.createElement(Outer, null, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      flexDirection: 'column',\n      flexGrow: 1,\n      margin: '0 auto',\n      maxWidth: '80rem'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 1\n    }\n  }, children), /*#__PURE__*/_react.default.createElement(RelatedPages, {\n    database: database,\n    page: page\n  })));\n}\n})()"
         },
         {
             "filename": "section.jsx",
@@ -29441,7 +29441,7 @@
             "blog_ideas",
             "creating_user_stories",
             "git_repo",
-            "home",
+            "index",
             "wishlist"
         ],
         "interesting": [
@@ -29514,7 +29514,7 @@
             "creating_user_stories",
             "example_user_stories",
             "git_repo",
-            "home"
+            "index"
         ],
         "technical": [
             "blog_ideas",
@@ -29522,7 +29522,7 @@
         ],
         "hobby": [
             "blog_ideas",
-            "home"
+            "index"
         ],
         "without": [
             "blog_ideas",
@@ -29626,9 +29626,9 @@
             "creating_a_new_site",
             "data_table",
             "git_repo",
-            "index",
             "kestrel",
             "layouts",
+            "page_index",
             "sea",
             "test-wikilinks"
         ],
@@ -29641,7 +29641,7 @@
             "creating_a_new_site",
             "data_table",
             "git_repo",
-            "home",
+            "index",
             "sea"
         ],
         "up": [
@@ -29663,12 +29663,12 @@
         "focused": [
             "creating_user_stories",
             "git_repo",
-            "home"
+            "index"
         ],
         "everything": [
             "creating_user_stories",
             "git_repo",
-            "home",
+            "index",
             "principles",
             "rust_raytracer"
         ],
@@ -29750,7 +29750,7 @@
             "creating_a_new_site",
             "creating_user_stories",
             "data_objects",
-            "home",
+            "index",
             "principles",
             "rust_raytracer",
             "sea"
@@ -29808,7 +29808,7 @@
         ],
         "find": [
             "creating_user_stories",
-            "home",
+            "index",
             "principles"
         ],
         "those": [
@@ -29836,7 +29836,7 @@
         ],
         "every": [
             "data_objects",
-            "home",
+            "index",
             "principles"
         ],
         "your": [
@@ -29920,7 +29920,7 @@
         ],
         "world": [
             "example_user_stories",
-            "home"
+            "index"
         ],
         "adventure": [
             "example_user_stories",
@@ -29945,14 +29945,14 @@
         "using": [
             "creating_user_stories",
             "example_user_stories",
-            "home",
+            "index",
             "rust_raytracer",
             "rust_webgl",
             "webpack_notes"
         ],
         "rust": [
             "example_user_stories",
-            "home",
+            "index",
             "rust_producer_consumer",
             "rust_raytracer",
             "rust_webgl",
@@ -30077,7 +30077,7 @@
         ],
         "engineer": [
             "example_user_stories",
-            "home"
+            "index"
         ],
         "similar": [
             "common_user_stories",
@@ -30121,7 +30121,7 @@
             "creating_a_new_site",
             "creating_user_stories",
             "example_user_stories",
-            "home",
+            "index",
             "rust_raytracer",
             "sea"
         ],
@@ -30148,97 +30148,6 @@
         "external": [
             "creating_user_stories",
             "example_user_stories",
-            "sea"
-        ],
-        "hello": [
-            "home",
-            "test"
-        ],
-        "website": [
-            "home",
-            "sea"
-        ],
-        "share": [
-            "data_objects",
-            "home"
-        ],
-        "engineering": [
-            "creating_user_stories",
-            "home"
-        ],
-        "product": [
-            "creating_user_stories",
-            "data_table",
-            "home",
-            "sea"
-        ],
-        "manager": [
-            "creating_user_stories",
-            "home"
-        ],
-        "now": [
-            "changelog_tips",
-            "creating_a_new_site",
-            "home",
-            "sea"
-        ],
-        "am": [
-            "common_user_stories",
-            "home"
-        ],
-        "learning": [
-            "creating_user_stories",
-            "home"
-        ],
-        "about": [
-            "creating_user_stories",
-            "home"
-        ],
-        "effective": [
-            "creating_user_stories",
-            "home"
-        ],
-        "web": [
-            "home",
-            "rust_webgl",
-            "sea"
-        ],
-        "development": [
-            "creating_a_new_site",
-            "creating_user_stories",
-            "home",
-            "sea",
-            "webpack_notes"
-        ],
-        "well": [
-            "home",
-            "sea"
-        ],
-        "small": [
-            "creating_user_stories",
-            "home"
-        ],
-        "webgl": [
-            "home",
-            "rust_webgl"
-        ],
-        "still": [
-            "changelog_tips",
-            "creating_user_stories",
-            "home"
-        ],
-        "take": [
-            "creating_user_stories",
-            "home"
-        ],
-        "site": [
-            "creating_a_new_site",
-            "home",
-            "sea"
-        ],
-        "musings": [
-            "home",
-            "rust_raytracer",
             "sea"
         ],
         "embed": [
@@ -30355,6 +30264,97 @@
         "questions": [
             "creating_user_stories",
             "how-to-embed-a-long-script-in-a-makefile"
+        ],
+        "hello": [
+            "index",
+            "test"
+        ],
+        "website": [
+            "index",
+            "sea"
+        ],
+        "share": [
+            "data_objects",
+            "index"
+        ],
+        "engineering": [
+            "creating_user_stories",
+            "index"
+        ],
+        "product": [
+            "creating_user_stories",
+            "data_table",
+            "index",
+            "sea"
+        ],
+        "manager": [
+            "creating_user_stories",
+            "index"
+        ],
+        "now": [
+            "changelog_tips",
+            "creating_a_new_site",
+            "index",
+            "sea"
+        ],
+        "am": [
+            "common_user_stories",
+            "index"
+        ],
+        "learning": [
+            "creating_user_stories",
+            "index"
+        ],
+        "about": [
+            "creating_user_stories",
+            "index"
+        ],
+        "effective": [
+            "creating_user_stories",
+            "index"
+        ],
+        "web": [
+            "index",
+            "rust_webgl",
+            "sea"
+        ],
+        "development": [
+            "creating_a_new_site",
+            "creating_user_stories",
+            "index",
+            "sea",
+            "webpack_notes"
+        ],
+        "well": [
+            "index",
+            "sea"
+        ],
+        "small": [
+            "creating_user_stories",
+            "index"
+        ],
+        "webgl": [
+            "index",
+            "rust_webgl"
+        ],
+        "still": [
+            "changelog_tips",
+            "creating_user_stories",
+            "index"
+        ],
+        "take": [
+            "creating_user_stories",
+            "index"
+        ],
+        "site": [
+            "creating_a_new_site",
+            "index",
+            "sea"
+        ],
+        "musings": [
+            "index",
+            "rust_raytracer",
+            "sea"
         ],
         "just": [
             "creating_a_new_site",
