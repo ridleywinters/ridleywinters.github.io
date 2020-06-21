@@ -2616,6 +2616,138 @@
                             },
                             "indent": []
                         }
+                    },
+                    {
+                        "type": "heading",
+                        "depth": 2,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Reference",
+                                "position": {
+                                    "start": {
+                                        "line": 47,
+                                        "column": 4,
+                                        "offset": 2139
+                                    },
+                                    "end": {
+                                        "line": 47,
+                                        "column": 13,
+                                        "offset": 2148
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 47,
+                                "column": 1,
+                                "offset": 2136
+                            },
+                            "end": {
+                                "line": 47,
+                                "column": 13,
+                                "offset": 2148
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "ordered": false,
+                        "start": null,
+                        "spread": false,
+                        "children": [
+                            {
+                                "type": "listItem",
+                                "spread": false,
+                                "checked": null,
+                                "children": [
+                                    {
+                                        "type": "paragraph",
+                                        "children": [
+                                            {
+                                                "type": "link",
+                                                "title": null,
+                                                "url": "https://www.gnu.org/software/make/manual/html_node/Standard-Targets.html#Standard-Targets",
+                                                "children": [
+                                                    {
+                                                        "type": "text",
+                                                        "value": "GNU make standard targets",
+                                                        "position": {
+                                                            "start": {
+                                                                "line": 49,
+                                                                "column": 4,
+                                                                "offset": 2153
+                                                            },
+                                                            "end": {
+                                                                "line": 49,
+                                                                "column": 29,
+                                                                "offset": 2178
+                                                            },
+                                                            "indent": []
+                                                        }
+                                                    }
+                                                ],
+                                                "position": {
+                                                    "start": {
+                                                        "line": 49,
+                                                        "column": 3,
+                                                        "offset": 2152
+                                                    },
+                                                    "end": {
+                                                        "line": 49,
+                                                        "column": 121,
+                                                        "offset": 2270
+                                                    },
+                                                    "indent": []
+                                                }
+                                            }
+                                        ],
+                                        "position": {
+                                            "start": {
+                                                "line": 49,
+                                                "column": 3,
+                                                "offset": 2152
+                                            },
+                                            "end": {
+                                                "line": 49,
+                                                "column": 121,
+                                                "offset": 2270
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 49,
+                                        "column": 1,
+                                        "offset": 2150
+                                    },
+                                    "end": {
+                                        "line": 49,
+                                        "column": 121,
+                                        "offset": 2270
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 49,
+                                "column": 1,
+                                "offset": 2150
+                            },
+                            "end": {
+                                "line": 49,
+                                "column": 121,
+                                "offset": 2270
+                            },
+                            "indent": []
+                        }
                     }
                 ],
                 "position": {
@@ -2625,13 +2757,13 @@
                         "offset": 0
                     },
                     "end": {
-                        "line": 46,
-                        "column": 1,
-                        "offset": 2135
+                        "line": 49,
+                        "column": 121,
+                        "offset": 2270
                     }
                 }
             },
-            "string": "# Zero Config\n\n**Work-in-progress**: collecting notes, but have not cleaned them up yet\n\nI've wasted way too much time in my career trying to figure out idiosyncracies of different development tools, especially in the context of hobby projects where I'm trying to learn something else, not configure the perfect production system. As a result here are some conventions I use...\n\n## Use make\n\nIt's certainly not perfect, but it's available on most systems and can be used as a common wrapper on other build systems so you don't have to remember what `cargo` versus `go` versus `rust` versus `npm` takes an argument.\n\nAlso, **use git**. Every assumption that can be made adds simplicity.\n\n## Make targets\n\n-   `ensure` - \n-   `build`\n-   `test`\n-   `format` - aka 'lint', 'fmt'\n-   `run`\n-   `publish`\n-   `dev`\n-   `benchmark`\n-   `doc`\n\n## Common other targets\n\n-   `build-watch` - watch files and rebuild locally. This can be useful for _other projects_ in a repo to invoke: i.e. watch all dependent projects (libraries, assets, etc.) so they are rebuilt automatically especailly in the context of a monorepo. This usually \n\n## Some details\n\n-   `.build-sentinel` - I have the `build` step `touch` a git-ignored file by this name whenever it is rebuilt. This makes chained \"watching\" of dependent projects simpler: the host project can kick of `build-watch` for all dependent projects and then it can watch the set of `.build-sentinel` files to know if and when it should rebuild itself.\n\n## Things I wish were true...\n\n#### A universal config/ sub-folder\n\nHaving so many .dot-files and config files in the root directory always distracts me. I've given up on this battle and some of my suggestions above contribute to the existing trends.\n\n#### A standard JSON or AST format for documentation separating content from presentation\n\nI wish Go, Rust, JavaScript, etc. all decoupled the data from the presentation!\n\n## Context\n\nI once wrote a program that examined projects and enforced many of these conventions (scanning .gitignore files, package files, adding eslint files, etc.). I decided documentation was easier to maintain that an automated approach.\n",
+            "string": "# Zero Config\n\n**Work-in-progress**: collecting notes, but have not cleaned them up yet\n\nI've wasted way too much time in my career trying to figure out idiosyncracies of different development tools, especially in the context of hobby projects where I'm trying to learn something else, not configure the perfect production system. As a result here are some conventions I use...\n\n## Use make\n\nIt's certainly not perfect, but it's available on most systems and can be used as a common wrapper on other build systems so you don't have to remember what `cargo` versus `go` versus `rust` versus `npm` takes an argument.\n\nAlso, **use git**. Every assumption that can be made adds simplicity.\n\n## Make targets\n\n-   `ensure` - \n-   `build`\n-   `test`\n-   `format` - aka 'lint', 'fmt'\n-   `run`\n-   `publish`\n-   `dev`\n-   `benchmark`\n-   `doc`\n\n## Common other targets\n\n-   `build-watch` - watch files and rebuild locally. This can be useful for _other projects_ in a repo to invoke: i.e. watch all dependent projects (libraries, assets, etc.) so they are rebuilt automatically especailly in the context of a monorepo. This usually \n\n## Some details\n\n-   `.build-sentinel` - I have the `build` step `touch` a git-ignored file by this name whenever it is rebuilt. This makes chained \"watching\" of dependent projects simpler: the host project can kick of `build-watch` for all dependent projects and then it can watch the set of `.build-sentinel` files to know if and when it should rebuild itself.\n\n## Things I wish were true...\n\n#### A universal config/ sub-folder\n\nHaving so many .dot-files and config files in the root directory always distracts me. I've given up on this battle and some of my suggestions above contribute to the existing trends.\n\n#### A standard JSON or AST format for documentation separating content from presentation\n\nI wish Go, Rust, JavaScript, etc. all decoupled the data from the presentation!\n\n## Context\n\nI once wrote a program that examined projects and enforced many of these conventions (scanning .gitignore files, package files, adding eslint files, etc.). I decided documentation was easier to maintain that an automated approach.\n\n## Reference\n\n-   [GNU make standard targets](https://www.gnu.org/software/make/manual/html_node/Standard-Targets.html#Standard-Targets)\n",
             "tags": [],
             "properties": {},
             "title": "Zero Config"
@@ -34087,6 +34219,11 @@
             "webpack_notes",
             "zero_config"
         ],
+        "reference": [
+            "data_objects",
+            "sea",
+            "zero_config"
+        ],
         "page": [
             "creating_a_new_site",
             "data_table",
@@ -35562,10 +35699,6 @@
             "sea"
         ],
         "text": [
-            "data_objects",
-            "sea"
-        ],
-        "reference": [
             "data_objects",
             "sea"
         ],
