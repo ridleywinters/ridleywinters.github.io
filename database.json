@@ -20791,6 +20791,281 @@
             "title": "Rust WebGL"
         },
         {
+            "filename": "sample_page.mdx",
+            "extension": "mdx",
+            "id": "sample_page",
+            "path": [],
+            "ast": {
+                "type": "root",
+                "children": [
+                    {
+                        "type": "heading",
+                        "depth": 1,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Sample Page with a Longish Title",
+                                "position": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 3,
+                                        "offset": 2
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 35,
+                                        "offset": 34
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 35,
+                                "offset": 34
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "An introduction of something that is important.",
+                                "position": {
+                                    "start": {
+                                        "line": 3,
+                                        "column": 1,
+                                        "offset": 36
+                                    },
+                                    "end": {
+                                        "line": 3,
+                                        "column": 48,
+                                        "offset": 83
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 3,
+                                "column": 1,
+                                "offset": 36
+                            },
+                            "end": {
+                                "line": 3,
+                                "column": 48,
+                                "offset": 83
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "heading",
+                        "depth": 2,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Introductions for everyone",
+                                "position": {
+                                    "start": {
+                                        "line": 5,
+                                        "column": 4,
+                                        "offset": 88
+                                    },
+                                    "end": {
+                                        "line": 5,
+                                        "column": 30,
+                                        "offset": 114
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 5,
+                                "column": 1,
+                                "offset": 85
+                            },
+                            "end": {
+                                "line": 5,
+                                "column": 30,
+                                "offset": 114
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "heading",
+                        "depth": 3,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Hello World!",
+                                "position": {
+                                    "start": {
+                                        "line": 7,
+                                        "column": 5,
+                                        "offset": 120
+                                    },
+                                    "end": {
+                                        "line": 7,
+                                        "column": 17,
+                                        "offset": 132
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 7,
+                                "column": 1,
+                                "offset": 116
+                            },
+                            "end": {
+                                "line": 7,
+                                "column": 17,
+                                "offset": 132
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "This is the beginning! I will show you how to start something that you haven't yet begun. That is the best sort of thing to start.",
+                                "position": {
+                                    "start": {
+                                        "line": 9,
+                                        "column": 1,
+                                        "offset": 134
+                                    },
+                                    "end": {
+                                        "line": 9,
+                                        "column": 131,
+                                        "offset": 264
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 9,
+                                "column": 1,
+                                "offset": 134
+                            },
+                            "end": {
+                                "line": 9,
+                                "column": 131,
+                                "offset": 264
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "This is a ",
+                                "position": {
+                                    "start": {
+                                        "line": 11,
+                                        "column": 1,
+                                        "offset": 266
+                                    },
+                                    "end": {
+                                        "line": 11,
+                                        "column": 11,
+                                        "offset": 276
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "wikilink",
+                                "id": "page_index",
+                                "text": "link to the index",
+                                "position": {
+                                    "start": {
+                                        "line": 11,
+                                        "column": 11,
+                                        "offset": 276
+                                    },
+                                    "end": {
+                                        "line": 11,
+                                        "column": 43,
+                                        "offset": 308
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": ".",
+                                "position": {
+                                    "start": {
+                                        "line": 11,
+                                        "column": 43,
+                                        "offset": 308
+                                    },
+                                    "end": {
+                                        "line": 11,
+                                        "column": 44,
+                                        "offset": 309
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 11,
+                                "column": 1,
+                                "offset": 266
+                            },
+                            "end": {
+                                "line": 11,
+                                "column": 44,
+                                "offset": 309
+                            },
+                            "indent": []
+                        }
+                    }
+                ],
+                "position": {
+                    "start": {
+                        "line": 1,
+                        "column": 1,
+                        "offset": 0
+                    },
+                    "end": {
+                        "line": 12,
+                        "column": 1,
+                        "offset": 310
+                    }
+                }
+            },
+            "string": "# Sample Page with a Longish Title\n\nAn introduction of something that is important.\n\n## Introductions for everyone\n\n### Hello World!\n\nThis is the beginning! I will show you how to start something that you haven't yet begun. That is the best sort of thing to start.\n\nThis is a TODO-WIKILINK.\n",
+            "tags": [],
+            "properties": {},
+            "title": "Sample Page with a Longish Title"
+        },
+        {
             "filename": "sea/creating_a_new_site.mdx",
             "extension": "mdx",
             "id": "creating_a_new_site",
@@ -32971,8 +33246,8 @@
             "extension": "jsx",
             "id": "page_layout",
             "path": [],
-            "text": "import React from 'react';\n\n\nfunction Outer({ children }) {\n    return (\n        <div>\n            <div style={{                \n                padding: '12px 2rem 6px',\n                backgroundColor: '#ACF',\n            }}>\n                <div style={{\n                    display: 'flex',\n                    flexDirection: 'row',\n                    maxWidth: '80rem',\n                margin: '0 auto',\n                }}>\n                    <a href=\"https://blacklivesmatter.com/\" style={{ textDecoration: 'none' }}>🖤</a>                    \n                    <div style={{ flexGrow: 1 }} />\n                    <a style={{ flexGrow: 0 }} href=\"/\">home</a>                   \n                    <div style={{ flexGrow: 1 }} />\n                    <a style={{ flexGrow: 0 }} href=\"/?page=page_index\">index</a>\n                    <div style={{ flexGrow: 50 }} />\n                </div>\n            </div>\n            <div style={{\n                display: 'flex',\n                flexDirection: 'column',\n                minHeight: 'calc(100vh - 120px)'\n            }}\n            >\n                {children}\n            </div>\n            <div style={{\n                minHeight: '120px',\n                padding: '12px 2rem 6px',\n                backgroundColor: '#ACF',\n            }}>\n                <div>\n                    Twitter: <a href=\"https://twitter.com/RidleyWinters\">RidleyWinters</a>\n                </div>\n                <div>\n                    Favicon designed by\n                    {' '}<a href=\"https://www.flaticon.com/authors/good-ware\">Good Ware</a>{' '}\n                    available at\n                    {' '}<a href=\"https://www.flaticon.com/free-icon/woodland_2933738?term=landscape&page=1&position=\">flaticon</a>.\n                </div>\n            </div>\n        </div>\n    );\n}\n\n\nfunction RelatedPages({ database, page }) {\n\n    const pages = _.keyBy(database.pages, 'id');\n\n    // This absurd functional chain is taking the set of keywords on this\n    // page and unioning it with the set of pages that also have that keyword.\n    const related = _.chain(database.index_words)\n        .map((list, word) => {\n            for (let i = 0; i < list.length; i++) {\n                if (list[i] === page.id) {\n                    return word;\n                }\n            }\n            return null;\n        })\n        .compact()\n        .sort()\n        .uniq()\n        .map((word) => database.index_words[word])\n        .flatten()\n        .compact()\n        .sort()\n        .filter((id) => id !== page.id)\n        .uniq()\n        .value();\n\n    return (\n        <div\n            style={{\n                margin: '8rem 0 2rem'\n            }}\n        >\n            <h3>Similar pages</h3>\n            <div>\n                {_.map(related, (id, index) => (\n                    <span key={id}>\n                        <a href={`/?page=${id}`}>{pages[id].title}</a>\n                        {index + 1 < related.length\n                            ?\n                            <span style={{ paddingRight: '0.5rem' }}>,</span>\n                            :\n                            null\n                        }\n                    </span>\n                ))}\n            </div>\n        </div>\n    );\n}\n\nexport default function PageLayout({ \n    database,\n    page,\n    children ,\n}) {\n    \n    return (\n        <Outer>\n            <div\n                style={{\n                    display: 'flex',\n                    flexDirection: 'column',\n                    flexGrow: 1,\n                    margin: '0 auto',\n                    maxWidth: '80rem',                    \n                }}\n            >\n                <div\n                    style={{\n                        flexGrow: 1,\n                    }}\n                >\n                    {children}                    \n                </div>\n                <RelatedPages database={database} page={page} />\n            </div>            \n        </Outer>\n    );\n}\n\n",
-            "parsed": "(function() {\n\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = PageLayout;\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction Outer({\n  children\n}) {\n  return /*#__PURE__*/_react.default.createElement(\"div\", null, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      padding: '12px 2rem 6px',\n      backgroundColor: '#ACF'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      flexDirection: 'row',\n      maxWidth: '80rem',\n      margin: '0 auto'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://blacklivesmatter.com/\",\n    style: {\n      textDecoration: 'none'\n    }\n  }, \"\\uD83D\\uDDA4\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 1\n    }\n  }), /*#__PURE__*/_react.default.createElement(\"a\", {\n    style: {\n      flexGrow: 0\n    },\n    href: \"/\"\n  }, \"home\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 1\n    }\n  }), /*#__PURE__*/_react.default.createElement(\"a\", {\n    style: {\n      flexGrow: 0\n    },\n    href: \"/?page=page_index\"\n  }, \"index\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 50\n    }\n  }))), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      flexDirection: 'column',\n      minHeight: 'calc(100vh - 120px)'\n    }\n  }, children), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      minHeight: '120px',\n      padding: '12px 2rem 6px',\n      backgroundColor: '#ACF'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", null, \"Twitter: \", /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://twitter.com/RidleyWinters\"\n  }, \"RidleyWinters\")), /*#__PURE__*/_react.default.createElement(\"div\", null, \"Favicon designed by\", ' ', /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://www.flaticon.com/authors/good-ware\"\n  }, \"Good Ware\"), ' ', \"available at\", ' ', /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://www.flaticon.com/free-icon/woodland_2933738?term=landscape&page=1&position=\"\n  }, \"flaticon\"), \".\")));\n}\n\nfunction RelatedPages({\n  database,\n  page\n}) {\n  const pages = _.keyBy(database.pages, 'id'); // This absurd functional chain is taking the set of keywords on this\n  // page and unioning it with the set of pages that also have that keyword.\n\n\n  const related = _.chain(database.index_words).map((list, word) => {\n    for (let i = 0; i < list.length; i++) {\n      if (list[i] === page.id) {\n        return word;\n      }\n    }\n\n    return null;\n  }).compact().sort().uniq().map(word => database.index_words[word]).flatten().compact().sort().filter(id => id !== page.id).uniq().value();\n\n  return /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      margin: '8rem 0 2rem'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"h3\", null, \"Similar pages\"), /*#__PURE__*/_react.default.createElement(\"div\", null, _.map(related, (id, index) => /*#__PURE__*/_react.default.createElement(\"span\", {\n    key: id\n  }, /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: `/?page=${id}`\n  }, pages[id].title), index + 1 < related.length ? /*#__PURE__*/_react.default.createElement(\"span\", {\n    style: {\n      paddingRight: '0.5rem'\n    }\n  }, \",\") : null))));\n}\n\nfunction PageLayout({\n  database,\n  page,\n  children\n}) {\n  return /*#__PURE__*/_react.default.createElement(Outer, null, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      flexDirection: 'column',\n      flexGrow: 1,\n      margin: '0 auto',\n      maxWidth: '80rem'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 1\n    }\n  }, children), /*#__PURE__*/_react.default.createElement(RelatedPages, {\n    database: database,\n    page: page\n  })));\n}\n})()"
+            "text": "import React from 'react';\nimport _ from 'lodash';\n\nfunction Outer({ \n    database,\n    children,\n}) {\n    console.log(database)\n\n    const handleClickRandom = (evt) => { \n        evt.preventDefault();\n        const page = _.shuffle(database.pages)[0];\n        const href = page.href;\n        history.pushState(null, '', href);\n    };\n\n    return (\n        <div>\n            <div style={{                \n                padding: '12px 2rem 6px',\n                backgroundColor: '#ACF',\n            }}>\n                <div style={{\n                    display: 'flex',\n                    flexDirection: 'row',\n                    maxWidth: '80rem',\n                margin: '0 auto',\n                }}>\n                    <a href=\"https://blacklivesmatter.com/\" style={{ textDecoration: 'none' }}>🖤</a>                    \n                    <div style={{ flexGrow: 1 }} />\n                    <a style={{ flexGrow: 0 }} href=\"/\">home</a>                   \n                    <div style={{ flexGrow: 1 }} />\n                    <a style={{ flexGrow: 0 }} href=\"/?page=page_index\">index</a>\n                    <div style={{ flexGrow: 1 }} />\n                    <a style={{ flexGrow: 0 }} href=\"#\" onClick={handleClickRandom}>random</a>\n                    <div style={{ flexGrow: 50 }} />\n                </div>\n            </div>\n            <div style={{\n                display: 'flex',\n                flexDirection: 'column',\n                minHeight: 'calc(100vh - 120px)'\n            }}\n            >\n                {children}\n            </div>\n            <div style={{\n                minHeight: '120px',\n                padding: '12px 2rem 6px',\n                backgroundColor: '#ACF',\n            }}>\n                <div>\n                    Twitter: <a href=\"https://twitter.com/RidleyWinters\">RidleyWinters</a>\n                </div>\n                <div>\n                    Favicon designed by\n                    {' '}<a href=\"https://www.flaticon.com/authors/good-ware\">Good Ware</a>{' '}\n                    available at\n                    {' '}<a href=\"https://www.flaticon.com/free-icon/woodland_2933738?term=landscape&page=1&position=\">flaticon</a>.\n                </div>\n            </div>\n        </div>\n    );\n}\n\n\nfunction RelatedPages({ database, page }) {\n\n    const pages = _.keyBy(database.pages, 'id');\n\n    // This absurd functional chain is taking the set of keywords on this\n    // page and unioning it with the set of pages that also have that keyword.\n    const related = _.chain(database.index_words)\n        .map((list, word) => {\n            for (let i = 0; i < list.length; i++) {\n                if (list[i] === page.id) {\n                    return word;\n                }\n            }\n            return null;\n        })\n        .compact()\n        .sort()\n        .uniq()\n        .map((word) => database.index_words[word])\n        .flatten()\n        .compact()\n        .sort()\n        .filter((id) => id !== page.id)\n        .uniq()\n        .value();\n\n    return (\n        <div\n            style={{\n                margin: '8rem 0 2rem'\n            }}\n        >\n            <h3>Similar pages</h3>\n            <div>\n                {_.map(related, (id, index) => (\n                    <span key={id}>\n                        <a href={`/?page=${id}`}>{pages[id].title}</a>\n                        {index + 1 < related.length\n                            ?\n                            <span style={{ paddingRight: '0.5rem' }}>,</span>\n                            :\n                            null\n                        }\n                    </span>\n                ))}\n            </div>\n        </div>\n    );\n}\n\nexport default function PageLayout({ \n    database,\n    page,\n    children ,\n}) {\n    \n    return (\n        <Outer database={database}>\n            <div\n                style={{\n                    display: 'flex',\n                    flexDirection: 'column',\n                    flexGrow: 1,\n                    margin: '0 auto',\n                    maxWidth: '80rem',                    \n                }}\n            >\n                <div\n                    className=\"page-content\"\n                    style={{\n                        flexGrow: 1,\n                    }}\n                >\n                    {children}                    \n                </div>\n                <RelatedPages database={database} page={page} />\n            </div>            \n        </Outer>\n    );\n}\n\n",
+            "parsed": "(function() {\n\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = PageLayout;\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nvar _lodash = _interopRequireDefault(require(\"lodash\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction Outer({\n  database,\n  children\n}) {\n  console.log(database);\n\n  const handleClickRandom = evt => {\n    evt.preventDefault();\n\n    const page = _lodash.default.shuffle(database.pages)[0];\n\n    const href = page.href;\n    history.pushState(null, '', href);\n  };\n\n  return /*#__PURE__*/_react.default.createElement(\"div\", null, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      padding: '12px 2rem 6px',\n      backgroundColor: '#ACF'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      flexDirection: 'row',\n      maxWidth: '80rem',\n      margin: '0 auto'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://blacklivesmatter.com/\",\n    style: {\n      textDecoration: 'none'\n    }\n  }, \"\\uD83D\\uDDA4\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 1\n    }\n  }), /*#__PURE__*/_react.default.createElement(\"a\", {\n    style: {\n      flexGrow: 0\n    },\n    href: \"/\"\n  }, \"home\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 1\n    }\n  }), /*#__PURE__*/_react.default.createElement(\"a\", {\n    style: {\n      flexGrow: 0\n    },\n    href: \"/?page=page_index\"\n  }, \"index\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 1\n    }\n  }), /*#__PURE__*/_react.default.createElement(\"a\", {\n    style: {\n      flexGrow: 0\n    },\n    href: \"#\",\n    onClick: handleClickRandom\n  }, \"random\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 50\n    }\n  }))), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      flexDirection: 'column',\n      minHeight: 'calc(100vh - 120px)'\n    }\n  }, children), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      minHeight: '120px',\n      padding: '12px 2rem 6px',\n      backgroundColor: '#ACF'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", null, \"Twitter: \", /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://twitter.com/RidleyWinters\"\n  }, \"RidleyWinters\")), /*#__PURE__*/_react.default.createElement(\"div\", null, \"Favicon designed by\", ' ', /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://www.flaticon.com/authors/good-ware\"\n  }, \"Good Ware\"), ' ', \"available at\", ' ', /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://www.flaticon.com/free-icon/woodland_2933738?term=landscape&page=1&position=\"\n  }, \"flaticon\"), \".\")));\n}\n\nfunction RelatedPages({\n  database,\n  page\n}) {\n  const pages = _lodash.default.keyBy(database.pages, 'id'); // This absurd functional chain is taking the set of keywords on this\n  // page and unioning it with the set of pages that also have that keyword.\n\n\n  const related = _lodash.default.chain(database.index_words).map((list, word) => {\n    for (let i = 0; i < list.length; i++) {\n      if (list[i] === page.id) {\n        return word;\n      }\n    }\n\n    return null;\n  }).compact().sort().uniq().map(word => database.index_words[word]).flatten().compact().sort().filter(id => id !== page.id).uniq().value();\n\n  return /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      margin: '8rem 0 2rem'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"h3\", null, \"Similar pages\"), /*#__PURE__*/_react.default.createElement(\"div\", null, _lodash.default.map(related, (id, index) => /*#__PURE__*/_react.default.createElement(\"span\", {\n    key: id\n  }, /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: `/?page=${id}`\n  }, pages[id].title), index + 1 < related.length ? /*#__PURE__*/_react.default.createElement(\"span\", {\n    style: {\n      paddingRight: '0.5rem'\n    }\n  }, \",\") : null))));\n}\n\nfunction PageLayout({\n  database,\n  page,\n  children\n}) {\n  return /*#__PURE__*/_react.default.createElement(Outer, {\n    database: database\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      flexDirection: 'column',\n      flexGrow: 1,\n      margin: '0 auto',\n      maxWidth: '80rem'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"page-content\",\n    style: {\n      flexGrow: 1\n    }\n  }, children), /*#__PURE__*/_react.default.createElement(RelatedPages, {\n    database: database,\n    page: page\n  })));\n}\n})()"
         },
         {
             "filename": "section.jsx",
@@ -32987,8 +33262,8 @@
             "extension": "jsx",
             "id": "site_layout",
             "path": [],
-            "text": "import _ from 'lodash';\n\nfunction addStylesheets(stylesheets) {\n    _.each(stylesheets, (href) => {\n        const link = document.createElement('link');\n        link.type = 'text/css';\n        link.rel = \"stylesheet\";\n        link.href = href;\n        document.head.appendChild(link);\n    });\n}\n\nfunction addStyleNode(style) {\n    const lines = [];\n    for (let selector in style) {\n        const props = style[selector];\n        lines.push(`${selector} {`);\n        for (let javascriptName in props) {\n            const cssName = javascriptName.replace(/[A-Z]/g, (m) => `-${m.toLowerCase()}`);\n            lines.push(`    ${cssName}: ${props[javascriptName]};`);\n        }\n        lines.push(`}`);\n    }\n\n    const el = document.createElement('style');\n    el.type = 'text/css';\n    el.appendChild(document.createTextNode(lines.join('\\n')));\n    document.head.appendChild(el);\n}\n\nlet runCount = 0;\n\nexport default function SiteLayout({ children }) {\n\n    if (runCount === 0) {\n        runCount++;\n\n        addStylesheets([\n            \"https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900&display=swap&subset=latin-ext\",\n            \"https://fonts.googleapis.com/css?family=Faustina&display=swap\",\n            \"https://fonts.googleapis.com/css?family=Courier+Prime&display=swap\",\n        ]);\n\n        addStyleNode({\n            \"body, input, button\": {\n                fontFamily: 'Catamaran',\n            },\n            \"a, a:visited, a code\": {\n                color: 'rgb(31, 136, 180)',\n            },\n            \"code\" : {\n                color : '#052',\n                fontSize: '0.85rem',\n            },\n            \"body\": {\n                fontFamily: 'Catamaran',\n            },\n            \".t-sans\": {\n                fontFamily: 'Catamaran',\n            },\n            \".t-serif\": {\n                fontFamily: 'Faustina'\n            },\n            \".t-mono\": {\n                fontFamily: 'Courier Prime',\n            }\n        })\n    }\n\n    return children;\n}\n\n",
-            "parsed": "(function() {\n\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = SiteLayout;\n\nvar _lodash = _interopRequireDefault(require(\"lodash\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction addStylesheets(stylesheets) {\n  _lodash.default.each(stylesheets, href => {\n    const link = document.createElement('link');\n    link.type = 'text/css';\n    link.rel = \"stylesheet\";\n    link.href = href;\n    document.head.appendChild(link);\n  });\n}\n\nfunction addStyleNode(style) {\n  const lines = [];\n\n  for (let selector in style) {\n    const props = style[selector];\n    lines.push(`${selector} {`);\n\n    for (let javascriptName in props) {\n      const cssName = javascriptName.replace(/[A-Z]/g, m => `-${m.toLowerCase()}`);\n      lines.push(`    ${cssName}: ${props[javascriptName]};`);\n    }\n\n    lines.push(`}`);\n  }\n\n  const el = document.createElement('style');\n  el.type = 'text/css';\n  el.appendChild(document.createTextNode(lines.join('\\n')));\n  document.head.appendChild(el);\n}\n\nlet runCount = 0;\n\nfunction SiteLayout({\n  children\n}) {\n  if (runCount === 0) {\n    runCount++;\n    addStylesheets([\"https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900&display=swap&subset=latin-ext\", \"https://fonts.googleapis.com/css?family=Faustina&display=swap\", \"https://fonts.googleapis.com/css?family=Courier+Prime&display=swap\"]);\n    addStyleNode({\n      \"body, input, button\": {\n        fontFamily: 'Catamaran'\n      },\n      \"a, a:visited, a code\": {\n        color: 'rgb(31, 136, 180)'\n      },\n      \"code\": {\n        color: '#052',\n        fontSize: '0.85rem'\n      },\n      \"body\": {\n        fontFamily: 'Catamaran'\n      },\n      \".t-sans\": {\n        fontFamily: 'Catamaran'\n      },\n      \".t-serif\": {\n        fontFamily: 'Faustina'\n      },\n      \".t-mono\": {\n        fontFamily: 'Courier Prime'\n      }\n    });\n  }\n\n  return children;\n}\n})()"
+            "text": "import _ from 'lodash';\n\nfunction addStylesheets(stylesheets) {\n    _.each(stylesheets, (href) => {\n        const link = document.createElement('link');\n        link.type = 'text/css';\n        link.rel = \"stylesheet\";\n        link.href = href;\n        document.head.appendChild(link);\n    });\n}\n\nfunction addStyleNode(style) {\n    const lines = [];\n    for (let selector in style) {\n        const props = style[selector];\n        lines.push(`${selector} {`);\n        for (let javascriptName in props) {\n            const cssName = javascriptName.replace(/[A-Z]/g, (m) => `-${m.toLowerCase()}`);\n            lines.push(`    ${cssName}: ${props[javascriptName]};`);\n        }\n        lines.push(`}`);\n    }\n\n    const el = document.createElement('style');\n    el.type = 'text/css';\n    el.appendChild(document.createTextNode(lines.join('\\n')));\n    document.head.appendChild(el);\n}\n\nfunction addStyleNodePrefix(prefix, style) {\n\n    const remapped = {};\n    const keys = Object.keys(style);\n    keys.forEach((key) => {\n        const k = key.split(',').map((p) => `${prefix} ${p}`).join(', ');\n        remapped[k] = style[key];\n        console.log(k)\n    });\n    addStyleNode(remapped);\n}\n\nfunction addScriptNode(url) {\n    const el = document.createElement('script');\n    el.src = url;\n    document.body.appendChild(el);\n}\n\nlet runCount = 0;\nlet chroma = null;\n\nexport default function SiteLayout({ children }) {\n    if (runCount === 0) {\n        runCount++;\n\n        addScriptNode('https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js');\n\n        addStylesheets([\n            \"https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900&display=swap&subset=latin-ext\",\n            \"https://fonts.googleapis.com/css?family=Faustina&display=swap\",\n            \"https://fonts.googleapis.com/css?family=Courier+Prime&display=swap\",\n        ]);\n\n        // Hacky loop to make sure external script is loaded\n        const checkReady = () => {\n            if (!window.chroma) {\n                setTimeout(checkReady, 200);\n                return;\n            }\n            chroma = window.chroma;\n\n            addStyleNode({\n                \"body, input, button\": {\n                    fontFamily: 'Catamaran',\n                },\n                \"a, a:visited, a code\": {\n                    color: 'rgb(31, 136, 180)',\n                },\n                \"code\" : {\n                    color : '#052',\n                    fontSize: '0.85rem',\n                },\n                \"body\": {\n                    fontFamily: 'Catamaran',\n                },\n                \".t-sans\": {\n                    fontFamily: 'Catamaran',\n                },\n                \".t-serif\": {\n                    fontFamily: 'Faustina'\n                },\n                \".t-mono\": {\n                    fontFamily: 'Courier Prime',\n                }\n            });\n\n            const colors = {};\n            colors.base = [\"fe5f55\",\"2391cc\",\"313e50\",\"5d8f68\",\"07393c\"].map((c) => chroma(`#${c}`));\n            colors.header = colors.base[3];\n            colors.link = colors.base[1];\n\n            addStyleNodePrefix('.page-content', {\n                \"\" : {\n                    fontSize : '110%',\n                },\n                \"a, a:visited\" : {\n                    'color' : colors.link.css(),\n                },\n                \"a:hover\" : {\n                    'color' : colors.base[0].css(),\n                },\n                \"h1,h2,h3\" : {\n                    'color' : colors.header.css(),\n                }                \n            })\n        };\n        checkReady();\n    }\n\n    return children;\n}\n\n",
+            "parsed": "(function() {\n\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = SiteLayout;\n\nvar _lodash = _interopRequireDefault(require(\"lodash\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction addStylesheets(stylesheets) {\n  _lodash.default.each(stylesheets, href => {\n    const link = document.createElement('link');\n    link.type = 'text/css';\n    link.rel = \"stylesheet\";\n    link.href = href;\n    document.head.appendChild(link);\n  });\n}\n\nfunction addStyleNode(style) {\n  const lines = [];\n\n  for (let selector in style) {\n    const props = style[selector];\n    lines.push(`${selector} {`);\n\n    for (let javascriptName in props) {\n      const cssName = javascriptName.replace(/[A-Z]/g, m => `-${m.toLowerCase()}`);\n      lines.push(`    ${cssName}: ${props[javascriptName]};`);\n    }\n\n    lines.push(`}`);\n  }\n\n  const el = document.createElement('style');\n  el.type = 'text/css';\n  el.appendChild(document.createTextNode(lines.join('\\n')));\n  document.head.appendChild(el);\n}\n\nfunction addStyleNodePrefix(prefix, style) {\n  const remapped = {};\n  const keys = Object.keys(style);\n  keys.forEach(key => {\n    const k = key.split(',').map(p => `${prefix} ${p}`).join(', ');\n    remapped[k] = style[key];\n    console.log(k);\n  });\n  addStyleNode(remapped);\n}\n\nfunction addScriptNode(url) {\n  const el = document.createElement('script');\n  el.src = url;\n  document.body.appendChild(el);\n}\n\nlet runCount = 0;\nlet chroma = null;\n\nfunction SiteLayout({\n  children\n}) {\n  if (runCount === 0) {\n    runCount++;\n    addScriptNode('https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js');\n    addStylesheets([\"https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900&display=swap&subset=latin-ext\", \"https://fonts.googleapis.com/css?family=Faustina&display=swap\", \"https://fonts.googleapis.com/css?family=Courier+Prime&display=swap\"]); // Hacky loop to make sure external script is loaded\n\n    const checkReady = () => {\n      if (!window.chroma) {\n        setTimeout(checkReady, 200);\n        return;\n      }\n\n      chroma = window.chroma;\n      addStyleNode({\n        \"body, input, button\": {\n          fontFamily: 'Catamaran'\n        },\n        \"a, a:visited, a code\": {\n          color: 'rgb(31, 136, 180)'\n        },\n        \"code\": {\n          color: '#052',\n          fontSize: '0.85rem'\n        },\n        \"body\": {\n          fontFamily: 'Catamaran'\n        },\n        \".t-sans\": {\n          fontFamily: 'Catamaran'\n        },\n        \".t-serif\": {\n          fontFamily: 'Faustina'\n        },\n        \".t-mono\": {\n          fontFamily: 'Courier Prime'\n        }\n      });\n      const colors = {};\n      colors.base = [\"fe5f55\", \"2391cc\", \"313e50\", \"5d8f68\", \"07393c\"].map(c => chroma(`#${c}`));\n      colors.header = colors.base[3];\n      colors.link = colors.base[1];\n      addStyleNodePrefix('.page-content', {\n        \"\": {\n          fontSize: '110%'\n        },\n        \"a, a:visited\": {\n          'color': colors.link.css()\n        },\n        \"a:hover\": {\n          'color': colors.base[0].css()\n        },\n        \"h1,h2,h3\": {\n          'color': colors.header.css()\n        }\n      });\n    };\n\n    checkReady();\n  }\n\n  return children;\n}\n})()"
         },
         {
             "filename": "user_story.jsx",
@@ -33304,6 +33579,7 @@
         "yet": [
             "creating_user_stories",
             "rust_raytracer",
+            "sample_page",
             "sea",
             "zero_config"
         ],
@@ -33394,6 +33670,7 @@
             "creating_a_new_site",
             "creating_user_stories",
             "rust_raytracer",
+            "sample_page",
             "sea",
             "zero_config"
         ],
@@ -33489,6 +33766,7 @@
             "index",
             "principles",
             "rust_raytracer",
+            "sample_page",
             "sea",
             "zero_config"
         ],
@@ -33503,6 +33781,7 @@
             "creating_user_stories",
             "data_objects",
             "rust_raytracer",
+            "sample_page",
             "webpack_notes",
             "zero_config"
         ],
@@ -33513,17 +33792,6 @@
         "takes": [
             "principles",
             "rust_producer_consumer",
-            "zero_config"
-        ],
-        "an": [
-            "creating_user_stories",
-            "data_objects",
-            "data_table",
-            "git_repo",
-            "kestrel",
-            "rust_producer_consumer",
-            "rust_raytracer",
-            "sea",
             "zero_config"
         ],
         "argument": [
@@ -33826,6 +34094,7 @@
             "kestrel",
             "layouts",
             "page_index",
+            "sample_page",
             "sea",
             "test-wikilinks"
         ],
@@ -33928,11 +34197,13 @@
             "data_objects",
             "kestrel",
             "principles",
+            "sample_page",
             "sea"
         ],
         "important": [
             "data_objects",
-            "principles"
+            "principles",
+            "sample_page"
         ],
         "person": [
             "creating_user_stories",
@@ -34023,7 +34294,8 @@
         "world": [
             "example_user_stories",
             "index",
-            "kestrel"
+            "kestrel",
+            "sample_page"
         ],
         "engine": [
             "example_user_stories",
@@ -34336,6 +34608,7 @@
         ],
         "hello": [
             "index",
+            "sample_page",
             "test"
         ],
         "website": [
@@ -34771,12 +35044,17 @@
             "five_whys",
             "rust_producer_consumer",
             "rust_raytracer",
+            "sample_page",
             "sea"
         ],
         "tries": [
             "creating_user_stories",
             "layouts",
             "sea"
+        ],
+        "everyone": [
+            "creating_user_stories",
+            "sample_page"
         ],
         "expected": [
             "creating_user_stories",
@@ -34867,6 +35145,10 @@
             "sea",
             "webpack_notes"
         ],
+        "best": [
+            "creating_user_stories",
+            "sample_page"
+        ],
         "roadmap": [
             "creating_user_stories",
             "sea"
@@ -34895,6 +35177,10 @@
         "before": [
             "creating_user_stories",
             "rust_raytracer"
+        ],
+        "beginning": [
+            "creating_user_stories",
+            "sample_page"
         ],
         "helpful": [
             "creating_user_stories",
@@ -35093,6 +35379,10 @@
         "install": [
             "creating_a_new_site",
             "rust_webgl",
+            "sea"
+        ],
+        "show": [
+            "sample_page",
             "sea"
         ],
         "sea": [
