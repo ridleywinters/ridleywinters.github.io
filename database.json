@@ -1465,6 +1465,23 @@
                                                     },
                                                     "indent": []
                                                 }
+                                            },
+                                            {
+                                                "type": "text",
+                                                "value": " -",
+                                                "position": {
+                                                    "start": {
+                                                        "line": 16,
+                                                        "column": 10,
+                                                        "offset": 727
+                                                    },
+                                                    "end": {
+                                                        "line": 16,
+                                                        "column": 12,
+                                                        "offset": 729
+                                                    },
+                                                    "indent": []
+                                                }
                                             }
                                         ],
                                         "position": {
@@ -1475,8 +1492,8 @@
                                             },
                                             "end": {
                                                 "line": 16,
-                                                "column": 10,
-                                                "offset": 727
+                                                "column": 12,
+                                                "offset": 729
                                             },
                                             "indent": []
                                         }
@@ -1490,8 +1507,8 @@
                                     },
                                     "end": {
                                         "line": 16,
-                                        "column": 10,
-                                        "offset": 727
+                                        "column": 12,
+                                        "offset": 729
                                     },
                                     "indent": []
                                 }
@@ -1511,12 +1528,29 @@
                                                     "start": {
                                                         "line": 17,
                                                         "column": 3,
-                                                        "offset": 730
+                                                        "offset": 732
                                                     },
                                                     "end": {
                                                         "line": 17,
                                                         "column": 9,
-                                                        "offset": 736
+                                                        "offset": 738
+                                                    },
+                                                    "indent": []
+                                                }
+                                            },
+                                            {
+                                                "type": "text",
+                                                "value": " - ",
+                                                "position": {
+                                                    "start": {
+                                                        "line": 17,
+                                                        "column": 9,
+                                                        "offset": 738
+                                                    },
+                                                    "end": {
+                                                        "line": 17,
+                                                        "column": 12,
+                                                        "offset": 741
                                                     },
                                                     "indent": []
                                                 }
@@ -1526,12 +1560,12 @@
                                             "start": {
                                                 "line": 17,
                                                 "column": 3,
-                                                "offset": 730
+                                                "offset": 732
                                             },
                                             "end": {
                                                 "line": 17,
-                                                "column": 9,
-                                                "offset": 736
+                                                "column": 12,
+                                                "offset": 741
                                             },
                                             "indent": []
                                         }
@@ -1541,12 +1575,12 @@
                                     "start": {
                                         "line": 17,
                                         "column": 1,
-                                        "offset": 728
+                                        "offset": 730
                                     },
                                     "end": {
                                         "line": 17,
-                                        "column": 9,
-                                        "offset": 736
+                                        "column": 12,
+                                        "offset": 741
                                     },
                                     "indent": []
                                 }
@@ -1566,12 +1600,12 @@
                                                     "start": {
                                                         "line": 18,
                                                         "column": 3,
-                                                        "offset": 739
+                                                        "offset": 744
                                                     },
                                                     "end": {
                                                         "line": 18,
                                                         "column": 11,
-                                                        "offset": 747
+                                                        "offset": 752
                                                     },
                                                     "indent": []
                                                 }
@@ -1583,12 +1617,12 @@
                                                     "start": {
                                                         "line": 18,
                                                         "column": 11,
-                                                        "offset": 747
+                                                        "offset": 752
                                                     },
                                                     "end": {
                                                         "line": 18,
                                                         "column": 31,
-                                                        "offset": 767
+                                                        "offset": 772
                                                     },
                                                     "indent": []
                                                 }
@@ -1598,12 +1632,12 @@
                                             "start": {
                                                 "line": 18,
                                                 "column": 3,
-                                                "offset": 739
+                                                "offset": 744
                                             },
                                             "end": {
                                                 "line": 18,
                                                 "column": 31,
-                                                "offset": 767
+                                                "offset": 772
                                             },
                                             "indent": []
                                         }
@@ -1613,12 +1647,12 @@
                                     "start": {
                                         "line": 18,
                                         "column": 1,
-                                        "offset": 737
+                                        "offset": 742
                                     },
                                     "end": {
                                         "line": 18,
                                         "column": 31,
-                                        "offset": 767
+                                        "offset": 772
                                     },
                                     "indent": []
                                 }
@@ -1638,12 +1672,29 @@
                                                     "start": {
                                                         "line": 19,
                                                         "column": 3,
-                                                        "offset": 770
+                                                        "offset": 775
                                                     },
                                                     "end": {
                                                         "line": 19,
                                                         "column": 8,
-                                                        "offset": 775
+                                                        "offset": 780
+                                                    },
+                                                    "indent": []
+                                                }
+                                            },
+                                            {
+                                                "type": "text",
+                                                "value": " - ",
+                                                "position": {
+                                                    "start": {
+                                                        "line": 19,
+                                                        "column": 8,
+                                                        "offset": 780
+                                                    },
+                                                    "end": {
+                                                        "line": 19,
+                                                        "column": 11,
+                                                        "offset": 783
                                                     },
                                                     "indent": []
                                                 }
@@ -1653,12 +1704,12 @@
                                             "start": {
                                                 "line": 19,
                                                 "column": 3,
-                                                "offset": 770
+                                                "offset": 775
                                             },
                                             "end": {
                                                 "line": 19,
-                                                "column": 8,
-                                                "offset": 775
+                                                "column": 11,
+                                                "offset": 783
                                             },
                                             "indent": []
                                         }
@@ -1668,12 +1719,12 @@
                                     "start": {
                                         "line": 19,
                                         "column": 1,
-                                        "offset": 768
+                                        "offset": 773
                                     },
                                     "end": {
                                         "line": 19,
-                                        "column": 8,
-                                        "offset": 775
+                                        "column": 11,
+                                        "offset": 783
                                     },
                                     "indent": []
                                 }
@@ -1693,12 +1744,29 @@
                                                     "start": {
                                                         "line": 20,
                                                         "column": 3,
-                                                        "offset": 778
+                                                        "offset": 786
                                                     },
                                                     "end": {
                                                         "line": 20,
                                                         "column": 12,
-                                                        "offset": 787
+                                                        "offset": 795
+                                                    },
+                                                    "indent": []
+                                                }
+                                            },
+                                            {
+                                                "type": "text",
+                                                "value": " - ",
+                                                "position": {
+                                                    "start": {
+                                                        "line": 20,
+                                                        "column": 12,
+                                                        "offset": 795
+                                                    },
+                                                    "end": {
+                                                        "line": 20,
+                                                        "column": 15,
+                                                        "offset": 798
                                                     },
                                                     "indent": []
                                                 }
@@ -1708,12 +1776,12 @@
                                             "start": {
                                                 "line": 20,
                                                 "column": 3,
-                                                "offset": 778
+                                                "offset": 786
                                             },
                                             "end": {
                                                 "line": 20,
-                                                "column": 12,
-                                                "offset": 787
+                                                "column": 15,
+                                                "offset": 798
                                             },
                                             "indent": []
                                         }
@@ -1723,12 +1791,12 @@
                                     "start": {
                                         "line": 20,
                                         "column": 1,
-                                        "offset": 776
+                                        "offset": 784
                                     },
                                     "end": {
                                         "line": 20,
-                                        "column": 12,
-                                        "offset": 787
+                                        "column": 15,
+                                        "offset": 798
                                     },
                                     "indent": []
                                 }
@@ -1748,12 +1816,29 @@
                                                     "start": {
                                                         "line": 21,
                                                         "column": 3,
-                                                        "offset": 790
+                                                        "offset": 801
                                                     },
                                                     "end": {
                                                         "line": 21,
                                                         "column": 8,
-                                                        "offset": 795
+                                                        "offset": 806
+                                                    },
+                                                    "indent": []
+                                                }
+                                            },
+                                            {
+                                                "type": "text",
+                                                "value": " -",
+                                                "position": {
+                                                    "start": {
+                                                        "line": 21,
+                                                        "column": 8,
+                                                        "offset": 806
+                                                    },
+                                                    "end": {
+                                                        "line": 21,
+                                                        "column": 10,
+                                                        "offset": 808
                                                     },
                                                     "indent": []
                                                 }
@@ -1763,12 +1848,12 @@
                                             "start": {
                                                 "line": 21,
                                                 "column": 3,
-                                                "offset": 790
+                                                "offset": 801
                                             },
                                             "end": {
                                                 "line": 21,
-                                                "column": 8,
-                                                "offset": 795
+                                                "column": 10,
+                                                "offset": 808
                                             },
                                             "indent": []
                                         }
@@ -1778,12 +1863,12 @@
                                     "start": {
                                         "line": 21,
                                         "column": 1,
-                                        "offset": 788
+                                        "offset": 799
                                     },
                                     "end": {
                                         "line": 21,
-                                        "column": 8,
-                                        "offset": 795
+                                        "column": 10,
+                                        "offset": 808
                                     },
                                     "indent": []
                                 }
@@ -1803,12 +1888,29 @@
                                                     "start": {
                                                         "line": 22,
                                                         "column": 3,
-                                                        "offset": 798
+                                                        "offset": 811
                                                     },
                                                     "end": {
                                                         "line": 22,
                                                         "column": 14,
-                                                        "offset": 809
+                                                        "offset": 822
+                                                    },
+                                                    "indent": []
+                                                }
+                                            },
+                                            {
+                                                "type": "text",
+                                                "value": " -",
+                                                "position": {
+                                                    "start": {
+                                                        "line": 22,
+                                                        "column": 14,
+                                                        "offset": 822
+                                                    },
+                                                    "end": {
+                                                        "line": 22,
+                                                        "column": 16,
+                                                        "offset": 824
                                                     },
                                                     "indent": []
                                                 }
@@ -1818,12 +1920,12 @@
                                             "start": {
                                                 "line": 22,
                                                 "column": 3,
-                                                "offset": 798
+                                                "offset": 811
                                             },
                                             "end": {
                                                 "line": 22,
-                                                "column": 14,
-                                                "offset": 809
+                                                "column": 16,
+                                                "offset": 824
                                             },
                                             "indent": []
                                         }
@@ -1833,12 +1935,12 @@
                                     "start": {
                                         "line": 22,
                                         "column": 1,
-                                        "offset": 796
+                                        "offset": 809
                                     },
                                     "end": {
                                         "line": 22,
-                                        "column": 14,
-                                        "offset": 809
+                                        "column": 16,
+                                        "offset": 824
                                     },
                                     "indent": []
                                 }
@@ -1858,12 +1960,29 @@
                                                     "start": {
                                                         "line": 23,
                                                         "column": 3,
-                                                        "offset": 812
+                                                        "offset": 827
                                                     },
                                                     "end": {
                                                         "line": 23,
                                                         "column": 8,
-                                                        "offset": 817
+                                                        "offset": 832
+                                                    },
+                                                    "indent": []
+                                                }
+                                            },
+                                            {
+                                                "type": "text",
+                                                "value": " -",
+                                                "position": {
+                                                    "start": {
+                                                        "line": 23,
+                                                        "column": 8,
+                                                        "offset": 832
+                                                    },
+                                                    "end": {
+                                                        "line": 23,
+                                                        "column": 10,
+                                                        "offset": 834
                                                     },
                                                     "indent": []
                                                 }
@@ -1873,12 +1992,12 @@
                                             "start": {
                                                 "line": 23,
                                                 "column": 3,
-                                                "offset": 812
+                                                "offset": 827
                                             },
                                             "end": {
                                                 "line": 23,
-                                                "column": 8,
-                                                "offset": 817
+                                                "column": 10,
+                                                "offset": 834
                                             },
                                             "indent": []
                                         }
@@ -1888,12 +2007,12 @@
                                     "start": {
                                         "line": 23,
                                         "column": 1,
-                                        "offset": 810
+                                        "offset": 825
                                     },
                                     "end": {
                                         "line": 23,
-                                        "column": 8,
-                                        "offset": 817
+                                        "column": 10,
+                                        "offset": 834
                                     },
                                     "indent": []
                                 }
@@ -1907,8 +2026,8 @@
                             },
                             "end": {
                                 "line": 23,
-                                "column": 8,
-                                "offset": 817
+                                "column": 10,
+                                "offset": 834
                             },
                             "indent": [
                                 1,
@@ -1933,12 +2052,12 @@
                                     "start": {
                                         "line": 25,
                                         "column": 4,
-                                        "offset": 822
+                                        "offset": 839
                                     },
                                     "end": {
                                         "line": 25,
                                         "column": 24,
-                                        "offset": 842
+                                        "offset": 859
                                     },
                                     "indent": []
                                 }
@@ -1948,12 +2067,12 @@
                             "start": {
                                 "line": 25,
                                 "column": 1,
-                                "offset": 819
+                                "offset": 836
                             },
                             "end": {
                                 "line": 25,
                                 "column": 24,
-                                "offset": 842
+                                "offset": 859
                             },
                             "indent": []
                         }
@@ -1979,12 +2098,12 @@
                                                     "start": {
                                                         "line": 27,
                                                         "column": 3,
-                                                        "offset": 846
+                                                        "offset": 863
                                                     },
                                                     "end": {
                                                         "line": 27,
                                                         "column": 16,
-                                                        "offset": 859
+                                                        "offset": 876
                                                     },
                                                     "indent": []
                                                 }
@@ -1996,12 +2115,12 @@
                                                     "start": {
                                                         "line": 27,
                                                         "column": 16,
-                                                        "offset": 859
+                                                        "offset": 876
                                                     },
                                                     "end": {
                                                         "line": 27,
                                                         "column": 75,
-                                                        "offset": 918
+                                                        "offset": 935
                                                     },
                                                     "indent": []
                                                 }
@@ -2016,12 +2135,12 @@
                                                             "start": {
                                                                 "line": 27,
                                                                 "column": 76,
-                                                                "offset": 919
+                                                                "offset": 936
                                                             },
                                                             "end": {
                                                                 "line": 27,
                                                                 "column": 90,
-                                                                "offset": 933
+                                                                "offset": 950
                                                             },
                                                             "indent": []
                                                         }
@@ -2031,12 +2150,12 @@
                                                     "start": {
                                                         "line": 27,
                                                         "column": 75,
-                                                        "offset": 918
+                                                        "offset": 935
                                                     },
                                                     "end": {
                                                         "line": 27,
                                                         "column": 91,
-                                                        "offset": 934
+                                                        "offset": 951
                                                     },
                                                     "indent": []
                                                 }
@@ -2048,12 +2167,12 @@
                                                     "start": {
                                                         "line": 27,
                                                         "column": 91,
-                                                        "offset": 934
+                                                        "offset": 951
                                                     },
                                                     "end": {
                                                         "line": 27,
                                                         "column": 261,
-                                                        "offset": 1104
+                                                        "offset": 1121
                                                     },
                                                     "indent": []
                                                 }
@@ -2063,12 +2182,12 @@
                                             "start": {
                                                 "line": 27,
                                                 "column": 3,
-                                                "offset": 846
+                                                "offset": 863
                                             },
                                             "end": {
                                                 "line": 27,
                                                 "column": 261,
-                                                "offset": 1104
+                                                "offset": 1121
                                             },
                                             "indent": []
                                         }
@@ -2078,12 +2197,12 @@
                                     "start": {
                                         "line": 27,
                                         "column": 1,
-                                        "offset": 844
+                                        "offset": 861
                                     },
                                     "end": {
                                         "line": 27,
                                         "column": 261,
-                                        "offset": 1104
+                                        "offset": 1121
                                     },
                                     "indent": []
                                 }
@@ -2093,12 +2212,354 @@
                             "start": {
                                 "line": 27,
                                 "column": 1,
-                                "offset": 844
+                                "offset": 861
                             },
                             "end": {
                                 "line": 27,
                                 "column": 261,
-                                "offset": 1104
+                                "offset": 1121
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "The purpose of this target is to start an  on-going process watch all source files and automatically trigger the ",
+                                "position": {
+                                    "start": {
+                                        "line": 29,
+                                        "column": 1,
+                                        "offset": 1123
+                                    },
+                                    "end": {
+                                        "line": 29,
+                                        "column": 114,
+                                        "offset": 1236
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "inlineCode",
+                                "value": "build",
+                                "position": {
+                                    "start": {
+                                        "line": 29,
+                                        "column": 114,
+                                        "offset": 1236
+                                    },
+                                    "end": {
+                                        "line": 29,
+                                        "column": 121,
+                                        "offset": 1243
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": " command when one of those files is modified. The work of this command is usually deferred to another program such as ",
+                                "position": {
+                                    "start": {
+                                        "line": 29,
+                                        "column": 121,
+                                        "offset": 1243
+                                    },
+                                    "end": {
+                                        "line": 29,
+                                        "column": 239,
+                                        "offset": 1361
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "inlineCode",
+                                "value": "nodemon",
+                                "position": {
+                                    "start": {
+                                        "line": 29,
+                                        "column": 239,
+                                        "offset": 1361
+                                    },
+                                    "end": {
+                                        "line": 29,
+                                        "column": 248,
+                                        "offset": 1370
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": ", ",
+                                "position": {
+                                    "start": {
+                                        "line": 29,
+                                        "column": 248,
+                                        "offset": 1370
+                                    },
+                                    "end": {
+                                        "line": 29,
+                                        "column": 250,
+                                        "offset": 1372
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "inlineCode",
+                                "value": "yolo",
+                                "position": {
+                                    "start": {
+                                        "line": 29,
+                                        "column": 250,
+                                        "offset": 1372
+                                    },
+                                    "end": {
+                                        "line": 29,
+                                        "column": 256,
+                                        "offset": 1378
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": ", or one of many other alternatives.  ",
+                                "position": {
+                                    "start": {
+                                        "line": 29,
+                                        "column": 256,
+                                        "offset": 1378
+                                    },
+                                    "end": {
+                                        "line": 29,
+                                        "column": 294,
+                                        "offset": 1416
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 29,
+                                "column": 1,
+                                "offset": 1123
+                            },
+                            "end": {
+                                "line": 29,
+                                "column": 294,
+                                "offset": 1416
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "This is usually a proper subset of the actions of ",
+                                "position": {
+                                    "start": {
+                                        "line": 31,
+                                        "column": 1,
+                                        "offset": 1418
+                                    },
+                                    "end": {
+                                        "line": 31,
+                                        "column": 51,
+                                        "offset": 1468
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "inlineCode",
+                                "value": "dev",
+                                "position": {
+                                    "start": {
+                                        "line": 31,
+                                        "column": 51,
+                                        "offset": 1468
+                                    },
+                                    "end": {
+                                        "line": 31,
+                                        "column": 56,
+                                        "offset": 1473
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": " target where the ",
+                                "position": {
+                                    "start": {
+                                        "line": 31,
+                                        "column": 56,
+                                        "offset": 1473
+                                    },
+                                    "end": {
+                                        "line": 31,
+                                        "column": 74,
+                                        "offset": 1491
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "inlineCode",
+                                "value": "dev",
+                                "position": {
+                                    "start": {
+                                        "line": 31,
+                                        "column": 74,
+                                        "offset": 1491
+                                    },
+                                    "end": {
+                                        "line": 31,
+                                        "column": 79,
+                                        "offset": 1496
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": " target may also run a development server, command-line processing, produce active output step after the automatic rebuild. The ",
+                                "position": {
+                                    "start": {
+                                        "line": 31,
+                                        "column": 79,
+                                        "offset": 1496
+                                    },
+                                    "end": {
+                                        "line": 31,
+                                        "column": 207,
+                                        "offset": 1624
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "inlineCode",
+                                "value": "dev",
+                                "position": {
+                                    "start": {
+                                        "line": 31,
+                                        "column": 207,
+                                        "offset": 1624
+                                    },
+                                    "end": {
+                                        "line": 31,
+                                        "column": 212,
+                                        "offset": 1629
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": " step also may invoke ",
+                                "position": {
+                                    "start": {
+                                        "line": 31,
+                                        "column": 212,
+                                        "offset": 1629
+                                    },
+                                    "end": {
+                                        "line": 31,
+                                        "column": 234,
+                                        "offset": 1651
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "inlineCode",
+                                "value": "build-watch",
+                                "position": {
+                                    "start": {
+                                        "line": 31,
+                                        "column": 234,
+                                        "offset": 1651
+                                    },
+                                    "end": {
+                                        "line": 31,
+                                        "column": 247,
+                                        "offset": 1664
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": " on dependent modules. ",
+                                "position": {
+                                    "start": {
+                                        "line": 31,
+                                        "column": 247,
+                                        "offset": 1664
+                                    },
+                                    "end": {
+                                        "line": 31,
+                                        "column": 270,
+                                        "offset": 1687
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "inlineCode",
+                                "value": "build-watch",
+                                "position": {
+                                    "start": {
+                                        "line": 31,
+                                        "column": 270,
+                                        "offset": 1687
+                                    },
+                                    "end": {
+                                        "line": 31,
+                                        "column": 283,
+                                        "offset": 1700
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": " should not watch dependent modules to avoid duplicated watches across shared dependencies.",
+                                "position": {
+                                    "start": {
+                                        "line": 31,
+                                        "column": 283,
+                                        "offset": 1700
+                                    },
+                                    "end": {
+                                        "line": 31,
+                                        "column": 374,
+                                        "offset": 1791
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 31,
+                                "column": 1,
+                                "offset": 1418
+                            },
+                            "end": {
+                                "line": 31,
+                                "column": 374,
+                                "offset": 1791
                             },
                             "indent": []
                         }
@@ -2112,14 +2573,14 @@
                                 "value": "Some details",
                                 "position": {
                                     "start": {
-                                        "line": 29,
+                                        "line": 34,
                                         "column": 4,
-                                        "offset": 1109
+                                        "offset": 1797
                                     },
                                     "end": {
-                                        "line": 29,
+                                        "line": 34,
                                         "column": 16,
-                                        "offset": 1121
+                                        "offset": 1809
                                     },
                                     "indent": []
                                 }
@@ -2127,14 +2588,14 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 29,
+                                "line": 34,
                                 "column": 1,
-                                "offset": 1106
+                                "offset": 1794
                             },
                             "end": {
-                                "line": 29,
+                                "line": 34,
                                 "column": 16,
-                                "offset": 1121
+                                "offset": 1809
                             },
                             "indent": []
                         }
@@ -2158,14 +2619,14 @@
                                                 "value": ".build-sentinel",
                                                 "position": {
                                                     "start": {
-                                                        "line": 31,
+                                                        "line": 36,
                                                         "column": 3,
-                                                        "offset": 1125
+                                                        "offset": 1813
                                                     },
                                                     "end": {
-                                                        "line": 31,
+                                                        "line": 36,
                                                         "column": 20,
-                                                        "offset": 1142
+                                                        "offset": 1830
                                                     },
                                                     "indent": []
                                                 }
@@ -2175,14 +2636,14 @@
                                                 "value": " - I have the ",
                                                 "position": {
                                                     "start": {
-                                                        "line": 31,
+                                                        "line": 36,
                                                         "column": 20,
-                                                        "offset": 1142
+                                                        "offset": 1830
                                                     },
                                                     "end": {
-                                                        "line": 31,
+                                                        "line": 36,
                                                         "column": 34,
-                                                        "offset": 1156
+                                                        "offset": 1844
                                                     },
                                                     "indent": []
                                                 }
@@ -2192,14 +2653,14 @@
                                                 "value": "build",
                                                 "position": {
                                                     "start": {
-                                                        "line": 31,
+                                                        "line": 36,
                                                         "column": 34,
-                                                        "offset": 1156
+                                                        "offset": 1844
                                                     },
                                                     "end": {
-                                                        "line": 31,
+                                                        "line": 36,
                                                         "column": 41,
-                                                        "offset": 1163
+                                                        "offset": 1851
                                                     },
                                                     "indent": []
                                                 }
@@ -2209,14 +2670,14 @@
                                                 "value": " step ",
                                                 "position": {
                                                     "start": {
-                                                        "line": 31,
+                                                        "line": 36,
                                                         "column": 41,
-                                                        "offset": 1163
+                                                        "offset": 1851
                                                     },
                                                     "end": {
-                                                        "line": 31,
+                                                        "line": 36,
                                                         "column": 47,
-                                                        "offset": 1169
+                                                        "offset": 1857
                                                     },
                                                     "indent": []
                                                 }
@@ -2226,14 +2687,14 @@
                                                 "value": "touch",
                                                 "position": {
                                                     "start": {
-                                                        "line": 31,
+                                                        "line": 36,
                                                         "column": 47,
-                                                        "offset": 1169
+                                                        "offset": 1857
                                                     },
                                                     "end": {
-                                                        "line": 31,
+                                                        "line": 36,
                                                         "column": 54,
-                                                        "offset": 1176
+                                                        "offset": 1864
                                                     },
                                                     "indent": []
                                                 }
@@ -2243,14 +2704,14 @@
                                                 "value": " a git-ignored file by this name whenever it is rebuilt. This makes chained \"watching\" of dependent projects simpler: the host project can kick of ",
                                                 "position": {
                                                     "start": {
-                                                        "line": 31,
+                                                        "line": 36,
                                                         "column": 54,
-                                                        "offset": 1176
+                                                        "offset": 1864
                                                     },
                                                     "end": {
-                                                        "line": 31,
+                                                        "line": 36,
                                                         "column": 201,
-                                                        "offset": 1323
+                                                        "offset": 2011
                                                     },
                                                     "indent": []
                                                 }
@@ -2260,14 +2721,14 @@
                                                 "value": "build-watch",
                                                 "position": {
                                                     "start": {
-                                                        "line": 31,
+                                                        "line": 36,
                                                         "column": 201,
-                                                        "offset": 1323
+                                                        "offset": 2011
                                                     },
                                                     "end": {
-                                                        "line": 31,
+                                                        "line": 36,
                                                         "column": 214,
-                                                        "offset": 1336
+                                                        "offset": 2024
                                                     },
                                                     "indent": []
                                                 }
@@ -2277,14 +2738,14 @@
                                                 "value": " for all dependent projects and then it can watch the set of ",
                                                 "position": {
                                                     "start": {
-                                                        "line": 31,
+                                                        "line": 36,
                                                         "column": 214,
-                                                        "offset": 1336
+                                                        "offset": 2024
                                                     },
                                                     "end": {
-                                                        "line": 31,
+                                                        "line": 36,
                                                         "column": 275,
-                                                        "offset": 1397
+                                                        "offset": 2085
                                                     },
                                                     "indent": []
                                                 }
@@ -2294,14 +2755,14 @@
                                                 "value": ".build-sentinel",
                                                 "position": {
                                                     "start": {
-                                                        "line": 31,
+                                                        "line": 36,
                                                         "column": 275,
-                                                        "offset": 1397
+                                                        "offset": 2085
                                                     },
                                                     "end": {
-                                                        "line": 31,
+                                                        "line": 36,
                                                         "column": 292,
-                                                        "offset": 1414
+                                                        "offset": 2102
                                                     },
                                                     "indent": []
                                                 }
@@ -2311,14 +2772,14 @@
                                                 "value": " files to know if and when it should rebuild itself.",
                                                 "position": {
                                                     "start": {
-                                                        "line": 31,
+                                                        "line": 36,
                                                         "column": 292,
-                                                        "offset": 1414
+                                                        "offset": 2102
                                                     },
                                                     "end": {
-                                                        "line": 31,
+                                                        "line": 36,
                                                         "column": 344,
-                                                        "offset": 1466
+                                                        "offset": 2154
                                                     },
                                                     "indent": []
                                                 }
@@ -2326,14 +2787,14 @@
                                         ],
                                         "position": {
                                             "start": {
-                                                "line": 31,
+                                                "line": 36,
                                                 "column": 3,
-                                                "offset": 1125
+                                                "offset": 1813
                                             },
                                             "end": {
-                                                "line": 31,
+                                                "line": 36,
                                                 "column": 344,
-                                                "offset": 1466
+                                                "offset": 2154
                                             },
                                             "indent": []
                                         }
@@ -2341,14 +2802,14 @@
                                 ],
                                 "position": {
                                     "start": {
-                                        "line": 31,
+                                        "line": 36,
                                         "column": 1,
-                                        "offset": 1123
+                                        "offset": 1811
                                     },
                                     "end": {
-                                        "line": 31,
+                                        "line": 36,
                                         "column": 344,
-                                        "offset": 1466
+                                        "offset": 2154
                                     },
                                     "indent": []
                                 }
@@ -2356,14 +2817,14 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 31,
+                                "line": 36,
                                 "column": 1,
-                                "offset": 1123
+                                "offset": 1811
                             },
                             "end": {
-                                "line": 31,
+                                "line": 36,
                                 "column": 344,
-                                "offset": 1466
+                                "offset": 2154
                             },
                             "indent": []
                         }
@@ -2377,14 +2838,14 @@
                                 "value": "Things I wish were true...",
                                 "position": {
                                     "start": {
-                                        "line": 33,
+                                        "line": 38,
                                         "column": 4,
-                                        "offset": 1471
+                                        "offset": 2159
                                     },
                                     "end": {
-                                        "line": 33,
+                                        "line": 38,
                                         "column": 30,
-                                        "offset": 1497
+                                        "offset": 2185
                                     },
                                     "indent": []
                                 }
@@ -2392,14 +2853,14 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 33,
+                                "line": 38,
                                 "column": 1,
-                                "offset": 1468
+                                "offset": 2156
                             },
                             "end": {
-                                "line": 33,
+                                "line": 38,
                                 "column": 30,
-                                "offset": 1497
+                                "offset": 2185
                             },
                             "indent": []
                         }
@@ -2413,14 +2874,14 @@
                                 "value": "A universal config/ sub-folder",
                                 "position": {
                                     "start": {
-                                        "line": 35,
+                                        "line": 40,
                                         "column": 6,
-                                        "offset": 1504
+                                        "offset": 2192
                                     },
                                     "end": {
-                                        "line": 35,
+                                        "line": 40,
                                         "column": 36,
-                                        "offset": 1534
+                                        "offset": 2222
                                     },
                                     "indent": []
                                 }
@@ -2428,14 +2889,14 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 35,
+                                "line": 40,
                                 "column": 1,
-                                "offset": 1499
+                                "offset": 2187
                             },
                             "end": {
-                                "line": 35,
+                                "line": 40,
                                 "column": 36,
-                                "offset": 1534
+                                "offset": 2222
                             },
                             "indent": []
                         }
@@ -2448,14 +2909,14 @@
                                 "value": "Having so many .dot-files and config files in the root directory always distracts me. I've given up on this battle and some of my suggestions above contribute to the existing trends.",
                                 "position": {
                                     "start": {
-                                        "line": 37,
+                                        "line": 42,
                                         "column": 1,
-                                        "offset": 1536
+                                        "offset": 2224
                                     },
                                     "end": {
-                                        "line": 37,
+                                        "line": 42,
                                         "column": 183,
-                                        "offset": 1718
+                                        "offset": 2406
                                     },
                                     "indent": []
                                 }
@@ -2463,14 +2924,14 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 37,
+                                "line": 42,
                                 "column": 1,
-                                "offset": 1536
+                                "offset": 2224
                             },
                             "end": {
-                                "line": 37,
+                                "line": 42,
                                 "column": 183,
-                                "offset": 1718
+                                "offset": 2406
                             },
                             "indent": []
                         }
@@ -2484,14 +2945,14 @@
                                 "value": "A standard JSON or AST format for documentation separating content from presentation",
                                 "position": {
                                     "start": {
-                                        "line": 39,
+                                        "line": 44,
                                         "column": 6,
-                                        "offset": 1725
+                                        "offset": 2413
                                     },
                                     "end": {
-                                        "line": 39,
+                                        "line": 44,
                                         "column": 90,
-                                        "offset": 1809
+                                        "offset": 2497
                                     },
                                     "indent": []
                                 }
@@ -2499,14 +2960,14 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 39,
+                                "line": 44,
                                 "column": 1,
-                                "offset": 1720
+                                "offset": 2408
                             },
                             "end": {
-                                "line": 39,
+                                "line": 44,
                                 "column": 90,
-                                "offset": 1809
+                                "offset": 2497
                             },
                             "indent": []
                         }
@@ -2519,14 +2980,14 @@
                                 "value": "I wish Go, Rust, JavaScript, etc. all decoupled the data from the presentation!",
                                 "position": {
                                     "start": {
-                                        "line": 41,
+                                        "line": 46,
                                         "column": 1,
-                                        "offset": 1811
+                                        "offset": 2499
                                     },
                                     "end": {
-                                        "line": 41,
+                                        "line": 46,
                                         "column": 80,
-                                        "offset": 1890
+                                        "offset": 2578
                                     },
                                     "indent": []
                                 }
@@ -2534,14 +2995,14 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 41,
+                                "line": 46,
                                 "column": 1,
-                                "offset": 1811
+                                "offset": 2499
                             },
                             "end": {
-                                "line": 41,
+                                "line": 46,
                                 "column": 80,
-                                "offset": 1890
+                                "offset": 2578
                             },
                             "indent": []
                         }
@@ -2555,14 +3016,14 @@
                                 "value": "Context",
                                 "position": {
                                     "start": {
-                                        "line": 43,
+                                        "line": 48,
                                         "column": 4,
-                                        "offset": 1895
+                                        "offset": 2583
                                     },
                                     "end": {
-                                        "line": 43,
+                                        "line": 48,
                                         "column": 11,
-                                        "offset": 1902
+                                        "offset": 2590
                                     },
                                     "indent": []
                                 }
@@ -2570,14 +3031,14 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 43,
+                                "line": 48,
                                 "column": 1,
-                                "offset": 1892
+                                "offset": 2580
                             },
                             "end": {
-                                "line": 43,
+                                "line": 48,
                                 "column": 11,
-                                "offset": 1902
+                                "offset": 2590
                             },
                             "indent": []
                         }
@@ -2590,14 +3051,14 @@
                                 "value": "I once wrote a program that examined projects and enforced many of these conventions (scanning .gitignore files, package files, adding eslint files, etc.). I decided documentation was easier to maintain that an automated approach.",
                                 "position": {
                                     "start": {
-                                        "line": 45,
+                                        "line": 50,
                                         "column": 1,
-                                        "offset": 1904
+                                        "offset": 2592
                                     },
                                     "end": {
-                                        "line": 45,
+                                        "line": 50,
                                         "column": 231,
-                                        "offset": 2134
+                                        "offset": 2822
                                     },
                                     "indent": []
                                 }
@@ -2605,14 +3066,14 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 45,
+                                "line": 50,
                                 "column": 1,
-                                "offset": 1904
+                                "offset": 2592
                             },
                             "end": {
-                                "line": 45,
+                                "line": 50,
                                 "column": 231,
-                                "offset": 2134
+                                "offset": 2822
                             },
                             "indent": []
                         }
@@ -2626,14 +3087,14 @@
                                 "value": "Reference",
                                 "position": {
                                     "start": {
-                                        "line": 47,
+                                        "line": 52,
                                         "column": 4,
-                                        "offset": 2139
+                                        "offset": 2827
                                     },
                                     "end": {
-                                        "line": 47,
+                                        "line": 52,
                                         "column": 13,
-                                        "offset": 2148
+                                        "offset": 2836
                                     },
                                     "indent": []
                                 }
@@ -2641,14 +3102,14 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 47,
+                                "line": 52,
                                 "column": 1,
-                                "offset": 2136
+                                "offset": 2824
                             },
                             "end": {
-                                "line": 47,
+                                "line": 52,
                                 "column": 13,
-                                "offset": 2148
+                                "offset": 2836
                             },
                             "indent": []
                         }
@@ -2677,14 +3138,14 @@
                                                         "value": "GNU make standard targets",
                                                         "position": {
                                                             "start": {
-                                                                "line": 49,
+                                                                "line": 54,
                                                                 "column": 4,
-                                                                "offset": 2153
+                                                                "offset": 2841
                                                             },
                                                             "end": {
-                                                                "line": 49,
+                                                                "line": 54,
                                                                 "column": 29,
-                                                                "offset": 2178
+                                                                "offset": 2866
                                                             },
                                                             "indent": []
                                                         }
@@ -2692,14 +3153,14 @@
                                                 ],
                                                 "position": {
                                                     "start": {
-                                                        "line": 49,
+                                                        "line": 54,
                                                         "column": 3,
-                                                        "offset": 2152
+                                                        "offset": 2840
                                                     },
                                                     "end": {
-                                                        "line": 49,
+                                                        "line": 54,
                                                         "column": 121,
-                                                        "offset": 2270
+                                                        "offset": 2958
                                                     },
                                                     "indent": []
                                                 }
@@ -2707,14 +3168,14 @@
                                         ],
                                         "position": {
                                             "start": {
-                                                "line": 49,
+                                                "line": 54,
                                                 "column": 3,
-                                                "offset": 2152
+                                                "offset": 2840
                                             },
                                             "end": {
-                                                "line": 49,
+                                                "line": 54,
                                                 "column": 121,
-                                                "offset": 2270
+                                                "offset": 2958
                                             },
                                             "indent": []
                                         }
@@ -2722,14 +3183,14 @@
                                 ],
                                 "position": {
                                     "start": {
-                                        "line": 49,
+                                        "line": 54,
                                         "column": 1,
-                                        "offset": 2150
+                                        "offset": 2838
                                     },
                                     "end": {
-                                        "line": 49,
+                                        "line": 54,
                                         "column": 121,
-                                        "offset": 2270
+                                        "offset": 2958
                                     },
                                     "indent": []
                                 }
@@ -2737,14 +3198,14 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 49,
+                                "line": 54,
                                 "column": 1,
-                                "offset": 2150
+                                "offset": 2838
                             },
                             "end": {
-                                "line": 49,
+                                "line": 54,
                                 "column": 121,
-                                "offset": 2270
+                                "offset": 2958
                             },
                             "indent": []
                         }
@@ -2757,13 +3218,13 @@
                         "offset": 0
                     },
                     "end": {
-                        "line": 49,
+                        "line": 54,
                         "column": 121,
-                        "offset": 2270
+                        "offset": 2958
                     }
                 }
             },
-            "string": "# Zero Config\n\n**Work-in-progress**: collecting notes, but have not cleaned them up yet\n\nI've wasted way too much time in my career trying to figure out idiosyncracies of different development tools, especially in the context of hobby projects where I'm trying to learn something else, not configure the perfect production system. As a result here are some conventions I use...\n\n## Use make\n\nIt's certainly not perfect, but it's available on most systems and can be used as a common wrapper on other build systems so you don't have to remember what `cargo` versus `go` versus `rust` versus `npm` takes an argument.\n\nAlso, **use git**. Every assumption that can be made adds simplicity.\n\n## Make targets\n\n-   `ensure` - \n-   `build`\n-   `test`\n-   `format` - aka 'lint', 'fmt'\n-   `run`\n-   `publish`\n-   `dev`\n-   `benchmark`\n-   `doc`\n\n## Common other targets\n\n-   `build-watch` - watch files and rebuild locally. This can be useful for _other projects_ in a repo to invoke: i.e. watch all dependent projects (libraries, assets, etc.) so they are rebuilt automatically especailly in the context of a monorepo. This usually \n\n## Some details\n\n-   `.build-sentinel` - I have the `build` step `touch` a git-ignored file by this name whenever it is rebuilt. This makes chained \"watching\" of dependent projects simpler: the host project can kick of `build-watch` for all dependent projects and then it can watch the set of `.build-sentinel` files to know if and when it should rebuild itself.\n\n## Things I wish were true...\n\n#### A universal config/ sub-folder\n\nHaving so many .dot-files and config files in the root directory always distracts me. I've given up on this battle and some of my suggestions above contribute to the existing trends.\n\n#### A standard JSON or AST format for documentation separating content from presentation\n\nI wish Go, Rust, JavaScript, etc. all decoupled the data from the presentation!\n\n## Context\n\nI once wrote a program that examined projects and enforced many of these conventions (scanning .gitignore files, package files, adding eslint files, etc.). I decided documentation was easier to maintain that an automated approach.\n\n## Reference\n\n-   [GNU make standard targets](https://www.gnu.org/software/make/manual/html_node/Standard-Targets.html#Standard-Targets)\n",
+            "string": "# Zero Config\n\n**Work-in-progress**: collecting notes, but have not cleaned them up yet\n\nI've wasted way too much time in my career trying to figure out idiosyncracies of different development tools, especially in the context of hobby projects where I'm trying to learn something else, not configure the perfect production system. As a result here are some conventions I use...\n\n## Use make\n\nIt's certainly not perfect, but it's available on most systems and can be used as a common wrapper on other build systems so you don't have to remember what `cargo` versus `go` versus `rust` versus `npm` takes an argument.\n\nAlso, **use git**. Every assumption that can be made adds simplicity.\n\n## Make targets\n\n-   `ensure` - \n-   `build` -\n-   `test` - \n-   `format` - aka 'lint', 'fmt'\n-   `run` - \n-   `publish` - \n-   `dev` -\n-   `benchmark` -\n-   `doc` -\n\n## Common other targets\n\n-   `build-watch` - watch files and rebuild locally. This can be useful for _other projects_ in a repo to invoke: i.e. watch all dependent projects (libraries, assets, etc.) so they are rebuilt automatically especailly in the context of a monorepo. This usually \n\nThe purpose of this target is to start an  on-going process watch all source files and automatically trigger the `build` command when one of those files is modified. The work of this command is usually deferred to another program such as `nodemon`, `yolo`, or one of many other alternatives.  \n\nThis is usually a proper subset of the actions of `dev` target where the `dev` target may also run a development server, command-line processing, produce active output step after the automatic rebuild. The `dev` step also may invoke `build-watch` on dependent modules. `build-watch` should not watch dependent modules to avoid duplicated watches across shared dependencies.\n\n## Some details\n\n-   `.build-sentinel` - I have the `build` step `touch` a git-ignored file by this name whenever it is rebuilt. This makes chained \"watching\" of dependent projects simpler: the host project can kick of `build-watch` for all dependent projects and then it can watch the set of `.build-sentinel` files to know if and when it should rebuild itself.\n\n## Things I wish were true...\n\n#### A universal config/ sub-folder\n\nHaving so many .dot-files and config files in the root directory always distracts me. I've given up on this battle and some of my suggestions above contribute to the existing trends.\n\n#### A standard JSON or AST format for documentation separating content from presentation\n\nI wish Go, Rust, JavaScript, etc. all decoupled the data from the presentation!\n\n## Context\n\nI once wrote a program that examined projects and enforced many of these conventions (scanning .gitignore files, package files, adding eslint files, etc.). I decided documentation was easier to maintain that an automated approach.\n\n## Reference\n\n-   [GNU make standard targets](https://www.gnu.org/software/make/manual/html_node/Standard-Targets.html#Standard-Targets)\n",
             "tags": [],
             "properties": {},
             "title": "Zero Config"
@@ -7071,7 +7532,7 @@
                         "type": "code",
                         "lang": "makefile",
                         "meta": null,
-                        "value": "#\n# Use a bash script since we want a single make command to run multiple\n# background processes.\n#\ndefine DEV_SCRIPT\nshutdown() {\n    echo kill $(jobs -l |awk '$2 == \"|\" {print $1; next} {print $2}')\n    kill $(jobs -l |awk '$2 == \"|\" {print $1; next} {print $2}')\n    exit 0\n}\ntrap \"shutdown\" SIGINT SIGTERM\n\nnpx nodemon --watch data --ext js,jsx,mdx --exec make build-database &\n\nnpx webpack-dev-server \\\n\t\t--mode development \\\n\t\t--entry ./src/client.jsx \\\n\t\t--output-public-path dist \\\n\t\t--output-filename client.bundle.js &\nwait\nendef\nexport DEV_SCRIPT\n\ndev:\n\t@bash -c \"$$DEV_SCRIPT\"",
+                        "value": "#\n# Use a bash script since we want a single make command to run multiple\n# background processes.\n#\ndefine DEV_SCRIPT\n\nnpx nodemon --watch data --ext js,jsx,mdx --exec make build-database &\n\nnpx webpack-dev-server \\\n\t\t--mode development \\\n\t\t--entry ./src/client.jsx \\\n\t\t--history-api-fallback '/404.html' \\\n\t\t--output-public-path dist \\\n\t\t--output-filename client.bundle.js &\nwait\nendef\nexport DEV_SCRIPT\n\ndev:\n\t@bash -c \"$$DEV_SCRIPT\"",
                         "position": {
                             "start": {
                                 "line": 25,
@@ -7079,16 +7540,11 @@
                                 "offset": 616
                             },
                             "end": {
-                                "line": 51,
+                                "line": 46,
                                 "column": 4,
-                                "offset": 1220
+                                "offset": 1067
                             },
                             "indent": [
-                                1,
-                                1,
-                                1,
-                                1,
-                                1,
                                 1,
                                 1,
                                 1,
@@ -7122,14 +7578,14 @@
                                 "value": "References",
                                 "position": {
                                     "start": {
-                                        "line": 53,
+                                        "line": 48,
                                         "column": 4,
-                                        "offset": 1225
+                                        "offset": 1072
                                     },
                                     "end": {
-                                        "line": 53,
+                                        "line": 48,
                                         "column": 14,
-                                        "offset": 1235
+                                        "offset": 1082
                                     },
                                     "indent": []
                                 }
@@ -7137,14 +7593,14 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 53,
+                                "line": 48,
                                 "column": 1,
-                                "offset": 1222
+                                "offset": 1069
                             },
                             "end": {
-                                "line": 53,
+                                "line": 48,
                                 "column": 14,
-                                "offset": 1235
+                                "offset": 1082
                             },
                             "indent": []
                         }
@@ -7173,14 +7629,14 @@
                                                         "value": "https://stackoverflow.com/questions/7281395/output-multiline-variable-to-a-file-with-gnu-make",
                                                         "position": {
                                                             "start": {
-                                                                "line": 55,
+                                                                "line": 50,
                                                                 "column": 3,
-                                                                "offset": 1239
+                                                                "offset": 1086
                                                             },
                                                             "end": {
-                                                                "line": 55,
+                                                                "line": 50,
                                                                 "column": 96,
-                                                                "offset": 1332
+                                                                "offset": 1179
                                                             },
                                                             "indent": []
                                                         }
@@ -7188,14 +7644,14 @@
                                                 ],
                                                 "position": {
                                                     "start": {
-                                                        "line": 55,
+                                                        "line": 50,
                                                         "column": 3,
-                                                        "offset": 1239
+                                                        "offset": 1086
                                                     },
                                                     "end": {
-                                                        "line": 55,
+                                                        "line": 50,
                                                         "column": 96,
-                                                        "offset": 1332
+                                                        "offset": 1179
                                                     },
                                                     "indent": []
                                                 }
@@ -7203,14 +7659,14 @@
                                         ],
                                         "position": {
                                             "start": {
-                                                "line": 55,
+                                                "line": 50,
                                                 "column": 3,
-                                                "offset": 1239
+                                                "offset": 1086
                                             },
                                             "end": {
-                                                "line": 55,
+                                                "line": 50,
                                                 "column": 96,
-                                                "offset": 1332
+                                                "offset": 1179
                                             },
                                             "indent": []
                                         }
@@ -7218,14 +7674,14 @@
                                 ],
                                 "position": {
                                     "start": {
-                                        "line": 55,
+                                        "line": 50,
                                         "column": 1,
-                                        "offset": 1237
+                                        "offset": 1084
                                     },
                                     "end": {
-                                        "line": 55,
+                                        "line": 50,
                                         "column": 96,
-                                        "offset": 1332
+                                        "offset": 1179
                                     },
                                     "indent": []
                                 }
@@ -7233,14 +7689,14 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 55,
+                                "line": 50,
                                 "column": 1,
-                                "offset": 1237
+                                "offset": 1084
                             },
                             "end": {
-                                "line": 55,
+                                "line": 50,
                                 "column": 96,
-                                "offset": 1332
+                                "offset": 1179
                             },
                             "indent": []
                         }
@@ -7253,13 +7709,13 @@
                         "offset": 0
                     },
                     "end": {
-                        "line": 55,
+                        "line": 50,
                         "column": 96,
-                        "offset": 1332
+                        "offset": 1179
                     }
                 }
             },
-            "string": "tags: how-to\n\n# How to embed a bash script inside a Makefile\n\n## Overview\n\nRelies on Make's features:\n\n-   [`define`](https://www.gnu.org/software/make/manual/html_node/Multi_002dLine.html)\n-   [`export`](https://www.gnu.org/software/make/manual/html_node/Variables_002fRecursion.html)\n\nThe basic concept is this:\n\n-   Use `define` to specify a multiline variable\n-   Use `export` to ensure the multiline variable expands correct to the bash subshell\n\n## Example\n\nIn this particular example, a bash script is used to wrap running multiple background \nprocesses together into logically a single Makefile command. \n\n```makefile\n#\n# Use a bash script since we want a single make command to run multiple\n# background processes.\n#\ndefine DEV_SCRIPT\nshutdown() {\n    echo kill $(jobs -l |awk '$2 == \"|\" {print $1; next} {print $2}')\n    kill $(jobs -l |awk '$2 == \"|\" {print $1; next} {print $2}')\n    exit 0\n}\ntrap \"shutdown\" SIGINT SIGTERM\n\nnpx nodemon --watch data --ext js,jsx,mdx --exec make build-database &\n\nnpx webpack-dev-server \\\n\t\t--mode development \\\n\t\t--entry ./src/client.jsx \\\n\t\t--output-public-path dist \\\n\t\t--output-filename client.bundle.js &\nwait\nendef\nexport DEV_SCRIPT\n\ndev:\n\t@bash -c \"$$DEV_SCRIPT\"\n```\n\n## References\n\n-   <https://stackoverflow.com/questions/7281395/output-multiline-variable-to-a-file-with-gnu-make>\n",
+            "string": "tags: how-to\n\n# How to embed a bash script inside a Makefile\n\n## Overview\n\nRelies on Make's features:\n\n-   [`define`](https://www.gnu.org/software/make/manual/html_node/Multi_002dLine.html)\n-   [`export`](https://www.gnu.org/software/make/manual/html_node/Variables_002fRecursion.html)\n\nThe basic concept is this:\n\n-   Use `define` to specify a multiline variable\n-   Use `export` to ensure the multiline variable expands correct to the bash subshell\n\n## Example\n\nIn this particular example, a bash script is used to wrap running multiple background \nprocesses together into logically a single Makefile command. \n\n```makefile\n#\n# Use a bash script since we want a single make command to run multiple\n# background processes.\n#\ndefine DEV_SCRIPT\n\nnpx nodemon --watch data --ext js,jsx,mdx --exec make build-database &\n\nnpx webpack-dev-server \\\n\t\t--mode development \\\n\t\t--entry ./src/client.jsx \\\n\t\t--history-api-fallback '/404.html' \\\n\t\t--output-public-path dist \\\n\t\t--output-filename client.bundle.js &\nwait\nendef\nexport DEV_SCRIPT\n\ndev:\n\t@bash -c \"$$DEV_SCRIPT\"\n```\n\n## References\n\n-   <https://stackoverflow.com/questions/7281395/output-multiline-variable-to-a-file-with-gnu-make>\n",
             "tags": [
                 "how-to"
             ],
@@ -10461,7 +10917,7 @@
                             "end": {
                                 "line": 31,
                                 "column": 9,
-                                "offset": 878
+                                "offset": 872
                             },
                             "indent": [
                                 1,
@@ -10492,8 +10948,8 @@
                                 1
                             ]
                         },
-                        "text": "<table>\n    <thead>\n        <tr>\n            <th style={{ textAlign: 'left' }}>Page</th>\n            <th style={{ textAlign: 'left' }}>Path</th>\n            <th style={{ textAlign: 'left' }}>Status</th>\n        </tr>\n    </thead>\n    <tbody>\n    {_.chain(database.pages)\n        .sortBy((page) => page.title)\n        .map((page) => ( \n            <tr key={page.id}>\n                <td style={{ paddingRight : '2rem' }}>\n                    <a href={`/?page=${page.id}`}>{page.title}</a>\n                </td>\n                <td style={{ paddingRight: '2rem', color: '#777' }}>\n                    {page.path.join(' / ')}\n                </td>\n                <td style={{ paddingRight: '1rem', color: '#777' }}>\n                    {page.properties.status}\n                </td>            \n            </tr>\n        ))\n        .value()}\n    </tbody>\n</table>",
-                        "parsed": "(function() {\n\"use strict\";\n\nreturn /*#__PURE__*/React.createElement(\"table\", null, /*#__PURE__*/React.createElement(\"thead\", null, /*#__PURE__*/React.createElement(\"tr\", null, /*#__PURE__*/React.createElement(\"th\", {\n  style: {\n    textAlign: 'left'\n  }\n}, \"Page\"), /*#__PURE__*/React.createElement(\"th\", {\n  style: {\n    textAlign: 'left'\n  }\n}, \"Path\"), /*#__PURE__*/React.createElement(\"th\", {\n  style: {\n    textAlign: 'left'\n  }\n}, \"Status\"))), /*#__PURE__*/React.createElement(\"tbody\", null, _.chain(database.pages).sortBy(page => page.title).map(page => /*#__PURE__*/React.createElement(\"tr\", {\n  key: page.id\n}, /*#__PURE__*/React.createElement(\"td\", {\n  style: {\n    paddingRight: '2rem'\n  }\n}, /*#__PURE__*/React.createElement(\"a\", {\n  href: `/?page=${page.id}`\n}, page.title)), /*#__PURE__*/React.createElement(\"td\", {\n  style: {\n    paddingRight: '2rem',\n    color: '#777'\n  }\n}, page.path.join(' / ')), /*#__PURE__*/React.createElement(\"td\", {\n  style: {\n    paddingRight: '1rem',\n    color: '#777'\n  }\n}, page.properties.status))).value()));\n})()"
+                        "text": "<table>\n    <thead>\n        <tr>\n            <th style={{ textAlign: 'left' }}>Page</th>\n            <th style={{ textAlign: 'left' }}>Path</th>\n            <th style={{ textAlign: 'left' }}>Status</th>\n        </tr>\n    </thead>\n    <tbody>\n    {_.chain(database.pages)\n        .sortBy((page) => page.title)\n        .map((page) => ( \n            <tr key={page.id}>\n                <td style={{ paddingRight : '2rem' }}>\n                    <a href={`/${page.id}`}>{page.title}</a>\n                </td>\n                <td style={{ paddingRight: '2rem', color: '#777' }}>\n                    {page.path.join(' / ')}\n                </td>\n                <td style={{ paddingRight: '1rem', color: '#777' }}>\n                    {page.properties.status}\n                </td>            \n            </tr>\n        ))\n        .value()}\n    </tbody>\n</table>",
+                        "parsed": "(function() {\n\"use strict\";\n\nreturn /*#__PURE__*/React.createElement(\"table\", null, /*#__PURE__*/React.createElement(\"thead\", null, /*#__PURE__*/React.createElement(\"tr\", null, /*#__PURE__*/React.createElement(\"th\", {\n  style: {\n    textAlign: 'left'\n  }\n}, \"Page\"), /*#__PURE__*/React.createElement(\"th\", {\n  style: {\n    textAlign: 'left'\n  }\n}, \"Path\"), /*#__PURE__*/React.createElement(\"th\", {\n  style: {\n    textAlign: 'left'\n  }\n}, \"Status\"))), /*#__PURE__*/React.createElement(\"tbody\", null, _.chain(database.pages).sortBy(page => page.title).map(page => /*#__PURE__*/React.createElement(\"tr\", {\n  key: page.id\n}, /*#__PURE__*/React.createElement(\"td\", {\n  style: {\n    paddingRight: '2rem'\n  }\n}, /*#__PURE__*/React.createElement(\"a\", {\n  href: `/${page.id}`\n}, page.title)), /*#__PURE__*/React.createElement(\"td\", {\n  style: {\n    paddingRight: '2rem',\n    color: '#777'\n  }\n}, page.path.join(' / ')), /*#__PURE__*/React.createElement(\"td\", {\n  style: {\n    paddingRight: '1rem',\n    color: '#777'\n  }\n}, page.properties.status))).value()));\n})()"
                     }
                 ],
                 "position": {
@@ -10505,11 +10961,11 @@
                     "end": {
                         "line": 31,
                         "column": 9,
-                        "offset": 878
+                        "offset": 872
                     }
                 }
             },
-            "string": "## Page Index\n\n<table>\n    <thead>\n        <tr>\n            <th style={{ textAlign: 'left' }}>Page</th>\n            <th style={{ textAlign: 'left' }}>Path</th>\n            <th style={{ textAlign: 'left' }}>Status</th>\n        </tr>\n    </thead>\n    <tbody>\n    {_.chain(database.pages)\n        .sortBy((page) => page.title)\n        .map((page) => ( \n            <tr key={page.id}>\n                <td style={{ paddingRight : '2rem' }}>\n                    <a href={`/?page=${page.id}`}>{page.title}</a>\n                </td>\n                <td style={{ paddingRight: '2rem', color: '#777' }}>\n                    {page.path.join(' / ')}\n                </td>\n                <td style={{ paddingRight: '1rem', color: '#777' }}>\n                    {page.properties.status}\n                </td>            \n            </tr>\n        ))\n        .value()}\n    </tbody>\n</table>\n",
+            "string": "## Page Index\n\n<table>\n    <thead>\n        <tr>\n            <th style={{ textAlign: 'left' }}>Page</th>\n            <th style={{ textAlign: 'left' }}>Path</th>\n            <th style={{ textAlign: 'left' }}>Status</th>\n        </tr>\n    </thead>\n    <tbody>\n    {_.chain(database.pages)\n        .sortBy((page) => page.title)\n        .map((page) => ( \n            <tr key={page.id}>\n                <td style={{ paddingRight : '2rem' }}>\n                    <a href={`/${page.id}`}>{page.title}</a>\n                </td>\n                <td style={{ paddingRight: '2rem', color: '#777' }}>\n                    {page.path.join(' / ')}\n                </td>\n                <td style={{ paddingRight: '1rem', color: '#777' }}>\n                    {page.properties.status}\n                </td>            \n            </tr>\n        ))\n        .value()}\n    </tbody>\n</table>\n",
             "tags": [],
             "properties": {},
             "title": "Page Index"
@@ -21177,6 +21633,397 @@
                             },
                             "indent": []
                         }
+                    },
+                    {
+                        "type": "heading",
+                        "depth": 4,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "This is a heading 4",
+                                "position": {
+                                    "start": {
+                                        "line": 14,
+                                        "column": 6,
+                                        "offset": 317
+                                    },
+                                    "end": {
+                                        "line": 14,
+                                        "column": 25,
+                                        "offset": 336
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 14,
+                                "column": 1,
+                                "offset": 312
+                            },
+                            "end": {
+                                "line": 14,
+                                "column": 25,
+                                "offset": 336
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Contrary to popular belief, Lorem Ipsum is not simply random text. ",
+                                "position": {
+                                    "start": {
+                                        "line": 16,
+                                        "column": 1,
+                                        "offset": 338
+                                    },
+                                    "end": {
+                                        "line": 16,
+                                        "column": 68,
+                                        "offset": 405
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 16,
+                                "column": 1,
+                                "offset": 338
+                            },
+                            "end": {
+                                "line": 16,
+                                "column": 68,
+                                "offset": 405
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "heading",
+                        "depth": 4,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "This is a heading 4",
+                                "position": {
+                                    "start": {
+                                        "line": 18,
+                                        "column": 6,
+                                        "offset": 412
+                                    },
+                                    "end": {
+                                        "line": 18,
+                                        "column": 25,
+                                        "offset": 431
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 18,
+                                "column": 1,
+                                "offset": 407
+                            },
+                            "end": {
+                                "line": 18,
+                                "column": 25,
+                                "offset": 431
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word.",
+                                "position": {
+                                    "start": {
+                                        "line": 20,
+                                        "column": 1,
+                                        "offset": 433
+                                    },
+                                    "end": {
+                                        "line": 20,
+                                        "column": 370,
+                                        "offset": 802
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 20,
+                                "column": 1,
+                                "offset": 433
+                            },
+                            "end": {
+                                "line": 20,
+                                "column": 370,
+                                "offset": 802
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "heading",
+                        "depth": 5,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "This is a heading 5",
+                                "position": {
+                                    "start": {
+                                        "line": 22,
+                                        "column": 7,
+                                        "offset": 810
+                                    },
+                                    "end": {
+                                        "line": 22,
+                                        "column": 26,
+                                        "offset": 829
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 22,
+                                "column": 1,
+                                "offset": 804
+                            },
+                            "end": {
+                                "line": 22,
+                                "column": 26,
+                                "offset": 829
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.",
+                                "position": {
+                                    "start": {
+                                        "line": 23,
+                                        "column": 1,
+                                        "offset": 830
+                                    },
+                                    "end": {
+                                        "line": 23,
+                                        "column": 764,
+                                        "offset": 1593
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 23,
+                                "column": 1,
+                                "offset": 830
+                            },
+                            "end": {
+                                "line": 23,
+                                "column": 764,
+                                "offset": 1593
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "heading",
+                        "depth": 4,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "This is a heading 4",
+                                "position": {
+                                    "start": {
+                                        "line": 25,
+                                        "column": 6,
+                                        "offset": 1600
+                                    },
+                                    "end": {
+                                        "line": 25,
+                                        "column": 25,
+                                        "offset": 1619
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 25,
+                                "column": 1,
+                                "offset": 1595
+                            },
+                            "end": {
+                                "line": 25,
+                                "column": 25,
+                                "offset": 1619
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.",
+                                "position": {
+                                    "start": {
+                                        "line": 27,
+                                        "column": 1,
+                                        "offset": 1621
+                                    },
+                                    "end": {
+                                        "line": 27,
+                                        "column": 764,
+                                        "offset": 2384
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 27,
+                                "column": 1,
+                                "offset": 1621
+                            },
+                            "end": {
+                                "line": 27,
+                                "column": 764,
+                                "offset": 2384
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "heading",
+                        "depth": 4,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "This is a heading 4",
+                                "position": {
+                                    "start": {
+                                        "line": 29,
+                                        "column": 6,
+                                        "offset": 2391
+                                    },
+                                    "end": {
+                                        "line": 29,
+                                        "column": 25,
+                                        "offset": 2410
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 29,
+                                "column": 1,
+                                "offset": 2386
+                            },
+                            "end": {
+                                "line": 29,
+                                "column": 25,
+                                "offset": 2410
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "heading",
+                        "depth": 2,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Start of another section",
+                                "position": {
+                                    "start": {
+                                        "line": 31,
+                                        "column": 4,
+                                        "offset": 2415
+                                    },
+                                    "end": {
+                                        "line": 31,
+                                        "column": 28,
+                                        "offset": 2439
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 31,
+                                "column": 1,
+                                "offset": 2412
+                            },
+                            "end": {
+                                "line": 31,
+                                "column": 28,
+                                "offset": 2439
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.",
+                                "position": {
+                                    "start": {
+                                        "line": 34,
+                                        "column": 1,
+                                        "offset": 2442
+                                    },
+                                    "end": {
+                                        "line": 34,
+                                        "column": 764,
+                                        "offset": 3205
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 34,
+                                "column": 1,
+                                "offset": 2442
+                            },
+                            "end": {
+                                "line": 34,
+                                "column": 764,
+                                "offset": 3205
+                            },
+                            "indent": []
+                        }
                     }
                 ],
                 "position": {
@@ -21186,13 +22033,13 @@
                         "offset": 0
                     },
                     "end": {
-                        "line": 12,
+                        "line": 35,
                         "column": 1,
-                        "offset": 310
+                        "offset": 3206
                     }
                 }
             },
-            "string": "# Sample Page with a Longish Title\n\nAn introduction of something that is important.\n\n## Introductions for everyone\n\n### Hello World!\n\nThis is the beginning! I will show you how to start something that you haven't yet begun. That is the best sort of thing to start.\n\nThis is a TODO-WIKILINK.\n",
+            "string": "# Sample Page with a Longish Title\n\nAn introduction of something that is important.\n\n## Introductions for everyone\n\n### Hello World!\n\nThis is the beginning! I will show you how to start something that you haven't yet begun. That is the best sort of thing to start.\n\nThis is a TODO-WIKILINK.\n\n#### This is a heading 4\n\nContrary to popular belief, Lorem Ipsum is not simply random text. \n\n#### This is a heading 4\n\nContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word.\n\n##### This is a heading 5\n\nContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.\n\n#### This is a heading 4\n\nContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.\n\n#### This is a heading 4\n\n## Start of another section\n\nContrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32.\n",
             "tags": [],
             "properties": {},
             "title": "Sample Page with a Longish Title"
@@ -33378,8 +34225,8 @@
             "extension": "jsx",
             "id": "page_layout",
             "path": [],
-            "text": "import React from 'react';\nimport _ from 'lodash';\n\nfunction Outer({ \n    database,\n    children,\n}) {\n    console.log(database)\n\n    const handleClickRandom = (evt) => { \n        evt.preventDefault();\n        const page = _.shuffle(database.pages)[0];\n        const href = page.href;\n        history.pushState(null, '', href);\n    };\n\n    return (\n        <div>\n            <div style={{                \n                padding: '12px 2rem 6px',\n                backgroundColor: '#ACF',\n            }}>\n                <div style={{\n                    display: 'flex',\n                    flexDirection: 'row',\n                    maxWidth: '80rem',\n                margin: '0 auto',\n                }}>\n                    <a href=\"https://blacklivesmatter.com/\" style={{ textDecoration: 'none' }}>🖤</a>                    \n                    <div style={{ flexGrow: 1 }} />\n                    <a style={{ flexGrow: 0 }} href=\"/\">home</a>                   \n                    <div style={{ flexGrow: 1 }} />\n                    <a style={{ flexGrow: 0 }} href=\"/?page=page_index\">index</a>\n                    <div style={{ flexGrow: 1 }} />\n                    <a style={{ flexGrow: 0 }} href=\"#\" onClick={handleClickRandom}>random</a>\n                    <div style={{ flexGrow: 50 }} />\n                </div>\n            </div>\n            <div style={{\n                display: 'flex',\n                flexDirection: 'column',\n                minHeight: 'calc(100vh - 120px)'\n            }}\n            >\n                {children}\n            </div>\n            <div style={{\n                minHeight: '120px',\n                padding: '12px 2rem 6px',\n                backgroundColor: '#ACF',\n            }}>\n                <div>\n                    Twitter: <a href=\"https://twitter.com/RidleyWinters\">RidleyWinters</a>\n                </div>\n                <div>\n                    Favicon designed by\n                    {' '}<a href=\"https://www.flaticon.com/authors/good-ware\">Good Ware</a>{' '}\n                    available at\n                    {' '}<a href=\"https://www.flaticon.com/free-icon/woodland_2933738?term=landscape&page=1&position=\">flaticon</a>.\n                </div>\n            </div>\n        </div>\n    );\n}\n\n\nfunction RelatedPages({ database, page }) {\n\n    const pages = _.keyBy(database.pages, 'id');\n\n    // This absurd functional chain is taking the set of keywords on this\n    // page and unioning it with the set of pages that also have that keyword.\n    const related = _.chain(database.index_words)\n        .map((list, word) => {\n            for (let i = 0; i < list.length; i++) {\n                if (list[i] === page.id) {\n                    return word;\n                }\n            }\n            return null;\n        })\n        .compact()\n        .sort()\n        .uniq()\n        .map((word) => database.index_words[word])\n        .flatten()\n        .compact()\n        .sort()\n        .filter((id) => id !== page.id)\n        .uniq()\n        .value();\n\n    return (\n        <div\n            style={{\n                margin: '8rem 0 2rem'\n            }}\n        >\n            <h3>Similar pages</h3>\n            <div>\n                {_.map(related, (id, index) => (\n                    <span key={id}>\n                        <a href={`/?page=${id}`}>{pages[id].title}</a>\n                        {index + 1 < related.length\n                            ?\n                            <span style={{ paddingRight: '0.5rem' }}>,</span>\n                            :\n                            null\n                        }\n                    </span>\n                ))}\n            </div>\n        </div>\n    );\n}\n\nexport default function PageLayout({ \n    database,\n    page,\n    children ,\n}) {\n    \n    return (\n        <Outer database={database}>\n            <div\n                style={{\n                    display: 'flex',\n                    flexDirection: 'column',\n                    flexGrow: 1,\n                    margin: '0 auto',\n                    maxWidth: '80rem',                    \n                }}\n            >\n                <div\n                    className=\"page-content\"\n                    style={{\n                        flexGrow: 1,\n                    }}\n                >\n                    {children}                    \n                </div>\n                <RelatedPages database={database} page={page} />\n            </div>            \n        </Outer>\n    );\n}\n\n",
-            "parsed": "(function() {\n\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = PageLayout;\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nvar _lodash = _interopRequireDefault(require(\"lodash\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction Outer({\n  database,\n  children\n}) {\n  console.log(database);\n\n  const handleClickRandom = evt => {\n    evt.preventDefault();\n\n    const page = _lodash.default.shuffle(database.pages)[0];\n\n    const href = page.href;\n    history.pushState(null, '', href);\n  };\n\n  return /*#__PURE__*/_react.default.createElement(\"div\", null, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      padding: '12px 2rem 6px',\n      backgroundColor: '#ACF'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      flexDirection: 'row',\n      maxWidth: '80rem',\n      margin: '0 auto'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://blacklivesmatter.com/\",\n    style: {\n      textDecoration: 'none'\n    }\n  }, \"\\uD83D\\uDDA4\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 1\n    }\n  }), /*#__PURE__*/_react.default.createElement(\"a\", {\n    style: {\n      flexGrow: 0\n    },\n    href: \"/\"\n  }, \"home\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 1\n    }\n  }), /*#__PURE__*/_react.default.createElement(\"a\", {\n    style: {\n      flexGrow: 0\n    },\n    href: \"/?page=page_index\"\n  }, \"index\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 1\n    }\n  }), /*#__PURE__*/_react.default.createElement(\"a\", {\n    style: {\n      flexGrow: 0\n    },\n    href: \"#\",\n    onClick: handleClickRandom\n  }, \"random\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 50\n    }\n  }))), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      flexDirection: 'column',\n      minHeight: 'calc(100vh - 120px)'\n    }\n  }, children), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      minHeight: '120px',\n      padding: '12px 2rem 6px',\n      backgroundColor: '#ACF'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", null, \"Twitter: \", /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://twitter.com/RidleyWinters\"\n  }, \"RidleyWinters\")), /*#__PURE__*/_react.default.createElement(\"div\", null, \"Favicon designed by\", ' ', /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://www.flaticon.com/authors/good-ware\"\n  }, \"Good Ware\"), ' ', \"available at\", ' ', /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://www.flaticon.com/free-icon/woodland_2933738?term=landscape&page=1&position=\"\n  }, \"flaticon\"), \".\")));\n}\n\nfunction RelatedPages({\n  database,\n  page\n}) {\n  const pages = _lodash.default.keyBy(database.pages, 'id'); // This absurd functional chain is taking the set of keywords on this\n  // page and unioning it with the set of pages that also have that keyword.\n\n\n  const related = _lodash.default.chain(database.index_words).map((list, word) => {\n    for (let i = 0; i < list.length; i++) {\n      if (list[i] === page.id) {\n        return word;\n      }\n    }\n\n    return null;\n  }).compact().sort().uniq().map(word => database.index_words[word]).flatten().compact().sort().filter(id => id !== page.id).uniq().value();\n\n  return /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      margin: '8rem 0 2rem'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"h3\", null, \"Similar pages\"), /*#__PURE__*/_react.default.createElement(\"div\", null, _lodash.default.map(related, (id, index) => /*#__PURE__*/_react.default.createElement(\"span\", {\n    key: id\n  }, /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: `/?page=${id}`\n  }, pages[id].title), index + 1 < related.length ? /*#__PURE__*/_react.default.createElement(\"span\", {\n    style: {\n      paddingRight: '0.5rem'\n    }\n  }, \",\") : null))));\n}\n\nfunction PageLayout({\n  database,\n  page,\n  children\n}) {\n  return /*#__PURE__*/_react.default.createElement(Outer, {\n    database: database\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      flexDirection: 'column',\n      flexGrow: 1,\n      margin: '0 auto',\n      maxWidth: '80rem'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"page-content\",\n    style: {\n      flexGrow: 1\n    }\n  }, children), /*#__PURE__*/_react.default.createElement(RelatedPages, {\n    database: database,\n    page: page\n  })));\n}\n})()"
+            "text": "import React from 'react';\nimport _ from 'lodash';\n\nfunction Outer({\n    database,\n    children,\n}) {\n    const handleClickRandom = (evt) => {\n        evt.preventDefault();\n        const page = _.shuffle(database.pages)[0];\n        const href = page.href;\n        history.pushState(null, '', href);\n    };\n\n    return (\n        <div>\n            <div className=\"site-layout\">\n                <div\n                    className=\"site-header\"\n                    style={{\n                        display: 'flex',\n                        flexDirection: 'row',\n                        maxWidth: '80rem',\n                        margin: '0 auto',\n                    }}>\n                    <a href=\"https://blacklivesmatter.com/\" style={{ textDecoration: 'none' }}>🖤</a>\n                    <div style={{ flexGrow: 1 }} />\n                    <a style={{ flexGrow: 0 }} href=\"/\">home</a>\n                    <div style={{ flexGrow: 1 }} />\n                    <a style={{ flexGrow: 0 }} href=\"/page_index\">index</a>\n                    <div style={{ flexGrow: 1 }} />\n                    <a style={{ flexGrow: 0 }} href=\"#\" onClick={handleClickRandom}>random</a>\n                    <div style={{ flexGrow: 50 }} />\n                </div>\n            </div>\n            <div style={{\n                display: 'flex',\n                flexDirection: 'column',\n                minHeight: 'calc(100vh - 120px)'\n            }}\n            >\n                {children}\n            </div>\n            <div className=\"site-footer\">\n                <div>\n                    Twitter: <a href=\"https://twitter.com/RidleyWinters\">RidleyWinters</a>\n                </div>\n                <div>\n                    Favicon designed by\n                    {' '}<a href=\"https://www.flaticon.com/authors/good-ware\">Good Ware</a>{' '}\n                    available at\n                    {' '}<a href=\"https://www.flaticon.com/free-icon/woodland_2933738?term=landscape&page=1&position=\">flaticon</a>.\n                </div>\n            </div>\n        </div>\n    );\n}\n\n\nfunction RelatedPages({ database, page }) {\n\n    const pages = _.keyBy(database.pages, 'id');\n\n    // This absurd functional chain is taking the set of keywords on this\n    // page and unioning it with the set of pages that also have that keyword.\n    const related = _.chain(database.index_words)\n        .map((list, word) => {\n            for (let i = 0; i < list.length; i++) {\n                if (list[i] === page.id) {\n                    return word;\n                }\n            }\n            return null;\n        })\n        .compact()\n        .sort()\n        .uniq()\n        .map((word) => database.index_words[word])\n        .flatten()\n        .compact()\n        .sort()\n        .filter((id) => id !== page.id)\n        .uniq()\n        .value();\n\n    return (\n        <div\n            style={{\n                margin: '8rem 0 2rem'\n            }}\n        >\n            <h3>Similar pages</h3>\n            <div>\n                {_.map(related, (id, index) => (\n                    <span key={id}>\n                        <a href={`/?page=${id}`}>{pages[id].title}</a>\n                        {index + 1 < related.length\n                            ?\n                            <span style={{ paddingRight: '0.5rem' }}>,</span>\n                            :\n                            null\n                        }\n                    </span>\n                ))}\n            </div>\n        </div>\n    );\n}\n\nexport default function PageLayout({\n    database,\n    page,\n    children,\n}) {\n\n    return (\n        <Outer database={database}>\n            <div\n                style={{\n                    display: 'flex',\n                    flexDirection: 'column',\n                    flexGrow: 1,\n                    margin: '0 auto',\n                    maxWidth: '80rem',\n                }}\n            >\n                <div\n                    className=\"page-content\"\n                    style={{\n                        flexGrow: 1,\n                    }}\n                >\n                    {children}\n                </div>\n                <RelatedPages database={database} page={page} />\n            </div>\n        </Outer>\n    );\n}\n\n",
+            "parsed": "(function() {\n\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = PageLayout;\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nvar _lodash = _interopRequireDefault(require(\"lodash\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction Outer({\n  database,\n  children\n}) {\n  const handleClickRandom = evt => {\n    evt.preventDefault();\n\n    const page = _lodash.default.shuffle(database.pages)[0];\n\n    const href = page.href;\n    history.pushState(null, '', href);\n  };\n\n  return /*#__PURE__*/_react.default.createElement(\"div\", null, /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"site-layout\"\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"site-header\",\n    style: {\n      display: 'flex',\n      flexDirection: 'row',\n      maxWidth: '80rem',\n      margin: '0 auto'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://blacklivesmatter.com/\",\n    style: {\n      textDecoration: 'none'\n    }\n  }, \"\\uD83D\\uDDA4\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 1\n    }\n  }), /*#__PURE__*/_react.default.createElement(\"a\", {\n    style: {\n      flexGrow: 0\n    },\n    href: \"/\"\n  }, \"home\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 1\n    }\n  }), /*#__PURE__*/_react.default.createElement(\"a\", {\n    style: {\n      flexGrow: 0\n    },\n    href: \"/page_index\"\n  }, \"index\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 1\n    }\n  }), /*#__PURE__*/_react.default.createElement(\"a\", {\n    style: {\n      flexGrow: 0\n    },\n    href: \"#\",\n    onClick: handleClickRandom\n  }, \"random\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 50\n    }\n  }))), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      flexDirection: 'column',\n      minHeight: 'calc(100vh - 120px)'\n    }\n  }, children), /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"site-footer\"\n  }, /*#__PURE__*/_react.default.createElement(\"div\", null, \"Twitter: \", /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://twitter.com/RidleyWinters\"\n  }, \"RidleyWinters\")), /*#__PURE__*/_react.default.createElement(\"div\", null, \"Favicon designed by\", ' ', /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://www.flaticon.com/authors/good-ware\"\n  }, \"Good Ware\"), ' ', \"available at\", ' ', /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://www.flaticon.com/free-icon/woodland_2933738?term=landscape&page=1&position=\"\n  }, \"flaticon\"), \".\")));\n}\n\nfunction RelatedPages({\n  database,\n  page\n}) {\n  const pages = _lodash.default.keyBy(database.pages, 'id'); // This absurd functional chain is taking the set of keywords on this\n  // page and unioning it with the set of pages that also have that keyword.\n\n\n  const related = _lodash.default.chain(database.index_words).map((list, word) => {\n    for (let i = 0; i < list.length; i++) {\n      if (list[i] === page.id) {\n        return word;\n      }\n    }\n\n    return null;\n  }).compact().sort().uniq().map(word => database.index_words[word]).flatten().compact().sort().filter(id => id !== page.id).uniq().value();\n\n  return /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      margin: '8rem 0 2rem'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"h3\", null, \"Similar pages\"), /*#__PURE__*/_react.default.createElement(\"div\", null, _lodash.default.map(related, (id, index) => /*#__PURE__*/_react.default.createElement(\"span\", {\n    key: id\n  }, /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: `/?page=${id}`\n  }, pages[id].title), index + 1 < related.length ? /*#__PURE__*/_react.default.createElement(\"span\", {\n    style: {\n      paddingRight: '0.5rem'\n    }\n  }, \",\") : null))));\n}\n\nfunction PageLayout({\n  database,\n  page,\n  children\n}) {\n  return /*#__PURE__*/_react.default.createElement(Outer, {\n    database: database\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      flexDirection: 'column',\n      flexGrow: 1,\n      margin: '0 auto',\n      maxWidth: '80rem'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"page-content\",\n    style: {\n      flexGrow: 1\n    }\n  }, children), /*#__PURE__*/_react.default.createElement(RelatedPages, {\n    database: database,\n    page: page\n  })));\n}\n})()"
         },
         {
             "filename": "section.jsx",
@@ -33394,8 +34241,8 @@
             "extension": "jsx",
             "id": "site_layout",
             "path": [],
-            "text": "import _ from 'lodash';\n\nfunction addStylesheets(stylesheets) {\n    _.each(stylesheets, (href) => {\n        const link = document.createElement('link');\n        link.type = 'text/css';\n        link.rel = \"stylesheet\";\n        link.href = href;\n        document.head.appendChild(link);\n    });\n}\n\nfunction addStyleNode(style) {\n    const lines = [];\n    for (let selector in style) {\n        const props = style[selector];\n        lines.push(`${selector} {`);\n        for (let javascriptName in props) {\n            const cssName = javascriptName.replace(/[A-Z]/g, (m) => `-${m.toLowerCase()}`);\n            lines.push(`    ${cssName}: ${props[javascriptName]};`);\n        }\n        lines.push(`}`);\n    }\n\n    const el = document.createElement('style');\n    el.type = 'text/css';\n    el.appendChild(document.createTextNode(lines.join('\\n')));\n    document.head.appendChild(el);\n}\n\nfunction addStyleNodePrefix(prefix, style) {\n\n    const remapped = {};\n    const keys = Object.keys(style);\n    keys.forEach((key) => {\n        const k = key.split(',').map((p) => `${prefix} ${p}`).join(', ');\n        remapped[k] = style[key];\n        console.log(k)\n    });\n    addStyleNode(remapped);\n}\n\nfunction addScriptNode(url) {\n    const el = document.createElement('script');\n    el.src = url;\n    document.body.appendChild(el);\n}\n\nlet runCount = 0;\nlet chroma = null;\n\nexport default function SiteLayout({ children }) {\n    if (runCount === 0) {\n        runCount++;\n\n        addScriptNode('https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js');\n\n        addStylesheets([\n            \"https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900&display=swap&subset=latin-ext\",\n            \"https://fonts.googleapis.com/css?family=Faustina&display=swap\",\n            \"https://fonts.googleapis.com/css?family=Courier+Prime&display=swap\",\n        ]);\n\n        // Hacky loop to make sure external script is loaded\n        const checkReady = () => {\n            if (!window.chroma) {\n                setTimeout(checkReady, 200);\n                return;\n            }\n            chroma = window.chroma;\n\n            addStyleNode({\n                \"body, input, button\": {\n                    fontFamily: 'Catamaran',\n                },\n                \"a, a:visited, a code\": {\n                    color: 'rgb(31, 136, 180)',\n                },\n                \"code\" : {\n                    color : '#052',\n                    fontSize: '0.85rem',\n                },\n                \"body\": {\n                    fontFamily: 'Catamaran',\n                },\n                \".t-sans\": {\n                    fontFamily: 'Catamaran',\n                },\n                \".t-serif\": {\n                    fontFamily: 'Faustina'\n                },\n                \".t-mono\": {\n                    fontFamily: 'Courier Prime',\n                }\n            });\n\n            const colors = {};\n            colors.base = [\"fe5f55\",\"2391cc\",\"313e50\",\"5d8f68\",\"07393c\"].map((c) => chroma(`#${c}`));\n            colors.header = colors.base[3];\n            colors.link = colors.base[1];\n\n            addStyleNodePrefix('.page-content', {\n                \"\" : {\n                    fontSize : '110%',\n                },\n                \"a, a:visited\" : {\n                    'color' : colors.link.css(),\n                },\n                \"a:hover\" : {\n                    'color' : colors.base[0].css(),\n                },\n                \"h1,h2,h3\" : {\n                    'color' : colors.header.css(),\n                }                \n            })\n        };\n        checkReady();\n    }\n\n    return children;\n}\n\n",
-            "parsed": "(function() {\n\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = SiteLayout;\n\nvar _lodash = _interopRequireDefault(require(\"lodash\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction addStylesheets(stylesheets) {\n  _lodash.default.each(stylesheets, href => {\n    const link = document.createElement('link');\n    link.type = 'text/css';\n    link.rel = \"stylesheet\";\n    link.href = href;\n    document.head.appendChild(link);\n  });\n}\n\nfunction addStyleNode(style) {\n  const lines = [];\n\n  for (let selector in style) {\n    const props = style[selector];\n    lines.push(`${selector} {`);\n\n    for (let javascriptName in props) {\n      const cssName = javascriptName.replace(/[A-Z]/g, m => `-${m.toLowerCase()}`);\n      lines.push(`    ${cssName}: ${props[javascriptName]};`);\n    }\n\n    lines.push(`}`);\n  }\n\n  const el = document.createElement('style');\n  el.type = 'text/css';\n  el.appendChild(document.createTextNode(lines.join('\\n')));\n  document.head.appendChild(el);\n}\n\nfunction addStyleNodePrefix(prefix, style) {\n  const remapped = {};\n  const keys = Object.keys(style);\n  keys.forEach(key => {\n    const k = key.split(',').map(p => `${prefix} ${p}`).join(', ');\n    remapped[k] = style[key];\n    console.log(k);\n  });\n  addStyleNode(remapped);\n}\n\nfunction addScriptNode(url) {\n  const el = document.createElement('script');\n  el.src = url;\n  document.body.appendChild(el);\n}\n\nlet runCount = 0;\nlet chroma = null;\n\nfunction SiteLayout({\n  children\n}) {\n  if (runCount === 0) {\n    runCount++;\n    addScriptNode('https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js');\n    addStylesheets([\"https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900&display=swap&subset=latin-ext\", \"https://fonts.googleapis.com/css?family=Faustina&display=swap\", \"https://fonts.googleapis.com/css?family=Courier+Prime&display=swap\"]); // Hacky loop to make sure external script is loaded\n\n    const checkReady = () => {\n      if (!window.chroma) {\n        setTimeout(checkReady, 200);\n        return;\n      }\n\n      chroma = window.chroma;\n      addStyleNode({\n        \"body, input, button\": {\n          fontFamily: 'Catamaran'\n        },\n        \"a, a:visited, a code\": {\n          color: 'rgb(31, 136, 180)'\n        },\n        \"code\": {\n          color: '#052',\n          fontSize: '0.85rem'\n        },\n        \"body\": {\n          fontFamily: 'Catamaran'\n        },\n        \".t-sans\": {\n          fontFamily: 'Catamaran'\n        },\n        \".t-serif\": {\n          fontFamily: 'Faustina'\n        },\n        \".t-mono\": {\n          fontFamily: 'Courier Prime'\n        }\n      });\n      const colors = {};\n      colors.base = [\"fe5f55\", \"2391cc\", \"313e50\", \"5d8f68\", \"07393c\"].map(c => chroma(`#${c}`));\n      colors.header = colors.base[3];\n      colors.link = colors.base[1];\n      addStyleNodePrefix('.page-content', {\n        \"\": {\n          fontSize: '110%'\n        },\n        \"a, a:visited\": {\n          'color': colors.link.css()\n        },\n        \"a:hover\": {\n          'color': colors.base[0].css()\n        },\n        \"h1,h2,h3\": {\n          'color': colors.header.css()\n        }\n      });\n    };\n\n    checkReady();\n  }\n\n  return children;\n}\n})()"
+            "text": "import _ from 'lodash';\n\nfunction addStylesheets(stylesheets) {\n    _.each(stylesheets, (href) => {\n        const link = document.createElement('link');\n        link.type = 'text/css';\n        link.rel = \"stylesheet\";\n        link.href = href;\n        document.head.appendChild(link);\n    });\n}\n\nfunction addStyleNode(style) {\n    const lines = [];\n    for (let selector in style) {\n        const props = style[selector];\n        lines.push(`${selector} {`);\n        for (let javascriptName in props) {\n            const cssName = javascriptName.replace(/[A-Z]/g, (m) => `-${m.toLowerCase()}`);\n            lines.push(`    ${cssName}: ${props[javascriptName]};`);\n        }\n        lines.push(`}`);\n    }\n\n    const el = document.createElement('style');\n    el.type = 'text/css';\n    el.appendChild(document.createTextNode(lines.join('\\n')));\n    document.head.appendChild(el);\n}\n\nfunction addStyleNodePrefix(prefix, style) {\n\n    const remapped = {};\n    const keys = Object.keys(style);\n    keys.forEach((key) => {\n        const k = key.split(',').map((p) => `${prefix} ${p}`).join(', ');\n        remapped[k] = style[key];\n    });\n    addStyleNode(remapped);\n}\n\nfunction addScriptNode(url) {\n    const el = document.createElement('script');\n    el.src = url;\n    document.body.appendChild(el);\n}\n\nlet runCount = 0;\nlet chroma = null;\n\nexport default function SiteLayout({ children }) {\n    if (runCount === 0) {\n        runCount++;\n\n        addScriptNode('https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js');\n\n        addStylesheets([\n            \"https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900&display=swap&subset=latin-ext\",\n            \"https://fonts.googleapis.com/css?family=Faustina&display=swap\",\n            \"https://fonts.googleapis.com/css?family=Courier+Prime&display=swap\",\n        ]);\n\n        // Hacky loop to make sure external script is loaded\n        document.body.style.opacity = 0.0;\n        const checkReady = () => {\n            if (!window.chroma) {\n                setTimeout(checkReady, 200);\n                return;\n            }\n            chroma = window.chroma;\n            document.body.style.opacity = 1.0;\n\n            // TODO: how can these be shared as a theme object?\n            const colors = {};\n            colors.base = [\"fe5f55\", \"2391cc\", \"313e50\", \"5d8f68\", \"07393c\"].map((c) => chroma(`#${c}`));\n            colors.header = colors.base[3];\n            colors.link = colors.base[1];\n\n            colors.red = colors.base[0];\n            colors.blue = colors.base[1];\n            colors.darkblue = colors.base[2];\n            colors.green = colors.base[3];\n            colors.darkgreen = colors.base[4];\n\n            addStyleNode({\n                \"body, input, button\": {\n                    fontFamily: 'Catamaran',\n                },\n                \"a, a:visited\": {\n                    color: 'rgb(31, 136, 180)',\n                    textDecoration: 'none',\n                },\n                \"code\": {\n                    fontSize: '0.85rem',\n                },\n                \"code:not(a code)\": {\n                    color: '#052',\n                },\n                \"body\": {\n                    fontFamily: 'Catamaran',\n                },\n                \".t-sans\": {\n                    fontFamily: 'Catamaran',\n                },\n                \".t-serif\": {\n                    fontFamily: 'Faustina'\n                },\n                \".t-mono\": {\n                    fontFamily: 'Courier Prime',\n                },\n\n                '.site-layout': {\n                    padding: '12px 2rem 6px',\n                    backgroundColor: colors.link.mix('black', 0.5).css(),\n                    boxShadow: \"2px 2px 6px 2px rgba(0,0,0,0.09)\",\n                }\n            });\n\n            addStyleNodePrefix('.site-header', {\n                \"\" : {\n                },\n                \"a, a:visited\": {\n                    'color': colors.link.mix('white', 0.8).css(),\n                },\n                \"a:hover\": {\n                    'color': colors.base[0].css(),\n                },\n            });\n\n            addStyleNodePrefix('.site-footer', {\n                \"\": {\n                    minHeight: '120px',\n                    padding: '32px 2rem 6px',\n                    backgroundColor: colors.link.mix('black', 0.5).css(),\n                    color: 'white',\n                    fontSize: '90%',\n                },\n                \"a, a:visited\": {\n                    color: colors.blue.mix('white', 0.15).css(),\n                },\n                \"a:hover\": {\n                    'color': colors.base[0].css(),\n                },\n            })\n\n            addStyleNodePrefix('.page-content', {\n                \"\": {\n                    marginTop: '1rem',\n                    fontSize: '110%',\n                    color : '#333',\n                },\n                \"a, a:visited\": {\n                    'color': colors.link.css(),\n                },\n                \"a:hover\": {\n                    'color': colors.base[0].css(),\n                },\n\n                \"h1\": {\n                    fontSize: '2.5rem',\n                    'color': colors.link.mix('black', 0.6).css(),\n                },\n                \"h2\": { fontSize: '2rem', letterSpacing: '0.05rem', fontWeight: 300 },\n                \"h3\": { fontSize: '1.45rem', letterSpacing: '0.05rem', fontWeight: 300 },\n                \"h4\": {\n                    fontSize: '1.15rem', letterSpacing: '0.05rem', fontWeight: 300,\n                    'color': colors.darkgreen.mix('black', 1.0).css(),\n                },\n                \"h5\": {\n                    fontSize: '1.1rem', \n                    padding: 0,\n                    margin: '1.5rem 0 0.5rem',\n                    fontWeight: 500,\n                    'color': colors.darkgreen.mix('white', 0.25).css(),\n                },\n                \"h2,h3\": {\n                    'color': colors.link.mix('black', 0.5).css(),\n                },\n            })\n        };\n        checkReady();\n    }\n\n    return children;\n}\n\n",
+            "parsed": "(function() {\n\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = SiteLayout;\n\nvar _lodash = _interopRequireDefault(require(\"lodash\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction addStylesheets(stylesheets) {\n  _lodash.default.each(stylesheets, href => {\n    const link = document.createElement('link');\n    link.type = 'text/css';\n    link.rel = \"stylesheet\";\n    link.href = href;\n    document.head.appendChild(link);\n  });\n}\n\nfunction addStyleNode(style) {\n  const lines = [];\n\n  for (let selector in style) {\n    const props = style[selector];\n    lines.push(`${selector} {`);\n\n    for (let javascriptName in props) {\n      const cssName = javascriptName.replace(/[A-Z]/g, m => `-${m.toLowerCase()}`);\n      lines.push(`    ${cssName}: ${props[javascriptName]};`);\n    }\n\n    lines.push(`}`);\n  }\n\n  const el = document.createElement('style');\n  el.type = 'text/css';\n  el.appendChild(document.createTextNode(lines.join('\\n')));\n  document.head.appendChild(el);\n}\n\nfunction addStyleNodePrefix(prefix, style) {\n  const remapped = {};\n  const keys = Object.keys(style);\n  keys.forEach(key => {\n    const k = key.split(',').map(p => `${prefix} ${p}`).join(', ');\n    remapped[k] = style[key];\n  });\n  addStyleNode(remapped);\n}\n\nfunction addScriptNode(url) {\n  const el = document.createElement('script');\n  el.src = url;\n  document.body.appendChild(el);\n}\n\nlet runCount = 0;\nlet chroma = null;\n\nfunction SiteLayout({\n  children\n}) {\n  if (runCount === 0) {\n    runCount++;\n    addScriptNode('https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js');\n    addStylesheets([\"https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900&display=swap&subset=latin-ext\", \"https://fonts.googleapis.com/css?family=Faustina&display=swap\", \"https://fonts.googleapis.com/css?family=Courier+Prime&display=swap\"]); // Hacky loop to make sure external script is loaded\n\n    document.body.style.opacity = 0.0;\n\n    const checkReady = () => {\n      if (!window.chroma) {\n        setTimeout(checkReady, 200);\n        return;\n      }\n\n      chroma = window.chroma;\n      document.body.style.opacity = 1.0; // TODO: how can these be shared as a theme object?\n\n      const colors = {};\n      colors.base = [\"fe5f55\", \"2391cc\", \"313e50\", \"5d8f68\", \"07393c\"].map(c => chroma(`#${c}`));\n      colors.header = colors.base[3];\n      colors.link = colors.base[1];\n      colors.red = colors.base[0];\n      colors.blue = colors.base[1];\n      colors.darkblue = colors.base[2];\n      colors.green = colors.base[3];\n      colors.darkgreen = colors.base[4];\n      addStyleNode({\n        \"body, input, button\": {\n          fontFamily: 'Catamaran'\n        },\n        \"a, a:visited\": {\n          color: 'rgb(31, 136, 180)',\n          textDecoration: 'none'\n        },\n        \"code\": {\n          fontSize: '0.85rem'\n        },\n        \"code:not(a code)\": {\n          color: '#052'\n        },\n        \"body\": {\n          fontFamily: 'Catamaran'\n        },\n        \".t-sans\": {\n          fontFamily: 'Catamaran'\n        },\n        \".t-serif\": {\n          fontFamily: 'Faustina'\n        },\n        \".t-mono\": {\n          fontFamily: 'Courier Prime'\n        },\n        '.site-layout': {\n          padding: '12px 2rem 6px',\n          backgroundColor: colors.link.mix('black', 0.5).css(),\n          boxShadow: \"2px 2px 6px 2px rgba(0,0,0,0.09)\"\n        }\n      });\n      addStyleNodePrefix('.site-header', {\n        \"\": {},\n        \"a, a:visited\": {\n          'color': colors.link.mix('white', 0.8).css()\n        },\n        \"a:hover\": {\n          'color': colors.base[0].css()\n        }\n      });\n      addStyleNodePrefix('.site-footer', {\n        \"\": {\n          minHeight: '120px',\n          padding: '32px 2rem 6px',\n          backgroundColor: colors.link.mix('black', 0.5).css(),\n          color: 'white',\n          fontSize: '90%'\n        },\n        \"a, a:visited\": {\n          color: colors.blue.mix('white', 0.15).css()\n        },\n        \"a:hover\": {\n          'color': colors.base[0].css()\n        }\n      });\n      addStyleNodePrefix('.page-content', {\n        \"\": {\n          marginTop: '1rem',\n          fontSize: '110%',\n          color: '#333'\n        },\n        \"a, a:visited\": {\n          'color': colors.link.css()\n        },\n        \"a:hover\": {\n          'color': colors.base[0].css()\n        },\n        \"h1\": {\n          fontSize: '2.5rem',\n          'color': colors.link.mix('black', 0.6).css()\n        },\n        \"h2\": {\n          fontSize: '2rem',\n          letterSpacing: '0.05rem',\n          fontWeight: 300\n        },\n        \"h3\": {\n          fontSize: '1.45rem',\n          letterSpacing: '0.05rem',\n          fontWeight: 300\n        },\n        \"h4\": {\n          fontSize: '1.15rem',\n          letterSpacing: '0.05rem',\n          fontWeight: 300,\n          'color': colors.darkgreen.mix('black', 1.0).css()\n        },\n        \"h5\": {\n          fontSize: '1.1rem',\n          padding: 0,\n          margin: '1.5rem 0 0.5rem',\n          fontWeight: 500,\n          'color': colors.darkgreen.mix('white', 0.25).css()\n        },\n        \"h2,h3\": {\n          'color': colors.link.mix('black', 0.5).css()\n        }\n      });\n    };\n\n    checkReady();\n  }\n\n  return children;\n}\n})()"
         },
         {
             "filename": "user_story.jsx",
@@ -33497,7 +34344,8 @@
             "creating_user_stories",
             "principles",
             "rust_producer_consumer",
-            "sea"
+            "sea",
+            "zero_config"
         ],
         "challenge": [
             "blog_ideas",
@@ -33514,7 +34362,8 @@
             "creating_a_new_site",
             "creating_user_stories",
             "five_whys",
-            "rust_raytracer"
+            "rust_raytracer",
+            "sample_page"
         ],
         "optional": [
             "blog_ideas",
@@ -33600,6 +34449,7 @@
             "kestrel",
             "principles",
             "rust_raytracer",
+            "sample_page",
             "sea",
             "zero_config"
         ],
@@ -33607,12 +34457,18 @@
             "blog_ideas",
             "kestrel",
             "rust_producer_consumer",
-            "rust_raytracer"
+            "rust_raytracer",
+            "sample_page"
         ],
         "after": [
             "blog_ideas",
             "creating_user_stories",
-            "rust_raytracer"
+            "rust_raytracer",
+            "zero_config"
+        ],
+        "purpose": [
+            "blog_ideas",
+            "zero_config"
         ],
         "user": [
             "common_user_stories",
@@ -33686,17 +34542,6 @@
             "webpack_notes",
             "zero_config"
         ],
-        "not": [
-            "changelog_tips",
-            "creating_a_new_site",
-            "creating_user_stories",
-            "five_whys",
-            "kestrel",
-            "principles",
-            "rust_raytracer",
-            "webpack_notes",
-            "zero_config"
-        ],
         "them": [
             "creating_user_stories",
             "zero_config"
@@ -33706,6 +34551,7 @@
             "git_repo",
             "rust_producer_consumer",
             "rust_raytracer",
+            "sample_page",
             "zero_config"
         ],
         "yet": [
@@ -33989,9 +34835,143 @@
             "creating_user_stories",
             "zero_config"
         ],
+        "start": [
+            "creating_a_new_site",
+            "creating_user_stories",
+            "five_whys",
+            "rust_producer_consumer",
+            "rust_raytracer",
+            "sample_page",
+            "sea",
+            "zero_config"
+        ],
+        "process": [
+            "creating_user_stories",
+            "five_whys",
+            "zero_config"
+        ],
+        "source": [
+            "data_table",
+            "kestrel",
+            "sample_page",
+            "sea",
+            "webpack_notes",
+            "zero_config"
+        ],
+        "command": [
+            "how-to-embed-a-long-script-in-a-makefile",
+            "webpack_notes",
+            "zero_config"
+        ],
+        "when": [
+            "creating_user_stories",
+            "data_objects",
+            "example_user_stories",
+            "zero_config"
+        ],
+        "one": [
+            "changelog_tips",
+            "creating_user_stories",
+            "sample_page",
+            "sea",
+            "zero_config"
+        ],
+        "those": [
+            "creating_a_new_site",
+            "creating_user_stories",
+            "data_objects",
+            "principles",
+            "zero_config"
+        ],
+        "modified": [
+            "changelog_tips",
+            "zero_config"
+        ],
+        "another": [
+            "sample_page",
+            "sea",
+            "zero_config"
+        ],
+        "program": [
+            "creating_a_new_site",
+            "example_user_stories",
+            "rust_raytracer",
+            "sea",
+            "zero_config"
+        ],
+        "such": [
+            "layouts",
+            "zero_config"
+        ],
+        "many": [
+            "creating_user_stories",
+            "zero_config"
+        ],
+        "proper": [
+            "sea",
+            "zero_config"
+        ],
+        "may": [
+            "creating_user_stories",
+            "data_objects",
+            "data_table",
+            "five_whys",
+            "kestrel",
+            "zero_config"
+        ],
+        "run": [
+            "creating_a_new_site",
+            "sea",
+            "webpack_notes",
+            "zero_config"
+        ],
+        "server": [
+            "creating_a_new_site",
+            "rust_raytracer",
+            "sea",
+            "webpack_notes",
+            "zero_config"
+        ],
+        "command-line": [
+            "creating_a_new_site",
+            "sea",
+            "zero_config"
+        ],
+        "produce": [
+            "kestrel",
+            "zero_config"
+        ],
+        "active": [
+            "sea",
+            "zero_config"
+        ],
+        "output": [
+            "rust_raytracer",
+            "zero_config"
+        ],
         "step": [
             "creating_user_stories",
             "rust_producer_consumer",
+            "zero_config"
+        ],
+        "should": [
+            "creating_a_new_site",
+            "creating_user_stories",
+            "data_objects",
+            "rust_producer_consumer",
+            "sea",
+            "zero_config"
+        ],
+        "avoid": [
+            "creating_user_stories",
+            "rust_webgl",
+            "sea",
+            "webpack_notes",
+            "zero_config"
+        ],
+        "across": [
+            "creating_user_stories",
+            "data_objects",
             "zero_config"
         ],
         "file": [
@@ -34055,20 +35035,6 @@
             "sea",
             "zero_config"
         ],
-        "when": [
-            "creating_user_stories",
-            "data_objects",
-            "example_user_stories",
-            "zero_config"
-        ],
-        "should": [
-            "creating_a_new_site",
-            "creating_user_stories",
-            "data_objects",
-            "rust_producer_consumer",
-            "sea",
-            "zero_config"
-        ],
         "itself": [
             "sea",
             "zero_config"
@@ -34081,10 +35047,6 @@
             "creating_user_stories",
             "principles",
             "sea",
-            "zero_config"
-        ],
-        "many": [
-            "creating_user_stories",
             "zero_config"
         ],
         "root": [
@@ -34151,6 +35113,7 @@
             "data_objects",
             "principles",
             "rust_producer_consumer",
+            "sample_page",
             "sea",
             "zero_config"
         ],
@@ -34185,13 +35148,6 @@
         ],
         "once": [
             "rust_raytracer",
-            "zero_config"
-        ],
-        "program": [
-            "creating_a_new_site",
-            "example_user_stories",
-            "rust_raytracer",
-            "sea",
             "zero_config"
         ],
         "these": [
@@ -34265,6 +35221,7 @@
         ],
         "very": [
             "git_repo",
+            "sample_page",
             "sea"
         ],
         "large": [
@@ -34351,12 +35308,6 @@
             "index",
             "principles"
         ],
-        "those": [
-            "creating_a_new_site",
-            "creating_user_stories",
-            "data_objects",
-            "principles"
-        ],
         "their": [
             "creating_user_stories",
             "principles"
@@ -34385,7 +35336,8 @@
         "good": [
             "creating_user_stories",
             "principles",
-            "rust_raytracer"
+            "rust_raytracer",
+            "sample_page"
         ],
         "improving": [
             "creating_user_stories",
@@ -34474,6 +35426,7 @@
             "example_user_stories",
             "kestrel",
             "rust_raytracer",
+            "sample_page",
             "sea"
         ],
         "month": [
@@ -34576,7 +35529,8 @@
         ],
         "words": [
             "creating_user_stories",
-            "example_user_stories"
+            "example_user_stories",
+            "sample_page"
         ],
         "like": [
             "creating_a_new_site",
@@ -34590,7 +35544,8 @@
         ],
         "word": [
             "creating_user_stories",
-            "example_user_stories"
+            "example_user_stories",
+            "sample_page"
         ],
         "often": [
             "creating_user_stories",
@@ -34604,6 +35559,7 @@
             "index",
             "kestrel",
             "rust_raytracer",
+            "sample_page",
             "sea"
         ],
         "statement": [
@@ -34620,7 +35576,8 @@
         ],
         "written": [
             "example_user_stories",
-            "rust_webgl"
+            "rust_webgl",
+            "sample_page"
         ],
         "external": [
             "creating_user_stories",
@@ -34716,10 +35673,6 @@
         "single": [
             "how-to-embed-a-long-script-in-a-makefile",
             "sea",
-            "webpack_notes"
-        ],
-        "command": [
-            "how-to-embed-a-long-script-in-a-makefile",
             "webpack_notes"
         ],
         "references": [
@@ -34871,12 +35824,6 @@
             "data_objects",
             "kestrel"
         ],
-        "source": [
-            "data_table",
-            "kestrel",
-            "sea",
-            "webpack_notes"
-        ],
         "anything": [
             "kestrel",
             "rust_raytracer"
@@ -34949,13 +35896,6 @@
             "kestrel",
             "rust_raytracer"
         ],
-        "may": [
-            "creating_user_stories",
-            "data_objects",
-            "data_table",
-            "five_whys",
-            "kestrel"
-        ],
         "right": [
             "creating_user_stories",
             "kestrel"
@@ -35005,11 +35945,6 @@
             "rust_raytracer",
             "sea"
         ],
-        "one": [
-            "changelog_tips",
-            "creating_user_stories",
-            "sea"
-        ],
         "following": [
             "changelog_tips",
             "creating_user_stories",
@@ -35021,6 +35956,7 @@
             "creating_a_new_site",
             "creating_user_stories",
             "rust_raytracer",
+            "sample_page",
             "sea"
         ],
         "been": [
@@ -35069,7 +36005,8 @@
         ],
         "through": [
             "creating_user_stories",
-            "rust_raytracer"
+            "rust_raytracer",
+            "sample_page"
         ],
         "there": [
             "creating_user_stories",
@@ -35107,7 +36044,8 @@
         "over": [
             "creating_user_stories",
             "five_whys",
-            "rust_raytracer"
+            "rust_raytracer",
+            "sample_page"
         ],
         "why": [
             "creating_user_stories",
@@ -35135,6 +36073,7 @@
             "creating_user_stories",
             "data_objects",
             "rust_raytracer",
+            "sample_page",
             "sea"
         ],
         "assumes": [
@@ -35145,10 +36084,6 @@
             "creating_a_new_site",
             "creating_user_stories",
             "rust_producer_consumer"
-        ],
-        "process": [
-            "creating_user_stories",
-            "five_whys"
         ],
         "while": [
             "creating_user_stories",
@@ -35175,15 +36110,6 @@
             "data_objects",
             "data_table"
         ],
-        "start": [
-            "creating_a_new_site",
-            "creating_user_stories",
-            "five_whys",
-            "rust_producer_consumer",
-            "rust_raytracer",
-            "sample_page",
-            "sea"
-        ],
         "tries": [
             "creating_user_stories",
             "layouts",
@@ -35205,6 +36131,10 @@
             "creating_user_stories",
             "user_stories"
         ],
+        "during": [
+            "creating_user_stories",
+            "sample_page"
+        ],
         "record": [
             "creating_user_stories",
             "five_whys"
@@ -35215,7 +36145,8 @@
         ],
         "piece": [
             "creating_user_stories",
-            "five_whys"
+            "five_whys",
+            "sample_page"
         ],
         "back": [
             "creating_user_stories",
@@ -35276,12 +36207,6 @@
             "creating_user_stories",
             "wishlist"
         ],
-        "avoid": [
-            "creating_user_stories",
-            "rust_webgl",
-            "sea",
-            "webpack_notes"
-        ],
         "best": [
             "creating_user_stories",
             "sample_page"
@@ -35292,6 +36217,7 @@
         ],
         "making": [
             "creating_user_stories",
+            "sample_page",
             "sea"
         ],
         "implementation": [
@@ -35336,10 +36262,6 @@
             "creating_user_stories",
             "data_objects",
             "sea"
-        ],
-        "across": [
-            "creating_user_stories",
-            "data_objects"
         ],
         "individual": [
             "creating_user_stories",
@@ -35464,12 +36386,6 @@
             "rust_producer_consumer",
             "rust_raytracer"
         ],
-        "server": [
-            "creating_a_new_site",
-            "rust_raytracer",
-            "sea",
-            "webpack_notes"
-        ],
         "api": [
             "rust_raytracer",
             "sea"
@@ -35502,6 +36418,7 @@
         ],
         "book": [
             "rust_raytracer",
+            "sample_page",
             "sea"
         ],
         "html": [
@@ -35522,6 +36439,19 @@
             "sample_page",
             "sea"
         ],
+        "simply": [
+            "sample_page",
+            "sea"
+        ],
+        "text": [
+            "data_objects",
+            "sample_page",
+            "sea"
+        ],
+        "comes": [
+            "data_objects",
+            "sample_page"
+        ],
         "sea": [
             "creating_a_new_site",
             "data_objects",
@@ -35529,10 +36459,6 @@
             "sea"
         ],
         "quick": [
-            "creating_a_new_site",
-            "sea"
-        ],
-        "command-line": [
             "creating_a_new_site",
             "sea"
         ],
@@ -35564,11 +36490,6 @@
         "local": [
             "creating_a_new_site",
             "sea"
-        ],
-        "run": [
-            "creating_a_new_site",
-            "sea",
-            "webpack_notes"
         ],
         "visit": [
             "creating_a_new_site",
@@ -35695,10 +36616,6 @@
             "sea"
         ],
         "plain": [
-            "data_objects",
-            "sea"
-        ],
-        "text": [
             "data_objects",
             "sea"
         ],
