@@ -1,0 +1,57 @@
+
+# Creating and Deploying a new Sea Site
+
+
+
+## Quick Start
+
+### Ensure sea is installed
+
+Install the `sea` command-line program:
+
+```bash
+$ npm install --global @ridleywinters/sea
+```
+
+If you're not familiar with [`bash`](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) or [`npm`](https://en.wikipedia.org/wiki/Npm_(software)), some Google searching to get familiar with those tools would make sense first!
+
+### Creating a starter project
+
+
+Create a barebones example project (note: if you skip the `--template` argument, a bare-minimal project will be created):
+
+```console
+$ sea create myproject
+```
+
+You should now have a directory structure that looks something like this:
+
+```
+myproject\
+    components\
+    pages\
+        index.mdx
+```
+
+### Local testing
+
+Now run the development server:
+
+```
+$ sea dev
+```
+Lastly:
+
+* Visit http://localhost:8080!
+* Start modifying the MDX files to see the changes livee
+* Check out the [features](#features) section to play with some of the more interesting and unique features of Sea
+
+
+## Make some basic changes
+
+## Deploy
+
+### Neocities
+
+Note: this isn't sponsored! Neocities just has a nice, free, minimal setup that is a great fit given the goals here.  In the future, I'll aim to add documentation on how to deploy to GitHub Page, DigitalOcean, Amazon S3, and others. 
+

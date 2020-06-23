@@ -1,0 +1,108 @@
+# Kestrel
+
+A single-player, story-based adventure mod for [Veloren](https://veloren.net/).
+
+This is just an idea at this point! Hopefully this page will grow as time passes!
+
+This is a huge hobby project. The scope is way beyond what I will ever finish. Finishing is not the point: exploring the different parts of the project is. I'm going to try to keep it all open source so if in my exploring I produce anything worthwhile, perhaps it can be leveraged by others?
+
+Parts I might want to build:
+
+* Voxel engine (Raiment) built in Rust, WASM, and JavaScript
+* World building exercise
+* Concept art
+* Stories
+* Rulebook
+* Veloren mod
+
+## Gameplay
+
+Game Personas:
+
+* Adventurer - Wants to follow storylines, meet characters
+* Explorer - Wants to see new beautiful vistas, explore caves, use hanggliders, ride horses, ships, etc.
+* Builder - Defender, Conquerer, Gardener
+* Fighter - Wants to gain XP, defeat monsters, collet more powerful equipment
+
+Contribution Personas
+
+* Storyteller - Wants to add depth, detail, and consistency to the world building
+* Contributor - Wants to add to the code, the assets, the expression of the world, or make it faster, easier to use
+
+
+## Tasks
+
+* Raiment
+    * Research Amethyst (done, too much abstraction for my goals)
+    * Learn about Rust + Vulkan (done, possibly too low-level to get started?)
+    * Research Rust library somewhere between Vulkan & Amethyst in abstraction?
+        * kiss3d may be the right choice
+    * Render a fixed size voxel world
+    * Add basic physics
+    * Add basic chunking
+
+## Raiment functionality
+
+* add_voxel
+* add_block (a cube of N voxels)
+* chunk (an internal optimization of voxels)
+
+
+### kiss3d code snippet to get  rendering started!
+
+```rust
+extern crate kiss3d;
+extern crate nalgebra as na;
+
+use kiss3d::light::Light;
+use kiss3d::window::Window;
+use na::{UnitQuaternion, Vector3, Translation3};
+
+fn create_cube(
+    window : &mut Window, 
+    x : f32, y : f32, z : f32,
+    r : f32, g : f32, b : f32,
+) -> 
+    kiss3d::scene::SceneNode 
+{
+    let mut c = window.add_cube(1.0, 1.0, 1.0);
+    c.set_color(r, g, b);
+    c.set_local_translation(Translation3::new(x, y, z));
+    c
+}
+
+fn main() {
+    let mut window = Window::new("Kiss3d: cube");
+
+    let mut c = create_cube(&mut window, 1.0, 0.0, 0.0, 0.2, 0.6, 0.44);
+    create_cube(&mut window, 0.0, 0.0, 1.0, 0.8, 0.2, 0.14);
+    create_cube(&mut window, 1.0, 0.0, 1.0, 0.2, 0.8, 0.34);
+
+
+    window.set_light(Light::StickToCamera);
+
+    let rot = UnitQuaternion::from_axis_angle(&Vector3::y_axis(), 0.014);
+
+    while window.render() {
+        c.prepend_to_local_rotation(&rot);
+    }
+}
+```
+
+
+```
+https://coolors.co/fe5f55-2391cc-313e50-5d8f68-07393c
+
+/* CSV */
+fe5f55,2391cc,313e50,5d8f68,07393c
+
+/* Array */
+["fe5f55","2391cc","313e50","5d8f68","07393c"]
+
+/* Object */
+{"Orange Red Crayola":"fe5f55","Blue NCS":"2391cc","Charcoal":"313e50","Russian Green":"5d8f68","Rich Black":"07393c"}
+
+/* Extended Array */
+[{"name":"Orange Red Crayola","hex":"fe5f55","rgb":[254,95,85],"cmyk":[0,63,67,0],"hsb":[4,67,100],"hsl":[4,99,66],"lab":[62,60,38]},{"name":"Blue NCS","hex":"2391cc","rgb":[35,145,204],"cmyk":[83,29,0,20],"hsb":[201,83,80],"hsl":[201,71,47],"lab":[57,-9,-39]},{"name":"Charcoal","hex":"313e50","rgb":[49,62,80],"cmyk":[39,22,0,69],"hsb":[215,39,31],"hsl":[215,24,25],"lab":[26,0,-13]},{"name":"Russian Green","hex":"5d8f68","rgb":[93,143,104],"cmyk":[35,0,27,44],"hsb":[133,35,56],"hsl":[133,21,46],"lab":[55,-25,16]},{"name":"Rich Black","hex":"07393c","rgb":[7,57,60],"cmyk":[88,5,0,76],"hsb":[183,88,24],"hsl":[183,79,13],"lab":[21,-14,-6]}]
+```
+

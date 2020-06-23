@@ -1,0 +1,70 @@
+# Zero Config
+
+**Work-in-progress**: collecting notes, but have not cleaned them up yet
+
+I've wasted way too much time in my career trying to figure out idiosyncracies of different development tools, especially in the context of hobby projects where I'm trying to learn something else, not configure the perfect production system. As a result here are some conventions I use...
+
+## Use make
+
+It's certainly not perfect, but it's available on most systems and can be used as a common wrapper on other build systems so you don't have to remember what `cargo` versus `go` versus `rust` versus `npm` takes an argument.
+
+Also, **use git**. Every assumption that can be made adds simplicity.
+
+## Make targets
+
+* `ensure` - 
+* `build` -
+* `test` - 
+* `format` - aka 'lint', 'fmt'
+* `run` - 
+* `publish` - 
+* `dev` -
+* `benchmark` -
+* `doc` -
+
+## In detail...
+
+###  `make dev`
+
+**Intent**: automate as much of the build, display, testing, and results as possible for developing a particular project.
+
+The `dev` target can be complicated as the what __specifically__ is part of "automating as much as possible" is not clear and can lead to overly complex setups. On the other hand, small step that is necessary in every iteration of change that can be automated can go a long way. The complications in arriving at a standardized definition arise from the non-uniform nature of:
+
+* tasks at hand (scope)
+* development style
+
+Is the **scope of the task at hand** to upgrade a dependent library and the core program to support new functionality?  If yes, it could be expediant to have that dependent library automatically rebuild and integrated.  But then does that mean all dependent libraries should be rebuilt just in case? Or maybe you're on a team and you are always working on library A and your teammate is the expert on libary B: how do you create a `dev` target that is optimal for you both?
+
+The next consideration is **development style**. Perhaps you believe test-driven development starting with the library is the most efficient way to ensure upgrading the library and core program to have new functionality. Your teammate is a believer in "spiking" working functionality across the core program and library, then working backwards to generalize the API and code. One of those styles suggests running the unit tests on every change. The other suggests disabling testing until the core functionality is ready. I'm not sure there is an objective approach that is "always" better, so how does `make dev` allow for the right development setup?
+
+
+## Common other targets
+
+* `build-watch` - watch files and rebuild locally. This can be useful for _other projects_ in a repo to invoke: i.e. watch all dependent projects (libraries, assets, etc.) so they are rebuilt automatically especailly in the context of a monorepo. This usually 
+
+The purpose of this target is to start an  on-going process watch all source files and automatically trigger the `build` command when one of those files is modified. The work of this command is usually deferred to another program such as `nodemon`, `yolo`, or one of many other alternatives.  
+
+This is usually a proper subset of the actions of `dev` target where the `dev` target may also run a development server, command-line processing, produce active output step after the automatic rebuild. The `dev` step also may invoke `build-watch` on dependent modules. `build-watch` should not watch dependent modules to avoid duplicated watches across shared dependencies.
+
+
+## Some details
+
+* `.build-sentinel` - I have the `build` step `touch` a git-ignored file by this name whenever it is rebuilt. This makes chained "watching" of dependent projects simpler: the host project can kick of `build-watch` for all dependent projects and then it can watch the set of `.build-sentinel` files to know if and when it should rebuild itself.
+
+## Things I wish were true...
+
+#### A universal config/ sub-folder
+
+Having so many .dot-files and config files in the root directory always distracts me. I've given up on this battle and some of my suggestions above contribute to the existing trends.
+
+#### A standard JSON or AST format for documentation separating content from presentation
+
+I wish Go, Rust, JavaScript, etc. all decoupled the data from the presentation!
+
+## Context
+
+I once wrote a program that examined projects and enforced many of these conventions (scanning .gitignore files, package files, adding eslint files, etc.). I decided documentation was easier to maintain that an automated approach.
+
+## Reference
+
+* [GNU make standard targets](https://www.gnu.org/software/make/manual/html_node/Standard-Targets.html#Standard-Targets)
