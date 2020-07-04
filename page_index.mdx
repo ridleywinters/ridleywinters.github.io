@@ -10,7 +10,7 @@
     </thead>
     <tbody>
     {_.chain(database.pages)
-        .sortBy((page) => page.title)
+        .sortBy((page) => `${page.path.join('/')}/${page.title}`.toLowerCase())
         .map((page) => ( 
             <tr key={page.id}>
                 <td style={{ paddingRight : '2rem' }}>

@@ -25931,7 +25931,7 @@
                             "end": {
                                 "line": 29,
                                 "column": 9,
-                                "offset": 866
+                                "offset": 908
                             },
                             "indent": [
                                 1,
@@ -25962,8 +25962,8 @@
                                 1
                             ]
                         },
-                        "text": "<table>\n    <thead>\n        <tr>\n            <th style={{ textAlign: 'left' }}>Page</th>\n            <th style={{ textAlign: 'left' }}>Path</th>\n            <th style={{ textAlign: 'left' }}>Status</th>\n        </tr>\n    </thead>\n    <tbody>\n    {_.chain(database.pages)\n        .sortBy((page) => page.title)\n        .map((page) => ( \n            <tr key={page.id}>\n                <td style={{ paddingRight : '2rem' }}>\n                    <a href={page.href}>{page.title}</a>\n                </td>\n                <td style={{ paddingRight: '2rem', color: '#777' }}>\n                    {page.path.join(' / ')}\n                </td>\n                <td style={{ paddingRight: '1rem', color: '#777' }}>\n                    {page.properties.status}\n                </td>            \n            </tr>\n        ))\n        .value()}\n    </tbody>\n</table>",
-                        "parsed": "(function() {\n\"use strict\";\n\nreturn /*#__PURE__*/React.createElement(\"table\", null, /*#__PURE__*/React.createElement(\"thead\", null, /*#__PURE__*/React.createElement(\"tr\", null, /*#__PURE__*/React.createElement(\"th\", {\n  style: {\n    textAlign: 'left'\n  }\n}, \"Page\"), /*#__PURE__*/React.createElement(\"th\", {\n  style: {\n    textAlign: 'left'\n  }\n}, \"Path\"), /*#__PURE__*/React.createElement(\"th\", {\n  style: {\n    textAlign: 'left'\n  }\n}, \"Status\"))), /*#__PURE__*/React.createElement(\"tbody\", null, _.chain(database.pages).sortBy(page => page.title).map(page => /*#__PURE__*/React.createElement(\"tr\", {\n  key: page.id\n}, /*#__PURE__*/React.createElement(\"td\", {\n  style: {\n    paddingRight: '2rem'\n  }\n}, /*#__PURE__*/React.createElement(\"a\", {\n  href: page.href\n}, page.title)), /*#__PURE__*/React.createElement(\"td\", {\n  style: {\n    paddingRight: '2rem',\n    color: '#777'\n  }\n}, page.path.join(' / ')), /*#__PURE__*/React.createElement(\"td\", {\n  style: {\n    paddingRight: '1rem',\n    color: '#777'\n  }\n}, page.properties.status))).value()));\n})()"
+                        "text": "<table>\n    <thead>\n        <tr>\n            <th style={{ textAlign: 'left' }}>Page</th>\n            <th style={{ textAlign: 'left' }}>Path</th>\n            <th style={{ textAlign: 'left' }}>Status</th>\n        </tr>\n    </thead>\n    <tbody>\n    {_.chain(database.pages)\n        .sortBy((page) => `${page.path.join('/')}/${page.title}`.toLowerCase())\n        .map((page) => ( \n            <tr key={page.id}>\n                <td style={{ paddingRight : '2rem' }}>\n                    <a href={page.href}>{page.title}</a>\n                </td>\n                <td style={{ paddingRight: '2rem', color: '#777' }}>\n                    {page.path.join(' / ')}\n                </td>\n                <td style={{ paddingRight: '1rem', color: '#777' }}>\n                    {page.properties.status}\n                </td>            \n            </tr>\n        ))\n        .value()}\n    </tbody>\n</table>",
+                        "parsed": "(function() {\n\"use strict\";\n\nreturn /*#__PURE__*/React.createElement(\"table\", null, /*#__PURE__*/React.createElement(\"thead\", null, /*#__PURE__*/React.createElement(\"tr\", null, /*#__PURE__*/React.createElement(\"th\", {\n  style: {\n    textAlign: 'left'\n  }\n}, \"Page\"), /*#__PURE__*/React.createElement(\"th\", {\n  style: {\n    textAlign: 'left'\n  }\n}, \"Path\"), /*#__PURE__*/React.createElement(\"th\", {\n  style: {\n    textAlign: 'left'\n  }\n}, \"Status\"))), /*#__PURE__*/React.createElement(\"tbody\", null, _.chain(database.pages).sortBy(page => `${page.path.join('/')}/${page.title}`.toLowerCase()).map(page => /*#__PURE__*/React.createElement(\"tr\", {\n  key: page.id\n}, /*#__PURE__*/React.createElement(\"td\", {\n  style: {\n    paddingRight: '2rem'\n  }\n}, /*#__PURE__*/React.createElement(\"a\", {\n  href: page.href\n}, page.title)), /*#__PURE__*/React.createElement(\"td\", {\n  style: {\n    paddingRight: '2rem',\n    color: '#777'\n  }\n}, page.path.join(' / ')), /*#__PURE__*/React.createElement(\"td\", {\n  style: {\n    paddingRight: '1rem',\n    color: '#777'\n  }\n}, page.properties.status))).value()));\n})()"
                     }
                 ],
                 "position": {
@@ -25975,11 +25975,11 @@
                     "end": {
                         "line": 30,
                         "column": 1,
-                        "offset": 867
+                        "offset": 909
                     }
                 }
             },
-            "string": "## Page Index\n\n<table>\n    <thead>\n        <tr>\n            <th style={{ textAlign: 'left' }}>Page</th>\n            <th style={{ textAlign: 'left' }}>Path</th>\n            <th style={{ textAlign: 'left' }}>Status</th>\n        </tr>\n    </thead>\n    <tbody>\n    {_.chain(database.pages)\n        .sortBy((page) => page.title)\n        .map((page) => ( \n            <tr key={page.id}>\n                <td style={{ paddingRight : '2rem' }}>\n                    <a href={page.href}>{page.title}</a>\n                </td>\n                <td style={{ paddingRight: '2rem', color: '#777' }}>\n                    {page.path.join(' / ')}\n                </td>\n                <td style={{ paddingRight: '1rem', color: '#777' }}>\n                    {page.properties.status}\n                </td>            \n            </tr>\n        ))\n        .value()}\n    </tbody>\n</table>\n",
+            "string": "## Page Index\n\n<table>\n    <thead>\n        <tr>\n            <th style={{ textAlign: 'left' }}>Page</th>\n            <th style={{ textAlign: 'left' }}>Path</th>\n            <th style={{ textAlign: 'left' }}>Status</th>\n        </tr>\n    </thead>\n    <tbody>\n    {_.chain(database.pages)\n        .sortBy((page) => `${page.path.join('/')}/${page.title}`.toLowerCase())\n        .map((page) => ( \n            <tr key={page.id}>\n                <td style={{ paddingRight : '2rem' }}>\n                    <a href={page.href}>{page.title}</a>\n                </td>\n                <td style={{ paddingRight: '2rem', color: '#777' }}>\n                    {page.path.join(' / ')}\n                </td>\n                <td style={{ paddingRight: '1rem', color: '#777' }}>\n                    {page.properties.status}\n                </td>            \n            </tr>\n        ))\n        .value()}\n    </tbody>\n</table>\n",
             "tags": [],
             "properties": {},
             "title": "page_index"
@@ -30647,6 +30647,26 @@
                 "type": "root",
                 "children": [
                     {
+                        "type": "yaml",
+                        "value": "page_width: 43rem",
+                        "position": {
+                            "start": {
+                                "line": 1,
+                                "column": 1,
+                                "offset": 0
+                            },
+                            "end": {
+                                "line": 3,
+                                "column": 4,
+                                "offset": 25
+                            },
+                            "indent": [
+                                1,
+                                1
+                            ]
+                        }
+                    },
+                    {
                         "type": "heading",
                         "depth": 1,
                         "children": [
@@ -30655,14 +30675,14 @@
                                 "value": "Occupation",
                                 "position": {
                                     "start": {
-                                        "line": 1,
+                                        "line": 5,
                                         "column": 3,
-                                        "offset": 2
+                                        "offset": 29
                                     },
                                     "end": {
-                                        "line": 1,
+                                        "line": 5,
                                         "column": 13,
-                                        "offset": 12
+                                        "offset": 39
                                     },
                                     "indent": []
                                 }
@@ -30670,14 +30690,14 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 1,
+                                "line": 5,
                                 "column": 1,
-                                "offset": 0
+                                "offset": 27
                             },
                             "end": {
-                                "line": 1,
+                                "line": 5,
                                 "column": 13,
-                                "offset": 12
+                                "offset": 39
                             },
                             "indent": []
                         }
@@ -30690,14 +30710,14 @@
                                 "value": "A character's ",
                                 "position": {
                                     "start": {
-                                        "line": 3,
+                                        "line": 7,
                                         "column": 1,
-                                        "offset": 14
+                                        "offset": 41
                                     },
                                     "end": {
-                                        "line": 3,
+                                        "line": 7,
                                         "column": 15,
-                                        "offset": 28
+                                        "offset": 55
                                     },
                                     "indent": []
                                 }
@@ -30707,17 +30727,17 @@
                                 "children": [
                                     {
                                         "type": "text",
-                                        "value": "occupation",
+                                        "value": "Occupation",
                                         "position": {
                                             "start": {
-                                                "line": 3,
+                                                "line": 7,
                                                 "column": 17,
-                                                "offset": 30
+                                                "offset": 57
                                             },
                                             "end": {
-                                                "line": 3,
+                                                "line": 7,
                                                 "column": 27,
-                                                "offset": 40
+                                                "offset": 67
                                             },
                                             "indent": []
                                         }
@@ -30725,31 +30745,31 @@
                                 ],
                                 "position": {
                                     "start": {
-                                        "line": 3,
+                                        "line": 7,
                                         "column": 15,
-                                        "offset": 28
+                                        "offset": 55
                                     },
                                     "end": {
-                                        "line": 3,
+                                        "line": 7,
                                         "column": 29,
-                                        "offset": 42
+                                        "offset": 69
                                     },
                                     "indent": []
                                 }
                             },
                             {
                                 "type": "text",
-                                "value": " is literally how the character \"occupies their time.\"  The could be, but is not necessarily, their profession.  Example occupations:",
+                                "value": " is how the character \"occupies their time.\"  The character's occupation defines what how the character will act when left to their own devices. Every occupation is coupled to a some form of motivation (whether it's to pursue money, fame, excellence at their craft, defense of what they don't want to lose, etc.) and a strategy to up hold that motivation. The occupation of a character could be, but is not necessarily, their profession.  Some example occupations might include:",
                                 "position": {
                                     "start": {
-                                        "line": 3,
+                                        "line": 7,
                                         "column": 29,
-                                        "offset": 42
+                                        "offset": 69
                                     },
                                     "end": {
-                                        "line": 3,
-                                        "column": 162,
-                                        "offset": 175
+                                        "line": 7,
+                                        "column": 507,
+                                        "offset": 547
                                     },
                                     "indent": []
                                 }
@@ -30757,14 +30777,14 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 3,
+                                "line": 7,
                                 "column": 1,
-                                "offset": 14
+                                "offset": 41
                             },
                             "end": {
-                                "line": 3,
-                                "column": 162,
-                                "offset": 175
+                                "line": 7,
+                                "column": 507,
+                                "offset": 547
                             },
                             "indent": []
                         }
@@ -30784,73 +30804,53 @@
                                         "type": "paragraph",
                                         "children": [
                                             {
-                                                "type": "text",
-                                                "value": "Farmer",
+                                                "type": "strong",
+                                                "children": [
+                                                    {
+                                                        "type": "text",
+                                                        "value": "Farmer",
+                                                        "position": {
+                                                            "start": {
+                                                                "line": 9,
+                                                                "column": 5,
+                                                                "offset": 553
+                                                            },
+                                                            "end": {
+                                                                "line": 9,
+                                                                "column": 11,
+                                                                "offset": 559
+                                                            },
+                                                            "indent": []
+                                                        }
+                                                    }
+                                                ],
                                                 "position": {
                                                     "start": {
-                                                        "line": 5,
+                                                        "line": 9,
                                                         "column": 3,
-                                                        "offset": 179
+                                                        "offset": 551
                                                     },
                                                     "end": {
-                                                        "line": 5,
-                                                        "column": 9,
-                                                        "offset": 185
-                                                    },
-                                                    "indent": []
-                                                }
-                                            }
-                                        ],
-                                        "position": {
-                                            "start": {
-                                                "line": 5,
-                                                "column": 3,
-                                                "offset": 179
-                                            },
-                                            "end": {
-                                                "line": 5,
-                                                "column": 9,
-                                                "offset": 185
-                                            },
-                                            "indent": []
-                                        }
-                                    }
-                                ],
-                                "position": {
-                                    "start": {
-                                        "line": 5,
-                                        "column": 1,
-                                        "offset": 177
-                                    },
-                                    "end": {
-                                        "line": 5,
-                                        "column": 9,
-                                        "offset": 185
-                                    },
-                                    "indent": []
-                                }
-                            },
-                            {
-                                "type": "listItem",
-                                "spread": false,
-                                "checked": null,
-                                "children": [
-                                    {
-                                        "type": "paragraph",
-                                        "children": [
-                                            {
-                                                "type": "text",
-                                                "value": "Adventurer",
-                                                "position": {
-                                                    "start": {
-                                                        "line": 6,
-                                                        "column": 3,
-                                                        "offset": 188
-                                                    },
-                                                    "end": {
-                                                        "line": 6,
+                                                        "line": 9,
                                                         "column": 13,
-                                                        "offset": 198
+                                                        "offset": 561
+                                                    },
+                                                    "indent": []
+                                                }
+                                            },
+                                            {
+                                                "type": "text",
+                                                "value": ": motivated to make a profit raising crops",
+                                                "position": {
+                                                    "start": {
+                                                        "line": 9,
+                                                        "column": 13,
+                                                        "offset": 561
+                                                    },
+                                                    "end": {
+                                                        "line": 9,
+                                                        "column": 55,
+                                                        "offset": 603
                                                     },
                                                     "indent": []
                                                 }
@@ -30858,14 +30858,14 @@
                                         ],
                                         "position": {
                                             "start": {
-                                                "line": 6,
+                                                "line": 9,
                                                 "column": 3,
-                                                "offset": 188
+                                                "offset": 551
                                             },
                                             "end": {
-                                                "line": 6,
-                                                "column": 13,
-                                                "offset": 198
+                                                "line": 9,
+                                                "column": 55,
+                                                "offset": 603
                                             },
                                             "indent": []
                                         }
@@ -30873,14 +30873,14 @@
                                 ],
                                 "position": {
                                     "start": {
-                                        "line": 6,
+                                        "line": 9,
                                         "column": 1,
-                                        "offset": 186
+                                        "offset": 549
                                     },
                                     "end": {
-                                        "line": 6,
-                                        "column": 13,
-                                        "offset": 198
+                                        "line": 9,
+                                        "column": 55,
+                                        "offset": 603
                                     },
                                     "indent": []
                                 }
@@ -30894,18 +30894,53 @@
                                         "type": "paragraph",
                                         "children": [
                                             {
-                                                "type": "text",
-                                                "value": "Alcoholic",
+                                                "type": "strong",
+                                                "children": [
+                                                    {
+                                                        "type": "text",
+                                                        "value": "Builder",
+                                                        "position": {
+                                                            "start": {
+                                                                "line": 10,
+                                                                "column": 5,
+                                                                "offset": 608
+                                                            },
+                                                            "end": {
+                                                                "line": 10,
+                                                                "column": 12,
+                                                                "offset": 615
+                                                            },
+                                                            "indent": []
+                                                        }
+                                                    }
+                                                ],
                                                 "position": {
                                                     "start": {
-                                                        "line": 7,
+                                                        "line": 10,
                                                         "column": 3,
-                                                        "offset": 201
+                                                        "offset": 606
                                                     },
                                                     "end": {
-                                                        "line": 7,
-                                                        "column": 12,
-                                                        "offset": 210
+                                                        "line": 10,
+                                                        "column": 14,
+                                                        "offset": 617
+                                                    },
+                                                    "indent": []
+                                                }
+                                            },
+                                            {
+                                                "type": "text",
+                                                "value": ": motivated to construct building in exchange for money from others",
+                                                "position": {
+                                                    "start": {
+                                                        "line": 10,
+                                                        "column": 14,
+                                                        "offset": 617
+                                                    },
+                                                    "end": {
+                                                        "line": 10,
+                                                        "column": 81,
+                                                        "offset": 684
                                                     },
                                                     "indent": []
                                                 }
@@ -30913,14 +30948,14 @@
                                         ],
                                         "position": {
                                             "start": {
-                                                "line": 7,
+                                                "line": 10,
                                                 "column": 3,
-                                                "offset": 201
+                                                "offset": 606
                                             },
                                             "end": {
-                                                "line": 7,
-                                                "column": 12,
-                                                "offset": 210
+                                                "line": 10,
+                                                "column": 81,
+                                                "offset": 684
                                             },
                                             "indent": []
                                         }
@@ -30928,14 +30963,14 @@
                                 ],
                                 "position": {
                                     "start": {
-                                        "line": 7,
+                                        "line": 10,
                                         "column": 1,
-                                        "offset": 199
+                                        "offset": 604
                                     },
                                     "end": {
-                                        "line": 7,
-                                        "column": 12,
-                                        "offset": 210
+                                        "line": 10,
+                                        "column": 81,
+                                        "offset": 684
                                     },
                                     "indent": []
                                 }
@@ -30949,18 +30984,53 @@
                                         "type": "paragraph",
                                         "children": [
                                             {
-                                                "type": "text",
-                                                "value": "Vagabond",
+                                                "type": "strong",
+                                                "children": [
+                                                    {
+                                                        "type": "text",
+                                                        "value": "Adventurer",
+                                                        "position": {
+                                                            "start": {
+                                                                "line": 11,
+                                                                "column": 5,
+                                                                "offset": 689
+                                                            },
+                                                            "end": {
+                                                                "line": 11,
+                                                                "column": 15,
+                                                                "offset": 699
+                                                            },
+                                                            "indent": []
+                                                        }
+                                                    }
+                                                ],
                                                 "position": {
                                                     "start": {
-                                                        "line": 8,
+                                                        "line": 11,
                                                         "column": 3,
-                                                        "offset": 213
+                                                        "offset": 687
                                                     },
                                                     "end": {
-                                                        "line": 8,
-                                                        "column": 11,
-                                                        "offset": 221
+                                                        "line": 11,
+                                                        "column": 17,
+                                                        "offset": 701
+                                                    },
+                                                    "indent": []
+                                                }
+                                            },
+                                            {
+                                                "type": "text",
+                                                "value": ": motivated to find treasure and defeat novel enemies",
+                                                "position": {
+                                                    "start": {
+                                                        "line": 11,
+                                                        "column": 17,
+                                                        "offset": 701
+                                                    },
+                                                    "end": {
+                                                        "line": 11,
+                                                        "column": 70,
+                                                        "offset": 754
                                                     },
                                                     "indent": []
                                                 }
@@ -30968,14 +31038,14 @@
                                         ],
                                         "position": {
                                             "start": {
-                                                "line": 8,
+                                                "line": 11,
                                                 "column": 3,
-                                                "offset": 213
+                                                "offset": 687
                                             },
                                             "end": {
-                                                "line": 8,
-                                                "column": 11,
-                                                "offset": 221
+                                                "line": 11,
+                                                "column": 70,
+                                                "offset": 754
                                             },
                                             "indent": []
                                         }
@@ -30983,14 +31053,194 @@
                                 ],
                                 "position": {
                                     "start": {
-                                        "line": 8,
+                                        "line": 11,
                                         "column": 1,
-                                        "offset": 211
+                                        "offset": 685
                                     },
                                     "end": {
-                                        "line": 8,
-                                        "column": 11,
-                                        "offset": 221
+                                        "line": 11,
+                                        "column": 70,
+                                        "offset": 754
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "listItem",
+                                "spread": false,
+                                "checked": null,
+                                "children": [
+                                    {
+                                        "type": "paragraph",
+                                        "children": [
+                                            {
+                                                "type": "strong",
+                                                "children": [
+                                                    {
+                                                        "type": "text",
+                                                        "value": "Alcoholic",
+                                                        "position": {
+                                                            "start": {
+                                                                "line": 12,
+                                                                "column": 5,
+                                                                "offset": 759
+                                                            },
+                                                            "end": {
+                                                                "line": 12,
+                                                                "column": 14,
+                                                                "offset": 768
+                                                            },
+                                                            "indent": []
+                                                        }
+                                                    }
+                                                ],
+                                                "position": {
+                                                    "start": {
+                                                        "line": 12,
+                                                        "column": 3,
+                                                        "offset": 757
+                                                    },
+                                                    "end": {
+                                                        "line": 12,
+                                                        "column": 16,
+                                                        "offset": 770
+                                                    },
+                                                    "indent": []
+                                                }
+                                            },
+                                            {
+                                                "type": "text",
+                                                "value": ": motivated, perhaps unconsciously, to find more to drink ",
+                                                "position": {
+                                                    "start": {
+                                                        "line": 12,
+                                                        "column": 16,
+                                                        "offset": 770
+                                                    },
+                                                    "end": {
+                                                        "line": 12,
+                                                        "column": 74,
+                                                        "offset": 828
+                                                    },
+                                                    "indent": []
+                                                }
+                                            }
+                                        ],
+                                        "position": {
+                                            "start": {
+                                                "line": 12,
+                                                "column": 3,
+                                                "offset": 757
+                                            },
+                                            "end": {
+                                                "line": 12,
+                                                "column": 74,
+                                                "offset": 828
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 12,
+                                        "column": 1,
+                                        "offset": 755
+                                    },
+                                    "end": {
+                                        "line": 12,
+                                        "column": 74,
+                                        "offset": 828
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "listItem",
+                                "spread": false,
+                                "checked": null,
+                                "children": [
+                                    {
+                                        "type": "paragraph",
+                                        "children": [
+                                            {
+                                                "type": "strong",
+                                                "children": [
+                                                    {
+                                                        "type": "text",
+                                                        "value": "Vagabond",
+                                                        "position": {
+                                                            "start": {
+                                                                "line": 13,
+                                                                "column": 5,
+                                                                "offset": 833
+                                                            },
+                                                            "end": {
+                                                                "line": 13,
+                                                                "column": 13,
+                                                                "offset": 841
+                                                            },
+                                                            "indent": []
+                                                        }
+                                                    }
+                                                ],
+                                                "position": {
+                                                    "start": {
+                                                        "line": 13,
+                                                        "column": 3,
+                                                        "offset": 831
+                                                    },
+                                                    "end": {
+                                                        "line": 13,
+                                                        "column": 15,
+                                                        "offset": 843
+                                                    },
+                                                    "indent": []
+                                                }
+                                            },
+                                            {
+                                                "type": "text",
+                                                "value": ": motivated to wander",
+                                                "position": {
+                                                    "start": {
+                                                        "line": 13,
+                                                        "column": 15,
+                                                        "offset": 843
+                                                    },
+                                                    "end": {
+                                                        "line": 13,
+                                                        "column": 36,
+                                                        "offset": 864
+                                                    },
+                                                    "indent": []
+                                                }
+                                            }
+                                        ],
+                                        "position": {
+                                            "start": {
+                                                "line": 13,
+                                                "column": 3,
+                                                "offset": 831
+                                            },
+                                            "end": {
+                                                "line": 13,
+                                                "column": 36,
+                                                "offset": 864
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 13,
+                                        "column": 1,
+                                        "offset": 829
+                                    },
+                                    "end": {
+                                        "line": 13,
+                                        "column": 36,
+                                        "offset": 864
                                     },
                                     "indent": []
                                 }
@@ -30998,16 +31248,17 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 5,
+                                "line": 9,
                                 "column": 1,
-                                "offset": 177
+                                "offset": 549
                             },
                             "end": {
-                                "line": 8,
-                                "column": 11,
-                                "offset": 221
+                                "line": 13,
+                                "column": 36,
+                                "offset": 864
                             },
                             "indent": [
+                                1,
                                 1,
                                 1,
                                 1
@@ -31019,39 +31270,37 @@
                         "children": [
                             {
                                 "type": "text",
-                                "value": "The occupation guides which ",
+                                "value": "An occupation generally describes is how they spent their time, but each Occupation is coupled to a ",
                                 "position": {
                                     "start": {
-                                        "line": 10,
+                                        "line": 15,
                                         "column": 1,
-                                        "offset": 223
+                                        "offset": 866
                                     },
                                     "end": {
-                                        "line": 10,
-                                        "column": 29,
-                                        "offset": 251
+                                        "line": 15,
+                                        "column": 101,
+                                        "offset": 966
                                     },
                                     "indent": []
                                 }
                             },
                             {
-                                "type": "link",
-                                "title": null,
-                                "url": "strategy",
+                                "type": "strong",
                                 "children": [
                                     {
                                         "type": "text",
-                                        "value": "Strategies",
+                                        "value": "Strategy",
                                         "position": {
                                             "start": {
-                                                "line": 10,
-                                                "column": 30,
-                                                "offset": 252
+                                                "line": 15,
+                                                "column": 103,
+                                                "offset": 968
                                             },
                                             "end": {
-                                                "line": 10,
-                                                "column": 40,
-                                                "offset": 262
+                                                "line": 15,
+                                                "column": 111,
+                                                "offset": 976
                                             },
                                             "indent": []
                                         }
@@ -31059,31 +31308,31 @@
                                 ],
                                 "position": {
                                     "start": {
-                                        "line": 10,
-                                        "column": 29,
-                                        "offset": 251
+                                        "line": 15,
+                                        "column": 101,
+                                        "offset": 966
                                     },
                                     "end": {
-                                        "line": 10,
-                                        "column": 51,
-                                        "offset": 273
+                                        "line": 15,
+                                        "column": 113,
+                                        "offset": 978
                                     },
                                     "indent": []
                                 }
                             },
                             {
                                 "type": "text",
-                                "value": " the character adopts (since the Strategy is what they will be spending most of their time pursuing when not distracted by reactive events).",
+                                "value": " that defines what motivates the character in that activity and, therefore, how they approach it.",
                                 "position": {
                                     "start": {
-                                        "line": 10,
-                                        "column": 51,
-                                        "offset": 273
+                                        "line": 15,
+                                        "column": 113,
+                                        "offset": 978
                                     },
                                     "end": {
-                                        "line": 10,
-                                        "column": 191,
-                                        "offset": 413
+                                        "line": 15,
+                                        "column": 210,
+                                        "offset": 1075
                                     },
                                     "indent": []
                                 }
@@ -31091,14 +31340,50 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 10,
+                                "line": 15,
                                 "column": 1,
-                                "offset": 223
+                                "offset": 866
                             },
                             "end": {
-                                "line": 10,
-                                "column": 191,
-                                "offset": 413
+                                "line": 15,
+                                "column": 210,
+                                "offset": 1075
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "heading",
+                        "depth": 2,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Strategy",
+                                "position": {
+                                    "start": {
+                                        "line": 19,
+                                        "column": 4,
+                                        "offset": 1082
+                                    },
+                                    "end": {
+                                        "line": 19,
+                                        "column": 12,
+                                        "offset": 1090
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 19,
+                                "column": 1,
+                                "offset": 1079
+                            },
+                            "end": {
+                                "line": 19,
+                                "column": 12,
+                                "offset": 1090
                             },
                             "indent": []
                         }
@@ -31108,17 +31393,17 @@
                         "children": [
                             {
                                 "type": "text",
-                                "value": "Strategies are then pursued via a series of Plans. Plans are in turn composed of Tasks.",
+                                "value": "A single Occupation can have multiple possible Strategies.  Which Strategy a character chooses largely defines who they are. Let's take the example of the Farmer. Different Farmers might have different Strategies (and motiviations) in why they farm:",
                                 "position": {
                                     "start": {
-                                        "line": 12,
+                                        "line": 21,
                                         "column": 1,
-                                        "offset": 415
+                                        "offset": 1092
                                     },
                                     "end": {
-                                        "line": 12,
-                                        "column": 88,
-                                        "offset": 502
+                                        "line": 21,
+                                        "column": 250,
+                                        "offset": 1341
                                     },
                                     "indent": []
                                 }
@@ -31126,14 +31411,735 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 12,
+                                "line": 21,
                                 "column": 1,
-                                "offset": 415
+                                "offset": 1092
                             },
                             "end": {
-                                "line": 12,
-                                "column": 88,
-                                "offset": 502
+                                "line": 21,
+                                "column": 250,
+                                "offset": 1341
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "strong",
+                                "children": [
+                                    {
+                                        "type": "text",
+                                        "value": "Example: A family farmer",
+                                        "position": {
+                                            "start": {
+                                                "line": 23,
+                                                "column": 3,
+                                                "offset": 1345
+                                            },
+                                            "end": {
+                                                "line": 23,
+                                                "column": 27,
+                                                "offset": 1369
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 23,
+                                        "column": 1,
+                                        "offset": 1343
+                                    },
+                                    "end": {
+                                        "line": 23,
+                                        "column": 29,
+                                        "offset": 1371
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 23,
+                                "column": 1,
+                                "offset": 1343
+                            },
+                            "end": {
+                                "line": 23,
+                                "column": 29,
+                                "offset": 1371
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "A farmer, motiviated by the beauty of the field and to feed their family, has a strategy of cultivating small farms near their homes. They are not motivated to expand their fields once they have enough for their family, but instead will then try to improve the quality of what they are producing.  The success of this Strategy will likely be determined by the health of their family as well as the amount of time the character can spend with their family.",
+                                "position": {
+                                    "start": {
+                                        "line": 25,
+                                        "column": 1,
+                                        "offset": 1373
+                                    },
+                                    "end": {
+                                        "line": 25,
+                                        "column": 456,
+                                        "offset": 1828
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 25,
+                                "column": 1,
+                                "offset": 1373
+                            },
+                            "end": {
+                                "line": 25,
+                                "column": 456,
+                                "offset": 1828
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "strong",
+                                "children": [
+                                    {
+                                        "type": "text",
+                                        "value": "Example: An ambitious business farmer",
+                                        "position": {
+                                            "start": {
+                                                "line": 28,
+                                                "column": 3,
+                                                "offset": 1833
+                                            },
+                                            "end": {
+                                                "line": 28,
+                                                "column": 40,
+                                                "offset": 1870
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 28,
+                                        "column": 1,
+                                        "offset": 1831
+                                    },
+                                    "end": {
+                                        "line": 28,
+                                        "column": 42,
+                                        "offset": 1872
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 28,
+                                "column": 1,
+                                "offset": 1831
+                            },
+                            "end": {
+                                "line": 28,
+                                "column": 42,
+                                "offset": 1872
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "A farmer, motivated to run a successful business, has a strategy of expanding their fields and increasing how much produce they can sell over time. They are motiviated by financial success which in term makes them measure the quality of what they grow.  ",
+                                "position": {
+                                    "start": {
+                                        "line": 30,
+                                        "column": 1,
+                                        "offset": 1874
+                                    },
+                                    "end": {
+                                        "line": 30,
+                                        "column": 255,
+                                        "offset": 2128
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 30,
+                                "column": 1,
+                                "offset": 1874
+                            },
+                            "end": {
+                                "line": 30,
+                                "column": 255,
+                                "offset": 2128
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "These varied strategies may lead to very different outcomes.  The different strategies also will have interesting effects when both are situated in the same area and other characters are looking to acquire the highest-quality food.",
+                                "position": {
+                                    "start": {
+                                        "line": 32,
+                                        "column": 1,
+                                        "offset": 2130
+                                    },
+                                    "end": {
+                                        "line": 32,
+                                        "column": 232,
+                                        "offset": 2361
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 32,
+                                "column": 1,
+                                "offset": 2130
+                            },
+                            "end": {
+                                "line": 32,
+                                "column": 232,
+                                "offset": 2361
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Ultimately the success of the strategy affects the character's ",
+                                "position": {
+                                    "start": {
+                                        "line": 34,
+                                        "column": 1,
+                                        "offset": 2363
+                                    },
+                                    "end": {
+                                        "line": 34,
+                                        "column": 64,
+                                        "offset": 2426
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "link",
+                                "title": null,
+                                "url": "contentment",
+                                "children": [
+                                    {
+                                        "type": "text",
+                                        "value": "contentment",
+                                        "position": {
+                                            "start": {
+                                                "line": 34,
+                                                "column": 65,
+                                                "offset": 2427
+                                            },
+                                            "end": {
+                                                "line": 34,
+                                                "column": 76,
+                                                "offset": 2438
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 34,
+                                        "column": 64,
+                                        "offset": 2426
+                                    },
+                                    "end": {
+                                        "line": 34,
+                                        "column": 90,
+                                        "offset": 2452
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": ", which is the primary health indicator of a character.",
+                                "position": {
+                                    "start": {
+                                        "line": 34,
+                                        "column": 90,
+                                        "offset": 2452
+                                    },
+                                    "end": {
+                                        "line": 34,
+                                        "column": 145,
+                                        "offset": 2507
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 34,
+                                "column": 1,
+                                "offset": 2363
+                            },
+                            "end": {
+                                "line": 34,
+                                "column": 145,
+                                "offset": 2507
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "heading",
+                        "depth": 2,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Plans",
+                                "position": {
+                                    "start": {
+                                        "line": 36,
+                                        "column": 4,
+                                        "offset": 2512
+                                    },
+                                    "end": {
+                                        "line": 36,
+                                        "column": 9,
+                                        "offset": 2517
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 36,
+                                "column": 1,
+                                "offset": 2509
+                            },
+                            "end": {
+                                "line": 36,
+                                "column": 9,
+                                "offset": 2517
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "A Strategy is a large, encompassing goal that drives the entire behavior of the character.  In order to make that Strategy happen, each strategy is composed of different smaller ",
+                                "position": {
+                                    "start": {
+                                        "line": 38,
+                                        "column": 1,
+                                        "offset": 2519
+                                    },
+                                    "end": {
+                                        "line": 38,
+                                        "column": 179,
+                                        "offset": 2697
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "strong",
+                                "children": [
+                                    {
+                                        "type": "text",
+                                        "value": "Plans",
+                                        "position": {
+                                            "start": {
+                                                "line": 38,
+                                                "column": 181,
+                                                "offset": 2699
+                                            },
+                                            "end": {
+                                                "line": 38,
+                                                "column": 186,
+                                                "offset": 2704
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 38,
+                                        "column": 179,
+                                        "offset": 2697
+                                    },
+                                    "end": {
+                                        "line": 38,
+                                        "column": 188,
+                                        "offset": 2706
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": " that the character undertakes. ",
+                                "position": {
+                                    "start": {
+                                        "line": 38,
+                                        "column": 188,
+                                        "offset": 2706
+                                    },
+                                    "end": {
+                                        "line": 38,
+                                        "column": 220,
+                                        "offset": 2738
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 38,
+                                "column": 1,
+                                "offset": 2519
+                            },
+                            "end": {
+                                "line": 38,
+                                "column": 220,
+                                "offset": 2738
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "These are series of tasks. If some of the tasks fail, the plan may adapt or adjust or cancel. These are more complex.  Plans are usually defined under the umbrella of particular Strategies (i.e. they are not reused across different strategies).",
+                                "position": {
+                                    "start": {
+                                        "line": 40,
+                                        "column": 1,
+                                        "offset": 2740
+                                    },
+                                    "end": {
+                                        "line": 40,
+                                        "column": 245,
+                                        "offset": 2984
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 40,
+                                "column": 1,
+                                "offset": 2740
+                            },
+                            "end": {
+                                "line": 40,
+                                "column": 245,
+                                "offset": 2984
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "heading",
+                        "depth": 2,
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Tasks",
+                                "position": {
+                                    "start": {
+                                        "line": 42,
+                                        "column": 4,
+                                        "offset": 2989
+                                    },
+                                    "end": {
+                                        "line": 42,
+                                        "column": 9,
+                                        "offset": 2994
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 42,
+                                "column": 1,
+                                "offset": 2986
+                            },
+                            "end": {
+                                "line": 42,
+                                "column": 9,
+                                "offset": 2994
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "These are \"atomic\" things a character can do in the world. They either succeed or fail. It's like digging a block. Tilling the soil for farming. ",
+                                "position": {
+                                    "start": {
+                                        "line": 44,
+                                        "column": 1,
+                                        "offset": 2996
+                                    },
+                                    "end": {
+                                        "line": 44,
+                                        "column": 146,
+                                        "offset": 3141
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 44,
+                                "column": 1,
+                                "offset": 2996
+                            },
+                            "end": {
+                                "line": 44,
+                                "column": 146,
+                                "offset": 3141
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Tasks are \"reusable\".  Plans are composed as a sequence of Tasks.  Task can have simple options to allow variations. They also may have a small set of different outcomes.  Tasks can be Succeeded, Failed, Interrupted, or Canceled.  ",
+                                "position": {
+                                    "start": {
+                                        "line": 46,
+                                        "column": 1,
+                                        "offset": 3143
+                                    },
+                                    "end": {
+                                        "line": 46,
+                                        "column": 232,
+                                        "offset": 3374
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 46,
+                                "column": 1,
+                                "offset": 3143
+                            },
+                            "end": {
+                                "line": 46,
+                                "column": 232,
+                                "offset": 3374
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "A task may require certain Items or Skills to be undertaken. A Task can always be \"forced\" to be undertaken, but it will result in failure without the required Skills.  Items, Skills, and Conditions may also affect the probability of Success.",
+                                "position": {
+                                    "start": {
+                                        "line": 48,
+                                        "column": 1,
+                                        "offset": 3376
+                                    },
+                                    "end": {
+                                        "line": 48,
+                                        "column": 243,
+                                        "offset": 3618
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 48,
+                                "column": 1,
+                                "offset": 3376
+                            },
+                            "end": {
+                                "line": 48,
+                                "column": 243,
+                                "offset": 3618
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "As Tasks are the building block of all Plans and Strategies, building a collection of high-quality Tasks ensure the world can support a robust set of behaviors.",
+                                "position": {
+                                    "start": {
+                                        "line": 50,
+                                        "column": 1,
+                                        "offset": 3620
+                                    },
+                                    "end": {
+                                        "line": 50,
+                                        "column": 161,
+                                        "offset": 3780
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 50,
+                                "column": 1,
+                                "offset": 3620
+                            },
+                            "end": {
+                                "line": 50,
+                                "column": 161,
+                                "offset": 3780
+                            },
+                            "indent": []
+                        }
+                    },
+                    {
+                        "type": "paragraph",
+                        "children": [
+                            {
+                                "type": "text",
+                                "value": "Last a task may be composed of different ",
+                                "position": {
+                                    "start": {
+                                        "line": 52,
+                                        "column": 1,
+                                        "offset": 3782
+                                    },
+                                    "end": {
+                                        "line": 52,
+                                        "column": 42,
+                                        "offset": 3823
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "emphasis",
+                                "children": [
+                                    {
+                                        "type": "text",
+                                        "value": "Steps",
+                                        "position": {
+                                            "start": {
+                                                "line": 52,
+                                                "column": 43,
+                                                "offset": 3824
+                                            },
+                                            "end": {
+                                                "line": 52,
+                                                "column": 48,
+                                                "offset": 3829
+                                            },
+                                            "indent": []
+                                        }
+                                    }
+                                ],
+                                "position": {
+                                    "start": {
+                                        "line": 52,
+                                        "column": 42,
+                                        "offset": 3823
+                                    },
+                                    "end": {
+                                        "line": 52,
+                                        "column": 49,
+                                        "offset": 3830
+                                    },
+                                    "indent": []
+                                }
+                            },
+                            {
+                                "type": "text",
+                                "value": ".  These are essentially sub-tasks which exist to help make it easier to develop new Plans in the gaming world.",
+                                "position": {
+                                    "start": {
+                                        "line": 52,
+                                        "column": 49,
+                                        "offset": 3830
+                                    },
+                                    "end": {
+                                        "line": 52,
+                                        "column": 160,
+                                        "offset": 3941
+                                    },
+                                    "indent": []
+                                }
+                            }
+                        ],
+                        "position": {
+                            "start": {
+                                "line": 52,
+                                "column": 1,
+                                "offset": 3782
+                            },
+                            "end": {
+                                "line": 52,
+                                "column": 160,
+                                "offset": 3941
                             },
                             "indent": []
                         }
@@ -31147,14 +32153,14 @@
                                 "value": "Future Directions",
                                 "position": {
                                     "start": {
-                                        "line": 15,
+                                        "line": 56,
                                         "column": 4,
-                                        "offset": 508
+                                        "offset": 3948
                                     },
                                     "end": {
-                                        "line": 15,
+                                        "line": 56,
                                         "column": 21,
-                                        "offset": 525
+                                        "offset": 3965
                                     },
                                     "indent": []
                                 }
@@ -31162,14 +32168,14 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 15,
+                                "line": 56,
                                 "column": 1,
-                                "offset": 505
+                                "offset": 3945
                             },
                             "end": {
-                                "line": 15,
+                                "line": 56,
                                 "column": 21,
-                                "offset": 525
+                                "offset": 3965
                             },
                             "indent": []
                         }
@@ -31185,14 +32191,14 @@
                                         "value": "Multiple occupations",
                                         "position": {
                                             "start": {
-                                                "line": 17,
+                                                "line": 58,
                                                 "column": 3,
-                                                "offset": 529
+                                                "offset": 3969
                                             },
                                             "end": {
-                                                "line": 17,
+                                                "line": 58,
                                                 "column": 23,
-                                                "offset": 549
+                                                "offset": 3989
                                             },
                                             "indent": []
                                         }
@@ -31200,14 +32206,14 @@
                                 ],
                                 "position": {
                                     "start": {
-                                        "line": 17,
+                                        "line": 58,
                                         "column": 1,
-                                        "offset": 527
+                                        "offset": 3967
                                     },
                                     "end": {
-                                        "line": 17,
+                                        "line": 58,
                                         "column": 25,
-                                        "offset": 551
+                                        "offset": 3991
                                     },
                                     "indent": []
                                 }
@@ -31217,14 +32223,14 @@
                                 "value": ".  Characters may have a profession as well as a hobby. They may have a daytime occupation as well as evening occupation.  They may have multiple occupations with rules about which one decides their actions.",
                                 "position": {
                                     "start": {
-                                        "line": 17,
+                                        "line": 58,
                                         "column": 25,
-                                        "offset": 551
+                                        "offset": 3991
                                     },
                                     "end": {
-                                        "line": 17,
+                                        "line": 58,
                                         "column": 232,
-                                        "offset": 758
+                                        "offset": 4198
                                     },
                                     "indent": []
                                 }
@@ -31232,14 +32238,14 @@
                         ],
                         "position": {
                             "start": {
-                                "line": 17,
+                                "line": 58,
                                 "column": 1,
-                                "offset": 527
+                                "offset": 3967
                             },
                             "end": {
-                                "line": 17,
+                                "line": 58,
                                 "column": 232,
-                                "offset": 758
+                                "offset": 4198
                             },
                             "indent": []
                         }
@@ -31252,15 +32258,17 @@
                         "offset": 0
                     },
                     "end": {
-                        "line": 17,
+                        "line": 58,
                         "column": 232,
-                        "offset": 758
+                        "offset": 4198
                     }
                 }
             },
-            "string": "# Occupation\n\nA character's **occupation** is literally how the character \"occupies their time.\"  The could be, but is not necessarily, their profession.  Example occupations:\n\n-   Farmer\n-   Adventurer\n-   Alcoholic\n-   Vagabond\n\nThe occupation guides which [Strategies](strategy) the character adopts (since the Strategy is what they will be spending most of their time pursuing when not distracted by reactive events).\n\nStrategies are then pursued via a series of Plans. Plans are in turn composed of Tasks.\n\n## Future Directions\n\n**Multiple occupations**.  Characters may have a profession as well as a hobby. They may have a daytime occupation as well as evening occupation.  They may have multiple occupations with rules about which one decides their actions.\n",
+            "string": "page_width: 43rem\n\n# Occupation\n\nA character's **Occupation** is how the character \"occupies their time.\"  The character's occupation defines what how the character will act when left to their own devices. Every occupation is coupled to a some form of motivation (whether it's to pursue money, fame, excellence at their craft, defense of what they don't want to lose, etc.) and a strategy to up hold that motivation. The occupation of a character could be, but is not necessarily, their profession.  Some example occupations might include:\n\n-   **Farmer**: motivated to make a profit raising crops\n-   **Builder**: motivated to construct building in exchange for money from others\n-   **Adventurer**: motivated to find treasure and defeat novel enemies\n-   **Alcoholic**: motivated, perhaps unconsciously, to find more to drink \n-   **Vagabond**: motivated to wander\n\nAn occupation generally describes is how they spent their time, but each Occupation is coupled to a **Strategy** that defines what motivates the character in that activity and, therefore, how they approach it.\n\n## Strategy\n\nA single Occupation can have multiple possible Strategies.  Which Strategy a character chooses largely defines who they are. Let's take the example of the Farmer. Different Farmers might have different Strategies (and motiviations) in why they farm:\n\n**Example: A family farmer**\n\nA farmer, motiviated by the beauty of the field and to feed their family, has a strategy of cultivating small farms near their homes. They are not motivated to expand their fields once they have enough for their family, but instead will then try to improve the quality of what they are producing.  The success of this Strategy will likely be determined by the health of their family as well as the amount of time the character can spend with their family.\n\n**Example: An ambitious business farmer**\n\nA farmer, motivated to run a successful business, has a strategy of expanding their fields and increasing how much produce they can sell over time. They are motiviated by financial success which in term makes them measure the quality of what they grow.  \n\nThese varied strategies may lead to very different outcomes.  The different strategies also will have interesting effects when both are situated in the same area and other characters are looking to acquire the highest-quality food.\n\nUltimately the success of the strategy affects the character's [contentment](contentment), which is the primary health indicator of a character.\n\n## Plans\n\nA Strategy is a large, encompassing goal that drives the entire behavior of the character.  In order to make that Strategy happen, each strategy is composed of different smaller **Plans** that the character undertakes. \n\nThese are series of tasks. If some of the tasks fail, the plan may adapt or adjust or cancel. These are more complex.  Plans are usually defined under the umbrella of particular Strategies (i.e. they are not reused across different strategies).\n\n## Tasks\n\nThese are \"atomic\" things a character can do in the world. They either succeed or fail. It's like digging a block. Tilling the soil for farming. \n\nTasks are \"reusable\".  Plans are composed as a sequence of Tasks.  Task can have simple options to allow variations. They also may have a small set of different outcomes.  Tasks can be Succeeded, Failed, Interrupted, or Canceled.  \n\nA task may require certain Items or Skills to be undertaken. A Task can always be \"forced\" to be undertaken, but it will result in failure without the required Skills.  Items, Skills, and Conditions may also affect the probability of Success.\n\nAs Tasks are the building block of all Plans and Strategies, building a collection of high-quality Tasks ensure the world can support a robust set of behaviors.\n\nLast a task may be composed of different _Steps_.  These are essentially sub-tasks which exist to help make it easier to develop new Plans in the gaming world.\n\n## Future Directions\n\n**Multiple occupations**.  Characters may have a profession as well as a hobby. They may have a daytime occupation as well as evening occupation.  They may have multiple occupations with rules about which one decides their actions.\n",
             "tags": [],
-            "properties": {},
+            "properties": {
+                "page_width": "43rem"
+            },
             "title": "Occupation"
         },
         {
@@ -32081,426 +33089,6 @@
             "tags": [],
             "properties": {},
             "title": "Occupation: Vagabond"
-        },
-        {
-            "filename": "projects/kestrel/rulebook/strategy.mdx",
-            "extension": "mdx",
-            "id": "strategy",
-            "path": [
-                "projects",
-                "kestrel",
-                "rulebook"
-            ],
-            "ast": {
-                "type": "root",
-                "children": [
-                    {
-                        "type": "heading",
-                        "depth": 1,
-                        "children": [
-                            {
-                                "type": "text",
-                                "value": "Strategy",
-                                "position": {
-                                    "start": {
-                                        "line": 1,
-                                        "column": 3,
-                                        "offset": 2
-                                    },
-                                    "end": {
-                                        "line": 1,
-                                        "column": 11,
-                                        "offset": 10
-                                    },
-                                    "indent": []
-                                }
-                            }
-                        ],
-                        "position": {
-                            "start": {
-                                "line": 1,
-                                "column": 1,
-                                "offset": 0
-                            },
-                            "end": {
-                                "line": 1,
-                                "column": 11,
-                                "offset": 10
-                            },
-                            "indent": []
-                        }
-                    },
-                    {
-                        "type": "heading",
-                        "depth": 3,
-                        "children": [
-                            {
-                                "type": "text",
-                                "value": "Tasks",
-                                "position": {
-                                    "start": {
-                                        "line": 5,
-                                        "column": 5,
-                                        "offset": 18
-                                    },
-                                    "end": {
-                                        "line": 5,
-                                        "column": 10,
-                                        "offset": 23
-                                    },
-                                    "indent": []
-                                }
-                            }
-                        ],
-                        "position": {
-                            "start": {
-                                "line": 5,
-                                "column": 1,
-                                "offset": 14
-                            },
-                            "end": {
-                                "line": 5,
-                                "column": 10,
-                                "offset": 23
-                            },
-                            "indent": []
-                        }
-                    },
-                    {
-                        "type": "paragraph",
-                        "children": [
-                            {
-                                "type": "text",
-                                "value": "These are \"atomic\" things a character can do in the world. They either succeed or fail. It's like digging a block. Tilling the soil for farming. ",
-                                "position": {
-                                    "start": {
-                                        "line": 7,
-                                        "column": 1,
-                                        "offset": 25
-                                    },
-                                    "end": {
-                                        "line": 7,
-                                        "column": 146,
-                                        "offset": 170
-                                    },
-                                    "indent": []
-                                }
-                            }
-                        ],
-                        "position": {
-                            "start": {
-                                "line": 7,
-                                "column": 1,
-                                "offset": 25
-                            },
-                            "end": {
-                                "line": 7,
-                                "column": 146,
-                                "offset": 170
-                            },
-                            "indent": []
-                        }
-                    },
-                    {
-                        "type": "paragraph",
-                        "children": [
-                            {
-                                "type": "text",
-                                "value": "Tasks are \"reusable\".  Plans are composed as a sequence of Tasks.  Task can have simple options to allow variations. They also may have a small set of different outcomes.  Tasks can be Succeeded, Failed, Interrupted, or Canceled.  ",
-                                "position": {
-                                    "start": {
-                                        "line": 9,
-                                        "column": 1,
-                                        "offset": 172
-                                    },
-                                    "end": {
-                                        "line": 9,
-                                        "column": 232,
-                                        "offset": 403
-                                    },
-                                    "indent": []
-                                }
-                            }
-                        ],
-                        "position": {
-                            "start": {
-                                "line": 9,
-                                "column": 1,
-                                "offset": 172
-                            },
-                            "end": {
-                                "line": 9,
-                                "column": 232,
-                                "offset": 403
-                            },
-                            "indent": []
-                        }
-                    },
-                    {
-                        "type": "paragraph",
-                        "children": [
-                            {
-                                "type": "text",
-                                "value": "A task may require certain Items or Skills to be undertaken. A Task can always be \"forced\" to be undertaken, but it will result in failure without the required Skills.  Items, Skills, and Conditions may also affect the probability of Success.",
-                                "position": {
-                                    "start": {
-                                        "line": 11,
-                                        "column": 1,
-                                        "offset": 405
-                                    },
-                                    "end": {
-                                        "line": 11,
-                                        "column": 243,
-                                        "offset": 647
-                                    },
-                                    "indent": []
-                                }
-                            }
-                        ],
-                        "position": {
-                            "start": {
-                                "line": 11,
-                                "column": 1,
-                                "offset": 405
-                            },
-                            "end": {
-                                "line": 11,
-                                "column": 243,
-                                "offset": 647
-                            },
-                            "indent": []
-                        }
-                    },
-                    {
-                        "type": "paragraph",
-                        "children": [
-                            {
-                                "type": "text",
-                                "value": "As Tasks are the building block of all Plans and Strategies, building a collection of high-quality Tasks ensure the world can support a robust set of behaviors.",
-                                "position": {
-                                    "start": {
-                                        "line": 13,
-                                        "column": 1,
-                                        "offset": 649
-                                    },
-                                    "end": {
-                                        "line": 13,
-                                        "column": 161,
-                                        "offset": 809
-                                    },
-                                    "indent": []
-                                }
-                            }
-                        ],
-                        "position": {
-                            "start": {
-                                "line": 13,
-                                "column": 1,
-                                "offset": 649
-                            },
-                            "end": {
-                                "line": 13,
-                                "column": 161,
-                                "offset": 809
-                            },
-                            "indent": []
-                        }
-                    },
-                    {
-                        "type": "heading",
-                        "depth": 3,
-                        "children": [
-                            {
-                                "type": "text",
-                                "value": "Plans",
-                                "position": {
-                                    "start": {
-                                        "line": 15,
-                                        "column": 5,
-                                        "offset": 815
-                                    },
-                                    "end": {
-                                        "line": 15,
-                                        "column": 10,
-                                        "offset": 820
-                                    },
-                                    "indent": []
-                                }
-                            }
-                        ],
-                        "position": {
-                            "start": {
-                                "line": 15,
-                                "column": 1,
-                                "offset": 811
-                            },
-                            "end": {
-                                "line": 15,
-                                "column": 10,
-                                "offset": 820
-                            },
-                            "indent": []
-                        }
-                    },
-                    {
-                        "type": "paragraph",
-                        "children": [
-                            {
-                                "type": "text",
-                                "value": "These are series of tasks. If some of the tasks fail, the plan may adapt or adjust or cancel. These are more complex.  Plans are usually defined under the umbrella of particular Strategies (i.e. they are not reused across different strategies).",
-                                "position": {
-                                    "start": {
-                                        "line": 17,
-                                        "column": 1,
-                                        "offset": 822
-                                    },
-                                    "end": {
-                                        "line": 17,
-                                        "column": 245,
-                                        "offset": 1066
-                                    },
-                                    "indent": []
-                                }
-                            }
-                        ],
-                        "position": {
-                            "start": {
-                                "line": 17,
-                                "column": 1,
-                                "offset": 822
-                            },
-                            "end": {
-                                "line": 17,
-                                "column": 245,
-                                "offset": 1066
-                            },
-                            "indent": []
-                        }
-                    },
-                    {
-                        "type": "heading",
-                        "depth": 3,
-                        "children": [
-                            {
-                                "type": "text",
-                                "value": "Strategies",
-                                "position": {
-                                    "start": {
-                                        "line": 19,
-                                        "column": 5,
-                                        "offset": 1072
-                                    },
-                                    "end": {
-                                        "line": 19,
-                                        "column": 15,
-                                        "offset": 1082
-                                    },
-                                    "indent": []
-                                }
-                            }
-                        ],
-                        "position": {
-                            "start": {
-                                "line": 19,
-                                "column": 1,
-                                "offset": 1068
-                            },
-                            "end": {
-                                "line": 19,
-                                "column": 15,
-                                "offset": 1082
-                            },
-                            "indent": []
-                        }
-                    },
-                    {
-                        "type": "paragraph",
-                        "children": [
-                            {
-                                "type": "text",
-                                "value": "These are a series of on-going plans all aimed at improving a goal.",
-                                "position": {
-                                    "start": {
-                                        "line": 21,
-                                        "column": 1,
-                                        "offset": 1084
-                                    },
-                                    "end": {
-                                        "line": 21,
-                                        "column": 68,
-                                        "offset": 1151
-                                    },
-                                    "indent": []
-                                }
-                            }
-                        ],
-                        "position": {
-                            "start": {
-                                "line": 21,
-                                "column": 1,
-                                "offset": 1084
-                            },
-                            "end": {
-                                "line": 21,
-                                "column": 68,
-                                "offset": 1151
-                            },
-                            "indent": []
-                        }
-                    },
-                    {
-                        "type": "paragraph",
-                        "children": [
-                            {
-                                "type": "text",
-                                "value": "Strategies are almost always defined under the umbrella of a specific occupation (i.e. they are not reused across different Occuptations).",
-                                "position": {
-                                    "start": {
-                                        "line": 23,
-                                        "column": 1,
-                                        "offset": 1153
-                                    },
-                                    "end": {
-                                        "line": 23,
-                                        "column": 139,
-                                        "offset": 1291
-                                    },
-                                    "indent": []
-                                }
-                            }
-                        ],
-                        "position": {
-                            "start": {
-                                "line": 23,
-                                "column": 1,
-                                "offset": 1153
-                            },
-                            "end": {
-                                "line": 23,
-                                "column": 139,
-                                "offset": 1291
-                            },
-                            "indent": []
-                        }
-                    }
-                ],
-                "position": {
-                    "start": {
-                        "line": 1,
-                        "column": 1,
-                        "offset": 0
-                    },
-                    "end": {
-                        "line": 25,
-                        "column": 1,
-                        "offset": 1293
-                    }
-                }
-            },
-            "string": "# Strategy\n\n### Tasks\n\nThese are \"atomic\" things a character can do in the world. They either succeed or fail. It's like digging a block. Tilling the soil for farming. \n\nTasks are \"reusable\".  Plans are composed as a sequence of Tasks.  Task can have simple options to allow variations. They also may have a small set of different outcomes.  Tasks can be Succeeded, Failed, Interrupted, or Canceled.  \n\nA task may require certain Items or Skills to be undertaken. A Task can always be \"forced\" to be undertaken, but it will result in failure without the required Skills.  Items, Skills, and Conditions may also affect the probability of Success.\n\nAs Tasks are the building block of all Plans and Strategies, building a collection of high-quality Tasks ensure the world can support a robust set of behaviors.\n\n### Plans\n\nThese are series of tasks. If some of the tasks fail, the plan may adapt or adjust or cancel. These are more complex.  Plans are usually defined under the umbrella of particular Strategies (i.e. they are not reused across different strategies).\n\n### Strategies\n\nThese are a series of on-going plans all aimed at improving a goal.\n\nStrategies are almost always defined under the umbrella of a specific occupation (i.e. they are not reused across different Occuptations).\n",
-            "tags": [],
-            "properties": {},
-            "title": "Strategy"
         },
         {
             "filename": "projects/sea/creating_a_new_site.mdx",
@@ -44788,8 +45376,8 @@
             "extension": "jsx",
             "id": "page_layout",
             "path": [],
-            "text": "import React from 'react';\nimport _ from 'lodash';\n\nfunction Outer({\n    database,\n    children,\n}) {\n    const handleClickRandom = (evt) => {\n        evt.preventDefault();\n        const page = _.shuffle(database.pages)[0];\n        const href = page.href;\n        history.pushState(null, '', href);\n    };\n\n    const sections = [\n        [ '/', 'Home' ],\n        [ '/blog', 'Blog' ],\n        [ '/products', 'Products' ],\n        [ '/licensing', 'Licensing' ],\n        [ '/about', 'About' ],\n    ]\n\n    return (\n        <div>\n            <div className=\"site-layout\">\n                <div\n                    className=\"site-header\"\n                    style={{\n                        display: 'flex',\n                        flexDirection: 'row',\n                        minWidth: '80rem',\n                        maxWidth: '80rem',\n                        margin: '0 auto',\n                    }}>\n                    <div                    \n                        style={{\n                            display: 'flex',\n                            flexDirection: 'row',\n                            flexGrow: 0,\n                        }}>\n                        <a href=\"https://blacklivesmatter.com/\" style={{ textDecoration: 'none' }}>🖤</a>\n                        {sections.map(([url, name ]) => (\n                            <React.Fragment key={name}>\n                                <div style={{ width : '1.5rem' }} />\n                                <a style={{ flexGrow: 0 }} href={url}>{name}</a>\n                            </React.Fragment>\n                        ))}\n                    </div>\n                    <div style={{ flexGrow: 8 }} />\n                    <div                    \n                        style={{\n                            display: 'flex',\n                            flexDirection: 'row',\n                            flexGrow: 0,\n                        }}>\n                        <a style={{ flexGrow: 0 }} href=\"/page_index\">Index</a>\n                        <div style={{ width : '1.5rem' }} />\n                        <a style={{ flexGrow: 0 }} href=\"#\" onClick={handleClickRandom}>Random!</a>\n                    </div>\n                </div>\n            </div>\n            <div style={{\n                display: 'flex',\n                flexDirection: 'column',\n                minHeight: 'calc(100vh - 120px)'\n            }}\n            >\n                {children}\n            </div>\n            <div className=\"site-footer\">\n                <div>\n                    Twitter: <a href=\"https://twitter.com/RidleyWinters\">RidleyWinters</a>\n                </div>\n                <div>\n                    Favicon designed by\n                    {' '}<a href=\"https://www.flaticon.com/authors/good-ware\">Good Ware</a>{' '}\n                    available at\n                    {' '}<a href=\"https://www.flaticon.com/free-icon/woodland_2933738?term=landscape&page=1&position=\">flaticon</a>.\n                </div>\n            </div>\n        </div>\n    );\n}\n\nexport default function PageLayout({\n    database,\n    page,\n    children,\n}) {\n    console.log(page);\n\n    return (\n        <Outer database={database}>\n            <div\n                style={{\n                    display: 'flex',\n                    flexDirection: 'column',\n                    flexGrow: 1,\n                    margin: '0 auto',\n                    minWidth: '80rem',\n                    maxWidth: '80rem',\n                }}\n            >\n                <div\n                    className=\"page-content\"\n                    style={{\n                        flexGrow: 1,\n                    }}\n                >\n                    {children}\n                </div>\n            </div>\n        </Outer>\n    );\n}\n\n",
-            "parsed": "(function() {\n\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = PageLayout;\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nvar _lodash = _interopRequireDefault(require(\"lodash\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction Outer({\n  database,\n  children\n}) {\n  const handleClickRandom = evt => {\n    evt.preventDefault();\n\n    const page = _lodash.default.shuffle(database.pages)[0];\n\n    const href = page.href;\n    history.pushState(null, '', href);\n  };\n\n  const sections = [['/', 'Home'], ['/blog', 'Blog'], ['/products', 'Products'], ['/licensing', 'Licensing'], ['/about', 'About']];\n  return /*#__PURE__*/_react.default.createElement(\"div\", null, /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"site-layout\"\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"site-header\",\n    style: {\n      display: 'flex',\n      flexDirection: 'row',\n      minWidth: '80rem',\n      maxWidth: '80rem',\n      margin: '0 auto'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      flexDirection: 'row',\n      flexGrow: 0\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://blacklivesmatter.com/\",\n    style: {\n      textDecoration: 'none'\n    }\n  }, \"\\uD83D\\uDDA4\"), sections.map(([url, name]) => /*#__PURE__*/_react.default.createElement(_react.default.Fragment, {\n    key: name\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      width: '1.5rem'\n    }\n  }), /*#__PURE__*/_react.default.createElement(\"a\", {\n    style: {\n      flexGrow: 0\n    },\n    href: url\n  }, name)))), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 8\n    }\n  }), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      flexDirection: 'row',\n      flexGrow: 0\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"a\", {\n    style: {\n      flexGrow: 0\n    },\n    href: \"/page_index\"\n  }, \"Index\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      width: '1.5rem'\n    }\n  }), /*#__PURE__*/_react.default.createElement(\"a\", {\n    style: {\n      flexGrow: 0\n    },\n    href: \"#\",\n    onClick: handleClickRandom\n  }, \"Random!\")))), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      flexDirection: 'column',\n      minHeight: 'calc(100vh - 120px)'\n    }\n  }, children), /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"site-footer\"\n  }, /*#__PURE__*/_react.default.createElement(\"div\", null, \"Twitter: \", /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://twitter.com/RidleyWinters\"\n  }, \"RidleyWinters\")), /*#__PURE__*/_react.default.createElement(\"div\", null, \"Favicon designed by\", ' ', /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://www.flaticon.com/authors/good-ware\"\n  }, \"Good Ware\"), ' ', \"available at\", ' ', /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://www.flaticon.com/free-icon/woodland_2933738?term=landscape&page=1&position=\"\n  }, \"flaticon\"), \".\")));\n}\n\nfunction PageLayout({\n  database,\n  page,\n  children\n}) {\n  console.log(page);\n  return /*#__PURE__*/_react.default.createElement(Outer, {\n    database: database\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      flexDirection: 'column',\n      flexGrow: 1,\n      margin: '0 auto',\n      minWidth: '80rem',\n      maxWidth: '80rem'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"page-content\",\n    style: {\n      flexGrow: 1\n    }\n  }, children)));\n}\n})()"
+            "text": "import React from 'react';\nimport _ from 'lodash';\n\nfunction Outer({\n    database,\n    children,\n}) {\n    const handleClickRandom = (evt) => {\n        evt.preventDefault();\n        const page = _.shuffle(database.pages)[0];\n        const href = page.href;\n        history.pushState(null, '', href);\n    };\n\n    const sections = [\n        [ '/', 'Home' ],\n        [ '/blog', 'Blog' ],\n        [ '/products', 'Products' ],\n        [ '/licensing', 'Licensing' ],\n        [ '/about', 'About' ],\n    ]\n\n    return (\n        <div>\n            <div className=\"site-layout\">\n                <div\n                    className=\"site-header\"\n                    style={{\n                        display: 'flex',\n                        flexDirection: 'row',\n                        minWidth: '80rem',\n                        maxWidth: '80rem',\n                        margin: '0 auto',\n                    }}>\n                    <div                    \n                        style={{\n                            display: 'flex',\n                            flexDirection: 'row',\n                            flexGrow: 0,\n                        }}>\n                        <a href=\"https://blacklivesmatter.com/\" style={{ textDecoration: 'none' }}>🖤</a>\n                        {sections.map(([url, name ]) => (\n                            <React.Fragment key={name}>\n                                <div style={{ width : '1.5rem' }} />\n                                <a style={{ flexGrow: 0 }} href={url}>{name}</a>\n                            </React.Fragment>\n                        ))}\n                    </div>\n                    <div style={{ flexGrow: 8 }} />\n                    <div                    \n                        style={{\n                            display: 'flex',\n                            flexDirection: 'row',\n                            flexGrow: 0,\n                        }}>\n                        <a style={{ flexGrow: 0 }} href=\"/page_index\">Index</a>\n                        <div style={{ width : '1.5rem' }} />\n                        <a style={{ flexGrow: 0 }} href=\"#\" onClick={handleClickRandom}>Random!</a>\n                    </div>\n                </div>\n            </div>\n            <div style={{\n                display: 'flex',\n                flexDirection: 'column',\n                minHeight: 'calc(100vh - 120px)'\n            }}\n            >\n                {children}\n            </div>\n            <div className=\"site-footer\">\n                <div>\n                    Twitter: <a href=\"https://twitter.com/RidleyWinters\">RidleyWinters</a>\n                </div>\n                <div>\n                    Favicon designed by\n                    {' '}<a href=\"https://www.flaticon.com/authors/good-ware\">Good Ware</a>{' '}\n                    available at\n                    {' '}<a href=\"https://www.flaticon.com/free-icon/woodland_2933738?term=landscape&page=1&position=\">flaticon</a>.\n                </div>\n            </div>\n        </div>\n    );\n}\n\nexport default function PageLayout({\n    database,\n    page,\n    children,\n}) {\n    console.log(page);\n\n    const pageWidth = page.properties.page_width || '80rem';\n\n    return (\n        <Outer database={database}>\n            <div\n                style={{\n                    display: 'flex',\n                    flexDirection: 'column',\n                    flexGrow: 1,\n                    margin: '0 auto 6rem',\n                    minWidth: pageWidth,\n                    maxWidth: pageWidth,\n                }}\n            >\n                <div\n                    className=\"page-content\"\n                    style={{\n                        flexGrow: 1,\n                    }}\n                >\n                    {children}\n                </div>\n            </div>\n        </Outer>\n    );\n}\n\n",
+            "parsed": "(function() {\n\"use strict\";\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = PageLayout;\n\nvar _react = _interopRequireDefault(require(\"react\"));\n\nvar _lodash = _interopRequireDefault(require(\"lodash\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction Outer({\n  database,\n  children\n}) {\n  const handleClickRandom = evt => {\n    evt.preventDefault();\n\n    const page = _lodash.default.shuffle(database.pages)[0];\n\n    const href = page.href;\n    history.pushState(null, '', href);\n  };\n\n  const sections = [['/', 'Home'], ['/blog', 'Blog'], ['/products', 'Products'], ['/licensing', 'Licensing'], ['/about', 'About']];\n  return /*#__PURE__*/_react.default.createElement(\"div\", null, /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"site-layout\"\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"site-header\",\n    style: {\n      display: 'flex',\n      flexDirection: 'row',\n      minWidth: '80rem',\n      maxWidth: '80rem',\n      margin: '0 auto'\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      flexDirection: 'row',\n      flexGrow: 0\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://blacklivesmatter.com/\",\n    style: {\n      textDecoration: 'none'\n    }\n  }, \"\\uD83D\\uDDA4\"), sections.map(([url, name]) => /*#__PURE__*/_react.default.createElement(_react.default.Fragment, {\n    key: name\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      width: '1.5rem'\n    }\n  }), /*#__PURE__*/_react.default.createElement(\"a\", {\n    style: {\n      flexGrow: 0\n    },\n    href: url\n  }, name)))), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      flexGrow: 8\n    }\n  }), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      flexDirection: 'row',\n      flexGrow: 0\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"a\", {\n    style: {\n      flexGrow: 0\n    },\n    href: \"/page_index\"\n  }, \"Index\"), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      width: '1.5rem'\n    }\n  }), /*#__PURE__*/_react.default.createElement(\"a\", {\n    style: {\n      flexGrow: 0\n    },\n    href: \"#\",\n    onClick: handleClickRandom\n  }, \"Random!\")))), /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      flexDirection: 'column',\n      minHeight: 'calc(100vh - 120px)'\n    }\n  }, children), /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"site-footer\"\n  }, /*#__PURE__*/_react.default.createElement(\"div\", null, \"Twitter: \", /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://twitter.com/RidleyWinters\"\n  }, \"RidleyWinters\")), /*#__PURE__*/_react.default.createElement(\"div\", null, \"Favicon designed by\", ' ', /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://www.flaticon.com/authors/good-ware\"\n  }, \"Good Ware\"), ' ', \"available at\", ' ', /*#__PURE__*/_react.default.createElement(\"a\", {\n    href: \"https://www.flaticon.com/free-icon/woodland_2933738?term=landscape&page=1&position=\"\n  }, \"flaticon\"), \".\")));\n}\n\nfunction PageLayout({\n  database,\n  page,\n  children\n}) {\n  console.log(page);\n  const pageWidth = page.properties.page_width || '80rem';\n  return /*#__PURE__*/_react.default.createElement(Outer, {\n    database: database\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    style: {\n      display: 'flex',\n      flexDirection: 'column',\n      flexGrow: 1,\n      margin: '0 auto 6rem',\n      minWidth: pageWidth,\n      maxWidth: pageWidth\n    }\n  }, /*#__PURE__*/_react.default.createElement(\"div\", {\n    className: \"page-content\",\n    style: {\n      flexGrow: 1\n    }\n  }, children)));\n}\n})()"
         },
         {
             "filename": "section.jsx",
@@ -44923,6 +45511,7 @@
         "both": [
             "about",
             "creating_user_stories",
+            "occupation",
             "zero_config"
         ],
         "games": [
@@ -44944,8 +45533,12 @@
             "example_user_stories",
             "index_old",
             "kestrel",
-            "sample_page",
-            "strategy"
+            "occupation",
+            "sample_page"
+        ],
+        "gaming": [
+            "about",
+            "occupation"
         ],
         "another": [
             "about",
@@ -44971,6 +45564,7 @@
             "creating_user_stories",
             "data_objects",
             "kestrel",
+            "occupation",
             "principles",
             "rust_raytracer",
             "vagabond",
@@ -44987,6 +45581,7 @@
         ],
         "whether": [
             "about",
+            "occupation",
             "sea"
         ],
         "software": [
@@ -45046,10 +45641,10 @@
             "creating_user_stories",
             "example_user_stories",
             "kestrel",
+            "occupation",
             "rust_raytracer",
             "sample_page",
-            "sea",
-            "strategy"
+            "sea"
         ],
         "important": [
             "about",
@@ -45061,10 +45656,10 @@
             "about",
             "blog",
             "licensing",
+            "occupation",
             "principles",
             "rust_raytracer",
             "sea",
-            "strategy",
             "zero_config"
         ],
         "than": [
@@ -45096,8 +45691,8 @@
             "kestrel",
             "layouts",
             "licensing",
+            "occupation",
             "sea",
-            "strategy",
             "vagabond",
             "zero_config"
         ],
@@ -45125,13 +45720,15 @@
             "example_user_stories",
             "interviewing",
             "kestrel",
+            "occupation",
             "principles",
             "user_stories",
             "webpack_notes"
         ],
         "business": [
             "about",
-            "licensing"
+            "licensing",
+            "occupation"
         ],
         "follows": [
             "about",
@@ -45141,6 +45738,10 @@
             "about",
             "creating_user_stories",
             "example_user_stories"
+        ],
+        "sell": [
+            "about",
+            "occupation"
         ],
         "packaged": [
             "about",
@@ -45226,21 +45827,6 @@
             "about",
             "sea"
         ],
-        "from": [
-            "000_farming",
-            "about",
-            "contentment",
-            "creating_user_stories",
-            "data_objects",
-            "interviewing",
-            "licensing",
-            "principles",
-            "rust_producer_consumer",
-            "sample_page",
-            "sea",
-            "vagabond",
-            "zero_config"
-        ],
         "being": [
             "000_farming",
             "about",
@@ -45295,7 +45881,6 @@
             "creating_user_stories",
             "interviewing",
             "occupation",
-            "strategy",
             "zero_config"
         ],
         "beautiful": [
@@ -45343,13 +45928,13 @@
         ],
         "via": [
             "about",
-            "occupation",
             "sea",
             "vagabond"
         ],
         "approach": [
             "about",
             "creating_user_stories",
+            "occupation",
             "webpack_notes",
             "zero_config"
         ],
@@ -45387,6 +45972,7 @@
             "creating_a_new_site",
             "creating_user_stories",
             "kestrel",
+            "occupation",
             "sea",
             "vagabond",
             "zero_config"
@@ -45415,7 +46001,7 @@
             "about",
             "blog",
             "creating_user_stories",
-            "strategy",
+            "occupation",
             "zero_config"
         ],
         "had": [
@@ -45440,6 +46026,10 @@
             "creating_user_stories",
             "sea"
         ],
+        "spent": [
+            "blog",
+            "occupation"
+        ],
         "long": [
             "blog",
             "principles",
@@ -45457,11 +46047,11 @@
             "creating_user_stories",
             "interviewing",
             "licensing",
+            "occupation",
             "principles",
             "rust_producer_consumer",
             "rust_raytracer",
             "sea",
-            "strategy",
             "webpack_notes",
             "zero_config"
         ],
@@ -45495,6 +46085,7 @@
         ],
         "lead": [
             "blog",
+            "occupation",
             "zero_config"
         ],
         "lot": [
@@ -45513,6 +46104,7 @@
             "blog",
             "creating_a_new_site",
             "example_user_stories",
+            "occupation",
             "rust_raytracer",
             "sea"
         ],
@@ -45556,6 +46148,10 @@
             "creating_user_stories",
             "principles"
         ],
+        "essentially": [
+            "blog",
+            "occupation"
+        ],
         "all": [
             "blog",
             "contentment",
@@ -45563,10 +46159,10 @@
             "git_repo",
             "kestrel",
             "licensing",
+            "occupation",
             "principles",
             "rust_raytracer",
             "sea",
-            "strategy",
             "zero_config"
         ],
         "technical": [
@@ -45585,8 +46181,8 @@
             "creating_user_stories",
             "example_user_stories",
             "licensing",
+            "occupation",
             "principles",
-            "strategy",
             "vagabond"
         ],
         "did": [
@@ -45712,6 +46308,7 @@
         "include": [
             "concept_art",
             "git_repo",
+            "occupation",
             "sea"
         ],
         "sentence": [
@@ -45735,11 +46332,11 @@
             "creating_user_stories",
             "example_user_stories",
             "kestrel",
+            "occupation",
             "principles",
             "rust_raytracer",
             "sample_page",
             "sea",
-            "strategy",
             "vagabond",
             "zero_config"
         ],
@@ -45792,6 +46389,10 @@
             "principles",
             "vagabond"
         ],
+        "primary": [
+            "concept_art",
+            "occupation"
+        ],
         "color": [
             "concept_art",
             "rust_raytracer"
@@ -45800,6 +46401,7 @@
             "concept_art",
             "creating_user_stories",
             "git_repo",
+            "occupation",
             "rust_producer_consumer",
             "rust_raytracer",
             "sample_page",
@@ -45815,8 +46417,8 @@
             "interviewing",
             "kestrel",
             "licensing",
+            "occupation",
             "sea",
-            "strategy",
             "zero_config"
         ],
         "objects": [
@@ -45824,21 +46426,6 @@
             "data_objects",
             "data_table",
             "sea"
-        ],
-        "an": [
-            "000_farming",
-            "concept_art",
-            "creating_user_stories",
-            "data_objects",
-            "data_table",
-            "git_repo",
-            "kestrel",
-            "licensing",
-            "rust_producer_consumer",
-            "rust_raytracer",
-            "sample_page",
-            "sea",
-            "zero_config"
         ],
         "rough": [
             "concept_art",
@@ -45860,6 +46447,7 @@
             "concept_art",
             "creating_user_stories",
             "kestrel",
+            "occupation",
             "principles",
             "sea",
             "zero_config"
@@ -45888,8 +46476,7 @@
             "occupation",
             "principles",
             "sample_page",
-            "sea",
-            "strategy"
+            "sea"
         ],
         "make": [
             "concept_art",
@@ -45897,6 +46484,7 @@
             "creating_user_stories",
             "how-to-embed-a-long-script-in-a-makefile",
             "kestrel",
+            "occupation",
             "principles",
             "rust_producer_consumer",
             "sea",
@@ -45908,12 +46496,14 @@
             "concept_art",
             "creating_user_stories",
             "kestrel",
+            "occupation",
             "principles",
             "zero_config"
         ],
         "easier": [
             "concept_art",
             "kestrel",
+            "occupation",
             "principles",
             "rust_raytracer",
             "zero_config"
@@ -45927,6 +46517,7 @@
             "concept_art",
             "creating_user_stories",
             "git_repo",
+            "occupation",
             "sea"
         ],
         "size": [
@@ -45951,13 +46542,15 @@
             "concept_art",
             "creating_user_stories",
             "data_table",
+            "occupation",
             "rust_producer_consumer",
             "rust_raytracer",
             "sea"
         ],
         "smaller": [
             "000_farming",
-            "concept_art"
+            "concept_art",
+            "occupation"
         ],
         "incremental": [
             "concept_art",
@@ -46004,7 +46597,6 @@
             "development_primitives",
             "kestrel",
             "occupation",
-            "strategy",
             "zero_config"
         ],
         "git": [
@@ -46062,6 +46654,7 @@
         ],
         "very": [
             "git_repo",
+            "occupation",
             "sample_page",
             "sea"
         ],
@@ -46148,6 +46741,7 @@
             "principles"
         ],
         "who": [
+            "occupation",
             "principles",
             "vagabond"
         ],
@@ -46165,7 +46759,6 @@
         ],
         "most": [
             "example_user_stories",
-            "occupation",
             "principles",
             "zero_config"
         ],
@@ -46181,6 +46774,7 @@
         "find": [
             "contentment",
             "creating_user_stories",
+            "occupation",
             "principles"
         ],
         "those": [
@@ -46198,6 +46792,7 @@
         "every": [
             "data_objects",
             "index_old",
+            "occupation",
             "principles",
             "zero_config"
         ],
@@ -46233,8 +46828,7 @@
         ],
         "improving": [
             "creating_user_stories",
-            "principles",
-            "strategy"
+            "principles"
         ],
         "finishing": [
             "kestrel",
@@ -46260,10 +46854,11 @@
             "zero_config"
         ],
         "enough": [
+            "occupation",
             "principles",
             "sea"
         ],
-        "distracted": [
+        "family": [
             "occupation",
             "principles"
         ],
@@ -46276,6 +46871,10 @@
         ],
         "means": [
             "data_objects",
+            "principles"
+        ],
+        "money": [
+            "occupation",
             "principles"
         ],
         "time": [
@@ -46306,6 +46905,7 @@
             "creating_a_new_site",
             "creating_user_stories",
             "data_objects",
+            "occupation",
             "principles",
             "rust_raytracer",
             "sample_page",
@@ -46348,6 +46948,7 @@
         ],
         "own": [
             "example_user_stories",
+            "occupation",
             "principles"
         ],
         "making": [
@@ -46432,6 +47033,7 @@
         "over": [
             "creating_user_stories",
             "five_whys",
+            "occupation",
             "principles",
             "rust_raytracer",
             "sample_page",
@@ -46443,6 +47045,10 @@
             "principles",
             "rust_raytracer",
             "zero_config"
+        ],
+        "quality": [
+            "occupation",
+            "principles"
         ],
         "running": [
             "how-to-embed-a-long-script-in-a-makefile",
@@ -46502,6 +47108,7 @@
         ],
         "makes": [
             "example_user_stories",
+            "occupation",
             "zero_config"
         ],
         "month": [
@@ -46532,7 +47139,7 @@
         "building": [
             "example_user_stories",
             "kestrel",
-            "strategy"
+            "occupation"
         ],
         "trying": [
             "common_user_stories",
@@ -46575,9 +47182,9 @@
         "simple": [
             "data_table",
             "example_user_stories",
+            "occupation",
             "rust_producer_consumer",
-            "rust_raytracer",
-            "strategy"
+            "rust_raytracer"
         ],
         "javascript": [
             "example_user_stories",
@@ -46630,8 +47237,8 @@
             "example_user_stories",
             "interviewing",
             "kestrel",
-            "sea",
-            "strategy"
+            "occupation",
+            "sea"
         ],
         "word": [
             "creating_user_stories",
@@ -46652,10 +47259,10 @@
             "creating_user_stories",
             "data_table",
             "example_user_stories",
+            "occupation",
             "rust_producer_consumer",
             "rust_raytracer",
             "sea",
-            "strategy",
             "zero_config"
         ],
         "statement": [
@@ -46725,9 +47332,9 @@
         "ensure": [
             "creating_a_new_site",
             "how-to-embed-a-long-script-in-a-makefile",
+            "occupation",
             "rust_producer_consumer",
             "sea",
-            "strategy",
             "zero_config"
         ],
         "example": [
@@ -46740,7 +47347,7 @@
         ],
         "particular": [
             "how-to-embed-a-long-script-in-a-makefile",
-            "strategy",
+            "occupation",
             "zero_config"
         ],
         "used": [
@@ -46767,6 +47374,7 @@
         ],
         "single": [
             "how-to-embed-a-long-script-in-a-makefile",
+            "occupation",
             "sea",
             "vagabond",
             "webpack_notes"
@@ -46825,6 +47433,7 @@
             "changelog_tips",
             "creating_a_new_site",
             "creating_user_stories",
+            "occupation",
             "rust_raytracer",
             "sample_page",
             "sea",
@@ -46878,8 +47487,8 @@
             "changelog_tips",
             "creating_user_stories",
             "kestrel",
+            "occupation",
             "rust_producer_consumer",
-            "strategy",
             "zero_config"
         ],
         "way": [
@@ -46930,8 +47539,8 @@
             "common_user_stories",
             "creating_user_stories",
             "licensing",
+            "occupation",
             "sea",
-            "strategy",
             "vagabond",
             "zero_config"
         ],
@@ -46972,25 +47581,27 @@
         ],
         "possible": [
             "creating_user_stories",
+            "occupation",
             "sea",
             "zero_config"
         ],
         "take": [
             "creating_user_stories",
+            "occupation",
             "sea"
         ],
         "goal": [
             "000_farming",
             "creating_user_stories",
+            "occupation",
             "rust_raytracer",
-            "strategy",
             "user_stories"
         ],
         "also": [
             "contentment",
             "creating_user_stories",
+            "occupation",
             "rust_producer_consumer",
-            "strategy",
             "zero_config"
         ],
         "covers": [
@@ -47009,9 +47620,9 @@
             "000_farming",
             "creating_user_stories",
             "licensing",
+            "occupation",
             "rust_producer_consumer",
             "sea",
-            "strategy",
             "zero_config"
         ],
         "fixed": [
@@ -47020,8 +47631,8 @@
         ],
         "allow": [
             "creating_user_stories",
+            "occupation",
             "sea",
-            "strategy",
             "vagabond",
             "zero_config"
         ],
@@ -47052,6 +47663,7 @@
             "creating_user_stories",
             "five_whys",
             "interviewing",
+            "occupation",
             "user_stories"
         ],
         "here": [
@@ -47142,6 +47754,10 @@
             "creating_user_stories",
             "interviewing"
         ],
+        "varied": [
+            "creating_user_stories",
+            "occupation"
+        ],
         "yet": [
             "creating_user_stories",
             "rust_raytracer",
@@ -47224,8 +47840,7 @@
         "specific": [
             "creating_user_stories",
             "data_table",
-            "sea",
-            "strategy"
+            "sea"
         ],
         "detail": [
             "creating_user_stories",
@@ -47246,12 +47861,14 @@
         "don": [
             "creating_user_stories",
             "data_objects",
+            "occupation",
             "rust_raytracer",
             "zero_config"
         ],
         "entire": [
             "000_farming",
-            "creating_user_stories"
+            "creating_user_stories",
+            "occupation"
         ],
         "intent": [
             "creating_user_stories",
@@ -47260,7 +47877,12 @@
         ],
         "them": [
             "creating_user_stories",
+            "occupation",
             "zero_config"
+        ],
+        "hold": [
+            "creating_user_stories",
+            "occupation"
         ],
         "until": [
             "creating_user_stories",
@@ -47273,11 +47895,12 @@
         ],
         "happen": [
             "creating_user_stories",
-            "licensing"
+            "licensing",
+            "occupation"
         ],
         "either": [
             "creating_user_stories",
-            "strategy"
+            "occupation"
         ],
         "aim": [
             "creating_a_new_site",
@@ -47289,6 +47912,7 @@
         ],
         "improve": [
             "creating_user_stories",
+            "occupation",
             "rust_raytracer"
         ],
         "does": [
@@ -47327,7 +47951,6 @@
             "five_whys",
             "kestrel",
             "occupation",
-            "strategy",
             "zero_config"
         ],
         "best": [
@@ -47339,7 +47962,11 @@
             "creating_user_stories",
             "sea"
         ],
-        "pursued": [
+        "order": [
+            "creating_user_stories",
+            "occupation"
+        ],
+        "pursue": [
             "creating_user_stories",
             "occupation"
         ],
@@ -47359,7 +47986,11 @@
         ],
         "success": [
             "creating_user_stories",
-            "strategy"
+            "occupation"
+        ],
+        "successful": [
+            "creating_user_stories",
+            "occupation"
         ],
         "maybe": [
             "creating_user_stories",
@@ -47367,7 +47998,7 @@
         ],
         "small": [
             "creating_user_stories",
-            "strategy",
+            "occupation",
             "vagabond",
             "zero_config"
         ],
@@ -47388,12 +48019,11 @@
             "creating_user_stories",
             "data_objects",
             "occupation",
-            "products",
-            "strategy"
+            "products"
         ],
         "usually": [
             "creating_user_stories",
-            "strategy",
+            "occupation",
             "zero_config"
         ],
         "before": [
@@ -47425,6 +48055,14 @@
             "five_whys",
             "rust_producer_consumer"
         ],
+        "generally": [
+            "creating_user_stories",
+            "occupation"
+        ],
+        "instead": [
+            "creating_user_stories",
+            "occupation"
+        ],
         "rely": [
             "creating_user_stories",
             "licensing"
@@ -47435,7 +48073,7 @@
         ],
         "succeed": [
             "creating_user_stories",
-            "strategy"
+            "occupation"
         ],
         "huge": [
             "creating_user_stories",
@@ -47452,12 +48090,13 @@
         "same": [
             "creating_user_stories",
             "data_objects",
+            "occupation",
             "sea"
         ],
         "across": [
             "creating_user_stories",
             "data_objects",
-            "strategy",
+            "occupation",
             "zero_config"
         ],
         "individual": [
@@ -47466,6 +48105,7 @@
         ],
         "chooses": [
             "creating_user_stories",
+            "occupation",
             "vagabond"
         ],
         "article": [
@@ -47516,6 +48156,10 @@
             "rust_producer_consumer",
             "zero_config"
         ],
+        "looking": [
+            "occupation",
+            "rust_producer_consumer"
+        ],
         "render": [
             "data_objects",
             "kestrel",
@@ -47529,6 +48173,7 @@
         "let": [
             "data_objects",
             "data_table",
+            "occupation",
             "rust_producer_consumer",
             "rust_raytracer"
         ],
@@ -47541,8 +48186,8 @@
             "rust_producer_consumer"
         ],
         "e": [
+            "occupation",
             "rust_producer_consumer",
-            "strategy",
             "zero_config"
         ],
         "rendered": [
@@ -47569,12 +48214,12 @@
         "since": [
             "contentment",
             "licensing",
-            "occupation",
             "rust_producer_consumer"
         ],
         "might": [
             "contentment",
             "kestrel",
+            "occupation",
             "rust_producer_consumer"
         ],
         "lastly": [
@@ -47658,6 +48303,7 @@
             "rust_raytracer"
         ],
         "once": [
+            "occupation",
             "rust_raytracer",
             "vagabond",
             "zero_config"
@@ -47672,6 +48318,7 @@
         ],
         "measure": [
             "contentment",
+            "occupation",
             "rust_raytracer"
         ],
         "github": [
@@ -47699,12 +48346,14 @@
             "webpack_notes"
         ],
         "other": [
+            "occupation",
             "rust_webgl",
             "sea",
             "zero_config"
         ],
         "steps": [
             "000_farming",
+            "occupation",
             "rust_webgl"
         ],
         "examples": [
@@ -47788,13 +48437,14 @@
         ],
         "support": [
             "data_objects",
+            "occupation",
             "sea",
-            "strategy",
             "webpack_notes",
             "zero_config"
         ],
         "run": [
             "creating_a_new_site",
+            "occupation",
             "sea",
             "webpack_notes",
             "zero_config"
@@ -47807,6 +48457,10 @@
             "data_objects",
             "wishlist"
         ],
+        "motivation": [
+            "interviewing",
+            "occupation"
+        ],
         "personal": [
             "interviewing",
             "sea"
@@ -47815,6 +48469,14 @@
             "contentment",
             "interviewing",
             "sea"
+        ],
+        "motivates": [
+            "interviewing",
+            "occupation"
+        ],
+        "help": [
+            "interviewing",
+            "occupation"
         ],
         "config": [
             "sea",
@@ -47825,7 +48487,7 @@
             "zero_config"
         ],
         "result": [
-            "strategy",
+            "occupation",
             "zero_config"
         ],
         "conventions": [
@@ -47868,7 +48530,7 @@
             "zero_config"
         ],
         "complex": [
-            "strategy",
+            "occupation",
             "zero_config"
         ],
         "change": [
@@ -47882,7 +48544,7 @@
             "zero_config"
         ],
         "task": [
-            "strategy",
+            "occupation",
             "vagabond",
             "zero_config"
         ],
@@ -47898,14 +48560,11 @@
         ],
         "perhaps": [
             "kestrel",
+            "occupation",
             "zero_config"
         ],
         "assets": [
             "kestrel",
-            "zero_config"
-        ],
-        "on-going": [
-            "strategy",
             "zero_config"
         ],
         "trigger": [
@@ -47931,6 +48590,7 @@
         ],
         "produce": [
             "kestrel",
+            "occupation",
             "zero_config"
         ],
         "active": [
@@ -48019,8 +48679,8 @@
         ],
         "under": [
             "licensing",
-            "sea",
-            "strategy"
+            "occupation",
+            "sea"
         ],
         "rulebook": [
             "kestrel",
@@ -48030,6 +48690,10 @@
             "products",
             "sea"
         ],
+        "novel": [
+            "occupation",
+            "products"
+        ],
         "sea": [
             "creating_a_new_site",
             "data_objects",
@@ -48038,9 +48702,14 @@
             "sea",
             "test"
         ],
+        "grow": [
+            "kestrel",
+            "occupation"
+        ],
         "others": [
             "creating_a_new_site",
-            "kestrel"
+            "kestrel",
+            "occupation"
         ],
         "adventurer": [
             "kestrel",
@@ -48051,13 +48720,21 @@
             "kestrel",
             "occupation"
         ],
+        "builder": [
+            "kestrel",
+            "occupation"
+        ],
+        "defeat": [
+            "kestrel",
+            "occupation"
+        ],
         "choice": [
             "kestrel",
             "vagabond"
         ],
         "farming": [
             "000_farming",
-            "strategy"
+            "occupation"
         ],
         "solve": [
             "000_farming",
@@ -48066,14 +48743,16 @@
         "occupation": [
             "000_farming",
             "occupation",
-            "strategy",
             "vagabond"
+        ],
+        "farm": [
+            "000_farming",
+            "occupation"
         ],
         "plans": [
             "000_farming",
             "contentment",
             "occupation",
-            "strategy",
             "vagabond"
         ],
         "cards": [
@@ -48085,16 +48764,24 @@
             "data_objects",
             "vagabond"
         ],
+        "defines": [
+            "000_farming",
+            "occupation"
+        ],
         "strategies": [
             "000_farming",
             "contentment",
             "occupation",
-            "strategy",
             "vagabond"
         ],
         "likely": [
             "000_farming",
-            "contentment"
+            "contentment",
+            "occupation"
+        ],
+        "last": [
+            "000_farming",
+            "occupation"
         ],
         "lifetime": [
             "000_farming",
@@ -48102,8 +48789,7 @@
         ],
         "composed": [
             "000_farming",
-            "occupation",
-            "strategy"
+            "occupation"
         ],
         "current": [
             "000_farming",
@@ -48111,8 +48797,8 @@
         ],
         "conditions": [
             "000_farming",
-            "sea",
-            "strategy"
+            "occupation",
+            "sea"
         ],
         "abandoned": [
             "000_farming",
@@ -48120,11 +48806,11 @@
         ],
         "sequence": [
             "000_farming",
-            "strategy"
+            "occupation"
         ],
         "atomic": [
             "000_farming",
-            "strategy"
+            "occupation"
         ],
         "changes": [
             "000_farming",
@@ -48134,6 +48820,7 @@
         ],
         "contentment": [
             "contentment",
+            "occupation",
             "vagabond"
         ],
         "attribute": [
@@ -48143,16 +48830,12 @@
         "character": [
             "contentment",
             "occupation",
-            "strategy",
             "vagabond"
         ],
         "determined": [
             "contentment",
+            "occupation",
             "vagabond"
-        ],
-        "events": [
-            "contentment",
-            "occupation"
         ],
         "directions": [
             "contentment",
@@ -48160,20 +48843,53 @@
         ],
         "behavior": [
             "contentment",
-            "data_objects"
+            "data_objects",
+            "occupation"
+        ],
+        "strategy": [
+            "occupation",
+            "vagabond"
         ],
         "vagabond": [
             "occupation",
             "vagabond"
         ],
-        "strategy": [
+        "wander": [
             "occupation",
-            "strategy",
             "vagabond"
         ],
-        "turn": [
+        "field": [
+            "data_objects",
             "occupation",
             "sea"
+        ],
+        "fields": [
+            "data_objects",
+            "occupation"
+        ],
+        "spend": [
+            "data_objects",
+            "occupation"
+        ],
+        "area": [
+            "occupation",
+            "sea"
+        ],
+        "plan": [
+            "occupation",
+            "vagabond"
+        ],
+        "block": [
+            "data_objects",
+            "occupation"
+        ],
+        "interrupted": [
+            "occupation",
+            "vagabond"
+        ],
+        "canceled": [
+            "occupation",
+            "vagabond"
         ],
         "rules": [
             "occupation",
@@ -48184,20 +48900,8 @@
             "sea",
             "vagabond"
         ],
-        "plan": [
-            "strategy",
-            "vagabond"
-        ],
         "less": [
             "sea",
-            "vagabond"
-        ],
-        "interrupted": [
-            "strategy",
-            "vagabond"
-        ],
-        "canceled": [
-            "strategy",
             "vagabond"
         ],
         "course": [
@@ -48208,10 +48912,6 @@
             "layouts",
             "sea",
             "vagabond"
-        ],
-        "block": [
-            "data_objects",
-            "strategy"
         ],
         "site": [
             "creating_a_new_site",
@@ -48319,10 +49019,6 @@
             "sea"
         ],
         "node": [
-            "data_objects",
-            "sea"
-        ],
-        "field": [
             "data_objects",
             "sea"
         ],
