@@ -1,5 +1,3 @@
-
-
 ## Page Index
 
 <table>
@@ -16,7 +14,7 @@
         .map((page) => ( 
             <tr key={page.id}>
                 <td style={{ paddingRight : '2rem' }}>
-                    <a href={`/${page.id}`}>{page.title}</a>
+                    <a href={page.href}>{page.title}</a>
                 </td>
                 <td style={{ paddingRight: '2rem', color: '#777' }}>
                     {page.path.join(' / ')}
