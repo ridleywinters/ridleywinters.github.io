@@ -55,7 +55,7 @@ Contribution Personas
 
 <ul>
     {_.chain(database.pages)
-        .filter((page) => page.path.join('/') === 'kestrel/rulebook')
+        .filter((page) => page.path.join('/').startsWith('projects/kestrel/rulebook'))
         .sortBy((page) => page.title)
         .map((page) => ( 
             <li key={page.id}>            
