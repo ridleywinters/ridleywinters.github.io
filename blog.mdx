@@ -1,6 +1,25 @@
 # Blog!
 
+## July 5th, 2020
 
+__Musings on Kestrel__
+
+I'm excited as I recently discovered [Odd Realm](https://www.oddrealmgame.com/). This game seems well-aligned to what I am hoping [Kestrel](/projects/kestrel/kestrel) evolves to be.
+
+One area I am considering deemphasizing for Kestrel is management of individual characters. I would like Kestrel to run that self-sufficient towns are constructed via the inherent strategies of the non-player characters. If the player does nothing, there is an interesting world to watch evolve.  The player can _choose_ a role to "coordinate" and "motivate" activities so that towns are built coherent, bands of fighters group together, etc.
+
+__Coding Progress__
+
+I'm working on implementing [Strategies](/projects/kestrel/rulebook/occupation). I'm hitting more mental blocks than I would like, at least in part, as my brain is not yet wired to think in Rust.  What I want is something pretty simple:
+
+* The Occupation determines a Strategy
+* The Strategy is more or less permanent 
+* It has some state to track how well the strategy is doing, i.e. the effect on the Actor's [Contentment](/projects/kestrel/rulebook/contentment)
+* It also has the current Plan
+* The Plan is a series of Tasks
+* Tasks are small state machines since they may take more than one game cycle
+
+I'm attempting to implement this for the "Mindless" which should be very simple as it is an Occupation simply to move around randomly on the map (no path finding, no retained state). 
 
 
 ### Future Blog Post Ideas
