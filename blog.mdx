@@ -1,6 +1,68 @@
 # Blog!
 
-## July 5th, 2020
+## How Rust Ended my World (struct)
+
+__July 6th, 2020__
+
+Moving ActorState out of Actor. Clearly borrowing boundaries.
+
+__July 5th, 2020__
+
+I'm still struggling to intuitively understand Rust's borrowing rules. The rules actually seem quite simple (I believe it boils down to no overlapping scope of mutable references and no overlapping scope of mutable references with immutable references). However, when it comes to writing practical code, I do not "default" to thinking about this correctly.
+
+Currently in the code, I use a `World` struct which has the list of all `Actor`s. That makes logical sense. The problem is the Actors want access to the World so they can manipulate it. But if that access is happening in a loop over the World's actors then the scope of the loop contains at least an immutable reference to the World and then the actor's update needs a mutable reference. 
+
+The tricky problem for refactoring the code is this:
+* The World contains a list of all actors
+* Every frame the list of actors need to be updated
+* Every actor potentially needs to know the state of all other actors to update
+
+How do we pass a mutable member of a list a list of all the other members as immutable?
+
+https://play.rust-lang.org/?version=stable&mode=debug&edition=2018&gist=733fdfe697df11caeaa5adc74525f3e1
+
+```rust
+struct Actor {
+    id: u64,
+    count: u64,
+}
+
+impl Actor {
+    fn new(id: u64) -> Self {
+        Self { id, count: 0 }
+    }
+
+    fn do_something(&mut self, others: &[Box<Actor>]) {
+        for other in others {
+            println!("Examining {} -> {}", self.id, other.id);
+        }
+
+        self.count += 1;
+        println!("Actor {} has count {}", self.id, self.count);
+    }
+}
+
+struct World {
+    actors: Vec<Box<Actor>>,
+}
+
+fn main() {
+    let mut world = World { actors: Vec::new() };
+
+    for i in 0..5 {
+        world.actors.push(Box::new(Actor::new(i)));
+    }
+
+    if let Some((current, rest)) = world.actors.split_first_mut() {
+        let mut i = 0;
+        while i < rest.len() {
+            current.do_something(rest);
+            std::mem::swap(current, &mut rest[i]);
+            i += 1;
+        }
+    }
+}
+```
 
 __Musings on Kestrel__
 
@@ -19,7 +81,7 @@ I'm working on implementing [Strategies](/projects/kestrel/rulebook/occupation).
 * The Plan is a series of Tasks
 * Tasks are small state machines since they may take more than one game cycle
 
-I'm attempting to implement this for the "Mindless" which should be very simple as it is an Occupation simply to move around randomly on the map (no path finding, no retained state). 
+I'm attempting to implement this for the "Mindless" which should be very simple as it is an Occupation simply to     move around randomly on the map (no path finding, no retained state). 
 
 
 ### Future Blog Post Ideas
