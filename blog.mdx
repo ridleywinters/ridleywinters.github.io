@@ -4,6 +4,12 @@
 
 __July 6th, 2020__
 
+In order to add flexibility and uniformity to the code, I'm moving the player Actor to be "just another Actor" as far as the game sees it, but with a new Occupation called "Avatar." This Occupation is a special-case meaning the Actor's actions are controlled by the player, not an AI strategy. 
+
+I'm excited about this change as it should make it easier in the future for the player to take control of other Actors or for multiplayer since the simulation portion of the engine is decoupled from the controllers.
+
+__July 6th, 2020__
+
 Moving ActorState out of Actor. Clearly borrowing boundaries.
 
 __July 5th, 2020__

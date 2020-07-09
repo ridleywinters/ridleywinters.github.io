@@ -1,0 +1,47 @@
+# Occupation: Farmer
+
+## Strategy: Basic Farming
+
+### Plan: Create the Plot
+
+1. Choose a NxM rectangular area for farming
+2. Level the terrain in that area
+3. Build a fence around the rectangle
+
+If (1) is interrupted, reset the Task.  If (2) is interrupted, retry based on stubbornness, then reset the Plan.  
+
+If (3) is interrupted, rety based on stubbornness. Possibly apply aggression if frustration is high.
+
+If plan completes go to next plan...
+
+### Plan: Till and Harvest
+
+* Till the soil in each square
+* Plant seeds in each tilled square
+* Wait for the planted seeds to grow
+* Harvest the plants
+* Repeat tilling the soil
+
+
+```@mermaid
+name: Test
+content: |
+    graph TD   
+
+    subgraph A [Create the Plot]
+        A1(Choose NxM area for farming)
+        A2(Level the terrain in that area)
+        A3(Build a fence around the rectangle)
+        A1 --> A2 --> A3
+    end
+    subgraph B [Till and Harvest]
+        B1(Till the soil in each square)
+        B2(Plant seeds in each tiled square)
+        B3(Wait for the planted seeds to grow)
+        B4(Harvest the plants)
+        B1 --> B2 --> B3 --> B4
+    end
+
+    A3 --> B1;
+    B4 --> B1;
+```
