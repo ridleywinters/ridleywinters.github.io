@@ -1,0 +1,113 @@
+---
+page_width: 43rem
+---
+
+# Tangled Orchard Guidebook
+
+This guidebooks prescribes a lot of guidelines and principles for doing work related to the company.  The purpose of these common guidelines are _clear communications_, not to stifle any creative efforts. 
+
+#### What does success look like?
+
+* A published, hard-copy Kestrel Rulebook v1.0 with excellent artwork and game rules
+* A published Kestrel v1.0 on Steam using the Kestrel Rulebook
+* A high-quality wiki of the Kestrel history and world-building
+* A published version of Sea used internally and a small devoted community of external developers
+
+#### How will we compete and win?
+
+TBD
+
+
+## All Employees
+
+### Reading List
+
+Having a _common language_ helps with efficiency and reduces inadvertant misunderstandings.  Have a common set of material to reference (not necessarily to _agree with_!) helps establish that common language for approaching problems:
+
+* TBD
+
+## Departments
+
+
+### Marketing
+
+* Use Twitter to visual post updates & teasers of progress
+* Use the main website for permanent content or long-form posts
+
+### Sales
+
+TBD
+
+### Design
+
+#### Playbooks
+
+##### Concept Art
+
+This is a playbook for creating concept art for without training in art:
+
+**General idea**
+
+* Sketch with a pen really quickly what you're imagining.  Decide the "focal point object" in the scene. Include a sentence or two describing the scene with key descriptors ("a fishing village in the late evening with signs of the villagers at dinner")
+
+**Digital version**
+
+* Use Krita
+* Create a background layer with a solid colors conveying the major parts of the image in their primary color
+* Create a primary palette layer with the up to 3 primary colors, 2 secondary colors: shades, tones, and grayscales can be include without this being in the cout
+* Create a "pencil sketch" layer with the shapes of the objects in the scene
+* Create an airbrush rough fill of the pencil sketch
+* Creates layers based on the logical "z" depths of the image (distant ocean, hills, foreground, etc.) - getting this right will make future edits much easier
+* Use the Pencil 6 Quick Shade at 100% opacity & large size to start drawing each
+* Refine with smaller sizes and lower opacity
+
+Use incremental versions
+Export to PNG
+
+
+
+### Product
+
+<ul>
+    {_.chain(database.pages)
+        .filter((page) => page.path.join('/') === 'company/product')
+        .sortBy((page) => page.title)
+        .map((page) => ( 
+            <li key={page.id}>            
+                <a href={page.href}>{page.title}</a>
+            </li>
+        ))
+        .value()}
+</ul>
+
+### Engineering
+
+<ul>
+    {_.chain(database.pages)
+        .filter((page) => page.path.join('/') === 'company/development')
+        .sortBy((page) => page.title)
+        .map((page) => ( 
+            <li key={page.id}>            
+                <a href={page.href}>{page.title}</a>
+            </li>
+        ))
+        .value()}
+</ul>
+
+#### Principles
+
+* If there's an existing standard that meets the requirements use it!
+* Only build custom solutions if there truly is no existing solution OR the precision is critical the success of the overall project
+
+
+#### Changelog Tips
+
+In a changelog list, consider starting each bullet with one of the following verbs:
+
+* `Add` - something new has been added, prior functionality is unaffected
+* `Remove` - something has been removed entirely 
+* `Change` - some functionality still exists but has been modified in how it works
+* `Replace` - some functionality still exists but is accessed in a different way
+* `Fix` - some functionality that did not work correctly now works correctly
+* `Update` - content or data has been refreshed or added to in a backward compatible way
+

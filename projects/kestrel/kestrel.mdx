@@ -69,17 +69,7 @@ Contribution Personas
 
 Requests for change...
 
-<ul>
-    {_.chain(database.pages)
-        .filter((page) => page.path.join('/') === 'kestrel/rfcs')
-        .sortBy((page) => page.title)
-        .map((page) => ( 
-            <li key={page.id}>            
-                <a href={page.href}>{page.title}</a>
-            </li>
-        ))
-        .value()}
-</ul>
+* [Requests for Change (RFCs)](https://github.com/ridleywinters/raiment/labels/rfc)
 
 ## Tasks
 
