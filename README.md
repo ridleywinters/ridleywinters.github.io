@@ -1,1 +1,0 @@
-# ridleywinters.github.io
