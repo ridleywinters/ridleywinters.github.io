@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[947],{6600:e=>{e.exports=JSON.parse('{"authors":[{"name":"Ridley Winters","title":"Raiment Studios Contributor","url":"https://github.com/ridleywinters","imageURL":"https://github.com/ridleywinters.png","key":"ridleywinters","page":null,"count":1}]}')}}]);
