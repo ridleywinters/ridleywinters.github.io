@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://your-docusaurus-site.example.com/blog</id>
+    <id>https://ridleywinters.github.io/blog</id>
     <title>Raiment Studios Blog</title>
     <updated>2024-07-26T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://your-docusaurus-site.example.com/blog"/>
+    <link rel="alternate" href="https://ridleywinters.github.io/blog"/>
     <subtitle>Raiment Studios Blog</subtitle>
-    <icon>https://your-docusaurus-site.example.com/img/favicon.ico</icon>
+    <icon>https://ridleywinters.github.io/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[TODO]]></title>
-        <id>https://your-docusaurus-site.example.com/blog/usability-rants</id>
-        <link href="https://your-docusaurus-site.example.com/blog/usability-rants"/>
+        <id>https://ridleywinters.github.io/blog/usability-rants</id>
+        <link href="https://ridleywinters.github.io/blog/usability-rants"/>
         <updated>2024-07-26T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[I've started work on a project entitled Snowfield.  What is it? It's an adventure game in a vast, procedurally generated world akin to Daggerfall with a the lighthearted, fantastical tone of the classic King's Quest series. It takes place in the world of Galthea, a sci-fi / fantasy settings with a mix of low-fantasy and technological elements.]]></summary>
         <content type="html"><![CDATA[<p>I've started work on a project entitled <strong>Snowfield</strong>.  What is it? It's an adventure game in a vast, procedurally generated world akin to Daggerfall with a the lighthearted, fantastical tone of the classic King's Quest series. It takes place in the world of Galthea, a sci-fi / fantasy settings with a mix of low-fantasy and technological elements.</p>

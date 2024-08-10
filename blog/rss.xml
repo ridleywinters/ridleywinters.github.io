@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>Raiment Studios Blog</title>
-        <link>https://your-docusaurus-site.example.com/blog</link>
+        <link>https://ridleywinters.github.io/blog</link>
         <description>Raiment Studios Blog</description>
         <lastBuildDate>Fri, 26 Jul 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
@@ -10,8 +10,8 @@
         <language>en</language>
         <item>
             <title><![CDATA[TODO]]></title>
-            <link>https://your-docusaurus-site.example.com/blog/usability-rants</link>
-            <guid>https://your-docusaurus-site.example.com/blog/usability-rants</guid>
+            <link>https://ridleywinters.github.io/blog/usability-rants</link>
+            <guid>https://ridleywinters.github.io/blog/usability-rants</guid>
             <pubDate>Fri, 26 Jul 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[I've started work on a project entitled Snowfield.  What is it? It's an adventure game in a vast, procedurally generated world akin to Daggerfall with a the lighthearted, fantastical tone of the classic King's Quest series. It takes place in the world of Galthea, a sci-fi / fantasy settings with a mix of low-fantasy and technological elements.]]></description>
             <content:encoded><![CDATA[<p>I've started work on a project entitled <strong>Snowfield</strong>.  What is it? It's an adventure game in a vast, procedurally generated world akin to Daggerfall with a the lighthearted, fantastical tone of the classic King's Quest series. It takes place in the world of Galthea, a sci-fi / fantasy settings with a mix of low-fantasy and technological elements.</p>
