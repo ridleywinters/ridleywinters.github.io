@@ -4,10 +4,20 @@
         <title>Raiment Studios Blog</title>
         <link>https://ridleywinters.github.io/blog</link>
         <description>Raiment Studios Blog</description>
-        <lastBuildDate>Sat, 10 Aug 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 11 Aug 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Interesting reads]]></title>
+            <link>https://ridleywinters.github.io/blog/2024/08/11/index</link>
+            <guid>https://ridleywinters.github.io/blog/2024/08/11/index</guid>
+            <pubDate>Sun, 11 Aug 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[* Arc and Mutex in Rust - useful examples and explanation about thes Rust types]]></description>
+            <content:encoded><![CDATA[<ul>
+<li><a href="https://itsallaboutthebit.com/arc-mutex/" target="_blank" rel="noopener noreferrer">Arc and Mutex in Rust</a> - useful examples and explanation about thes Rust types</li>
+</ul>]]></content:encoded>
+        </item>
         <item>
             <title><![CDATA[Following the wgpu tutorial]]></title>
             <link>https://ridleywinters.github.io/blog/2024/08/10/index</link>
